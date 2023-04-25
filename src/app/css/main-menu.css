@@ -21,6 +21,7 @@
 
 /*Estilo de la lista desplegable, que parte desde el borde inferior de la barra de navegación*/
 #main-menu ul{
+    padding-top: 4.5em;
     background-color: var(--bg-color);
     position: absolute;
     top: var(--menu-height);
@@ -38,37 +39,40 @@
 
 /*Estilo entre cada sección de la lista del menu*/
 #main-menu li {
-    padding: .5em;
+    padding: 2em;
     text-align: center;
+    font-size: var(--tamaño-28-letra);
+    font-weight: 600;
 }
 
 /*Dimensiones del menu hamburguesa*/
 .menu-hamburguesa {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 2.5em;
+    margin-right: 1em;
+    margin-bottom: 0.7em;
 }
 
 /*Estilo de cada linea del menu hamburgesa*/
 .menu-hamburguesa div {
-    background-color: var(--txt-color);
-    width: 2em;
+    background-color: var(--second-color-green);
+    width: 2.4em;
     height: .4em;
-    margin: .4em auto;
-    border-radius: .4em;
+    border-radius: .6em;
+    margin-top: 0.5em;
 }
 
 /*Estilo de la linea del medio del menu para cuando este activo*/
 #main-menu.activo .menu-hamburguesa div:nth-child(2) {
     opacity:0;
-
 }
 
 /*Estilo de la primera linea de arriba del menu cuando este esté activo */
 #main-menu.activo .menu-hamburguesa div:nth-child(1) {
-    transform: translateY(.6em) rotate(45deg);
+    transform: translateY(.9em) rotate(45deg);
 }
 
 /*Estilo de la ultima linea de abajo del menu cuando este esté activo */
 #main-menu.activo .menu-hamburguesa div:nth-child(3) {
-    transform: translateY(-.6em) rotate(-45deg);
+    transform: translateY(-.9em) rotate(-45deg);
 }

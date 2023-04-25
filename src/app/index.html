@@ -8,23 +8,138 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
     <!-- Palabras clave para el SEO de la Web-->
     <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+    <!-- Para que sea compatible con Microsoft Edge-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/estilos.css"/>
+    <link rel='stylesheet' href="css/main-menu.css"/>
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
+
 </head>
 <body>
+<!-- Comienza la cabecera-->
+<header>
+    <nav id="main-menu">
+        <a href="index.html"><img src="images/logoGTI.svg" class="logo-menu-inicio"></a>
+        <ul>
+            <li><a href="#seccion1">Producto</a></li>
+            <li><a href="#seccion2">Solicita el producto</a></li>
+            <li><a href="#seccion3">Sobre nosotros</a></li>
+        </ul>
 
-<nav>
-    <ul>
-        <li>Opcion 1</li>
-        <li>Opcion 2</li>
-        <li>Opcion 3</li>
-    </ul>
-</nav>
-<section>
-    <h1>Monitoriza tu huerto</h1>
+        <div class="menu-hamburguesa" id="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</header>
+<!-- Comienza el full page hero landing page-->
+<section id="landing-page-hero">
+    <h1>MONITORIZA TU HUERTO</h1>
+    <p class="parrafo-negrita">Cuida tu huerto vertical desde cualquier parte sin ensuciarte las manos</p>
     <button>PEDIR YA</button>
 </section>
+
+<!-- Comienza la sección primera de explicación general-->
+<main>
+    <section>
+        <h2>Huerto doméstico</h2>
+        <p>Cultiva y cuida de tu huerto sin preocuparte por el riego o su cuidado. Nuestro sistema hidropónico te permite aprovechar tu tiempo sin perjudicar a tu huerto.</p>
+        <img class="imagenes-landing" src="images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
+    </section>
+
+    <section>
+        <h2>Monitorización</h2>
+        <p>Visualiza en tiempo real el estado de tu huerto. Nuestros sensores recopilan datos constantemente, lo que te permite controlar el cuidado de tu huerto constantemente.</p>
+        <img class="imagenes-landing" src="images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
+    </section>
+
+    <section>
+        <h2>Estadísticas</h2>
+        <p>Estadísticas de tu huerto de manera clara y concisa. Visualiza los datos históricos de tu huerto rápidamente y sin complicaciones.</p>
+        <img class="imagenes-landing" src="images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
+    </section>
+</main>
+<!-- Termina el main, explicación general -->
+
+<!-- Comienza la sección de explicación mantenimiento-->
+<section id="seccion-mantenimiento">
+    <h3>Mantenimiento constante de tu equipo</h3>
+    <p class="parrafo-negrita">No te preocupes por las averias</p>
+    <p>Nuestro equipo de expertos estará siempre disponible para ayudarte con cualquier problema técnico que puedas tener. Te proveemos con cambios de sensores, cambios de baterías y fallos en la monitorización.</p>
+    <img class="imagenes-landing" src="images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
+</section>
+<!-- Termina la sección de mantenimiento-->
+
+<!-- Comienza la sección de comparación social-->
+<section id="seccion-comparacion-nosotros">
+    <!--primera lista ul-->
+    <div id="primera-lista-comparacion">
+        <p>GTI</p>
+        <ul>
+            <li>
+                <img src="images/icono-feliz.svg" alt="icono persona feliz">
+                <p>Adaptamos el producto a tus necesidades</p>
+            </li>
+            <li>
+                <img src="images/icono-feliz.svg" alt="icono persona feliz">
+                <p>Mantenimiento constante</p>
+            </li>
+            <li>
+                <img src="images/icono-feliz.svg" alt="icono persona feliz">
+                <p> Entregas y mantenimientos en 24h</p>
+            </li>
+        </ul>
+    </div>
+    <!--segunda lista ul-->
+    <div id="segunda-lista-comparacion">
+        <p>OTROS</p>
+        <ul>
+            <li>
+                <img class="iconos-comparacion-landing" src="images/icono-triste.svg" alt="icono persona triste">
+                <p>Adaptamos el producto a tus necesidades</p>
+            </li>
+            <li>
+                <img class="iconos-comparacion-landing" src="images/icono-triste.svg" alt="icono persona triste">
+                <p>Mantenimiento constante</p>
+            </li>
+            <li>
+                <img class="iconos-comparacion-landing" src="images/icono-triste.svg" alt="icono persona triste">
+                <p> Entregas y mantenimientos en 24h</p>
+            </li>
+        </ul>
+    </div>
+    <button>Saber más</button>
+</section>
+<!-- Termina la sección de comparación social-->
+
+<!-- Comienza la sección de reseñas-->
+<section id="seccion-reseñas">
+    <div><p>5 estrellas</p></div>
+    <p class="parrafo-negrita">Las opiniones de nuestros usuarios</p>
+    <section id="deslizable-reseñas">
+        <section id="panel-deslizable-reseñas">
+
+        </section>
+        <div id="botones-deslizable-reseñas">
+            <button><</button>
+            <button>></button>
+        </div>
+    </section>
+</section>
+<!-- Termina la sección de reseñas-->
+
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo">
+    <section>
+        <div>
+            <a href="#">Política de privacidad</a>|<a href="#">Condiciones generales</a>
+        </div>
+        <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </section>
+</footer>
+<!-- Termina el footer-->
 </body>
 </html>

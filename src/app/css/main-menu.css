@@ -1,0 +1,66 @@
+/*Estilo del menu principal*/
+
+#main-menu {
+    --bg-color: var(--main-bg-color);
+    --txt-color: var(--main-fg-color);
+    --menu-height: 3rem;
+}
+
+#main-menu {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    height: var(--menu-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    position: fixed;
+    width: 100%;
+}
+
+#main-menu ul{
+    background-color: var(--bg-color);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
+}
+
+#main-menu.activo ul{
+    transform: translate(0) scaleY(1);
+}
+
+#main-menu li {
+    padding: .5em;
+    text-align: center;
+}
+
+.menu-hamburguesa {
+    width: 2em;
+    height: 2em;
+
+}
+
+.menu-hamburguesa div {
+    background-color: var(--txt-color);
+    width: 2em;
+    height: .4em;
+    margin: .4em auto;
+    border-radius: .4em;
+}
+
+#main-menu.activo .menu-hamburguesa div:nth-child(2) {
+    opacity:0;
+
+}
+
+#main-menu.activo .menu-hamburguesa div:nth-child(1) {
+    transform: translateY(.6em) rotate(45deg);
+}
+
+#main-menu.activo .menu-hamburguesa div:nth-child(3) {
+    transform: translateY(-.6em) rotate(-45deg);
+}

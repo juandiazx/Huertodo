@@ -14,35 +14,45 @@
 
 /*Declaramos variables en la raiz del documento*/
 :root {
-    --main-bg-color: #ffffff;
-    --main-fg-color: #000000;
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --second-color-green: #06884D;
 }
 
 /*Estilos del body*/
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--main-bg-color);
-    color: var(--main-fg-color);
+    background-color: var(--main-color-white);
+    color: var(--main-color-black);
 }
 
-main {
+#landing-page-hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
+    /*background-image: url("images/8105c4aac55cf49fa54e3ca0a81f0e8a.png")Me parte desde el local storage*/
 }
 
-/*Estilo de cada section*/
-section {
+/*Estilo de cada section dentro de la sección de información general */
+main section  {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
 }
 
+p {
+    font-size: 0.8em;
+    font-weight: 400;
+}
 h1 {
    justify-content: center;
     align-content: center;
+}
+
+h2 {
+    font-weight: 600;
 }

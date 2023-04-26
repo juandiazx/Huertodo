@@ -5,6 +5,17 @@
     --menu-height: 6rem;
 }
 
+/*Estilo imagen LOGOTIPO del menu de navegacion*/
+#logo-menu-inicio {
+    width: 10em;
+    height: 7em;
+}
+
+/*Icono de inicio sesión usuario*/
+#icono-inicio-sesion {
+    width: 3.7em;
+    height: 3.7em;
+}
 /*Estilo del menu principal*/
 #main-menu {
     background-color: var(--bg-color);

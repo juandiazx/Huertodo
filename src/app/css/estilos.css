@@ -122,7 +122,7 @@ h3 {
 
 /*Estilo para los parrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
 .parrafo-negrita {
-    font-size: 0.9em;
+    font-size: 110%;
     font-weight: 600;
 }
 
@@ -198,6 +198,7 @@ body {
 
 /*Contenedor para estrellas reseñas*/
 #contenedor-estrellas-opiniones {
+    display: flex;
     flex-direction: column;
     margin-bottom: 3em;
 }
@@ -205,6 +206,7 @@ body {
 #contenedor-estrellas-opiniones>p {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin-bottom: 1em;
 }
 
@@ -224,12 +226,13 @@ body {
 #contenedor-cabecera-reseña {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     flex-direction: row;
-    justify-content: space-between;
     max-width: 100%;
-    padding-left: 3em;
-    padding-right: 3em;
+    justify-content: center;
+}
+
+#contenedor-cabecera-reseña .parrafo-negrita {
+    margin-right: 1.8em;
 }
 
 /*Estilo contenedor botones deslizables reseñas*/
@@ -283,5 +286,4 @@ body {
     margin-right: 0.6em;
     margin-left: 0.6em;
 }
-
 /*------------------------Termina footer------------------------*/

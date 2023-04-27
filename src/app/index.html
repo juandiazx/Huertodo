@@ -21,14 +21,19 @@
 <!-- Comienza la cabecera-->
 <header>
     <nav id="main-menu">
-        <a href="index.html"><img src="images/logoGTI.svg" class="logo-menu-inicio"></a>
+        <!-- Logotipo Link Landing Page-->
+        <a href="index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio"></a>
         <ul>
             <li><a href="#seccion1">Producto</a></li>
             <li><a href="#seccion2">Solicita el producto</a></li>
             <li><a href="#seccion3">Sobre nosotros</a></li>
         </ul>
 
-        <div class="menu-hamburguesa" id="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+        <!-- Icono de iniciar sesion-->
+        <a href="index.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png"></a>
+
+        <!-- Menu hamburguesa-->
+        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
             <div></div>
             <div></div>
             <div></div>
@@ -39,7 +44,8 @@
 <section id="landing-page-hero">
     <h1>MONITORIZA TU HUERTO</h1>
     <p class="parrafo-negrita">Cuida tu huerto vertical desde cualquier parte sin ensuciarte las manos</p>
-    <button>PEDIR YA</button>
+    <!--Call To Action-->
+    <button class="boton-verde-blanco">Pídelo ya</button>
 </section>
 
 <!-- Comienza la sección primera de explicación general-->
@@ -61,6 +67,8 @@
         <p>Estadísticas de tu huerto de manera clara y concisa. Visualiza los datos históricos de tu huerto rápidamente y sin complicaciones.</p>
         <img class="imagenes-landing" src="images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
     </section>
+    <!--Boton Saber Más-->
+    <button class="boton-verde-blanco">Saber más</button>
 </main>
 <!-- Termina el main, explicación general -->
 
@@ -73,57 +81,31 @@
 </section>
 <!-- Termina la sección de mantenimiento-->
 
-<!-- Comienza la sección de comparación social-->
-<section id="seccion-comparacion-nosotros">
-    <!--primera lista ul-->
-    <div id="primera-lista-comparacion">
-        <p>GTI</p>
-        <ul>
-            <li>
-                <img src="images/icono-feliz.svg" alt="icono persona feliz">
-                <p>Adaptamos el producto a tus necesidades</p>
-            </li>
-            <li>
-                <img src="images/icono-feliz.svg" alt="icono persona feliz">
-                <p>Mantenimiento constante</p>
-            </li>
-            <li>
-                <img src="images/icono-feliz.svg" alt="icono persona feliz">
-                <p> Entregas y mantenimientos en 24h</p>
-            </li>
-        </ul>
-    </div>
-    <!--segunda lista ul-->
-    <div id="segunda-lista-comparacion">
-        <p>OTROS</p>
-        <ul>
-            <li>
-                <img class="iconos-comparacion-landing" src="images/icono-triste.svg" alt="icono persona triste">
-                <p>Adaptamos el producto a tus necesidades</p>
-            </li>
-            <li>
-                <img class="iconos-comparacion-landing" src="images/icono-triste.svg" alt="icono persona triste">
-                <p>Mantenimiento constante</p>
-            </li>
-            <li>
-                <img class="iconos-comparacion-landing" src="images/icono-triste.svg" alt="icono persona triste">
-                <p> Entregas y mantenimientos en 24h</p>
-            </li>
-        </ul>
-    </div>
-    <button>Saber más</button>
-</section>
-<!-- Termina la sección de comparación social-->
-
 <!-- Comienza la sección de reseñas-->
-<section id="seccion-reseñas">
-    <div><p>5 estrellas</p></div>
-    <p class="parrafo-negrita">Las opiniones de nuestros usuarios</p>
-    <section id="deslizable-reseñas">
-        <section id="panel-deslizable-reseñas">
-
+<section id="seccion-resenyas">
+    <div id="contenedor-estrellas-opiniones">
+        <p>5 estrellas</p>
+        <p class="parrafo-negrita">Las opiniones de nuestros usuarios</p>
+    </div>
+    <!--Sección panel deslizable y sus botones-->
+    <section id="contenedor-resenyas-botones">
+        <!--Panel deslizable-->
+        <section id="contenedor-reseñas-deslizables">
+            <!--Reseña concreta usuario-->
+                <!--Cabecera cada reseña-->
+            <div id="contenedor-cabecera-reseña">
+                <div>
+                    <p class="parrafo-negrita">Víctor Pérez</p>
+                </div>
+                <div>
+                    <p>5 estrellas</p>
+                </div>
+            </div>
+            <!--Texto reseña persona-->
+            <p>Compré el kit de sensores de monitoreo de GTI para mi huerto vertical hidropónico y estoy impresionado con los resultados. </p>
         </section>
-        <div id="botones-deslizable-reseñas">
+        <!--Botones para mover deslizables-->
+        <div id="contenedor-botones-deslizable-reseñas">
             <button><</button>
             <button>></button>
         </div>
@@ -134,9 +116,11 @@
 <!-- Comienza el footer-->
 <footer id="footer-bottom" role="contentinfo">
     <section>
+        <!--Contenedor con los links de texto-->
         <div>
             <a href="#">Política de privacidad</a>|<a href="#">Condiciones generales</a>
         </div>
+        <!--Parrafo con el nombre de la empresa y el copyright-->
         <p class="parrafo-negrita">© GTI Copyright 2023</p>
     </section>
 </footer>

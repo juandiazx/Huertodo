@@ -37,6 +37,13 @@ body {
     /*background-image: url("images/8105c4aac55cf49fa54e3ca0a81f0e8a.png")Me parte desde el local storage*/
 }
 
+#quienes-somos-page {
+    height: 45vh;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+}
+
 p {
     font-size: 0.8em;
     font-weight: 400;
@@ -67,6 +74,39 @@ h3 {
     color: var(--main-color-white);
 }
 
+/*Separación para no ocultar contenido bajo el menú de navegación*/
+#separacion-menu{
+    height: 10vh;
+}
+/*Secciones de la Página Sobre Nosotros*/
+#seccion-vision {
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
+    height: 38vh;
+}
+
+#seccion-vision-2 {
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
+    height: 38vh;
+}
+
+#seccion-valores{
+    height: 45vh;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+}
+
+#deslizable-imagenes-sobre-nosotros{
+    border: 0px solid black;
+    text-align: center;
+    border-radius: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 2px 3px 1px 1px lightgrey;
+}
+
 /*Estilo para los parrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
 .parrafo-negrita {
     font-size: 0.9em;
@@ -82,6 +122,18 @@ h3 {
     max-width: 100%;
     align-content: center;
     justify-content: center;
+}
+
+/*Estilo imágenes página Sobre Nosotros*/
+.imagenes-sobre-nosotros {
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    width: 19em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-left: 20px;
 }
 
 /*El estilo que tendrán todas las secciones*/

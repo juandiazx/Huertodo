@@ -156,9 +156,9 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-image: url("../images/8105c4aac55cf49fa54e3ca0a81f0e8a.png");
+    background-image: url("../images/landing-hero.png");/*url("../images/8105c4aac55cf49fa54e3ca0a81f0e8a.png");*/
     background-repeat: no-repeat;
-    background-size: 130% 100%;
+    background-size: 100% 100%;
 }
 
 #landing-page-hero h1{

@@ -76,28 +76,33 @@
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
 p {
-    font-size: 0.9em;
+    font-size: 90%;
     font-weight: 400;
+    margin-bottom: 1.4em;
 }
 
 h1 {
     font-weight: 800;
-    font-size: 2.2em;
+    font-size: 220%;
 }
 
 h2 {
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 140%;
+    margin-bottom: 0.4em;
 }
 
 h3 {
     font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
 }
 
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
-    width: 9.7em;
-    height: 2em;
+    width: 72%;
+    height: 7%;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -105,7 +110,14 @@ h3 {
     color: var(--main-color-white);
     font-family:'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 1.7em;
+    font-size: 170%;
+}
+
+/*Boton saber mas clase estilo*/
+#contenedor-boton-saber-mas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Estilo para los parrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
@@ -116,17 +128,18 @@ h3 {
 
 /*Estilo imagenes de la landing page*/
 .imagenes-landing {
-    height: 13em;
+    height: 6%;
     border-radius: 1.1em;
     max-width: 100%;
     align-content: center;
     justify-content: center;
+    margin-bottom: 3em;
 }
 
 /*El estilo que tendrán las secciones hijas directas de body main y footer*/
 body>section, main>section,footer>section{
-    padding-left: 1.7em;
-    padding-right: 1.7em;
+    padding-left: 7%;
+    padding-right: 7%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,6 +151,7 @@ main>section, body>section{
     margin-top: 1.6em;
     margin-bottom: 1.6em;
 }
+
 
 /*Estilos del body*/
 body {
@@ -153,7 +167,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     align-items: center;
     background-image: url("../images/landing-hero.png");/*url("../images/8105c4aac55cf49fa54e3ca0a81f0e8a.png");*/
@@ -161,11 +174,8 @@ body {
     background-size: 100% 100%;
 }
 
-#landing-page-hero h1{
-    padding: 0.5em;
-}
-
 #landing-page-hero p{
+    margin-top: 1em;
     margin-bottom: 6em;
 }
 /*------------------------Termina landing page hero------------------------*/
@@ -184,7 +194,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 /*Contenedor para estrellas reseñas*/
@@ -198,35 +207,29 @@ body {
     justify-content: center;
     margin-bottom: 1em;
 }
+
 /*Estilo contenedor donde deslizan todos los paneles*/
 #contenedor-reseñas-deslizables {
-    height: 10.5em;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     border-radius: 1.1em;
     display: flex;
     max-width: 100%;
-    align-content: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1.1em;
+    padding: 0.8rem 2rem;
+    text-align: center;
 }
 
 /*Contenedor para la cabecera de cada reseña que desliza*/
 #contenedor-cabecera-reseña {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
     flex-direction: row;
     justify-content: space-between;
     max-width: 100%;
     padding-left: 3em;
     padding-right: 3em;
-}
-
-/*Estilo  p dentro, texto de cada reseña*/
-#contenedor-reseñas-deslizables>p {
-    text-align: center;
-    margin-bottom: 0.6em;
-    margin-top: 1em;
 }
 
 /*Estilo contenedor botones deslizables reseñas*/
@@ -242,6 +245,14 @@ body {
 #contenedor-botones-deslizable-reseñas>button{
     margin-left: 1em;
     margin-right: 1em;
+    border-radius: 50%;
+    border: 0.11em var(--second-color-green) solid;
+    background: var(--main-color-white);
+    color: var(--second-color-green);
+    font-weight: 1000;
+    font-size: 1.2em;
+    width: 2.4em;
+    height: 2.4em;
 }
 /*------------------------Termina reseñas------------------------*/
 

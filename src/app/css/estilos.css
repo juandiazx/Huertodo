@@ -20,46 +20,84 @@
     --tamaño-28-letra: 1.6em;
 }
 
+/*Separación para no ocultar contenido bajo el menú de navegación*/
+.separacion-menu{
+    height: 8vh;
+}
+
+/*Separación entre partes de la página*/
+.separacion-contenido{
+    height: 2vh;
+}
+.pequeña-separacion-contenido{
+    height: 1vh;
+}
+
 /*------------------------Comienza QUIENES SOMOS------------------------*/
 #quienes-somos-page {
     height: 45vh;
     flex-direction: column;
     align-content: center;
     text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-
-/*Separación para no ocultar contenido bajo el menú de navegación*/
-#separacion-menu{
-    height: 10vh;
+/*Añadir fondo verde de contraste predeterminado del proyecto*/
+#fondo-contraste-sobre-nosotros{
+    background-color: var(--second-color-green);
+    height: 95vh;
 }
+
 /*Secciones de la Página Sobre Nosotros*/
-#seccion-vision {
-    background-color: var(--second-color-green);
+.seccion-vision {
     color: var(--main-color-white);
-    height: 38vh;
-}
-
-#seccion-vision-2 {
-    background-color: var(--second-color-green);
-    color: var(--main-color-white);
-    height: 38vh;
-}
-
-#seccion-valores{
-    height: 45vh;
+    height: 24em;
     flex-direction: column;
     align-content: center;
     text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#seccion-valores{
+    height: 60vh;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #deslizable-imagenes-sobre-nosotros{
     border: 0px solid black;
     text-align: center;
     border-radius: 1.1em;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
     box-shadow: 2px 3px 1px 1px lightgrey;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagenes-vision{
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    width: 19em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
 }
 
 /*Estilo imágenes página Sobre Nosotros*/
@@ -71,33 +109,39 @@
     max-width: 100%;
     align-content: center;
     justify-content: center;
-    margin-left: 20px;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
 }
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
-p {
-    font-size: 0.9em;
-    font-weight: 400;
+
+/*------------------------COMIENZA PRODUCTO------------------------*/
+
+#producto-page{
+    height: 45vh;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    font-weight: 800;
-    font-size: 2.2em;
+.seccion-ficha-producto{
+
 }
 
-h2 {
-    font-weight: 600;
-    font-size: 1.2em;
-}
+.boton-producto {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-h3 {
-    font-weight: 700;
-}
-
-/*Estilo botones verdes y blancos como CTA*/
-.boton-verde-blanco {
-    width: 9.7em;
-    height: 2em;
+    /*width: 72%;
+    height: 7%;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -105,22 +149,74 @@ h3 {
     color: var(--main-color-white);
     font-family:'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 1.7em;
+    font-size: 170%;*/
 }
 
-/*Estilo para los parrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.seccion-preguntas{
+    margin-top: 4vh;
+}
+
+/*------------------------ACABA PRODUCTO------------------------*/
+
+p {
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 220%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+
+/*Estilo botones verdes y blancos como CTA*/
+.boton-verde-blanco {
+    width: 72%;
+    height: 7%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+}
+
+/*Botón saber mas clase estilo*/
+#contenedor-boton-saber-mas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
 .parrafo-negrita {
-    font-size: 0.9em;
+    font-size: 110%;
     font-weight: 600;
 }
 
-/*Estilo imagenes de la landing page*/
+/*Estilo imágenes de la landing page*/
 .imagenes-landing {
-    height: 13em;
+    height: 6%;
     border-radius: 1.1em;
     max-width: 100%;
     align-content: center;
     justify-content: center;
+    margin-bottom: 3em;
 }
 
 /*El estilo que tendrán las secciones hijas directas de body main y footer*/
@@ -148,7 +244,7 @@ body {
     flex-direction: column;
 }
 /*------------------------Comienza landing page hero------------------------*/
-/*Estilo de la seccion hero donde esta el CTA, primera pantalla de la landing page*/
+/*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
 #landing-page-hero {
     height: 100vh;
     display: flex;

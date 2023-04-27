@@ -22,11 +22,11 @@
 
 #quienes-somos-page {
     height: 45vh;
+    flex-direction: column;
     align-content: center;
     text-align: justify-all;
 }
 
-    flex-direction: column;
 p {
     font-size: 0.9em;
     font-weight: 400;
@@ -204,7 +204,6 @@ body {
     max-width: 100%;
     align-content: center;
     justify-content: center;
-    display: flex;
     flex-direction: column;
     padding: 1.1em;
 }

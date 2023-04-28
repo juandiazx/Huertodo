@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Espacio personal</title>
+    <!-- Para que pueda verse bien en movil-->
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+    <!-- Palabras clave para el SEO de la Web-->
+    <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+    <!-- Para que sea compatible con Microsoft Edge-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS DOCUMENTO estilos.css-->
+
+    <!-- JavaScript Documento index.js-->
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!-- Comienza la cabecera-->
+<header>
+    <nav id="main-menu">
+    </nav>
+</header>
+<!-- Termina la cabecera-->
+
+<!-- Comienza la seccion de espacio personal sin banner ni footer-->
+<section id="contenedor-espacio-personal-completo">
+
+    <!-- Comienza el contenedor de notificaciones espacio personal-->
+    <div id="contenedor-notificaciones">
+        <p id="parrafo-numero-notificaciones">7 notificaciones</p>
+        <img id="icono-campana-notificaciones" src="#" alt="icono campana notificaciones">
+    </div>
+    <!-- Termina el contenedor de notificaciones espacio personal-->
+
+    <!-- Comienza el contenedor de monitorizacion-->
+    <div id="contenedor-monitorizacion">
+
+        <div id="contenedor-nombre-huerto">
+            <form action="#">
+                <select name="nombres-huertos" id="nombre-huerto" size="4">
+                    <option value="Huerto 1" selected>Huerto 1</option>
+                    <option value="Huerto 2">Huerto 2</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="contenedor-fecha-hora-huerto">
+            <div id="hora-huerto">
+                <p>18:00</p>
+            </div>
+            <div id="fecha-huerto">
+                <p>17/06/2023</p>
+            </div>
+        </div>
+
+        <!--Comienza contenedor con los parametros en tiempo real del huerto-->
+        <div id="contenedor-parametros-tiempo-real-huerto">
+            <div id="contenedor-humedad">
+                <div id="dato-humedad">
+                    <p>Humedad: <span>98%</span></p>
+                </div>
+                <div id="contenedor-boton-historico-humedad">
+                    <p>Histórico</p>
+                    <button id="boton-historico-humedad"><img src="#" alt="icono boton gráfica"></button>
+                </div>
+            </div>
+            <div id="contenedor-salinidad">
+                <div id="dato-salinidad">
+                    <p>Salinidad: <span>12%</span></p>
+                </div>
+                <div id="contenedor-boton-historico-salinidad">
+                    <p>Histórico</p>
+                    <button id="boton-historico-salinidad"><img src="#" alt="icono boton gráfica"></button>
+                </div>
+            </div>
+            <div id="contenedor-iluminacion">
+                <div id="dato-iluminacion">
+                    <p>Iluminacion: <span>Muy alta</span></p>
+                </div>
+                <div id="contenedor-boton-historico-iluminacion">
+                    <p>Histórico</p>
+                    <button id="boton-historico-iluminacion"><img src="#" alt="icono boton gráfica"></button>
+                </div>
+            </div>
+            <div id="contenedor-ph">
+                <div id="dato-ph">
+                    <p>pH: <span>6.53</span></p>
+                </div>
+                <div id="contenedor-boton-historico-ph">
+                    <p>Histórico</p>
+                    <button id="boton-historico-PH"><img src="#" alt="icono boton gráfica"></button>
+                </div>
+            </div>
+            <div id="contenedor-temperatura">
+                <div id="dato-temperatura">
+                    <p>Temperatura: <span>22ºC</span></p>
+                </div>
+                <div id="contenedor-boton-historico-temperatura">
+                    <p>Histórico</p>
+                    <button id="boton-historico-temperatura"><img src="#" alt="icono boton gráfica"></button>
+                </div>
+            </div>
+        </div>
+        <!--Termina contenedor con los parametros en tiempo real del huerto-->
+
+        <!-- Comienza el historial de mediciones grafica-->
+        <div id="contenedor-historial-medicion-parametro">
+            <div id="contenedor-grafica-historial">
+                Grafica Stats Mediciones
+            </div>
+            <div id="contenedor-botones-filtro-grafica">
+                <button id="boton-filtro-grafica-anyo">Año</button>
+                <button id="boton-filtro-grafica-mes">Mes</button>
+                <button id="boton-filtro-grafica-semana">Semana</button>
+                <button id="boton-filtro-grafica-dia">Dia</button>
+            </div>
+        </div>
+        <!-- Termina el historial de mediciones grafica-->
+        <div id="contenedor-informacion-metereologica">
+            <div id="contenedor-informacion-actual-metereologia">
+                Valencia 25ºC  Nublado
+            </div>
+            <div id="contenedor-fila-horas-metereologia">
+                15ºC  16ºC    19ºC
+            </div>
+        </div>
+        <!-- Comienza el historial de mediciones grafica-->
+    </div>
+    <!-- Termina el contenedor de monitorizacion-->
+
+    <button id="boton-mapas-huertos">Mapa con tus huertos</button>
+    
+</section>
+<footer>
+    <nav>
+
+    </nav>
+</footer>
+</body>
+</html>

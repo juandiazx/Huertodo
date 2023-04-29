@@ -257,6 +257,7 @@ body {
     background-size: 100% 100%;
 }
 
+/*Margenes para el parrafo de la hero, */
 #landing-page-hero p{
     margin-top: 1em;
     margin-bottom: 6em;
@@ -283,7 +284,16 @@ body {
 #contenedor-estrellas-opiniones {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-items: center;
     margin-bottom: 3em;
+}
+
+/*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
+#estrellas-media-resenyas {
+    height: 3.5em;
+    max-width: 100%;
+    margin-bottom: 0.5em;
 }
 /*Los parrafos de dentro del contenedor padre con las estrellas*/
 #contenedor-estrellas-opiniones>p {
@@ -301,7 +311,7 @@ body {
     max-width: 100%;
     justify-content: center;
     flex-direction: column;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     text-align: center;
 }
 
@@ -310,12 +320,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 100%;
+    padding-left: 9%;
+    padding-right: 9%;
     justify-content: center;
+    justify-content: space-between;
 }
 
-#contenedor-cabecera-reseña .parrafo-negrita {
-    margin-right: 1.8em;
+/*Separacion del parrafo con el nombre de cada persona que pone reseña, con las estrellitas puestas a la derecha*/
+#contenedor-cabecera-reseña>div {
+    display: flex;
+    justify-content: center ;
+}
+
+/*Estilo para las estrellas verdes especificas de cada reseña de usuarios*/
+.estrellas-resenya-especifica {
+    height: 1.7em;
 }
 
 /*Estilo contenedor botones deslizables reseñas*/

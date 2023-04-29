@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>GTI G01</title>
+  <!-- Para que pueda verse bien en movil-->
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+  <!-- Palabras clave para el SEO de la Web-->
+  <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+  <!-- Para que sea compatible con Microsoft Edge-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS DOCUMENTO estilos.css-->
+  <link rel='stylesheet' href="css/estilos.css"/>
+  <link rel='stylesheet' href="css/main-menu.css"/>
+  <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <!-- JavaScript Documento index.js-->
+  <script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<!-- Comienza la cabecera-->
+<header>
+  <nav id="main-menu">
+    <!-- Logotipo Link Landing Page-->
+    <a href="index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+    <ul>
+      <li><a href="#seccion1">Producto</a></li>
+      <li><a href="#seccion2">Solicita el producto</a></li>
+      <li><a href="#seccion3">Sobre nosotros</a></li>
+    </ul>
+
+    <!-- Icono de iniciar sesion-->
+    <a href="index.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+
+    <!-- Menu hamburguesa-->
+    <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+</header>
+
+<!-- Comienza la seccion general -->
+
+
+
+<main>
+  <section id="inicio-sesion">
+
+    <!-- Comienza la seccion titulo -->
+    <div id="solicitud-producto">
+      <h1>Solicitud de producto</h1>
+    </div>
+
+    <div id="nombre">
+      <div class="datos">
+        <label for="nombre">Nombre*:</label>
+        <input type="nombre" id="nombre-input" name="nombre" required>
+      </div>
+    </div>
+
+    <div id="apellidos">
+      <div class="datos">
+        <label for="apellidos">Apellidos*:</label>
+        <input type="apellidos" id="apellidos-input" name="apellidos" required>
+      </div>
+    </div>
+
+    <div id="correo">
+      <div class="datos">
+        <label for="correo">Email*:</label>
+        <input type="correo" id="correo-input" name="correo" required>
+      </div>
+    </div>
+
+    <div id="direccion">
+      <div class="datos">
+        <label for="direccion">Dirección completa*:</label>
+        <input type="direccion" id="direccion-input" name="direccion" required>
+      </div>
+    </div>
+
+    <div id="asunto">
+      <div class="datos">
+        <label for="asunto">Asunto*:</label>
+        <input type="asunto" id="asunto-input" name="asunto" required>
+      </div>
+    </div>
+
+    <div id="mensaje">
+      <div class="datos">
+        <label for="mensaje">Mensaje*:</label>
+        <input type="mensaje" id="mensaje-input" name="mensaje" required>
+      </div>
+    </div>
+
+
+    <div id="chekbox">
+
+      <input type="checkbox" id="aceptar-terminos">
+      <label for="aceptar-terminos">Aceptar términos y condiciones</label>
+
+    </div>
+
+
+    <!-- Comienza la seccion boton -->
+    <div class="boton-enviar">
+      <button class="boton-iniciar-sesion">Enviar</button>
+    </div>
+
+
+  </section>
+</main>
+<!-- Termina la seccion general -->
+
+
+
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo">
+  <section>
+    <!--Contenedor con los links de texto-->
+    <div>
+      <a href="#">Política de privacidad</a>|<a href="#">Condiciones generales</a>
+    </div>
+    <!--Parrafo con el nombre de la empresa y el copyright-->
+    <p class="parrafo-negrita">© GTI Copyright 2023</p>
+  </section>
+</footer>
+<!-- Termina el footer-->
+
+
+</body>
+</html>

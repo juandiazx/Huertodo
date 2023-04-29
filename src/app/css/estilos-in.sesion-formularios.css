@@ -1,0 +1,288 @@
+/*Estilos Inicio de sesion y formularios*/
+
+/*---------------------------------------- Inicio de Sesión ------------------------------------*/
+
+/* Estilos para el título de inicio de sesión */
+
+#inicio-de-sesion-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin-top: 120px;
+    margin-bottom: 10px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para las secciones de email y contraseña */
+
+#email,
+#password {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 10vh;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para los labels */
+
+.form-group label {
+    display: flex;
+    text-align: left;
+    font-size: 0.9em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #333333;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para los inputs */
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.7em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para la sección de "¿Has olvidado la contraseña?" */
+
+.contraseña-olvidada {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contraseña-olvidada a {
+    font-size: 0.9em;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    color: #06884D;
+    font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/*Estilos para los botones de inicio de sesion y formularios*/
+
+.boton-inicio {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.boton-iniciar-sesion {
+    width: 100%;
+    height: 7%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 80;
+    font-size: 180%;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para el enlace de "SOLICITAR ACCESO" */
+
+#solicitar-acceso {
+    text-align: center;
+}
+
+#solicitar-acceso p {
+    margin-top: 10px;
+    margin-bottom: 110px;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+#solicitar-acceso a {
+    color: #06884D;
+    font-weight: bolder;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------- Formulario enviado------------------------------------*/
+
+
+#formulario-enviado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.6em;
+    margin-top: 225px;
+    margin-bottom: 100px;
+}
+
+.boton-volver {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 150px;
+
+}
+
+
+
+/*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
+
+
+#introduce-correo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin-top: 225px;
+    margin-bottom: 10px;
+}
+
+.boton-enviar {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.parrafo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
+    margin-top: 10px;
+
+}
+
+
+
+
+/*--------------------------------------------Formulario de solicitud-------------------------------------------------*/
+
+#solicitud-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.7em;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+
+/*Estilos para la introduccion de datos*/
+
+#correo, #apellidos,#nombre, #asunto,#direccion {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 10vh;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+#mensaje{
+
+    height: 28vh;
+
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para los labels */
+
+.datos label {
+    display: flex;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: #333333;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para los inputs */
+
+.datos input {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.7em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+#mensaje input {
+
+    height: 180px; /* Modifica la altura del input según sea necesario */
+
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*Esitlos para el chekbox*/
+
+/* Estilos para el checkbox */
+#chekbox input[type="checkbox"] {
+    margin-right: 5px; /* Espacio entre el checkbox y el texto */
+}
+
+/* Estilos para el texto del checkbox */
+#chekbox label {
+    font-size: 14px; /* Tamaño del texto */
+    color: #333333; /* Color del texto */
+}
+
+
+/*-----------------------------------------------------------------------------------------*/

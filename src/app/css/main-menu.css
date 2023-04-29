@@ -13,8 +13,9 @@
 
 /*Icono de inicio sesión usuario*/
 #icono-inicio-sesion {
-    width: 3.7em;
-    height: 3.7em;
+    width: 3.2em;
+    height: 3.2em;
+    margin-top: 0.4em;
 }
 /*Estilo del menu principal*/
 #main-menu {
@@ -60,7 +61,7 @@
 .menu-hamburguesa {
     width: 3em;
     height: 2.5em;
-    margin-right: 1em;
+    margin-right: 1.5em;
     margin-bottom: 0.7em;
 }
 
@@ -68,9 +69,9 @@
 .menu-hamburguesa div {
     background-color: var(--second-color-green);
     width: 2.4em;
-    height: .4em;
+    height: .27em;
     border-radius: .6em;
-    margin-top: 0.5em;
+    margin-top: 0.63em;
 }
 
 /*Estilo de la linea del medio del menu para cuando este activo*/

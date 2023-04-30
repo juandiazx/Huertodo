@@ -1,5 +1,6 @@
 [
   {
+    "tipo": "usuario-final",
     "nombre": "Jose Luis",
     "apellidos": "Garcia Mantero",
     "correo": "joselgarciamant1@gmail.com",
@@ -63,6 +64,7 @@
   },
 
   {
+    "tipo": "usuario-final",
     "nombre": "Marcos",
     "apellidos": "Ramos Edward",
     "correo": "marcramedwa@gmail.com",
@@ -123,5 +125,27 @@
         }
       ]
     }
+  },
+
+  {
+    "tipo": "comercial",
+    "nombre": "Martin",
+    "apellidos": "Gutierrez Lant",
+    "correo": "lanternmartin@gmail.com",
+    "contrasenya": "upvMejorUniLoremIpsum"
+  },
+  {
+    "tipo": "tecnico",
+    "nombre": "Eduardo",
+    "apellidos": "Saavedra Rodriguez",
+    "correo": "saavedrarogg@gmail.com",
+    "contrasenya": "hartoDeLosArduinos400"
+  },
+  {
+    "tipo": "administrador",
+    "nombre": "Mauricio",
+    "apellidos": "Foronda Taliente",
+    "correo": "mauforonxl@gmail.com",
+    "contrasenya": "vivaWordpress2012"
   }
 ]

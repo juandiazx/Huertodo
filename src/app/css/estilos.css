@@ -10,6 +10,7 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
+    word-break: break-word;
 }
 
 /*Declaramos variables en la raiz del documento*/
@@ -201,6 +202,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 92%;
 }
 
 /*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
@@ -231,8 +233,8 @@ body>section, main>section,footer>section{
 
 /*Margen de las secciones del main*/
 main>section, body>section{
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
 }
 
 

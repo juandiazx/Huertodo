@@ -92,16 +92,10 @@ h3 {
 
 /*------------------------Comienza el estilo del espacio personal------------------------*/
 
-#contenedor-espacio-personal-completo {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-}
-
+/*Estilo contenedor de las notificaciones huertos*/
 #contenedor-notificaciones {
     display: flex;
-    justify-content: flex-end;
-    justify-items: flex-end;
+    justify-content: flex-start;
 }
 /*Estilo panel circular notificaciones espacio personal*/
 #panel-circular-notificaciones {
@@ -115,6 +109,8 @@ h3 {
     width: 60%;
     height: auto;
 }
+
+/*Estilo parrafo con el numero de notificaciones*/
 #parrafo-numero-notificaciones {
     display: flex;
     margin: 0;
@@ -146,12 +142,86 @@ h3 {
     margin-bottom: 3.2em;
 }
 
+/**/
+#contenedor-nombre-huerto {
+    display: flex;
+    justify-content: center;
+}
+
+/*Dropdown list para cambiar de huerto y cambiar el nombre*/
+select {
+    outline: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.26em;
+    background-image: none;
+    border:0!important;
+    width: 100%;
+    height: 1.3em;
+    cursor:pointer;
+    text-align: center;
+    font-size: 170%;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+/*Contenedor con la fecha y la hora del huerto*/
+#contenedor-fecha-hora-huerto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Estilo de los parrafos que indican la hora y la fecha del huerto*/
+#contenedor-fecha-hora-huerto p{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    margin-bottom: 0;
+    font-size: 100%;
+}
+
+/*Cada contenedor de parametros en tiempo real especifico*/
+.contenedor-parametro-monitorizacion-especifico {
+    display: flex;
+    align-content: center; /*NO SE CENTRA NO SE POR QUE*/
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.85em;
+    padding: 0.7em;
+    justify-content: space-between;
+    margin-bottom: 0.7em;
+}
+
+.contenedor-parametro-monitorizacion-especifico p{
+    font-weight: 600;
+    font-size: 105%;
+    margin: 0;
+}
+
+/*Estilo del icono de grafica para acceder a el histórico de cada parámetro*/
+.icono-boton-grafica-historico {
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 0.3em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+/*Estilo contenedor con el boton para acceder al mapa con los huertos*/
 #contenedor-boton-mapas {
     display: flex;
     justify-content: center;
     font-size: 74%;
     height: auto;
 }
+
 
 /*------------------------Termina el estilo del espacio peresonal------------------------*/
 

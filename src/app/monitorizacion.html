@@ -47,8 +47,8 @@
     <!-- Comienza el contenedor de notificaciones espacio personal-->
     <div id="contenedor-notificaciones">
         <div id="panel-circular-notificaciones">
-            <p id="parrafo-numero-notificaciones">7 notificaciones</p>
             <img id="icono-campana-notificaciones" src="images/icono-notificaciones-con.png" alt="icono campana notificaciones">
+            <p id="parrafo-numero-notificaciones">7 notificaciones</p>
         </div>
     </div>
     <!-- Termina el contenedor de notificaciones espacio personal-->
@@ -63,69 +63,38 @@
     <div id="contenedor-monitorizacion">
 
         <div id="contenedor-nombre-huerto">
-            <form action="#">
-                <select name="nombres-huertos" id="nombre-huerto" size="4">
-                    <option value="Huerto 1" selected>Huerto 1</option>
-                    <option value="Huerto 2">Huerto 2</option>
-                </select>
-            </form>
+            <select name="nombres-huertos" id="nombre-huerto">
+                <option value="Huerto 1">Huerto 1</option>
+                <option value="Huerto 2">Huerto 2</option>
+            </select>
         </div>
 
         <div id="contenedor-fecha-hora-huerto">
-            <div id="hora-huerto">
-                <p>18:00</p>
-            </div>
-            <div id="fecha-huerto">
-                <p>17/06/2023</p>
-            </div>
+            <p class="parrafo-negrita">18:32</p>
+            <p class="parrafo-negrita">17/06/2023</p>
         </div>
 
         <!--Comienza contenedor con los parametros en tiempo real del huerto-->
         <div id="contenedor-parametros-tiempo-real-huerto">
-            <div id="contenedor-humedad">
-                <div id="dato-humedad">
-                    <p>Humedad: <span>98%</span></p>
-                </div>
-                <div id="contenedor-boton-historico-humedad">
-                    <p>Histórico</p>
-                    <button id="boton-historico-humedad"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-humedad" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Humedad: <span>98%</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-salinidad">
-                <div id="dato-salinidad">
-                    <p>Salinidad: <span>12%</span></p>
-                </div>
-                <div id="contenedor-boton-historico-salinidad">
-                    <p>Histórico</p>
-                    <button id="boton-historico-salinidad"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-salinidad" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Salinidad: <span>12%</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-iluminacion">
-                <div id="dato-iluminacion">
-                    <p>Iluminacion: <span>Muy alta</span></p>
-                </div>
-                <div id="contenedor-boton-historico-iluminacion">
-                    <p>Histórico</p>
-                    <button id="boton-historico-iluminacion"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-iluminacion" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Iluminación: <span>Muy alta</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-ph">
-                <div id="dato-ph">
-                    <p>pH: <span>6.53</span></p>
-                </div>
-                <div id="contenedor-boton-historico-ph">
-                    <p>Histórico</p>
-                    <button id="boton-historico-PH"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-ph" class="contenedor-parametro-monitorizacion-especifico">
+                <p>pH: <span>6.53</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-temperatura">
-                <div id="dato-temperatura">
-                    <p>Temperatura: <span>22ºC</span></p>
-                </div>
-                <div id="contenedor-boton-historico-temperatura">
-                    <p>Histórico</p>
-                    <button id="boton-historico-temperatura"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-temperatura" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Temperatura: <span>22ºC</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
         </div>
         <!--Termina contenedor con los parametros en tiempo real del huerto-->

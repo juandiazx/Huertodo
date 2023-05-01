@@ -13,7 +13,6 @@
   <!-- Para que sea compatible con Microsoft Edge-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CSS DOCUMENTO estilos.css-->
-  <link rel='stylesheet' href="css/estilos.css"/>
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <!-- JavaScript Documento index.js-->
@@ -56,11 +55,13 @@
       <h1>Inicio de sesión</h1>
     </div>
 
+    <form id="login-form" action="/login" method="post">
+
     <!-- Comienza la seccion email -->
     <div id="email">
-      <div class="form-group">
+      <div class="datos">
 
-        <label for="email">Email:</label>
+        <label for="email">Email</label>
         <input type="email" id="email-input" name="email" required>
 
       </div>
@@ -69,9 +70,9 @@
 
     <!-- Comienza la seccion contraseña -->
     <div id="password">
-      <div class="form-group">
+      <div class="datos">
 
-        <label for="password">Contraseña:</label>
+        <label for="password">Contraseña</label>
         <input type="password" id="password-input" name="password" required>
 
       </div>
@@ -84,8 +85,10 @@
 
     <!-- Comienza la seccion boton -->
     <div class="boton-inicio">
-      <button class="boton-iniciar-sesion">Iniciar sesión</button>
+      <button type="submit" class="boton-iniciar-sesion">Iniciar sesión</button>
     </div>
+
+    </form>
 
     <!-- Comienza la seccion de solicitar acceso -->
     <div id="solicitar-acceso">

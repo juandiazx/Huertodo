@@ -22,64 +22,66 @@
 
 /*Separación para no ocultar contenido bajo el menú de navegación*/
 .separacion-menu{
-    height: 8vh;
+    height: 5rem;
 }
 
 /*Separación entre partes de la página*/
 .separacion-contenido{
-    height: 2vh;
+    height: 4rem;
 }
 .pequeña-separacion-contenido{
-    height: 1vh;
+    height: 2rem;
 }
 
 /*------------------------Comienza QUIENES SOMOS------------------------*/
 #quienes-somos-page {
-    height: 45vh;
+    height: 55vh;
     flex-direction: column;
     align-content: center;
     text-align: justify-all;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    border: 0px solid grey;
 
 }
 
 /*Añadir fondo verde de contraste predeterminado del proyecto*/
 #fondo-contraste-sobre-nosotros{
     background-color: var(--second-color-green);
-    height: 95vh;
+    height: 55rem;
+    border: 0px solid blue;
 }
 
 /*Secciones de la Página Sobre Nosotros*/
 .seccion-vision {
     color: var(--main-color-white);
-    height: 24em;
+    height: 25rem;
+    border: 0px solid black;
     flex-direction: column;
     align-content: center;
     text-align: justify-all;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 #seccion-valores{
-    height: 60vh;
+    height: 40rem;
     flex-direction: column;
     align-content: center;
     text-align: justify-all;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    border: 0px solid yellow;
 }
 
 #deslizable-imagenes-sobre-nosotros{
     border: 0px solid black;
     text-align: center;
     border-radius: 1.1em;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-    box-shadow: 2px 3px 1px 1px lightgrey;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -98,6 +100,7 @@
     flex-direction: column;
     text-align: justify-all;
     align-items: center;
+    border: 0px solid black;
 }
 
 /*Estilo imágenes página Sobre Nosotros*/
@@ -115,6 +118,95 @@
 }
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
+
+/*SELECTOR DE IMÁGENES*/
+* {
+    box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 1.1em;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/*ACABA SELECTOR DE IMÁGENES*/
 
 /*------------------------COMIENZA PRODUCTO------------------------*/
 
@@ -157,6 +249,69 @@
 }
 
 /*------------------------ACABA PRODUCTO------------------------*/
+
+/*COMIENZA ESTILOS DE DESPLEGABLES*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    background-color: #06884D;
+    color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: "\2192";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.accordion-item-header.active::after {
+    transform: rotate(90deg);
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 2px solid;
+    border-image: linear-gradient(to right, #06884D, white) 1;
+}
+
+/*ACABA ESTILOS DE DESPLEGABLES*/
 
 p {
     font-size: 90%;

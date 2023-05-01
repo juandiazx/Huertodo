@@ -15,6 +15,9 @@
     <link rel='stylesheet' href="css/main-menu.css"/>
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
+    <!-- Añadir librerias de chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <!--Añadimos el estilo a el chart-->
 </head>
 <body>
 <!-- Comienza la cabecera-->
@@ -100,10 +103,12 @@
         <!--Termina contenedor con los parametros en tiempo real del huerto-->
 
         <!-- Comienza el historial de mediciones grafica-->
-        <div id="contenedor-historial-medicion-parametro">
+        <div id="contenedor-graficas-con-filtros">
+            <!--Contenedor donde va solamente la grafica-->
             <div id="contenedor-grafica-historial">
-                Grafica Stats Mediciones
+                <canvas id="grafica-historial" aria-label="Grafica Interactiva Histórico Parámetros" role="img"></canvas>
             </div>
+            <!--Contenedor con los botones de filtrar de la gráfica-->
             <div id="contenedor-botones-filtro-grafica">
                 <button id="boton-filtro-grafica-anyo">Año</button>
                 <button id="boton-filtro-grafica-mes">Mes</button>
@@ -114,10 +119,10 @@
         <!-- Termina el historial de mediciones grafica-->
         <div id="contenedor-informacion-metereologica">
             <div id="contenedor-informacion-actual-metereologia">
-                Valencia 25ºC  Nublado
+                Valencia 25ºC Nublado
             </div>
             <div id="contenedor-fila-horas-metereologia">
-                15ºC  16ºC    19ºC
+                15ºC 16ºC 19ºC
             </div>
         </div>
         <!-- Comienza el historial de mediciones grafica-->
@@ -147,5 +152,8 @@
     </div>
 </footer>
 <!-- Termina el footer-->
+
+<!--Script para la grafica historial de parámetros-->
+<script src="js/graficas.js"></script>
 </body>
 </html>

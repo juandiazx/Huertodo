@@ -95,7 +95,7 @@ h3 {
 /*Estilo contenedor de las notificaciones huertos*/
 #contenedor-notificaciones {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 /*Estilo panel circular notificaciones espacio personal*/
 #panel-circular-notificaciones {
@@ -199,6 +199,7 @@ select {
     margin-bottom: 0.7em;
 }
 
+/*Estilo parrafos dentro de cada contenedor de los parametros de monitorizacion*/
 .contenedor-parametro-monitorizacion-especifico p{
     font-weight: 600;
     font-size: 105%;
@@ -213,7 +214,68 @@ select {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+/*Contenedor con la grafica de parametros y los botones de filtrar*/
+#contenedor-graficas-con-filtros {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.85em;
+    padding: 0.2em;
+    margin-bottom: 0.7em;
+}
+/*Contenedor con solo la grafica de parametros, sin los botones de filtrar por dia,mes,año*/
+#contenedor-grafica-historial {
+    position: relative;
+    height: 36vh;
+}
 
+/*Contenedor para los botones de filtro de la grafica*/
+#contenedor-botones-filtro-grafica {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.9em;
+    margin-top: 0.4em;
+}
+
+/*Estilo de los botones que estan dentro del contenedor de botones de filtro de la grafica*/
+#contenedor-botones-filtro-grafica>button {
+    width: 22%;
+    height: 6%;
+    border-radius: 3em;
+    border: none;
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 3.3vw;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+}
+
+/*Contenedor con la tarjeta de la informacion metereologica*/
+#contenedor-informacion-metereologica {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0.85em;
+    padding: 0.7em;
+    height: 25vw;
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+/*Contenedor con la fila de la información actual en tiempo real del tiempo*/
+#contenedor-informacion-actual-metereologia {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Contenedor con la fila de predicciones por hora del tiempo*/
+#contenedor-fila-horas-metereologia {
+    display: flex;
+    justify-content: space-evenly;
+}
 /*Estilo contenedor con el boton para acceder al mapa con los huertos*/
 #contenedor-boton-mapas {
     display: flex;

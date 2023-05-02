@@ -133,6 +133,7 @@
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
 
+/* SELECTOR DE IMÁGENES PRODUCTO */
 /* Esconde las imágenes por defecto */
 .mySlides {
     display: none;
@@ -217,6 +218,19 @@
 }
 
 /*------------------------ACABA PRODUCTO------------------------*/
+
+/*------------------------COMIENZA PÁGINA ADMINISTRADOR WEB------------------------*/
+
+.seccion-actualizaciones {
+    margin-top: 4vh;
+}
+
+.seccion-registros {
+    margin-top: 4vh;
+}
+
+/*------------------------ACABA PÁGINA ADMINISTRADOR WEB------------------------*/
+
 
 /* COMIENZA ESTILOS DE DESPLEGABLES */
 

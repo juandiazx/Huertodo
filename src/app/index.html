@@ -14,8 +14,6 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/estilos.css"/>
     <link rel='stylesheet' href="css/main-menu.css"/>
-    <!-- JavaScript Documento index.js-->
-    <script src="js/index.js"></script>
 
 </head>
 <body>
@@ -31,7 +29,7 @@
         </ul>
 
         <!-- Icono de iniciar sesion-->
-        <a href="monitorizacion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+        <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
         <!-- Menu hamburguesa-->
         <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
@@ -91,11 +89,11 @@
         <img id="estrellas-media-resenyas" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
         <p class="parrafo-negrita">Las opiniones de nuestros usuarios</p>
     </div>
-    <!--Sección panel deslizable y sus botones-->
-    <div id="contenedor-reseñas-deslizables">
+
+    <div id="resenya-1" class="contenedor-resenyas-deslizables resenya-activa">
         <!--Reseña concreta usuario-->
         <!--Cabecera cada reseña-->
-        <div id="contenedor-cabecera-reseña">
+        <div class="contenedor-cabecera-resenya">
             <div>
                 <p class="parrafo-negrita">Víctor Pérez</p>
             </div>
@@ -108,8 +106,42 @@
             <p>Compré el kit de sensores de monitoreo de GTI para mi huerto vertical hidropónico y estoy impresionado con los resultados. </p>
         </div>
     </div>
+
+    <div id="resenya-2" class="contenedor-resenyas-deslizables">
+        <!--Reseña concreta usuario-->
+        <!--Cabecera cada reseña-->
+        <div class="contenedor-cabecera-resenya">
+            <div>
+                <p class="parrafo-negrita">Laura Ibañez</p>
+            </div>
+            <div>
+                <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+            </div>
+        </div>
+        <!--Texto reseña persona-->
+        <div>
+            <p>Desde que adquirí mi huerto doméstico monitorizable ahorro tiempo, consumo alimentos de calidad y mi familia está tranquila</p>
+        </div>
+    </div>
+
+    <div id="resenya-3" class="contenedor-resenyas-deslizables">
+        <!--Reseña concreta usuario-->
+        <!--Cabecera cada reseña-->
+        <div class="contenedor-cabecera-resenya">
+            <div>
+                <p class="parrafo-negrita">Eduardo Pío</p>
+            </div>
+            <div>
+                <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+            </div>
+        </div>
+        <!--Texto reseña persona-->
+        <div>
+            <p>Recomiendo el producto de GTI encarecidamente, si estás interesado en cultivar tu huerto doméstico, es tu mejor opción" </p>
+        </div>
+    </div>
     <!--Botones para mover deslizables-->
-    <div id="contenedor-botones-deslizable-reseñas">
+    <div id="contenedor-botones-deslizable-resenyas">
         <button id="deslizar-izquierda-resenya"><</button>
         <button id="deslizar-derecha-resenya">></button>
     </div>
@@ -128,5 +160,7 @@
     </div>
 </footer>
 <!-- Termina el footer-->
+<!-- JavaScript Documento index.js-->
+<script src="js/index.js"></script>
 </body>
 </html>

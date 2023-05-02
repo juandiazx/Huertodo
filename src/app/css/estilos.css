@@ -133,12 +133,6 @@
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
 
-/* SELECTOR DE IMÁGENES PRODUCTO */
-
-* {
-    box-sizing: border-box;
-}
-
 /* Esconde las imágenes por defecto */
 .mySlides {
     display: none;
@@ -226,17 +220,7 @@
 
 /* COMIENZA ESTILOS DE DESPLEGABLES */
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-}
-
 .acordeon {
-    width: 90%;
     max-width: 1000px;
     margin: 2rem auto;
 }

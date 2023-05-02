@@ -66,13 +66,7 @@ h3 {
     font-family:'Poppins', sans-serif;
     font-weight: 500;
     font-size: 170%;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-    padding-right: 0.6em;
-    padding-left: 0.6em;
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
+    padding: 0.5em 0.6em;
 }
 
 /*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
@@ -83,11 +77,8 @@ h3 {
 
 /*Contenedor completo, wrapper de toda la monitorización*/
 .wrapper {
-    padding-left: 7%;
-    padding-right: 7%;
     margin-top: 6rem;
-    padding-top: 10%;
-    padding-bottom: 15%;
+    padding: 10% 7% 15%;
 }
 
 /*------------------------Comienza el estilo del espacio personal------------------------*/
@@ -103,7 +94,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 2em;
     padding: 0.4em;
     width: 60%;
@@ -132,11 +123,8 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 4.5%;
-    padding-right: 5%;
-    padding-top: 4.5%;
-    padding-bottom: 4.5%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 4.5% 5% 4.5% 4.5%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
     border-radius: 1.1em;
     margin-top: 2em;
     margin-bottom: 3.2em;
@@ -151,7 +139,7 @@ h3 {
 /*Dropdown list para cambiar de huerto y cambiar el nombre*/
 select {
     outline: 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.26em;
     background-image: none;
     border:0!important;
@@ -161,7 +149,6 @@ select {
     text-align: center;
     font-size: 170%;
     overflow: hidden;
-    overflow-x: hidden;
 }
 
 /*Contenedor con la fecha y la hora del huerto*/
@@ -192,7 +179,7 @@ select {
     align-items: center;
     text-align: center;
     flex-direction: row;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.85em;
     padding: 0.7em;
     justify-content: space-between;
@@ -211,19 +198,18 @@ select {
     width: 2.2em;
     height: 2.2em;
     border-radius: 0.3em;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
 }
 
 /*Contenedor con la grafica de parametros y los botones de filtrar*/
 #contenedor-graficas-con-filtros {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.85em;
     padding: 0.2em;
     margin-bottom: 0.7em;
 }
 /*Contenedor con solo la grafica de parametros, sin los botones de filtrar por dia,mes,año*/
 #contenedor-grafica-historial {
-    position: relative;
     height: 36vh;
 }
 
@@ -246,10 +232,7 @@ select {
     font-family:'Poppins', sans-serif;
     font-weight: 500;
     font-size: 3.3vw;
-    padding-bottom: 0.2em;
-    padding-top: 0.2em;
-    padding-right: 0.3em;
-    padding-left: 0.3em;
+    padding: 0.2em 0.3em;
 }
 
 /*Contenedor con la tarjeta de la informacion metereologica*/
@@ -257,7 +240,7 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.85em;
     padding: 0.7em;
     height: 25vw;

@@ -11,10 +11,13 @@
     <!-- Para que sea compatible con Microsoft Edge-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS DOCUMENTO estilos.css-->
-    <link rel='stylesheet' href="css/estilos.css"/>
+    <link rel='stylesheet' href="css/monitorizacion.css"/>
     <link rel='stylesheet' href="css/main-menu.css"/>
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
+    <!-- Añadir librerias de chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <!--Añadimos el estilo a el chart-->
 </head>
 <body>
 <!-- Comienza la cabecera-->
@@ -40,15 +43,16 @@
     </nav>
 </header>
 <!-- Termina la cabecera-->
-<!-- Separacion del menu-->
-<section class="separacion-menu"></section>
+<div class="wrapper">
 <!-- Comienza la seccion de espacio personal sin banner ni footer-->
 <section id="contenedor-espacio-personal-completo">
 
     <!-- Comienza el contenedor de notificaciones espacio personal-->
     <div id="contenedor-notificaciones">
-        <p id="parrafo-numero-notificaciones">7 notificaciones</p>
-        <img id="icono-campana-notificaciones" src="#" alt="icono campana notificaciones">
+        <div id="panel-circular-notificaciones">
+            <img id="icono-campana-notificaciones" src="images/icono-notificaciones-con.png" alt="icono campana notificaciones">
+            <p id="parrafo-numero-notificaciones">7 notificaciones</p>
+        </div>
     </div>
     <!-- Termina el contenedor de notificaciones espacio personal-->
 
@@ -62,78 +66,49 @@
     <div id="contenedor-monitorizacion">
 
         <div id="contenedor-nombre-huerto">
-            <form action="#">
-                <select name="nombres-huertos" id="nombre-huerto" size="4">
-                    <option value="Huerto 1" selected>Huerto 1</option>
-                    <option value="Huerto 2">Huerto 2</option>
-                </select>
-            </form>
+            <select name="nombres-huertos" id="nombre-huerto">
+                <option value="Huerto 1">Huerto 1</option>
+                <option value="Huerto 2">Huerto 2</option>
+            </select>
         </div>
 
         <div id="contenedor-fecha-hora-huerto">
-            <div id="hora-huerto">
-                <p>18:00</p>
-            </div>
-            <div id="fecha-huerto">
-                <p>17/06/2023</p>
-            </div>
+            <p class="parrafo-negrita">18:32</p>
+            <p class="parrafo-negrita">17/06/2023</p>
         </div>
 
         <!--Comienza contenedor con los parametros en tiempo real del huerto-->
         <div id="contenedor-parametros-tiempo-real-huerto">
-            <div id="contenedor-humedad">
-                <div id="dato-humedad">
-                    <p>Humedad: <span>98%</span></p>
-                </div>
-                <div id="contenedor-boton-historico-humedad">
-                    <p>Histórico</p>
-                    <button id="boton-historico-humedad"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-humedad" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Humedad: <span>98%</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-salinidad">
-                <div id="dato-salinidad">
-                    <p>Salinidad: <span>12%</span></p>
-                </div>
-                <div id="contenedor-boton-historico-salinidad">
-                    <p>Histórico</p>
-                    <button id="boton-historico-salinidad"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-salinidad" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Salinidad: <span>12%</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-iluminacion">
-                <div id="dato-iluminacion">
-                    <p>Iluminacion: <span>Muy alta</span></p>
-                </div>
-                <div id="contenedor-boton-historico-iluminacion">
-                    <p>Histórico</p>
-                    <button id="boton-historico-iluminacion"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-iluminacion" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Iluminación: <span>Muy alta</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-ph">
-                <div id="dato-ph">
-                    <p>pH: <span>6.53</span></p>
-                </div>
-                <div id="contenedor-boton-historico-ph">
-                    <p>Histórico</p>
-                    <button id="boton-historico-PH"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-ph" class="contenedor-parametro-monitorizacion-especifico">
+                <p>pH: <span>6.53</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
-            <div id="contenedor-temperatura">
-                <div id="dato-temperatura">
-                    <p>Temperatura: <span>22ºC</span></p>
-                </div>
-                <div id="contenedor-boton-historico-temperatura">
-                    <p>Histórico</p>
-                    <button id="boton-historico-temperatura"><img src="#" alt="icono boton gráfica"></button>
-                </div>
+            <div id="contenedor-temperatura" class="contenedor-parametro-monitorizacion-especifico">
+                <p>Temperatura: <span>22ºC</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
         </div>
         <!--Termina contenedor con los parametros en tiempo real del huerto-->
 
         <!-- Comienza el historial de mediciones grafica-->
-        <div id="contenedor-historial-medicion-parametro">
+        <div id="contenedor-graficas-con-filtros">
+            <!--Contenedor donde va solamente la grafica-->
             <div id="contenedor-grafica-historial">
-                Grafica Stats Mediciones
+                <canvas id="grafica-historial" aria-label="Grafica Interactiva Histórico Parámetros" role="img"></canvas>
             </div>
+            <!--Contenedor con los botones de filtrar de la gráfica-->
             <div id="contenedor-botones-filtro-grafica">
                 <button id="boton-filtro-grafica-anyo">Año</button>
                 <button id="boton-filtro-grafica-mes">Mes</button>
@@ -144,29 +119,41 @@
         <!-- Termina el historial de mediciones grafica-->
         <div id="contenedor-informacion-metereologica">
             <div id="contenedor-informacion-actual-metereologia">
-                Valencia 25ºC  Nublado
+                Valencia 25ºC Nublado
             </div>
             <div id="contenedor-fila-horas-metereologia">
-                15ºC  16ºC    19ºC
+                15ºC 16ºC 19ºC
             </div>
         </div>
         <!-- Comienza el historial de mediciones grafica-->
     </div>
     <!-- Termina el contenedor de monitorizacion-->
-
-    <button id="boton-mapas-huertos">Mapa con tus huertos</button>
+    <div id="contenedor-boton-mapas">
+        <button id="boton-mapas-huertos" class="boton-verde-blanco">Mapa con tus huertos</button>
+    </div>
 
     <!-- Desplegable para el mapa de huertos-->
     <div id="desplegable-popup-mapa" style="display: none">
 
     </div>
-    <!--Termina esplegable para el mapa de huertos-->
+    <!--Termina desplegable para el mapa de huertos-->
 
 </section>
-<footer>
-    <nav>
-
-    </nav>
+</div>
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo">
+    <div class="wrapper-footer">
+        <!--Contenedor con los links de texto-->
+        <div>
+            <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+        </div>
+        <!--Parrafo con el nombre de la empresa y el copyright-->
+        <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </div>
 </footer>
+<!-- Termina el footer-->
+
+<!--Script para la grafica historial de parámetros-->
+<script src="js/graficas.js"></script>
 </body>
 </html>

@@ -1,0 +1,305 @@
+/*Importamos la fuente Poppins de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*Se usa tal que:      font-family: 'Poppins', sans-serif;*/
+
+/*Estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    word-break: break-word;
+}
+
+/*Declaramos variables en la raiz del documento*/
+:root {
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --second-color-green: #06884D;
+    --tamaño-28-letra: 1.6em;
+}
+
+/*Estilos del body*/
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color-white);
+    color: var(--main-color-black);
+    flex-direction: column;
+}
+
+p {
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 220%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+
+/*Estilo botones verdes y blancos como CTA*/
+.boton-verde-blanco {
+    width: 85%;
+    height: 105%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.5em 0.6em;
+}
+
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.parrafo-negrita {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+/*Contenedor completo, wrapper de toda la monitorización*/
+.wrapper {
+    margin-top: 6rem;
+    padding: 10% 7% 15%;
+}
+
+/*------------------------Comienza el estilo del espacio personal------------------------*/
+
+/*Estilo contenedor de las notificaciones huertos*/
+#contenedor-notificaciones {
+    display: flex;
+    justify-content: flex-end;
+}
+/*Estilo panel circular notificaciones espacio personal*/
+#panel-circular-notificaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 2em;
+    padding: 0.4em;
+    width: 60%;
+    height: auto;
+}
+
+/*Estilo parrafo con el numero de notificaciones*/
+#parrafo-numero-notificaciones {
+    display: flex;
+    margin: 0;
+    font-size: 100%;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Estilo icono campana para notificaciones*/
+#icono-campana-notificaciones {
+    width: 2.1em;
+    height: 2.2em;
+}
+
+/*Estilo del contenedor completo de la monitorizacion, panel con sombra*/
+#contenedor-monitorizacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.5% 5% 4.5% 4.5%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    border-radius: 1.1em;
+    margin-top: 2em;
+    margin-bottom: 3.2em;
+}
+
+/**/
+#contenedor-nombre-huerto {
+    display: flex;
+    justify-content: center;
+}
+
+/*Dropdown list para cambiar de huerto y cambiar el nombre*/
+select {
+    outline: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 0.26em;
+    background-image: none;
+    border:0!important;
+    width: 100%;
+    height: 1.3em;
+    cursor:pointer;
+    text-align: center;
+    font-size: 170%;
+    overflow: hidden;
+}
+
+/*Contenedor con la fecha y la hora del huerto*/
+#contenedor-fecha-hora-huerto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Estilo de los parrafos que indican la hora y la fecha del huerto*/
+#contenedor-fecha-hora-huerto p{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    margin-bottom: 0;
+    font-size: 100%;
+}
+
+/*Cada contenedor de parametros en tiempo real especifico*/
+.contenedor-parametro-monitorizacion-especifico {
+    display: flex;
+    align-content: center; /*NO SE CENTRA NO SE POR QUE*/
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 0.85em;
+    padding: 0.7em;
+    justify-content: space-between;
+    margin-bottom: 0.7em;
+}
+
+/*Estilo parrafos dentro de cada contenedor de los parametros de monitorizacion*/
+.contenedor-parametro-monitorizacion-especifico p{
+    font-weight: 600;
+    font-size: 105%;
+    margin: 0;
+}
+
+/*Estilo del icono de grafica para acceder a el histórico de cada parámetro*/
+.icono-boton-grafica-historico {
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 0.3em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+}
+
+/*Contenedor con la grafica de parametros y los botones de filtrar*/
+#contenedor-graficas-con-filtros {
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 0.85em;
+    padding: 0.2em;
+    margin-bottom: 0.7em;
+}
+/*Contenedor con solo la grafica de parametros, sin los botones de filtrar por dia,mes,año*/
+#contenedor-grafica-historial {
+    height: 36vh;
+}
+
+/*Contenedor para los botones de filtro de la grafica*/
+#contenedor-botones-filtro-grafica {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.9em;
+    margin-top: 0.4em;
+}
+
+/*Estilo de los botones que estan dentro del contenedor de botones de filtro de la grafica*/
+#contenedor-botones-filtro-grafica>button {
+    width: 22%;
+    height: 6%;
+    border-radius: 3em;
+    border: none;
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 3.3vw;
+    padding: 0.2em 0.3em;
+}
+
+/*Contenedor con la tarjeta de la informacion metereologica*/
+#contenedor-informacion-metereologica {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 0.85em;
+    padding: 0.7em;
+    height: 25vw;
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+/*Contenedor con la fila de la información actual en tiempo real del tiempo*/
+#contenedor-informacion-actual-metereologia {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Contenedor con la fila de predicciones por hora del tiempo*/
+#contenedor-fila-horas-metereologia {
+    display: flex;
+    justify-content: space-evenly;
+}
+/*Estilo contenedor con el boton para acceder al mapa con los huertos*/
+#contenedor-boton-mapas {
+    display: flex;
+    justify-content: center;
+    font-size: 74%;
+    height: auto;
+}
+
+
+/*------------------------Termina el estilo del espacio peresonal------------------------*/
+
+/*------------------------Comienza footer------------------------*/
+
+/*Wrapper para aplicar el padding al footer*/
+.wrapper-footer {
+    padding: 1em 7%;
+}
+
+/*Estilo footer*/
+#footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
+}
+
+/*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
+#footer-bottom a{
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+}
+
+/*Margenes para el texto de copyrigth del footer*/
+#footer-bottom p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+/*------------------------Termina footer------------------------*/

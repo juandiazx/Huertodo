@@ -52,13 +52,15 @@
   <section id="inicio-sesion">
 
     <!-- Comienza la seccion titulo -->
-    <div id="introduce-correo">
+    <div class="introduce-correo">
       <h1>Introduce tu correo</h1>
     </div>
 
+    <form id="login-form" action="/login" method="post">
+
     <!-- Comienza la seccion email -->
     <div id="correo">
-      <div class="form-group">
+      <div class="datos">
 
         <input type="email" id="email-input" name="email" required>
 
@@ -68,7 +70,7 @@
 
     <!-- Comienza la seccion boton -->
     <div class="boton-enviar">
-      <button class="boton-iniciar-sesion">Enviar</button>
+      <button type="submit" class="boton-iniciar-sesion">Enviar</button>
     </div>
 
     <!-- Comienza la seccion parrafo -->
@@ -76,6 +78,7 @@
       <p>Si no logras encontrar el correo que te hemos enviado, comprueba en la bandeja de spam</p>
     </div>
 
+    </form>
 
   </section>
 </main>

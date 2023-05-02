@@ -54,49 +54,51 @@
   <section id="inicio-sesion">
 
     <!-- Comienza la seccion titulo -->
-    <div id="solicitud-producto">
+    <div class="solicitud-producto">
       <h1>Solicitud de producto</h1>
     </div>
 
-    <div id="nombre">
+    <form id="login-form" action="/login" method="post">
+
+    <div id="name">
       <div class="datos">
-        <label for="nombre">Nombre*:</label>
-        <input type="nombre" id="nombre-input" name="nombre" required>
+        <label for="name">Nombre*</label>
+        <input type="text" id="name-input" name="name" required>
       </div>
     </div>
 
-    <div id="apellidos">
+    <div id="last-name">
       <div class="datos">
-        <label for="apellidos">Apellidos*:</label>
-        <input type="apellidos" id="apellidos-input" name="apellidos" required>
+        <label for="last-name">Apellidos*</label>
+        <input type="text" id="last-name-input" name="last-name" required>
       </div>
     </div>
 
-    <div id="correo">
+    <div id="email">
       <div class="datos">
-        <label for="correo">Email*:</label>
-        <input type="correo" id="correo-input" name="correo" required>
+        <label for="email">Email*</label>
+        <input type="text" id="email-input" name="email" required>
       </div>
     </div>
 
-    <div id="direccion">
+    <div id="address">
       <div class="datos">
-        <label for="direccion">Dirección completa*:</label>
-        <input type="direccion" id="direccion-input" name="direccion" required>
+        <label for="address">Dirección completa*</label>
+        <input type="text" id="address-input" name="address" required>
       </div>
     </div>
 
-    <div id="asunto">
+    <div id="subject">
       <div class="datos">
-        <label for="asunto">Asunto*:</label>
-        <input type="asunto" id="asunto-input" name="asunto" required>
+        <label for="subject">Asunto*</label>
+        <input type="text" id="subject-input" name="subject" required>
       </div>
     </div>
 
-    <div id="mensaje">
+    <div id="message">
       <div class="datos">
-        <label for="mensaje">Mensaje*:</label>
-        <input type="mensaje" id="mensaje-input" name="mensaje" required>
+        <label for="message">Mensaje*</label>
+        <input type="text" id="message-input" name="message" required>
       </div>
     </div>
 
@@ -111,9 +113,11 @@
 
     <!-- Comienza la seccion boton -->
     <div class="boton-enviar">
-      <button class="boton-iniciar-sesion">Enviar</button>
+      <button type="submit" class="boton-iniciar-sesion">Enviar</button>
     </div>
 
+
+    </form>
 
   </section>
 </main>

@@ -10,6 +10,7 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
+    word-break: break-word;
 }
 
 /*Declaramos variables en la raiz del documento*/
@@ -201,6 +202,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 92%;
 }
 
 /*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
@@ -231,8 +233,8 @@ body>section, main>section,footer>section{
 
 /*Margen de las secciones del main*/
 main>section, body>section{
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
 }
 
 
@@ -362,30 +364,36 @@ body {
 /*------------------------Termina reseñas------------------------*/
 
 /*------------------------Comienza footer------------------------*/
+
+.wrapper-footer {
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 /*Estilo footer*/
 #footer-bottom {
-    height: 5.5em;
-    padding-top: 1.2em;
-    background-color: var(--second-color-green);
-    color: var(--main-color-white);
-}
-
-/*Estilo secciones dentro del footer*/
-#footer-bottom section{
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 0.7em;
     font-weight: 500;
-}
-
-/*Margen inferior del div dentro del footer*/
-#footer-bottom div{
-    margin-bottom: 0.7em;
+    height: 9em;
+    width: 100%;
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
 }
 
 /*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
 #footer-bottom a{
     margin-right: 0.6em;
     margin-left: 0.6em;
+}
+
+#footer-bottom p {
+    margin-top: 1em;
+    margin-bottom: 0;
 }
 /*------------------------Termina footer------------------------*/

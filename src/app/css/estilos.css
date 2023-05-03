@@ -115,6 +115,7 @@
     text-align: justify-all;
     align-items: center;
     border: 0px solid black;
+    margin: 0 auto;
 }
 
 /* Estilo imágenes página Sobre Nosotros */
@@ -227,6 +228,30 @@
 
 .seccion-registros {
     margin-top: 4vh;
+}
+
+.acordeon-item-header-web {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Fecha Desplegable Icono */
+.acordeon-item-header-web::after {
+    content: "\2191";
+    font-size: 1.9rem;
+    margin-left: 0.3rem;
+    align-self: center;
+    transition: transform 0.2s ease-in-out;
+    /*content: "\2573";*/
+}
+
+.acordeon-item-header-web.active::after {
+    transform: rotate(180deg);
 }
 
 /*------------------------ACABA PÁGINA ADMINISTRADOR WEB------------------------*/

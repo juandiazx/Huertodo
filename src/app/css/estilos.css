@@ -34,7 +34,7 @@
     height: 2rem;
 }
 
-/*Contenedor completo, wrapper de toda la monitorización*/
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
 .wrapper {
     padding-left: 7%;
     padding-right: 7%;
@@ -185,6 +185,13 @@
 
 /*------------------------COMIENZA PRODUCTO------------------------*/
 
+/*Contenedor completo, wrapper de producto,  lleva el margin top 12vh*/
+.wrapper-producto {
+    margin-top: 12vh;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 /* Página del Producto */
 #producto-page{
     flex-direction: column;
@@ -193,11 +200,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3em;
 }
 
-.seccion-ficha-producto{
-
-}
 /* Botones de la página de Producto */
 .boton-producto {
     flex-direction: column;

@@ -33,7 +33,7 @@ async function iniciarSesion(event) {
             break
         }
         else if(i=== respuestaUsuarioJSON.length-1){
-            alert("Usuario incorrecto, inténtelo de nuevo");
+            alert("Usuario incorrecto, inténtalo de nuevo");
         }
     }
 }

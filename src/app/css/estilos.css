@@ -350,7 +350,8 @@ body {
 /*------------------------Comienza landing page hero------------------------*/
 /*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
 #landing-page-hero {
-    height: 100vh;
+    margin-top: 12vh;
+    height: 88vh;
     display: flex;
     flex-direction: column;
     text-align: center;

@@ -1,13 +1,16 @@
-
+/*Wrapper para los formularios e inicio de sesion*/
+.wrapper-forms{
+    margin-top: 12vh;
+    padding: 10% 7% 15%;
+}
 /*------------------------------------------------------------------------------------------------*/
 
+/*Estilo para el titulo h1 de los formularios*/
 .h1-formularios-titulos {
     font-weight: 500;
-    font-size: 220%;
+    font-size: 1.9em;
 }
-
 /*------------------------------------------------------------------------------------------------*/
-
 
 /*Estilos Inicio de sesion y formularios*/
 
@@ -17,15 +20,11 @@
 
 #inicio-de-sesion-titulo {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    height: 10vh;
-    color: #333333;
-    font-size: 0.8em;
-    margin-top: 120px;
-    margin-bottom: 0.7em;
-    font-weight: 500;
+    color: var(--main-color-black);
+    margin-bottom: 2.5em;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -38,25 +37,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 10vh;
-    margin-bottom: 0.7em;
-    margin-top: 0.7em;
+    margin-top: 1.8em;
 }
 
 /*-----------------------------------------------------------------------------------------*/
-
-/* Estilos para los labels */
-
-.form-group label {
-    display: flex;
-    text-align: left;
-    font-size: 0.9em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    color: #333333;
-    font-weight: 400;
-}
-
 
 /*-----------------------------------------------------------------------------------------*/
 
@@ -70,7 +54,6 @@
 .contraseña-olvidada a {
     font-size: 0.9em;
     margin-left: 0.7em;
-    margin-bottom: 50px;
     margin-top: 0.7em;
     color: #06884D;
     font-weight: 600;
@@ -87,7 +70,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 5em;
 
 }
 
@@ -111,12 +94,11 @@
 
 #solicitar-acceso {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 6em;
+    margin-top: 4em;
 }
 
 #solicitar-acceso p {
-    margin-top: 0.7em;
-    margin-bottom: 8.5em;
     font-size: 0.9em;
     color: #000000;
     font-weight: 400;
@@ -127,13 +109,9 @@
     font-weight: 700;
 }
 
-
 /*-----------------------------------------------------------------------------------------*/
 
-
-
 /*---------------------------------------- Formulario enviado------------------------------------*/
-
 
 .formulario-enviado {
     display: flex;
@@ -157,13 +135,8 @@
     align-items: center;
     margin-bottom: 7em;
     margin-top: 10em;
-
 }
-
-
-
 /*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
-
 
 .introduce-correo {
     display: flex;
@@ -191,19 +164,13 @@
 }
 
 .parrafo{
-
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 155px;
     margin-top: 10px;
-
 }
-
-
-
 
 /*--------------------------------------------Formulario de solicitud-------------------------------------------------*/
 
@@ -220,7 +187,6 @@
     margin-bottom: 0px;
 }
 
-
 /*Estilos para la introduccion de datos*/
 
 #email, #last-name,#name, #subject,#address {
@@ -234,9 +200,7 @@
 }
 
 #message{
-
     height: 28vh;
-
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -247,8 +211,7 @@
     display: flex;
     text-align: left;
     font-size: 1em;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-bottom: 0.3em;
     color: #333333;
 }
 
@@ -269,24 +232,22 @@
 }
 
 .datos input:focus {
-    border-color: #06884D;
+    outline: none;
+    border: 2px #06884DFF solid;
 }
 
 
 #message input {
-
     height: 180px;
     font-family:'Poppins', sans-serif;
-
 }
 
 #message input:focus {
-    border-color: #06884D;
+    outline: none;
+    border: 2px #06884DFF solid;
 }
 
 /*-----------------------------------------------------------------------------------------*/
-
-
 /* Estilos para el checkbox */
 #chekbox input[type="checkbox"] {
     margin-right: 5px;
@@ -298,6 +259,4 @@
     font-size: 14px;
     color: #333333;
 }
-
-
 /*-----------------------------------------------------------------------------------------*/

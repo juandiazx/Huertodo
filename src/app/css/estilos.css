@@ -17,7 +17,7 @@
 :root {
     --main-color-white: #ffffff;
     --main-color-black: #000000;
-    --second-color-green: #06884D;
+    --second-color-green: rgb(6, 136, 77);
     --tamaño-28-letra: 1.6em;
 }
 
@@ -436,10 +436,10 @@ body {
 }
 
 /*Estilo contenedor donde deslizan todos los paneles*/
-#contenedor-reseñas-deslizables {
+.contenedor-resenyas-deslizables {
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     border-radius: 1.1em;
-    display: flex;
+    display: none;
     max-width: 100%;
     justify-content: center;
     flex-direction: column;
@@ -448,7 +448,7 @@ body {
 }
 
 /*Contenedor para la cabecera de cada reseña que desliza*/
-#contenedor-cabecera-reseña {
+.contenedor-cabecera-resenya {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -459,7 +459,7 @@ body {
 }
 
 /*Separacion del parrafo con el nombre de cada persona que pone reseña, con las estrellitas puestas a la derecha*/
-#contenedor-cabecera-reseña>div {
+.contenedor-cabecera-resenya>div {
     display: flex;
     justify-content: center ;
 }
@@ -470,7 +470,7 @@ body {
 }
 
 /*Estilo contenedor botones deslizables reseñas*/
-#contenedor-botones-deslizable-reseñas {
+#contenedor-botones-deslizable-resenyas {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -478,8 +478,13 @@ body {
     justify-content: center;
 }
 
+/*Clase para cuando un elemento esta activo*/
+.resenya-activa {
+    display: flex;
+}
+
 /*Estilo botones pertenecen al contenedor de botones deslizables*/
-#contenedor-botones-deslizable-reseñas>button{
+#contenedor-botones-deslizable-resenyas>button{
     margin-left: 1em;
     margin-right: 1em;
     border-radius: 50%;
@@ -495,11 +500,9 @@ body {
 
 /*------------------------Comienza footer------------------------*/
 
+/*Wrapper para aplicar el padding al footer*/
 .wrapper-footer {
-    padding-left: 7%;
-    padding-right: 7%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1em 7%;
 }
 
 /*Estilo footer*/
@@ -510,7 +513,7 @@ body {
     text-align: center;
     font-size: 0.7em;
     font-weight: 500;
-    height: 9em;
+    height: 100%;
     width: 100%;
     background-color: var(--second-color-green);
     color: var(--main-color-white);
@@ -522,6 +525,7 @@ body {
     margin-left: 0.6em;
 }
 
+/*Margenes para el texto de copyrigth del footer*/
 #footer-bottom p {
     margin-top: 1em;
     margin-bottom: 0;

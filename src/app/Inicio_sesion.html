@@ -14,6 +14,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CSS DOCUMENTO estilos.css-->
   <link rel='stylesheet' href="css/main-menu.css"/>
+  <link rel='stylesheet' href="css/estilos.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <!-- JavaScript Documento index.js-->
   <script src="js/index.js"></script>
@@ -34,7 +35,7 @@
     </ul>
 
     <!-- Icono de iniciar sesion-->
-    <a href="monitorizacion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+    <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
     <!-- Menu hamburguesa-->
     <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
@@ -53,7 +54,7 @@
 
     <!-- Comienza la seccion titulo -->
     <div id="inicio-de-sesion-titulo">
-      <h1>Inicio de sesión</h1>
+      <h1 class="h1-formularios-titulos">Inicio de sesión</h1>
     </div>
 
     <form id="login-form" action="/login" method="post">
@@ -79,21 +80,21 @@
       </div>
 
       <div class="contraseña-olvidada">
-        <a href="#">¿Has olvidado la contraseña?</a>
+        <a href="Formulario_contra_olvidada.html">¿Has olvidado la contraseña?</a>
       </div>
 
     </div>
 
     <!-- Comienza la seccion boton -->
     <div class="boton-inicio">
-      <button type="submit" class="boton-iniciar-sesion">Iniciar sesión</button>
+      <button type="submit" class="boton-iniciar-sesion"><a href="monitorizacion.html">Iniciar sesión</a></button>
     </div>
 
     </form>
 
     <!-- Comienza la seccion de solicitar acceso -->
     <div id="solicitar-acceso">
-      <p>¿No tienes cuenta? <a href="#">Solicita el acceso</a>.</p>
+      <p>¿No tienes cuenta? <a href="Formulario_Solicitud.html">Solicita el acceso</a>.</p>
     </div>
 
   </section>

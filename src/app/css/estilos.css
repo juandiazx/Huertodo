@@ -108,7 +108,6 @@
     border-radius: 1.1em;
     display: flex;
     width: 19em;
-    max-width: 100%;
     align-content: center;
     justify-content: center;
     flex-direction: column;
@@ -217,6 +216,26 @@
 }
 
 /*------------------------ACABA PRODUCTO------------------------*/
+
+
+/*------------------------COMIENZA ADMINISTRADOR WEB------------------------*/
+
+.seccion-registros{
+
+}
+
+.seccion-actualizaciones{
+
+}
+
+.acordeon-trabajador {
+    max-width: 1000px;
+    margin: 0.5rem auto;
+}
+
+
+/*------------------------ACABA ADMINISTRADOR WEB------------------------*/
+
 
 /* COMIENZA ESTILOS DE DESPLEGABLES */
 

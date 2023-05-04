@@ -300,8 +300,8 @@
 
 /* Fecha Desplegable Icono */
 .acordeon-item-header::after {
-    content: "\2191";
-    font-size: 1.9rem;
+    content: "\21BE";
+    font-size: 2.5rem;
     margin-left: 0.3rem;
     align-self: center;
     transition: transform 0.2s ease-in-out;

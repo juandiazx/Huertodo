@@ -2,6 +2,7 @@
 .wrapper-forms{
     margin-top: 12vh;
     padding: 10% 7% 15%;
+    height: 100%;
 }
 /*------------------------------------------------------------------------------------------------*/
 
@@ -94,8 +95,8 @@
 
 #solicitar-acceso {
     text-align: center;
-    margin-bottom: 6em;
     margin-top: 4em;
+    margin-bottom: 15vh;
 }
 
 #solicitar-acceso p {
@@ -178,13 +179,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 10vh;
+    text-align: center;
     color: #333333;
-    font-weight: lighter;
-    font-size: 0.7em;
-    margin-top: 100px;
-    margin-bottom: 0px;
+    font-size: 0.9em;
+    margin-bottom: 2.6em;
+
 }
 
 /*Estilos para la introduccion de datos*/
@@ -238,12 +237,18 @@
 
 
 #message input {
-    height: 180px;
+    height: 90px;
+    width: 100%;
     font-family:'Poppins', sans-serif;
+    vertical-align: top;
+    padding-left:1em;
+    padding-bottom: 7em;
+    padding-top: 2em;
 }
 
 #message input:focus {
     outline: none;
+    vertical-align: top;
     border: 2px #06884DFF solid;
 }
 

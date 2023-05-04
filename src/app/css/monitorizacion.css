@@ -118,6 +118,36 @@ h3 {
     height: 2.2em;
 }
 
+/*Estilo del dialogo de notifiacones popup*/
+#desplegable-popup-notificaciones {
+    width: 20em;
+    height: 29em;
+    border-radius: 1.1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    padding: 0.7em;
+    outline: 0;
+    border: none;
+    top: 50%; /* Distancia desde la parte superior */
+    left: 50%; /* Distancia desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+}
+
+/*Estilo popup de su backdrop dialogo de las notificaciones*/
+#desplegable-popup-notificaciones::backdrop {
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    top: 50%; /* Distancia desde la parte superior */
+    left: 50%; /* Distancia desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+    /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(1px);
+    position: fixed; /* Posición fija */
+}
+
+
+
 /*Estilo del contenedor completo de la monitorizacion, panel con sombra*/
 #contenedor-monitorizacion {
     display: flex;
@@ -238,7 +268,7 @@ select {
 /*Contenedor con la tarjeta de la informacion metereologica*/
 #contenedor-informacion-metereologica {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.85em;
@@ -248,17 +278,30 @@ select {
     font-size: 4vw;
 }
 
-/*Contenedor con la fila de la información actual en tiempo real del tiempo*/
-#contenedor-informacion-actual-metereologia {
-    display: flex;
-    justify-content: space-evenly;
+/*Contenedor con la temperatura en tiempo real de la informacion metereologica*/
+#contenedor-temperatura-metereologia p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.9em;
+    align-content: center;
+    margin-bottom: 0;
 }
 
-/*Contenedor con la fila de predicciones por hora del tiempo*/
-#contenedor-fila-horas-metereologia {
-    display: flex;
-    justify-content: space-evenly;
+/*Contenedor con la localizacion de la informacion meterologica*/
+#contenedor-localizacion-metereologia p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2em;
+    align-content: center;
+    margin-bottom: 0;
 }
+
+/*Imagen/icono representando la situación metereológica*/
+.icono-estado-metereologico {
+    width: 4em;
+    height: 4em;
+}
+
 /*Estilo contenedor con el boton para acceder al mapa con los huertos*/
 #contenedor-boton-mapas {
     display: flex;
@@ -267,6 +310,33 @@ select {
     height: auto;
 }
 
+/*Estilo del dialogo de notifiacones popup*/
+#desplegable-popup-mapa {
+    width: 20em;
+    height: 29em;
+    border-radius: 1.1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    padding: 0.7em;
+    outline: 0;
+    border: none;
+    top: 50%; /* Distancia desde la parte superior */
+    left: 50%; /* Distancia desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+}
+
+/*Estilo popup de su backdrop dialogo de las notificaciones*/
+#desplegable-popup-mapa::backdrop {
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    top: 50%; /* Distancia desde la parte superior */
+    left: 50%; /* Distancia desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+    /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(1px);
+    position: fixed; /* Posición fija */
+}
 
 /*------------------------Termina el estilo del espacio peresonal------------------------*/
 

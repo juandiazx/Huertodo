@@ -10,7 +10,6 @@ function toggleMenu(menu){
     })
 }
 
-
 //Trozo de código para cambiar de desplegable dentro de la landing page, resenyas
 
 //Guardamos los id de las resenyas

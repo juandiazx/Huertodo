@@ -14,11 +14,8 @@
     <link rel='stylesheet' href="css/monitorizacion.css"/>
     <link rel='stylesheet' href="css/main-menu.css"/>
     <link rel='stylesheet' href="css/estilos.css"/>
-    <!-- JavaScript Documento index.js-->
-    <script src="js/index.js"></script>
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
-    <!--Añadimos el estilo a el chart-->
 </head>
 <body>
 <!-- Comienza la cabecera-->
@@ -57,9 +54,10 @@
     <!-- Termina el contenedor de notificaciones espacio personal-->
 
     <!-- Desplegable para las notificaciones-->
-    <div id="desplegable-popup-notificaciones" style="display: none">
+    <dialog id="desplegable-popup-notificaciones">
+        <button id="cerrar-dialogo-notificaciones">Cerrar</button>
+    </dialog>
 
-    </div>
     <!--Termina esplegable para las notificaciones-->
 
     <!-- Comienza el contenedor de monitorizacion-->
@@ -118,11 +116,12 @@
         </div>
         <!-- Termina el historial de mediciones grafica-->
         <div id="contenedor-informacion-metereologica">
-            <div id="contenedor-informacion-actual-metereologia">
-                Valencia 25ºC Nublado
+            <img class="icono-estado-metereologico" src="images/icono-soleado.png" alt="icono soleado">
+            <div id="contenedor-temperatura-metereologia">
+                <p>18ºC</p>
             </div>
-            <div id="contenedor-fila-horas-metereologia">
-                15ºC 16ºC 19ºC
+            <div id="contenedor-localizacion-metereologia">
+                <p>Gandia</p>
             </div>
         </div>
         <!-- Comienza el historial de mediciones grafica-->
@@ -133,9 +132,9 @@
     </div>
 
     <!-- Desplegable para el mapa de huertos-->
-    <div id="desplegable-popup-mapa" style="display: none">
-
-    </div>
+    <dialog id="desplegable-popup-mapa">
+        <button id="cerrar-dialogo-mapa">Cerrar</button>
+    </dialog>
     <!--Termina desplegable para el mapa de huertos-->
 
 </section>
@@ -155,5 +154,9 @@
 <script src="js/graficas.js"></script>
 <!-- JavaScript Documento popups-monitorizacion.js para el mapa y las notificaciones-->
 <script src="js/popups-monitorizacion.js"></script>
+<!-- JavaScript Documento index.js-->
+<script src="js/index.js"></script>
+<!-- JavaScript Documento getMedidas.js-->
+<script src="js/getMedidas.js"></script>
 </body>
 </html>

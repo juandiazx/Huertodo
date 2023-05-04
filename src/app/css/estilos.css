@@ -56,7 +56,7 @@
 /* Añadir fondo verde de contraste predeterminado del proyecto */
 #fondo-contraste-sobre-nosotros{
     background-color: var(--second-color-green);
-    height: 55rem;
+    height: 52rem;
     border: 0px solid blue;
 }
 
@@ -107,7 +107,6 @@
     height: 13em;
     border-radius: 1.1em;
     display: flex;
-    width: 19em;
     max-width: 100%;
     align-content: center;
     justify-content: center;
@@ -118,13 +117,9 @@
 
 /* Sección de Valores */
 #seccion-valores{
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
     display: flex;
-    justify-content: center;
-    align-items: start;
     border: 0px solid yellow;
+    justify-content: space-between;
 }
 
 .imagenes-vision {
@@ -153,11 +148,10 @@
 .contenedor-cabecera-valores{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     padding-left: 2%;
     padding-right: 2%;
     justify-content: center;
-    justify-content: space-between;
+    align-items: center;
 }
 
 /*------------------------Termina QUIENES SOMOS------------------------*/

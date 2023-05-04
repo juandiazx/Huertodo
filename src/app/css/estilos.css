@@ -264,6 +264,9 @@
     margin: 0.5rem auto;
 }
 
+.close-icon{
+    order: 10;
+}
 
 /*------------------------ACABA ADMINISTRADOR WEB------------------------*/
 

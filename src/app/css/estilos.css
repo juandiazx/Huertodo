@@ -13,7 +13,7 @@
     word-break: break-word;
 }
 
-/*Declaramos variables en la raiz del documento*/
+/*Declaramos variables en la raíz del documento*/
 :root {
     --main-color-white: #ffffff;
     --main-color-black: #000000;
@@ -40,7 +40,97 @@
     padding-right: 7%;
 }
 
+/* Estilos de texto de la web */
+p {
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 220%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+
+/*Estilo botones verdes y blancos como CTA*/
+.boton-verde-blanco {
+    text-align: center;
+    align-content: center;
+    width: 72%;
+    height: 7%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.1em 0.1em;
+}
+
+/*Margen de las secciones del main*/
+main>section, body>section{
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+}
+
+
+/*Estilos del body*/
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color-white);
+    color: var(--main-color-black);
+    flex-direction: column;
+}
+
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.parrafo-negrita {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+/*------------------------Comienza landing page hero------------------------*/
+/*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
+#landing-page-hero {
+    margin-top: 12vh;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-image: url("../images/landing-hero.png");/*url("../images/8105c4aac55cf49fa54e3ca0a81f0e8a.png");*/
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/*Márgenes para el párrafo de la hero, */
+#landing-page-hero p{
+    margin-top: 1em;
+    margin-bottom: 6em;
+}
+/*------------------------Termina landing page hero------------------------*/
+
+
 /*------------------------Comienza QUIENES SOMOS------------------------*/
+
+/*Estilo general de la página Sobre Nosotros*/
 #quienes-somos-page {
     height: 55vh;
     flex-direction: column;
@@ -51,56 +141,6 @@
     align-items: start;
     border: 0px solid grey;
 
-}
-
-/* Añadir fondo verde de contraste predeterminado del proyecto */
-#fondo-contraste-sobre-nosotros{
-    background-color: var(--second-color-green);
-    height: 50rem;
-    border: 0px solid blue;
-}
-
-/* Secciones de la Página Sobre Nosotros */
-/* Sección de Visión */
-.seccion-vision {
-    color: var(--main-color-white);
-    height: 24rem;
-    margin-top: 2vh;
-    border: 0px solid black;
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-/* Deslizable de tarjetas de Sobre Nosotros (transparencia, pasión, etc) */
-#deslizable-imagenes-sobre-nosotros{
-    border: 0px solid black;
-    text-align: center;
-    border-radius: 1.1em;
-    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Todas las imágenes de la sección de Visión */
-#imagenes-vision{
-    height: 13em;
-    border-radius: 1.1em;
-    display: flex;
-    width: 19em;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: justify-all;
-    align-items: center;
-    border: 0px solid black;
-    margin: 0 auto;
 }
 
 /* Estilo imágenes página Sobre Nosotros */
@@ -116,22 +156,72 @@
     align-items: center;
 }
 
+/* Añadir fondo verde de contraste predeterminado del proyecto */
+#fondo-contraste-sobre-nosotros{
+    background-color: var(--second-color-green);
+    height: 50rem;
+    border: 0px solid blue;
+}
+
+/* Estilos de las secciones de la Página Sobre Nosotros */
+/* Sección de Visión */
+.seccion-vision {
+    color: var(--main-color-white);
+    height: 24rem;
+    margin-top: 2vh;
+    border: 0px solid black;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+/* Todas las imágenes de la sección de Visión */
+#imagenes-vision{
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    width: 19em;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
+    border: 0px solid black;
+    margin: 0 auto;
+}
+
+.imagenes-vision {
+     height: 13em;
+     border-radius: 1.1em;
+     display: flex;
+     max-width: 100%;
+     align-content: center;
+     justify-content: center;
+     flex-direction: column;
+     text-align: justify-all;
+     align-items: center;
+ }
+
 /* Sección de Valores */
 #seccion-valores{
     display: flex;
     border: 0px solid yellow;
     justify-content: space-between;
 }
+/* Acaban los estilos de las secciones de la página Sobre Nosotros*/
 
-.imagenes-vision {
-    height: 13em;
+/* Deslizable de tarjetas de Sobre Nosotros (transparencia, calidad, pasión) */
+#deslizable-imagenes-sobre-nosotros{
+    border: 0px solid black;
+    text-align: center;
     border-radius: 1.1em;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
     display: flex;
-    max-width: 100%;
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    text-align: justify-all;
     align-items: center;
 }
 
@@ -156,60 +246,6 @@
 }
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
-
-/* SELECTOR DE IMÁGENES PRODUCTO */
-/* Esconde las imágenes por defecto */
-.mySlides {
-    display: none;
-}
-
-/* Características de las imágenes mostradas del selector */
-.image-selector {
-    width: 100%;
-    height: 6%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3em;
-
-}
-
-/* Fila de imágenes del selector */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    margin-bottom: 2em;
-}
-
-/* Crea seis columnas en la fila para las seis imágenes del selector */
-.column {
-    float: left;
-    width: 16.66%;
-    padding: 0 5px;
-    height: 4em;
-}
-
-/* Características de las imágenes inferiores de selección */
-.demo {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-}
-
-/* Características cuando se selecciona una imagen inferior del selector */
-.demo:hover {
-    opacity: 1;
-    box-shadow: 0px 3px 6px 0 rgba(0,0,0,0.6);
-}
-
-/* ACABA SELECTOR DE IMÁGENES PRODUCTO */
 
 /*------------------------COMIENZA PRODUCTO------------------------*/
 
@@ -246,6 +282,58 @@
     margin-top: 4vh;
 }
 
+/* SELECTOR DE IMÁGENES PRODUCTO */
+/* Esconde las imágenes por defecto */
+.mySlides {
+    display: none;
+}
+
+/* Características de las imágenes mostradas del selector */
+.image-selector {
+    width: 100%;
+    height: 6%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+/* Fila de imágenes del selector */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 2em;
+}
+
+/* Crea seis columnas en la fila para las seis imágenes del selector */
+.column {
+    float: left;
+    width: 16.66%;
+    padding: 0 5px;
+    height: 4em;
+}
+
+/* Características de las imágenes inferiores de selección */
+.demo {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Características cuando se selecciona una imagen inferior del selector */
+.demo:hover {
+    opacity: 1;
+    box-shadow: 0px 3px 6px 0 rgba(0,0,0,0.6);
+}
+
+/* ACABA SELECTOR DE IMÁGENES PRODUCTO */
+
 /*------------------------ACABA PRODUCTO------------------------*/
 
 
@@ -273,7 +361,7 @@
 /*------------------------ACABA ADMINISTRADOR WEB------------------------*/
 
 
-/* COMIENZA ESTILOS DE DESPLEGABLES */
+/* COMIENZA ESTILOS DE DESPLEGABLES GENERALES */
 
 .acordeon {
     max-width: 1000px;
@@ -325,59 +413,12 @@
 
 /* ACABA ESTILOS DE DESPLEGABLES */
 
-p {
-    font-size: 90%;
-    font-weight: 400;
-    margin-bottom: 1.4em;
-}
-
-h1 {
-    font-weight: 800;
-    font-size: 220%;
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 140%;
-    margin-bottom: 0.4em;
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 150%;
-    margin-bottom: 0.8em;
-    margin-top: 1.2em;
-}
-
-/*Estilo botones verdes y blancos como CTA*/
-.boton-verde-blanco {
-    text-align: center;
-    align-content: center;
-    width: 72%;
-    height: 7%;
-    border-radius: 3em;
-    border: none;
-    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
-    background: var(--second-color-green);
-    color: var(--main-color-white);
-    font-family:'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 170%;
-    padding: 0.1em 0.1em;
-}
-
 /*Botón saber mas clase estilo*/
 #contenedor-boton-saber-mas {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 92%;
-}
-
-/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
-.parrafo-negrita {
-    font-size: 110%;
-    font-weight: 600;
 }
 
 /*Estilo imágenes de la landing page*/
@@ -390,51 +431,13 @@ h3 {
     margin-bottom: 3em;
 }
 
-/*Margen de las secciones del main*/
-main>section, body>section{
-    margin-top: 1.7em;
-    margin-bottom: 1.7em;
-}
-
-
-/*Estilos del body*/
-body {
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--main-color-white);
-    color: var(--main-color-black);
-    flex-direction: column;
-}
-/*------------------------Comienza landing page hero------------------------*/
-/*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
-#landing-page-hero {
-    margin-top: 12vh;
-    height: 88vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    background-image: url("../images/landing-hero.png");/*url("../images/8105c4aac55cf49fa54e3ca0a81f0e8a.png");*/
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-/*Margenes para el parrafo de la hero, */
-#landing-page-hero p{
-    margin-top: 1em;
-    margin-bottom: 6em;
-}
-/*------------------------Termina landing page hero------------------------*/
-
-/*------------------------Comienza seccion mantenimiento------------------------*/
-/*Estilo de la seccion de mantenimiento en la landing page*/
+/*------------------------Comienza sección mantenimiento------------------------*/
+/*Estilo de la sección de mantenimiento en la landing page*/
 #seccion-mantenimiento {
     background-color: var(--second-color-green);
     color: var(--main-color-white);
 }
-/*------------------------Termina seccion mantenimiento------------------------*/
+/*------------------------Termina sección mantenimiento------------------------*/
 
 /*------------------------Comienza reseñas------------------------*/
 

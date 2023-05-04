@@ -99,6 +99,7 @@
     text-align: justify-all;
     align-items: center;
     border: 0px solid black;
+    margin: 0 auto;
 }
 
 /* Estilo imágenes página Sobre Nosotros */
@@ -161,6 +162,7 @@
 
 /*------------------------Termina QUIENES SOMOS------------------------*/
 
+/* SELECTOR DE IMÁGENES PRODUCTO */
 /* Esconde las imágenes por defecto */
 .mySlides {
     display: none;

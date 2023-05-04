@@ -56,7 +56,7 @@
 /* Añadir fondo verde de contraste predeterminado del proyecto */
 #fondo-contraste-sobre-nosotros{
     background-color: var(--second-color-green);
-    height: 52rem;
+    height: 50rem;
     border: 0px solid blue;
 }
 
@@ -64,7 +64,8 @@
 /* Sección de Visión */
 .seccion-vision {
     color: var(--main-color-white);
-    height: 25rem;
+    height: 24rem;
+    margin-top: 2vh;
     border: 0px solid black;
     flex-direction: column;
     align-content: center;
@@ -263,6 +264,9 @@
     margin: 0.5rem auto;
 }
 
+.close-icon{
+    order: 10;
+}
 
 /*------------------------ACABA ADMINISTRADOR WEB------------------------*/
 

@@ -19,12 +19,12 @@ async function iniciarSesion(event) {
         }
         else if(respuestaUsuarioJSON[i].correo === correo && respuestaUsuarioJSON[i].contrasenya === contrasenya &&
             respuestaUsuarioJSON[i].tipo === "tecnico"){
-            location.href = "tecnico.html";
+            location.href = "Tecnico.html";
             break
         }
         else if(respuestaUsuarioJSON[i].correo === correo && respuestaUsuarioJSON[i].contrasenya === contrasenya &&
             respuestaUsuarioJSON[i].tipo === "comercial"){
-            location.href = "comercial.html";
+            location.href = "Comercial.html";
             break
         }
         else if(respuestaUsuarioJSON[i].correo === correo && respuestaUsuarioJSON[i].contrasenya === contrasenya &&

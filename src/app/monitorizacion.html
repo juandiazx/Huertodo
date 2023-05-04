@@ -54,9 +54,10 @@
     <!-- Termina el contenedor de notificaciones espacio personal-->
 
     <!-- Desplegable para las notificaciones-->
-    <div id="desplegable-popup-notificaciones" style="display: none">
+    <dialog id="desplegable-popup-notificaciones">
+        <button id="cerrar-dialogo-notificaciones">Cerrar</button>
+    </dialog>
 
-    </div>
     <!--Termina esplegable para las notificaciones-->
 
     <!-- Comienza el contenedor de monitorizacion-->
@@ -115,11 +116,12 @@
         </div>
         <!-- Termina el historial de mediciones grafica-->
         <div id="contenedor-informacion-metereologica">
-            <div id="contenedor-informacion-actual-metereologia">
-                Valencia 25ºC Nublado
+            <img class="icono-estado-metereologico" src="images/icono-soleado.png" alt="icono soleado">
+            <div id="contenedor-temperatura-metereologia">
+                <p>18ºC</p>
             </div>
-            <div id="contenedor-fila-horas-metereologia">
-                15ºC 16ºC 19ºC
+            <div id="contenedor-localizacion-metereologia">
+                <p>Gandia</p>
             </div>
         </div>
         <!-- Comienza el historial de mediciones grafica-->
@@ -130,9 +132,9 @@
     </div>
 
     <!-- Desplegable para el mapa de huertos-->
-    <div id="desplegable-popup-mapa" style="display: none">
-
-    </div>
+    <dialog id="desplegable-popup-mapa">
+        <button id="cerrar-dialogo-mapa">Cerrar</button>
+    </dialog>
     <!--Termina desplegable para el mapa de huertos-->
 
 </section>

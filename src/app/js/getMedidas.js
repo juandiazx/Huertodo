@@ -15,13 +15,10 @@ function getRandomNumber(min, max) {
 //con valores random para cada parametro en tiempo real
 document.addEventListener('DOMContentLoaded', function() {
     setInterval(function (){
-        if(selectorNombreHuerto.value == "Huerto 1"){
             humedad.innerText = getRandomNumber(50,75)+"%"
             salinidad.innerText = getRandomNumber(10,30)+"%"
             iluminacion.innerText = "Alta"
             ph.innerText = getRandomNumber(3,6)
             temperatura.innerText = getRandomNumber(14,20)+"ºC"
-
-        }
     }, 16000);
 });

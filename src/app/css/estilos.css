@@ -34,13 +34,10 @@
     height: 2rem;
 }
 
-/*Contenedor completo, wrapper de toda la monitorización*/
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
 .wrapper {
     padding-left: 7%;
     padding-right: 7%;
-    margin-top: 6rem;
-    padding-top: 10%;
-    padding-bottom: 15%;
 }
 
 /*------------------------Comienza QUIENES SOMOS------------------------*/
@@ -188,6 +185,13 @@
 
 /*------------------------COMIENZA PRODUCTO------------------------*/
 
+/*Contenedor completo, wrapper de producto,  lleva el margin top 12vh*/
+.wrapper-producto {
+    margin-top: 12vh;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 /* Página del Producto */
 #producto-page{
     flex-direction: column;
@@ -196,11 +200,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3em;
 }
 
-.seccion-ficha-producto{
-
-}
 /* Botones de la página de Producto */
 .boton-producto {
     flex-direction: column;
@@ -296,6 +298,8 @@ h3 {
 
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
+    text-align: center;
+    align-content: center;
     width: 72%;
     height: 7%;
     border-radius: 3em;
@@ -306,6 +310,7 @@ h3 {
     font-family:'Poppins', sans-serif;
     font-weight: 500;
     font-size: 170%;
+    padding: 0.1em 0.1em;
 }
 
 /*Botón saber mas clase estilo*/
@@ -332,16 +337,6 @@ h3 {
     margin-bottom: 3em;
 }
 
-/*El estilo que tendrán las secciones hijas directas de body main y footer*/
-body>section, main>section,footer>section{
-    padding-left: 7%;
-    padding-right: 7%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
 /*Margen de las secciones del main*/
 main>section, body>section{
     margin-top: 1.7em;
@@ -360,11 +355,14 @@ body {
 /*------------------------Comienza landing page hero------------------------*/
 /*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
 #landing-page-hero {
-    height: 100vh;
+    margin-top: 12vh;
+    height: 88vh;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    align-content: center;
     background-image: url("../images/landing-hero.png");/*url("../images/8105c4aac55cf49fa54e3ca0a81f0e8a.png");*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -436,7 +434,11 @@ body {
     padding-left: 9%;
     padding-right: 9%;
     justify-content: center;
-    justify-content: space-between;
+}
+
+/*Estilo del nombre de la persona dentro de cada resenya*/
+.contenedor-cabecera-resenya p {
+    margin-right: 0.6em;
 }
 
 /*Separacion del parrafo con el nombre de cada persona que pone reseña, con las estrellitas puestas a la derecha*/

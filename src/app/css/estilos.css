@@ -255,12 +255,14 @@
 
 }
 
-.seccion-actualizaciones{
-
+.texto-desplegable-trabajadores{
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: space-evenly;
 }
 
 .acordeon-trabajador {
-    max-width: 1000px;
+    max-width: 700px;
     margin: 0.5rem auto;
 }
 

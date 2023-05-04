@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 1.8em;
+    margin-top: 1em;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -148,7 +148,7 @@
     color: #333333;
     font-weight: lighter;
     font-size: 0.8em;
-    margin-top: 225px;
+    margin-top: 14em;
     margin-bottom: 10px;
 }
 
@@ -169,12 +169,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 155px;
+    margin-bottom: 20vh;
     margin-top: 10px;
 }
 
 /*--------------------------------------------Formulario de solicitud-------------------------------------------------*/
 
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
 .solicitud-producto {
     display: flex;
     flex-direction: column;
@@ -194,13 +198,10 @@
     align-items: center;
     text-align: center;
     height: 10vh;
-    margin-bottom: 5px;
-    margin-top: 0px;
+    margin-bottom: 0.7em;
+    margin-top: 0.5em;
 }
 
-#message{
-    height: 28vh;
-}
 
 /*-----------------------------------------------------------------------------------------*/
 
@@ -222,8 +223,6 @@
     width: 100%;
     padding: 15px;
     font-size: 0.9em;
-    margin-bottom: 0px;
-    margin-top: 0px;
     border-radius: 10px;
     border-width: 1px;
     font-family:'Poppins', sans-serif;
@@ -234,34 +233,72 @@
     outline: none;
     border: 2px #06884DFF solid;
 }
-
-
-#message input {
-    height: 90px;
-    width: 100%;
-    font-family:'Poppins', sans-serif;
-    vertical-align: top;
-    padding-left:1em;
-    padding-bottom: 7em;
-    padding-top: 2em;
+/*Id del contenedor con el mensaje de texto grande del formulario de solicitud*/
+#message {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
-#message input:focus {
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+    height: 10em;
+}
+
+textarea:focus {
     outline: none;
-    vertical-align: top;
     border: 2px #06884DFF solid;
 }
 
+.boton-enviar-formulario-solicitud-activo {
+    width: 100%;
+    height: 7%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 140%;
+    padding: 7px ;
+}
+
+.boton-enviar-formulario-solicitud-desactivado {
+    width: 100%;
+    height: 7%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: gray;
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 140%;
+    padding: 7px ;
+}
 /*-----------------------------------------------------------------------------------------*/
-/* Estilos para el checkbox */
+
+/*Estilo para el contenedor del checkbox */
+#chekbox {
+    display: flex;
+    align-items: center;
+}
+/* Estilos para el input del checkbox*/
 #chekbox input[type="checkbox"] {
     margin-right: 5px;
     font-family:'Poppins', sans-serif;
 }
 
-/* Estilos para el texto del checkbox */
+/* Estilos para el label al lado del checkbox, el texto de aceptar terminos */
 #chekbox label {
-    font-size: 14px;
+    font-size: 1em;
     color: #333333;
 }
 /*-----------------------------------------------------------------------------------------*/

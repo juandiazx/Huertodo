@@ -72,7 +72,7 @@
     <div id="email">
       <div class="datos">
         <label for="email">Email*</label>
-        <input type="text" id="email-input" name="email" required>
+        <input type="email" id="email-input" name="email" required>
       </div>
     </div>
 
@@ -93,25 +93,19 @@
     <div id="message">
       <div class="datos">
         <label for="message">Mensaje*</label>
-        <input type="text" id="message-input" name="message" required>
+        <textarea type="text" id="message-input" name="message" required></textarea>
       </div>
     </div>
 
-
     <div id="chekbox">
-
       <input type="checkbox" id="aceptar-terminos">
-      <label for="aceptar-terminos">Aceptar términos y condiciones</label>
-
+      <label for="aceptar-terminos">Acepto los términos y condiciones</label>
     </div>
-
 
     <!-- Comienza la seccion boton -->
     <div class="boton-enviar">
-      <button type="submit" class="boton-iniciar-sesion">Enviar</button>
+      <button type="submit" id="boton-enviar-formulario-solicitud" class="boton-enviar-formulario-solicitud-desactivado">Enviar</button>
     </div>
-
-
     </form>
 
   </section>
@@ -130,7 +124,7 @@
   </div>
 </footer>
 <!-- Termina el footer-->
-
-
+<!-- JavaScript Documento formulario-solicitud.js-->
+<script src="js/formulario-solicitud.js"></script>
 </body>
 </html>

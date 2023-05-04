@@ -29,7 +29,7 @@ async function iniciarSesion(event) {
         }
         else if(respuestaUsuarioJSON[i].correo === correo && respuestaUsuarioJSON[i].contrasenya === contrasenya &&
             respuestaUsuarioJSON[i].tipo === "administrador"){
-            location.href = "administrador.html";
+            location.href = "Administrador_Web.html";
             break
         }
         else if(i=== respuestaUsuarioJSON.length-1){

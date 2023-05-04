@@ -358,6 +358,23 @@ body {
     order: 10;
 }
 
+/*Títulos comunes para trabajadores*/
+
+.títulos-trabajadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4vh;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
 /*------------------------ACABA ADMINISTRADOR WEB------------------------*/
 
 

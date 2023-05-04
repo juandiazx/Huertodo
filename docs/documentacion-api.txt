@@ -1,13 +1,12 @@
 En   src/api/v.0.0   se encuentran los archivos .json para la simulación de datos del Sprint 3, aun no se involucra
 lógica del negocio, ni sevidor, ni bases de datos.
 
-Los usuarios y contraseñas posibles para realizar la prueba de producto son los siguientes:
+Los usuarios y contraseñas posibles para realizar la prueba de la Web del G01 son los siguientes:
 
--Usuarios Finales: Correo: joselgarciamant1@gmail.com  Contraseña: mementoMori45
-                   Correo: marcramedwa@gmail.com  Contraseña: amuntValencia98
+-Usuario final: Correo: joselgarciamant1@gmail.com  Contraseña: mementoMori45
 
--Comercial:
+-Comercial: Correo: lanternmartin@gmail.com  Contraseña: upvMejorUniLoremIpsum
 
--Administrador Web:
+-Administrador Web: Correo: mauforonxl@gmail.com  Contraseña: vivaWordpress2012
 
--Técnico:
+-Técnico: Correo: saavedrarogg@gmail.com  Contraseña: hartoDeLosArduinos400

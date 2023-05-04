@@ -13,6 +13,7 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/monitorizacion.css"/>
     <link rel='stylesheet' href="css/main-menu.css"/>
+    <link rel='stylesheet' href="css/estilos.css"/>
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
     <!-- Añadir librerias de chart.js-->
@@ -43,9 +44,8 @@
     </nav>
 </header>
 <!--Termina la cabecera-->
-<div class="wrapper">
 <!-- Comienza la seccion de espacio personal sin banner ni footer-->
-<section id="contenedor-espacio-personal-completo">
+<section id="contenedor-espacio-personal-completo" class="wrapper">
 
     <!-- Comienza el contenedor de notificaciones espacio personal-->
     <div id="contenedor-notificaciones">
@@ -129,7 +129,7 @@
     </div>
     <!-- Termina el contenedor de monitorizacion-->
     <div id="contenedor-boton-mapas">
-        <button id="boton-mapas-huertos" class="boton-verde-blanco">Mapa con tus huertos</button>
+        <button id="boton-mapas-huertos" class="boton-verde-blanco-mapa">Mapa con tus huertos</button>
     </div>
 
     <!-- Desplegable para el mapa de huertos-->
@@ -139,10 +139,9 @@
     <!--Termina desplegable para el mapa de huertos-->
 
 </section>
-</div>
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-    <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+    <div id="contenedor-footer-texto">
         <!--Contenedor con los links de texto-->
         <div>
             <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
@@ -152,8 +151,9 @@
     </div>
 </footer>
 <!-- Termina el footer-->
-
-<!--Script para la grafica historial de parámetros-->
+<!-- JavaScript Documento graficas.js para la gráfica-->
 <script src="js/graficas.js"></script>
+<!-- JavaScript Documento popups-monitorizacion.js para el mapa y las notificaciones-->
+<script src="js/popups-monitorizacion.js"></script>
 </body>
 </html>

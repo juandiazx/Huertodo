@@ -55,7 +55,7 @@ h3 {
 }
 
 /*Estilo botones verdes y blancos como CTA*/
-.boton-verde-blanco {
+.boton-verde-blanco-mapa {
     width: 85%;
     height: 105%;
     border-radius: 3em;
@@ -77,7 +77,7 @@ h3 {
 
 /*Contenedor completo, wrapper de toda la monitorización*/
 .wrapper {
-    margin-top: 6rem;
+    margin-top: 12vh;
     padding: 10% 7% 15%;
 }
 

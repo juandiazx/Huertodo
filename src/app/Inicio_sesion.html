@@ -5,7 +5,8 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>GTI G01</title>
+  <title>Inicio de sesión</title>
+  <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
   <!-- Para que pueda verse bien en movil-->
   <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
   <!-- Palabras clave para el SEO de la Web-->
@@ -16,8 +17,6 @@
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
-  <!-- JavaScript Documento index.js-->
-  <script src="js/index.js"></script>
 
 </head>
 
@@ -49,7 +48,7 @@
 
 <!-- Comienza la seccion general -->
 
-<main>
+<main class="wrapper-forms">
   <section id="inicio-sesion">
 
     <!-- Comienza la seccion titulo -->
@@ -57,39 +56,30 @@
       <h1 class="h1-formularios-titulos">Inicio de sesión</h1>
     </div>
 
-    <form id="login-form" action="/login" method="post">
-
+    <form id="login-form">
     <!-- Comienza la seccion email -->
     <div id="email">
       <div class="datos">
-
         <label for="email">Email</label>
         <input type="email" id="email-input" name="email" required>
-
       </div>
-
     </div>
 
     <!-- Comienza la seccion contraseña -->
     <div id="password">
       <div class="datos">
-
         <label for="password">Contraseña</label>
         <input type="password" id="password-input" name="password" required>
-
       </div>
-
       <div class="contraseña-olvidada">
         <a href="Formulario_contra_olvidada.html">¿Has olvidado la contraseña?</a>
       </div>
-
     </div>
 
     <!-- Comienza la seccion boton -->
     <div class="boton-inicio">
-      <button type="submit" class="boton-iniciar-sesion"><a href="monitorizacion.html">Iniciar sesión</a></button>
+      <button type="submit" class="boton-iniciar-sesion">Iniciar sesión</button>
     </div>
-
     </form>
 
     <!-- Comienza la seccion de solicitar acceso -->
@@ -103,8 +93,8 @@
 
 
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-  <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
     <!--Contenedor con los links de texto-->
     <div>
       <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
@@ -114,6 +104,8 @@
   </div>
 </footer>
 <!-- Termina el footer-->
-
+<!-- JavaScript Documento index.js-->
+<script src="js/index.js"></script>
+<script src="js/inicio-sesion.js"></script>
 </body>
 </html>

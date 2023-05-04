@@ -72,17 +72,71 @@
     </section>
   </section>
   <!-- Comienza la sección de valores-->
-  <section id="seccion-valores">
     <h2>Nuestros Valores</h2>
-    <section class="pequeña-separacion-contenido"></section>
-    <article id="deslizable-imagenes-sobre-nosotros">
+
+  <!-- Comienza la sección de Paneles de Valores-->
+  <section id="seccion-valores">
+    <section id="seccion-resenyas">
+    <div id="resenya-1" class="contenedor-resenyas-deslizables resenya-activa">
       <h3>Transparencia</h3>
-      <img id="imagenes-vision" src="images/transparenciaTab_sobreNosotros.png" alt="Hombre investigando cultivos.">
-      <section class="pequeña-separacion-contenido"></section>
-      <p>Creemos en la honestidad y la apertura en todas nuestras interacciones, y nos esforzamos por proporcionar información clara y precisa sobre nuestros productos y servicios.</p>
-      <section class="pequeña-separacion-contenido"></section>
-    </article>
+      <!--Cabecera cada reseña-->
+      <div class="contenedor-cabecera-valores">
+        <div>
+          <img class="imagenes-vision" src="images/transparenciaTab_sobreNosotros.png" alt="Hombre investigando cultivos.">
+        </div>
+      </div>
+      <!--Texto reseña persona-->
+      <div>
+        <section class="pequeña-separacion-contenido"></section>
+        <p>Creemos en la honestidad y la apertura en todas nuestras interacciones, y nos esforzamos por proporcionar información clara y precisa sobre nuestros productos y servicios.</p>
+      </div>
+    </div>
+
+    <div id="resenya-2" class="contenedor-resenyas-deslizables">
+      <!--Reseña concreta usuario-->
+      <!--Cabecera cada reseña-->
+      <div class="contenedor-cabecera-valores">
+        <div>
+          <p class="parrafo-negrita">Laura Lor</p>
+        </div>
+        <div>
+          <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+        </div>
+      </div>
+      <!--Texto reseña persona-->
+      <div>
+        <section class="pequeña-separacion-contenido"></section>
+        <p>Desde que adquirí mi huerto doméstico monitorizable ahorro tiempo, consumo alimentos de calidad y mi familia está tranquila</p>
+      </div>
+    </div>
+
+    <div id="resenya-3" class="contenedor-resenyas-deslizables">
+      <!--Reseña concreta usuario-->
+      <!--Cabecera cada reseña-->
+      <div class="contenedor-cabecera-valores">
+        <div>
+          <p class="parrafo-negrita">Eduardo Pío</p>
+        </div>
+        <div>
+          <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+        </div>
+      </div>
+      <!--Texto reseña persona-->
+      <div>
+        <section class="pequeña-separacion-contenido"></section>
+        <p>Recomiendo el producto de GTI encarecidamente, si estás interesado en cultivar tu huerto doméstico, es tu mejor opción" </p>
+      </div>
+    </div>
+    <!--Botones para mover deslizables-->
+    <div id="contenedor-botones-deslizable-resenyas">
+      <button id="deslizar-izquierda-resenya"><</button>
+      <button id="deslizar-derecha-resenya">></button>
+    </div>
   </section>
+  </section>
+  <!-- Termina la sección de Paneles de Valores -->
+
+
 </main>
 <!-- Termina el main, explicación general -->
 
@@ -98,5 +152,8 @@
   </div>
 </footer>
 <!-- Termina el footer-->
+
+<!-- JavaScript Paneles Valores -->
+<script src="js/paneles_valores.js"></script>
 </body>
 </html>

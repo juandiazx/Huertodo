@@ -74,18 +74,6 @@
     align-items: start;
 }
 
-/* Sección de Valores */
-#seccion-valores{
-    height: 40rem;
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    border: 0px solid yellow;
-}
-
 /* Deslizable de tarjetas de Sobre Nosotros (transparencia, pasión, etc) */
 #deslizable-imagenes-sobre-nosotros{
     border: 0px solid black;
@@ -125,6 +113,50 @@
     flex-direction: column;
     text-align: justify-all;
     align-items: center;
+}
+
+/* Sección de Valores */
+#seccion-valores{
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border: 0px solid yellow;
+}
+
+.imagenes-vision {
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
+}
+
+.contenedor-resenyas-deslizables{
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    border-radius: 1.1em;
+    display: none;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+    text-align: center;
+}
+
+.contenedor-cabecera-valores{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+    justify-content: space-between;
 }
 
 /*------------------------Termina QUIENES SOMOS------------------------*/

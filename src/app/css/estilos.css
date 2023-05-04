@@ -13,7 +13,7 @@
     word-break: break-word;
 }
 
-/*Declaramos variables en la raiz del documento*/
+/*Declaramos variables en la raíz del documento*/
 :root {
     --main-color-white: #ffffff;
     --main-color-black: #000000;
@@ -40,291 +40,7 @@
     padding-right: 7%;
 }
 
-/*------------------------Comienza QUIENES SOMOS------------------------*/
-#quienes-somos-page {
-    height: 55vh;
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    border: 0px solid grey;
-
-}
-
-/* Añadir fondo verde de contraste predeterminado del proyecto */
-#fondo-contraste-sobre-nosotros{
-    background-color: var(--second-color-green);
-    height: 50rem;
-    border: 0px solid blue;
-}
-
-/* Secciones de la Página Sobre Nosotros */
-/* Sección de Visión */
-.seccion-vision {
-    color: var(--main-color-white);
-    height: 24rem;
-    margin-top: 2vh;
-    border: 0px solid black;
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-/* Deslizable de tarjetas de Sobre Nosotros (transparencia, pasión, etc) */
-#deslizable-imagenes-sobre-nosotros{
-    border: 0px solid black;
-    text-align: center;
-    border-radius: 1.1em;
-    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Todas las imágenes de la sección de Visión */
-#imagenes-vision{
-    height: 13em;
-    border-radius: 1.1em;
-    display: flex;
-    width: 19em;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: justify-all;
-    align-items: center;
-    border: 0px solid black;
-    margin: 0 auto;
-}
-
-/* Estilo imágenes página Sobre Nosotros */
-.imagenes-sobre-nosotros {
-    height: 13em;
-    border-radius: 1.1em;
-    display: flex;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: justify-all;
-    align-items: center;
-}
-
-/* Sección de Valores */
-#seccion-valores{
-    display: flex;
-    border: 0px solid yellow;
-    justify-content: space-between;
-}
-
-.imagenes-vision {
-    height: 13em;
-    border-radius: 1.1em;
-    display: flex;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: justify-all;
-    align-items: center;
-}
-
-.contenedor-resenyas-deslizables{
-    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
-    border-radius: 1.1em;
-    display: none;
-    max-width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0.8rem 1rem;
-    text-align: center;
-}
-
-.contenedor-cabecera-valores{
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 2%;
-    padding-right: 2%;
-    justify-content: center;
-    align-items: center;
-}
-
-/*------------------------Termina QUIENES SOMOS------------------------*/
-
-/* SELECTOR DE IMÁGENES PRODUCTO */
-/* Esconde las imágenes por defecto */
-.mySlides {
-    display: none;
-}
-
-/* Características de las imágenes mostradas del selector */
-.image-selector {
-    width: 100%;
-    height: 6%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3em;
-
-}
-
-/* Fila de imágenes del selector */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-    margin-bottom: 2em;
-}
-
-/* Crea seis columnas en la fila para las seis imágenes del selector */
-.column {
-    float: left;
-    width: 16.66%;
-    padding: 0 5px;
-    height: 4em;
-}
-
-/* Características de las imágenes inferiores de selección */
-.demo {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-}
-
-/* Características cuando se selecciona una imagen inferior del selector */
-.demo:hover {
-    opacity: 1;
-    box-shadow: 0px 3px 6px 0 rgba(0,0,0,0.6);
-}
-
-/* ACABA SELECTOR DE IMÁGENES PRODUCTO */
-
-/*------------------------COMIENZA PRODUCTO------------------------*/
-
-/*Contenedor completo, wrapper de producto,  lleva el margin top 12vh*/
-.wrapper-producto {
-    margin-top: 12vh;
-    padding-left: 7%;
-    padding-right: 7%;
-}
-
-/* Página del Producto */
-#producto-page{
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3em;
-}
-
-/* Botones de la página de Producto */
-.boton-producto {
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Características de la sección de preguntas frecuentes */
-.seccion-preguntas{
-    margin-top: 4vh;
-}
-
-/*------------------------ACABA PRODUCTO------------------------*/
-
-
-/*------------------------COMIENZA ADMINISTRADOR WEB------------------------*/
-
-.seccion-registros{
-
-}
-
-.texto-desplegable-trabajadores{
-    display: flex;
-    flex: 1 1 0px;
-    justify-content: space-evenly;
-}
-
-.acordeon-trabajador {
-    max-width: 700px;
-    margin: 0.5rem auto;
-}
-
-.close-icon{
-    order: 10;
-}
-
-/*------------------------ACABA ADMINISTRADOR WEB------------------------*/
-
-
-/* COMIENZA ESTILOS DE DESPLEGABLES */
-
-.acordeon {
-    max-width: 1000px;
-    margin: 2rem auto;
-}
-
-.acordeon-item {
-    background-color: #06884D;
-    color: #fff;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
-}
-
-.acordeon-item-header {
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    min-height: 3.5rem;
-    line-height: 1.3rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-/* Fecha Desplegable Icono */
-.acordeon-item-header::after {
-    content: "\2191";
-    font-size: 1.9rem;
-    margin-left: 0.3rem;
-    align-self: center;
-    transition: transform 0.2s ease-in-out;
-}
-
-.acordeon-item-header.active::after {
-    transform: rotate(180deg);
-}
-
-.acordeon-item-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-.acordeon-item-body-content {
-    padding: 1rem;
-    line-height: 1.5rem;
-    border-top: 1px solid white;
-}
-
-/* ACABA ESTILOS DE DESPLEGABLES */
-
+/* Estilos de texto de la web */
 p {
     font-size: 90%;
     font-weight: 400;
@@ -366,30 +82,6 @@ h3 {
     padding: 0.1em 0.1em;
 }
 
-/*Botón saber mas clase estilo*/
-#contenedor-boton-saber-mas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 92%;
-}
-
-/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
-.parrafo-negrita {
-    font-size: 110%;
-    font-weight: 600;
-}
-
-/*Estilo imágenes de la landing page*/
-.imagenes-landing {
-    height: 6%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3em;
-}
-
 /*Margen de las secciones del main*/
 main>section, body>section{
     margin-top: 1.7em;
@@ -405,6 +97,13 @@ body {
     color: var(--main-color-black);
     flex-direction: column;
 }
+
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.parrafo-negrita {
+    font-size: 110%;
+    font-weight: 600;
+}
+
 /*------------------------Comienza landing page hero------------------------*/
 /*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
 #landing-page-hero {
@@ -421,20 +120,342 @@ body {
     background-size: 100% 100%;
 }
 
-/*Margenes para el parrafo de la hero, */
+/*Márgenes para el párrafo de la hero, */
 #landing-page-hero p{
     margin-top: 1em;
     margin-bottom: 6em;
 }
 /*------------------------Termina landing page hero------------------------*/
 
-/*------------------------Comienza seccion mantenimiento------------------------*/
-/*Estilo de la seccion de mantenimiento en la landing page*/
+
+/*------------------------Comienza QUIENES SOMOS------------------------*/
+
+/*Estilo general de la página Sobre Nosotros*/
+#quienes-somos-page {
+    height: 55vh;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border: 0px solid grey;
+
+}
+
+/* Estilo imágenes página Sobre Nosotros */
+.imagenes-sobre-nosotros {
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
+}
+
+/* Añadir fondo verde de contraste predeterminado del proyecto */
+#fondo-contraste-sobre-nosotros{
+    background-color: var(--second-color-green);
+    height: 50rem;
+    border: 0px solid blue;
+}
+
+/* Estilos de las secciones de la Página Sobre Nosotros */
+/* Sección de Visión */
+.seccion-vision {
+    color: var(--main-color-white);
+    height: 24rem;
+    margin-top: 2vh;
+    border: 0px solid black;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+/* Todas las imágenes de la sección de Visión */
+#imagenes-vision{
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    width: 19em;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
+    border: 0px solid black;
+    margin: 0 auto;
+}
+
+.imagenes-vision {
+     height: 13em;
+     border-radius: 1.1em;
+     display: flex;
+     max-width: 100%;
+     align-content: center;
+     justify-content: center;
+     flex-direction: column;
+     text-align: justify-all;
+     align-items: center;
+ }
+
+/* Sección de Valores */
+#seccion-valores{
+    display: flex;
+    border: 0px solid yellow;
+    justify-content: space-between;
+}
+/* Acaban los estilos de las secciones de la página Sobre Nosotros*/
+
+/* Deslizable de tarjetas de Sobre Nosotros (transparencia, calidad, pasión) */
+#deslizable-imagenes-sobre-nosotros{
+    border: 0px solid black;
+    text-align: center;
+    border-radius: 1.1em;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-resenyas-deslizables{
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    border-radius: 1.1em;
+    display: none;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+    text-align: center;
+}
+
+.contenedor-cabecera-valores{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------------Termina QUIENES SOMOS------------------------*/
+
+/*------------------------COMIENZA PRODUCTO------------------------*/
+
+/*Contenedor completo, wrapper de producto,  lleva el margin top 12vh*/
+.wrapper-producto {
+    margin-top: 12vh;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+/* Página del Producto */
+#producto-page{
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+/* Botones de la página de Producto */
+.boton-producto {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Características de la sección de preguntas frecuentes */
+.seccion-preguntas{
+    margin-top: 4vh;
+}
+
+/* SELECTOR DE IMÁGENES PRODUCTO */
+/* Esconde las imágenes por defecto */
+.mySlides {
+    display: none;
+}
+
+/* Características de las imágenes mostradas del selector */
+.image-selector {
+    width: 100%;
+    height: 6%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+/* Fila de imágenes del selector */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 2em;
+}
+
+/* Crea seis columnas en la fila para las seis imágenes del selector */
+.column {
+    float: left;
+    width: 16.66%;
+    padding: 0 5px;
+    height: 4em;
+}
+
+/* Características de las imágenes inferiores de selección */
+.demo {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Características cuando se selecciona una imagen inferior del selector */
+.demo:hover {
+    opacity: 1;
+    box-shadow: 0px 3px 6px 0 rgba(0,0,0,0.6);
+}
+
+/* ACABA SELECTOR DE IMÁGENES PRODUCTO */
+
+/*------------------------ACABA PRODUCTO------------------------*/
+
+
+/*------------------------COMIENZA ADMINISTRADOR WEB------------------------*/
+
+.seccion-registros{
+
+}
+
+.texto-desplegable-trabajadores{
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: space-evenly;
+}
+
+.acordeon-trabajador {
+    max-width: 700px;
+    margin: 0.5rem auto;
+}
+
+.close-icon{
+    order: 10;
+}
+
+/*Títulos comunes para trabajadores*/
+
+.títulos-trabajadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4vh;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+/*------------------------ACABA ADMINISTRADOR WEB------------------------*/
+
+
+/* COMIENZA ESTILOS DE DESPLEGABLES GENERALES */
+
+.acordeon {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.acordeon-item {
+    background-color: #06884D;
+    color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.acordeon-item-header {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Fecha Desplegable Icono */
+.acordeon-item-header::after {
+    content: "\21BE";
+    font-size: 2.5rem;
+    margin-left: 0.3rem;
+    align-self: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.acordeon-item-header.active::after {
+    transform: rotate(180deg);
+}
+
+.acordeon-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.acordeon-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid white;
+}
+
+/* ACABA ESTILOS DE DESPLEGABLES */
+
+/*Botón saber mas clase estilo*/
+#contenedor-boton-saber-mas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 92%;
+}
+
+/*Estilo imágenes de la landing page*/
+.imagenes-landing {
+    height: 6%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+/*------------------------Comienza sección mantenimiento------------------------*/
+/*Estilo de la sección de mantenimiento en la landing page*/
 #seccion-mantenimiento {
     background-color: var(--second-color-green);
     color: var(--main-color-white);
 }
-/*------------------------Termina seccion mantenimiento------------------------*/
+/*------------------------Termina sección mantenimiento------------------------*/
 
 /*------------------------Comienza reseñas------------------------*/
 

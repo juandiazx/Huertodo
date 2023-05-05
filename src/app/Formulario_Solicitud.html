@@ -24,7 +24,7 @@
 <header>
   <nav id="main-menu">
     <!-- Logotipo Link Landing Page-->
-    <a href="index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+    <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
     <ul>
       <li><a href="Producto.html">Producto</a></li>
       <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
@@ -44,7 +44,7 @@
 </header>
 <!--Termina la cabecera-->
 
-<!-- Comienza la seccion general con el formulario completo -->
+<!-- Comienza la seccion general -->
 
 <main class="wrapper-forms">
   <section id="inicio-sesion">
@@ -54,58 +54,65 @@
       <h1 class="h1-formularios-titulos">Solicitud de producto</h1>
     </div>
 
+    <!--Input de nombre-->
     <form id="login-form">
-    <div id="name">
-      <div class="datos">
-        <label for="name">Nombre*</label>
-        <input type="text" id="name-input" name="name" required>
+      <div id="name">
+        <div class="datos">
+          <label for="name">Nombre*</label>
+          <input type="text" id="name-input" name="name" required>
+        </div>
       </div>
-    </div>
 
-    <div id="last-name">
-      <div class="datos">
-        <label for="last-name">Apellidos*</label>
-        <input type="text" id="last-name-input" name="last-name" required>
+      <!--Input de apellidos-->
+      <div id="last-name">
+        <div class="datos">
+          <label for="last-name">Apellidos*</label>
+          <input type="text" id="last-name-input" name="last-name" required>
+        </div>
       </div>
-    </div>
 
-    <div id="email">
-      <div class="datos">
-        <label for="email">Email*</label>
-        <input type="email" id="email-input" name="email" required>
+      <!--Input de email-->
+      <div id="email">
+        <div class="datos">
+          <label for="email">Email*</label>
+          <input type="email" id="email-input" name="email" required>
+        </div>
       </div>
-    </div>
 
-    <div id="address">
-      <div class="datos">
-        <label for="address">Dirección completa*</label>
-        <input type="text" id="address-input" name="address" required>
+      <!--Input de dirección-->
+      <div id="address">
+        <div class="datos">
+          <label for="address">Dirección completa*</label>
+          <input type="text" id="address-input" name="address" required>
+        </div>
       </div>
-    </div>
 
-    <div id="subject">
-      <div class="datos">
-        <label for="subject">Asunto*</label>
-        <input type="text" id="subject-input" name="subject" required>
+      <!--Input de asunto-->
+      <div id="subject">
+        <div class="datos">
+          <label for="subject">Asunto*</label>
+          <input type="text" id="subject-input" name="subject" required>
+        </div>
       </div>
-    </div>
 
-    <div id="message">
-      <div class="datos">
-        <label for="message">Mensaje*</label>
-        <textarea type="text" id="message-input" name="message" required></textarea>
+      <!--Input de Mensaje-->
+      <div id="message">
+        <div class="datos">
+          <label for="message">Mensaje*</label>
+          <textarea type="text" id="message-input" name="message" required></textarea>
+        </div>
       </div>
-    </div>
 
-    <div id="chekbox">
-      <input type="checkbox" id="aceptar-terminos">
-      <label for="aceptar-terminos">Acepto los términos y condiciones</label>
-    </div>
+      <!--Chekbox aceptar terminos y condiciones-->
+      <div id="chekbox">
+        <input type="checkbox" id="aceptar-terminos">
+        <label for="aceptar-terminos">Acepto los términos y condiciones</label>
+      </div>
 
-    <!-- Comienza la seccion boton -->
-    <div class="boton-enviar">
-      <button type="submit" id="boton-enviar-formulario-solicitud" class="boton-enviar-formulario-solicitud-desactivado">Enviar</button>
-    </div>
+      <!-- Comienza la seccion boton -->
+      <div class="boton-enviar">
+        <button type="submit" id="boton-enviar-formulario-solicitud" class="boton-enviar-formulario-solicitud-desactivado">Enviar</button>
+      </div>
     </form>
 
   </section>
@@ -124,9 +131,9 @@
   </div>
 </footer>
 <!-- Termina el footer-->
-<!-- JavaScript Documento formulario-solicitud.js para el formulario solicitud-->
+<!-- JavaScript Documento formulario-solicitud.js-->
 <script src="js/formulario-solicitud.js"></script>
-<!-- JavaScript Documento index.js con el menu desplegable-->
+<!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
 </body>
 </html>

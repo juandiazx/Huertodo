@@ -45,6 +45,6 @@ async function enviarFormulario(event) {
         //Vaciamos el formulario
         document.querySelector("form").reset();
         //Se vuelve a la landing page
-        location.href = "./index.html";
+        location.href = "../../index.html";
     }
 }

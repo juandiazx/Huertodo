@@ -14,13 +14,15 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/main-menu.css"/>
     <link rel='stylesheet' href="css/estiloTrabajadores.css"/>
+    <!-- JavaScript Documento index.js-->
+    <script src="js/index.js"></script>
 </head>
 <body>
 <!-- Comienza la cabecera-->
 <header>
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
-        <a href="index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+        <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
         <ul>
             <li><a href="Producto.html">Producto</a></li>
             <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
@@ -52,13 +54,16 @@
 
         <!--Comienza la seccion Notificaciones Citas  -->
         <section class="seccion-preguntas">
+            <form id="login-form" action="/login" method="post">
                 <section class="separacion-contenido"></section>
+
+                <!--titulo de Notificaciones Citas-->
 
                 <div class="títulos-trabajadores">
                     <h2>Notificaciones citas</h2>
                 </div>
 
-            <!-- Desplegable 1 -->
+                <!-- Desplegable 1 -->
 
                 <div class="acordeon-trabajador">
                     <div class="acordeon-item">
@@ -74,7 +79,7 @@
                     </div>
                 </div>
 
-            <!-- Desplegable 2 -->
+                <!-- Desplegable 2 -->
 
                 <div class="acordeon-trabajador">
                     <div class="acordeon-item">
@@ -90,7 +95,7 @@
                     </div>
                 </div>
 
-            <!-- Desplegable 3 -->
+                <!-- Desplegable 3 -->
 
                 <div class="acordeon-trabajador">
                     <div class="acordeon-item">
@@ -98,14 +103,14 @@
                             <div class="texto-desplegable-trabajadores">Montaje - 17/03/23</div>
                             <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
                         </div>                    <div class="acordeon-item-body">
-                            <p class="acordeon-item-body-content">
-                                Un huerto hidropónico doméstico puede ser configurado en una pequeña área, como en una ventana o en una esquina de la casa. El espacio necesario dependerá de la cantidad y el tamaño de las plantas, pero en general, los huertos hidropónicos son ideales para espacios pequeños.
-                            </p>
-                        </div>
+                        <p class="acordeon-item-body-content">
+                            Un huerto hidropónico doméstico puede ser configurado en una pequeña área, como en una ventana o en una esquina de la casa. El espacio necesario dependerá de la cantidad y el tamaño de las plantas, pero en general, los huertos hidropónicos son ideales para espacios pequeños.
+                        </p>
+                    </div>
                     </div>
                 </div>
 
-            <!-- Desplegable 4 -->
+                <!-- Desplegable 4 -->
 
                 <div class="acordeon-trabajador">
                     <div class="acordeon-item">
@@ -121,7 +126,7 @@
                     </div>
                 </div>
 
-            <!-- Desplegable 5 -->
+                <!-- Desplegable 5 -->
 
                 <div class="acordeon-trabajador">
                     <div class="acordeon-item">
@@ -136,32 +141,36 @@
                         </div>
                     </div>
                 </div>
+
         </section>
         <!--Termina la seccion Notificaciones Citas  -->
 
+        <!--Titulo de formulario reportes generales-->
         <div class="títulos-trabajadores">
             <h2>Reportes generales</h2>
         </div>
 
-        <form id="login-form">
-            <div id="subject">
-                <div class="datos">
-                    <label for="subject">Asunto*</label>
-                    <input type="text" id="subject-input" name="subject" required>
-                </div>
+        <!--Input 1 Asunto-->
+        <div id="subject">
+            <div class="datos">
+                <label for="subject">Asunto*</label>
+                <input type="text" id="subject-input" name="subject" required>
             </div>
+        </div>
 
-            <div id="message">
-                <div class="datos">
-                    <label for="message">Texto*</label>
-                    <input type="text" id="message-input" name="message" required>
-                </div>
+        <!--Input 2 Texto-->
+        <div id="message">
+            <div class="datos">
+                <label for="message">Texto*</label>
+                <input type="text" id="message-input" name="message" required>
             </div>
+        </div>
 
-            <!-- Comienza la seccion boton -->
-            <div class="boton-enviar">
-                <button type="submit" class="boton-iniciar-sesion">Enviar</button>
-            </div>
+        <!-- Boton enviar formulario -->
+        <div class="boton-enviar">
+            <button type="submit" class="boton-iniciar-sesion">Enviar</button>
+        </div>
+
         </form>
 
     </section>

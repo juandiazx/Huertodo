@@ -231,6 +231,8 @@
     text-align: left;
 }
 
+/*Estilo para el borde del input*/
+
 .datos input:focus {
     outline: none;
     border: 2px #06884DFF solid;

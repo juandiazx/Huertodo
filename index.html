@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GTI | Huertos domésticos monitorizables</title>
-    <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+    <link rel="shortcut icon" href="src/app/images/icono-gti-sin-letras.png" />
     <!-- Para que pueda verse bien en movil-->
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
     <!-- Palabras clave para el SEO de la Web-->
@@ -12,8 +12,8 @@
     <!-- Para que sea compatible con Microsoft Edge-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS DOCUMENTO estilos.css-->
-    <link rel='stylesheet' href="css/estilos.css"/>
-    <link rel='stylesheet' href="css/main-menu.css"/>
+    <link rel='stylesheet' href="src/app/css/estilos.css"/>
+    <link rel='stylesheet' href="src/app/css/main-menu.css"/>
 
 </head>
 <body>
@@ -21,15 +21,15 @@
 <header>
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
-        <a href="index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+        <a href="index.html"><img src="src/app/images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
         <ul>
-            <li><a href="Producto.html">Producto</a></li>
-            <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
-            <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+            <li><a href="src/app/Producto.html">Producto</a></li>
+            <li><a href="src/app/Formulario_Solicitud.html">Solicita el producto</a></li>
+            <li><a href="src/app/Sobre_Nosotros.html">Sobre nosotros</a></li>
         </ul>
 
         <!-- Icono de iniciar sesion-->
-        <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+        <a href="src/app/Inicio_sesion.html"><img id="icono-inicio-sesion" src="src/app/images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
         <!-- Menu hamburguesa-->
         <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
@@ -45,7 +45,7 @@
     <h1>MONITORIZA TU HUERTO</h1>
     <p class="parrafo-negrita">Cuida tu huerto vertical desde cualquier parte sin ensuciarte las manos</p>
     <!--Call To Action-->
-    <button class="boton-verde-blanco"><a href="Formulario_Solicitud.html">Pídelo ya</a></button>
+    <button class="boton-verde-blanco"><a href="src/app/Formulario_Solicitud.html">Pídelo ya</a></button>
 </section>
 
 <!-- Comienza la sección primera de explicación general-->
@@ -53,23 +53,23 @@
     <section>
         <h2>Huerto doméstico</h2>
         <p>Cultiva y cuida de tu huerto sin preocuparte por el riego o su cuidado. Nuestro sistema hidropónico te permite aprovechar tu tiempo sin perjudicar a tu huerto.</p>
-        <img class="imagenes-landing" src="images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
+        <img class="imagenes-landing" src="src/app/images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
     </section>
 
     <section>
         <h2>Monitorización</h2>
         <p>Visualiza en tiempo real el estado de tu huerto. Nuestros sensores recopilan datos constantemente, lo que te permite controlar el cuidado de tu huerto constantemente.</p>
-        <img class="imagenes-landing" src="images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
+        <img class="imagenes-landing" src="src/app/images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
     </section>
 
     <section>
         <h2>Estadísticas</h2>
         <p>Estadísticas de tu huerto de manera clara y concisa. Visualiza los datos históricos de tu huerto rápidamente y sin complicaciones.</p>
-        <img class="imagenes-landing" src="images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
+        <img class="imagenes-landing" src="src/app/images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
     </section>
     <section id="contenedor-boton-saber-mas">
         <!--Boton Saber Más-->
-        <button class="boton-verde-blanco"><a href="Producto.html">Saber más</a></button>
+        <button class="boton-verde-blanco"><a href="src/app/Producto.html">Saber más</a></button>
     </section>
 </main>
 <!-- Termina el main, explicación general -->
@@ -79,14 +79,14 @@
     <h3>Mantenimiento constante de tu equipo</h3>
     <p class="parrafo-negrita">No te preocupes por las averias</p>
     <p>Nuestro equipo de expertos estará siempre disponible para ayudarte con cualquier problema técnico que puedas tener. Te proveemos con cambios de sensores, cambios de baterías y fallos en la monitorización.</p>
-    <img class="imagenes-landing" src="images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
+    <img class="imagenes-landing" src="src/app/images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
 </section>
 <!-- Termina la sección de mantenimiento-->
 
 <!-- Comienza la sección de reseñas-->
 <section id="seccion-resenyas" class="wrapper">
     <div id="contenedor-estrellas-opiniones">
-        <img id="estrellas-media-resenyas" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+        <img id="estrellas-media-resenyas" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
         <p class="parrafo-negrita">La media de las opiniones de nuestros usuarios</p>
     </div>
 
@@ -98,7 +98,7 @@
                 <p class="parrafo-negrita">Víctor Pérez</p>
             </div>
             <div>
-                <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+                <img class="estrellas-resenya-especifica" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
             </div>
         </div>
         <!--Texto reseña persona-->
@@ -115,7 +115,7 @@
                 <p class="parrafo-negrita">Laura Lor</p>
             </div>
             <div>
-                <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+                <img class="estrellas-resenya-especifica" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
             </div>
         </div>
         <!--Texto reseña persona-->
@@ -132,7 +132,7 @@
                 <p class="parrafo-negrita">Eduardo Pío</p>
             </div>
             <div>
-                <img class="estrellas-resenya-especifica" src="images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+                <img class="estrellas-resenya-especifica" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
             </div>
         </div>
         <!--Texto reseña persona-->
@@ -161,9 +161,9 @@
 <!-- Termina el footer-->
 
 <!-- JavaScript Documento index.js para el menu desplegable-->
-<script src="js/index.js"></script>
+<script src="src/app/js/index.js"></script>
 
 <!-- JavaScript Documento deslizables.js para los deslizables de reseñas-->
-<script src="js/deslizables.js"></script>
+<script src="src/app/js/deslizables.js"></script>
 </body>
 </html>

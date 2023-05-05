@@ -124,7 +124,7 @@ h3 {
     height: 29em;
     border-radius: 1.1em;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    padding: 0.7em;
+    padding: 1.7em;
     outline: 0;
     border: none;
     top: 50%; /* Distancia desde la parte superior */
@@ -146,8 +146,35 @@ h3 {
     position: fixed; /* Posición fija */
 }
 
+/*Estilo cabecera del popup de las notificaciones*/
+#cabecera-popup-notificaciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.2em;
+}
+/*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
+#cerrar-dialogo-notificaciones {
+    width: 2.3em;
+    height: 2.3em;
+}
 
+/*Estilo para cada contenedor de notificaciones especificas dentro del dialog*/
+.contenedor-notificacion-especifica {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.notificacion-especifica-texto {
+    width: 11em;
+}
 
+/*Estilo para el texto de fecha de cada notificacion*/
+.notificacion-especifica-fecha>p{
+    padding-left: 1em;
+    font-weight: 700;
+    text-align: center;
+}
 /*Estilo del contenedor completo de la monitorizacion, panel con sombra*/
 #contenedor-monitorizacion {
     display: flex;
@@ -316,12 +343,14 @@ select {
     height: 29em;
     border-radius: 1.1em;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    padding: 0.7em;
+    padding: 1.7em;
     outline: 0;
     border: none;
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+    background-image: url("../images/mapa-popup-imagen.png");
+    background-repeat: no-repeat;
 }
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
@@ -336,6 +365,35 @@ select {
     background-color: rgba(0,0,0,0.2);
     backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
+}
+
+/*Estilo cabecera del popup del mapa*/
+#cabecera-popup-mapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-bottom: 1.2em;
+}
+/*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
+#cerrar-dialogo-mapa {
+    background-color: #06884D;
+    border-radius: 0.4em;
+    box-shadow: rgba(0, 0, 0, 0.32) 0 5px 8px;
+    width: 2.3em;
+    height: 2.3em;
+}
+
+.contenedor-icono-huerto-mapa {
+    color: white;
+    margin: 4em;
+    text-align: center;
+    justify-content: center;
+}
+/*Estilo para cada icono de huerto dentro del mapa despleglable*/
+.icono-huerto-mapa {
+    width: 3em;
+    height: 3em;
+    background-color: white;
 }
 
 /*------------------------Termina el estilo del espacio peresonal------------------------*/

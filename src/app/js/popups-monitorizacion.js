@@ -21,3 +21,18 @@ botonPanelNotificacionesMapa.addEventListener('click', ()=>{
 botonCerrarPanelNotificacionesMapa.addEventListener('click', ()=>{
     popupMapa.close()
 });
+
+//Botones Iconos Huertos Mapa
+
+const huerto1 = document.getElementById("icono-huerto1")
+const huerto2 = document.getElementById("icono-huerto2")
+const selectorNombre = document.getElementById("nombre-huerto")
+huerto1.addEventListener("click",function (){
+    selectorNombre.value = "Huerto 1"
+    popupMapa.close()
+})
+
+huerto2.addEventListener("click",function (){
+    selectorNombre.value = "Huerto 2"
+    popupMapa.close()
+})

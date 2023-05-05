@@ -25,6 +25,9 @@ aceptarTerminos.addEventListener("click", function (){
 
 //Funcion que se ejecuta cuando el submit del formulario de solicitud se dispara, comprueba si cada campo del formulario
 //es válido, y si es válido, muestra un popup de correcto
+
+
+// event:EventoListener---------->enviarFormulario()
 async function enviarFormulario(event) {
     event.preventDefault();
     const emailInput = document.getElementById("email-input")

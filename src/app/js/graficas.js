@@ -1,5 +1,26 @@
 //Comienza el script para añadir en el HTML todos los datos al canvas
 
+document.getElementById("contenedor-humedad").querySelector("img").addEventListener("click",function (){
+    datos.datasets[0].data[2]= 100;
+})
+
+document.getElementById("contenedor-salinidad").querySelector("img").addEventListener("click",function (){
+
+})
+
+document.getElementById("contenedor-iluminacion").querySelector("img").addEventListener("click",function (){
+
+})
+
+document.getElementById("contenedor-ph").querySelector("img").addEventListener("click",function (){
+
+})
+
+document.getElementById("contenedor-temperatura").querySelector("img").addEventListener("click",function (){
+
+})
+
+
 //Los datos que irán asignados a data de nuestro objeto
 let datos = {
     labels: ['lunes', 'martes', 'miércoles', 'jueves', 'viernes','sábado','domingo'],

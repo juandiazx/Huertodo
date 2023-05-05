@@ -1,4 +1,4 @@
-En   src/api/v.0.0   se encuentran los archivos .json para la simulación de datos del Sprint 3, aun no se involucra
+En   src/api/v.1.0   se encuentran los archivos .json para la simulación de datos del Sprint 3, aun no se involucra
 lógica del negocio, ni sevidor, ni bases de datos.
 
 Los usuarios y contraseñas posibles para realizar la prueba de la Web del G01 son los siguientes:

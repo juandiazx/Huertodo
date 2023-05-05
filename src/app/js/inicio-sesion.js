@@ -9,7 +9,7 @@ async function iniciarSesion(event) {
     event.preventDefault();
     let correo = document.getElementById("email-input").value;
     let contrasenya = document.getElementById("password-input").value;
-    let respuestaUsuario = await fetch("../../src/api/v.0.0/usuarios.json");
+    let respuestaUsuario = await fetch("../../src/api/v.1.0/usuarios.json");
     let respuestaUsuarioJSON = await respuestaUsuario.json();
     for(let i =0 ; i<=respuestaUsuarioJSON.length-1;i++){
         if(respuestaUsuarioJSON[i].correo === correo && respuestaUsuarioJSON[i].contrasenya === contrasenya &&

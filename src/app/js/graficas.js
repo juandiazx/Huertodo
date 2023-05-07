@@ -1,5 +1,5 @@
 //Comienza el script para añadir en el HTML todos los datos al canvas
-
+//PODRIA SER UN POPUP EN VEZ,LOS DATOS CAMBIARÍAN SEGUN BOTON
 
 //Los datos que irán asignados a data de nuestro objeto
 let datos = {

@@ -16,17 +16,17 @@ botonCerrarPanelNotificaciones.addEventListener('click', ()=>{
 
 //JS Popup Mapa
 const popupMapa = document.getElementById("desplegable-popup-mapa")
-const botonPanelNotificacionesMapa = document.getElementById("boton-mapas-huertos")
-const botonCerrarPanelNotificacionesMapa = document.getElementById("cerrar-dialogo-mapa")
+const botonPanelMapa = document.getElementById("boton-mapas-huertos")
+const botonCerrarPanelMapa = document.getElementById("cerrar-dialogo-mapa")
 
 //Cuando se toque en el boton de mapa huertos, se abre el popup
-botonPanelNotificacionesMapa.addEventListener('click', ()=>{
+botonPanelMapa.addEventListener('click', ()=>{
     popupMapa.showModal();
 })
 
 
 //Cuando se toque en el boton de cerrar el popup, dentro de él mismo, se cierra el popup
-botonCerrarPanelNotificacionesMapa.addEventListener('click', ()=>{
+botonCerrarPanelMapa.addEventListener('click', ()=>{
     popupMapa.close()
 });
 

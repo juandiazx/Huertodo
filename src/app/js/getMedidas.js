@@ -1,3 +1,5 @@
+//ESTO ES TODO FAKE REALMENTE, HABRIA QUE INVOLUCRAR LA LLAMADA A SERVIDOR
+
 
 //Guardamos IDs de los spans donde van los datos en tiempo real de monitorizacion
 const humedad = document.getElementById("contenedor-humedad").querySelector("span")

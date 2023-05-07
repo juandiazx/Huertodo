@@ -44,6 +44,9 @@ async function enviarFormulario(event) {
         alert('El formulario se ha enviado correctamente');
         //Vaciamos el formulario
         document.querySelector("form").reset();
+
+        //AQUI AHORA DEBERIA DE HABER LO DE POPUP QUE SE ABRA Y SE CIERRA SI SE PULSA ACEPTAR
+
         //Se vuelve a la landing page
         location.href = "../../index.html";
     }

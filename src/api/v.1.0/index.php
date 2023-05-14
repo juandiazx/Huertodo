@@ -1,20 +1,56 @@
 <?php
 
-require_once('../logica/hacerLogin.php');
+require_once '../includes/PeticionREST.inc';
 
-// ----------------------------------------------------------------
+$peticion = new PeticionREST('v1.1');
+
+$salida = [];
+$salida['metodo'] = $peticion->metodo();
+$salida['recurso'] = $peticion->recurso();
+if(count($peticion->parametrosPath()) > 0) $salida['parametrosPath'] = $peticion->parametrosPath();
+if(count($peticion->parametrosQuery()) > 0)$salida['parametrosQuery'] = $peticion->parametrosQuery();
+if(count($peticion->parametrosPost()) > 0)$salida['parametrosPost'] = $peticion->parametrosPost();
+if($peticion->parametrosBody() !== null)$salida['parametrosBody'] = $peticion->parametrosBody();
+
+
+//--------------------------------------------------------------------------------------------------
+
+// ---------------------------------------------------------------
 //
-// GET ../rest/hacerLogin.php?nombre=<Texto>&password=<Texto>
+// nombre:Texto, password:Texto -> hacerLogin() -> VoF
 //
-// @return
-//  VoF: true si el login OK
-//
-// @return
-//  usuario:Texto
-//       devuelto implicitamente en la variable global de sesión
-//       (en el navegador no se pordrá acceder a la var. global)
-//
-// ----------------------------------------------------------------
+// ---------------------------------------------------------------
+
+function hacerLogin( $email, $password ) {
+    $objetoResultado = new stdClass;
+    $serverNombre = "localhost";
+    $userNombre = "arosjim";
+    $password = "12345";
+    $dbNombre = "Huertodo1234";
+// Crear la conexión
+    $conn = mysqli_connect($serverNombre,
+        $userNombre, $password, $dbNombre);
+// Chequear la conexión
+    if (!$conn) {
+        die("Error: " . mysqli_connect_error());
+    }
+    $sql = "SELECT * FROM Usuarios";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+// procesar cada fila
+        while($row = mysqli_fetch_assoc($result)) {
+            if($email == $row["email"] && $password == $row["contrasenya"]){
+                $objetoResultado->resultado = true;
+                $objetoResultado->rol = $row["rol"];
+                $objetoResultado->email = $row["email"];
+            }
+        }
+    } else {
+        $objetoResultado->resultado = false;
+    }
+}
+
+//--------------------------------------------------------------------------------------------------
 
 $objetoResultado = new stdClass;
 
@@ -22,20 +58,22 @@ $objetoResultado = new stdClass;
 session_start();
 
 // obtengo valores de los parámetros
-$nombre = $_GET["nombre"];
-$password = $_GET["password"];
-
+$email = $_POST["email"];
+$password = $_POST["password"];
 //
 // llamada a la verdadera función.
 //
-if ( hacerLogin( $nombre, $password) == true  ) {
+$GLOBALS['hacerLogin'] = hacerLogin( $email, $password);
+if ( $GLOBALS['hacerLogin'].resultado == true  ) {
 
     $objetoResultado->resultado = true;
-    $objetoResultado->usuario = $nombre;
+    $objetoResultado->email = $GLOBALS['hacerLogin'].email; //NO SE SI REALMENTE SE DEBERIA DE DEVOLVER AL CLIENTE ESTO
+    $objetoResultado->rol = $GLOBALS['hacerLogin'].rol;
+
 
     // guardo en la sesión el nombre del usuario
     session_start();
-    $_SESSION["usuario"] = $_GET["nombre"];
+    $_SESSION["email"] = $_POST["email"];
 
 } else {
     session_destroy();
@@ -44,51 +82,3 @@ if ( hacerLogin( $nombre, $password) == true  ) {
 
 // echo == devolver
 echo json_encode( $objetoResultado );
-
-
-//------------------------------------------------------------------------------
-//diHola.php
-
-require_once('../logica/diHola.php');
-
-// -------------------------------------------------
-//
-// GET ../rest/diHola.php
-//
-// usuario:Texto -> diHola() -> (nombre:Texto, saludo:Texto) | error:Texto
-//
-// usuario: recibido de forma implícita en la sesión
-// (nombre:Texto, saludo:Texto) | error:Texto : devuelto en un mismo JSON
-//
-// -------------------------------------------------
-
-session_start();
-
-// creo el objeto resultado
-$objetoResultado = new stdClass;
-
-// compruebo si esto lo pide un usuario
-// antes acreditado mediante login
-if ( ! isset( $_SESSION["usuario"]) ) {
-    // no es un usuario acreditado
-    $objetoResultado->error = "usuario no acreditado";
-    // $objetoResultado->nombre = "";
-    // $objetoResultado->saludo = "";
-    // echo == devolver
-    echo json_encode( $objetoResultado );
-    return;
-}
-
-// Sí que es un usuario acreditado:
-$usuario = $_SESSION["usuario"];
-
-//
-// llamada a la verdadera función.
-//
-$objetoResultado = diHola( $usuario );
-
-$objetoResultado->error = 0;
-
-// echo == devolver
-echo json_encode( $objetoResultado );
-?>

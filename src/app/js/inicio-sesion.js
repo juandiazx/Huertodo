@@ -37,8 +37,5 @@ async function iniciarSesion(event) {
             location.href = "Administrador_Web.html";
             break
         }
-        else if(i=== respuestaUsuarioJSON.length-1){
-            alert("Usuario incorrecto, inténtalo de nuevo");
-        }
     }
 }

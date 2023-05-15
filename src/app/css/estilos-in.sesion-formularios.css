@@ -1,3 +1,12 @@
+
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
 /*Wrapper para los formularios e inicio de sesion*/
 .wrapper-forms{
     margin-top: 12vh;
@@ -70,8 +79,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 5em;
+    margin-bottom: 3.5em;
+    margin-top: 4em;
 
 }
 
@@ -95,8 +104,8 @@
 
 #solicitar-acceso {
     text-align: center;
-    margin-top: 4em;
-    margin-bottom: 15vh;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #solicitar-acceso p {
@@ -113,7 +122,7 @@
 /*-----------------------------------------------------------------------------------------*/
 
 /*---------------------------------------- Formulario enviado------------------------------------*/
-
+/*
 .formulario-enviado {
     display: flex;
     flex-direction: column;
@@ -137,6 +146,7 @@
     margin-bottom: 7em;
     margin-top: 10em;
 }
+*/
 /*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
 
 .introduce-correo {
@@ -149,7 +159,7 @@
     color: #333333;
     font-weight: lighter;
     font-size: 0.8em;
-    margin-top: 14em;
+    margin-top: 3.2em;
     margin-bottom: 10px;
 }
 
@@ -305,4 +315,145 @@ textarea:focus {
     font-size: 1em;
     color: #333333;
 }
-/*-----------------------------------------------------------------------------------------*/
+#chekbox a {
+    color: #06884D;
+    font-weight: 700;
+}
+/*----------------------------------------------- Estilos para terminos y condiciones y politica de privacidad ------------------------------------------*/
+
+/*Estilo general para la sección de los parrafos*/
+.información{
+
+    margin-bottom: 7em;
+
+}
+/*Estilo para el titulo principal de la web*/
+.tituloPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 1vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.78em;
+    margin-top: 13em;
+    margin-bottom: 3em;
+}
+
+
+/*Estilo para cada seccion de información por separado*/
+.seccionInformación{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+/*Estilo para los titulos secundarios*/
+.tituloSecundario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 5vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*Estilos para los parrafos de texto*/
+.texto{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    font-size: 0.8em;
+    margin-bottom:1em;
+    margin-top: 1em;
+
+}
+
+/*Estilo para las lineas horizontales de separación de texto*/
+.linea-horizontal {
+
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom:3em;
+    margin-top: 3em;
+
+}
+
+
+/*-------------------FIn de estilos de informacion-------------------*/
+
+
+/*---------------------Estilos para los popups de inicio de sesión, formularios y trabajadores------------*/
+/* Popup de fondo oscuro */
+#popup {
+    /* Agregar flexbox para centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Posición fija y a pantalla completa */
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: visibility 0s, opacity 0.5s;
+}
+
+/* Mostrar popup cuando se agrega la clase "mostrar" */
+#popup.mostrar {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+/* Contenido del popup */
+.popup-contenido {
+    /* Agregar flexbox para centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Fondo blanco y borde redondeado */
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 60%;
+    max-height: 25%;
+    overflow: auto;
+    height: 70%;
+}
+
+/* Botón de cerrar */
+#cerrar-popup {
+    /* Establecer el diseño del botón */
+    width: 100%;
+    height: 20%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 7px;
+}

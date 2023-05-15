@@ -63,7 +63,7 @@
 
     <!-- Comienza la seccion boton -->
     <div class="boton-enviar">
-      <button type="submit" class="boton-iniciar-sesion">Enviar</button>
+      <button type="submit" id="abrir-popup" class="boton-iniciar-sesion">Enviar</button>
     </div>
 
     <!-- Comienza la seccion parrafo -->
@@ -74,21 +74,35 @@
   </section>
 </main>
 <!-- Termina la seccion general -->
+
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-  <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
     <!--Contenedor con los links de texto-->
     <div>
-      <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
     </div>
     <!--Parrafo con el nombre de la empresa y el copyright-->
     <p class="parrafo-negrita">© GTI Copyright 2023</p>
   </div>
 </footer>
 <!-- Termina el footer-->
+
+<!-- Comienza el popup -->
+<section  id="popup">
+  <div class="popup-contenido">
+    <p>El formulario se ha enviado con éxito</p>
+    <button id="cerrar-popup">Iniciar sesión</button>
+  </div>
+</section>
+<!-- Termina el popup -->
+
+<!-- JavaScript Documento popups_formularios.js para el popup de formulario enviado-->
+<script src="js/popup_contraOlvidada.js"></script>
+
 <!-- JavaScript Documento index.js para el menu desplegable-->
 <script src="js/index.js"></script>
-<!-- JavaScript Documento formulario-contrasenya-olvidada.js para el formulario de contraseña olvidada-->
-<script src="js/formulario-contrasenya-olvidada.js"></script>
+
+
 </body>
 </html>

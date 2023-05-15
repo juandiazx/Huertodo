@@ -519,7 +519,7 @@ h3 {
 
 /* Fecha Desplegable Icono */
 .acordeon-item-header::after {
-    content: "\21BE";
+    content: "\21D1";
     font-size: 2.5rem;
     margin-left: 0.3rem;
     align-self: center;

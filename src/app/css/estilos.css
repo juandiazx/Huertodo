@@ -116,7 +116,6 @@ main>section, body>section{
     justify-content: center;
     align-items: start;
     border: 0px solid grey;
-
 }
 
 /* Estilo imágenes página Sobre Nosotros */
@@ -319,6 +318,48 @@ main>section, body>section{
 
 }
 
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+th {
+    border-bottom: solid 2px black;
+}
+td {
+    border-bottom: solid 1px black;
+    padding: .2em 3em;
+}
+
+tbody {
+    border: solid 1px black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #a7a7a7;
+}
+
+.mensaje-error {
+    text-align: center;
+    padding: 2em;
+    font-weight: bold;
+    color: red;
+}
+
+.btn-input input {
+    max-width: 3em;
+    text-align: center;
+    display: none;
+}
+
+.btn-input.activo button {
+    display: none;
+}
+
+.btn-input.activo input {
+    display: initial;
+}
+
 .texto-desplegable-trabajadores{
     display: flex;
     flex: 1 1 0px;
@@ -373,7 +414,7 @@ main>section, body>section{
     padding: 0.5rem 1rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -382,10 +423,11 @@ main>section, body>section{
 
 /* Fecha Desplegable Icono */
 .acordeon-item-header::after {
-    content: "\21BE";
-    font-size: 2.5rem;
+    content: "\27A1";
+    font-size: 2rem;
     margin-left: 0.3rem;
     align-self: center;
+    rotate: -90deg;
     transition: transform 0.2s ease-in-out;
 }
 

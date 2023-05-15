@@ -16,6 +16,7 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/main-menu.css"/>
     <link rel='stylesheet' href="css/estiloTrabajadores.css"/>
+    <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
 
 </head>
 
@@ -314,21 +315,36 @@
 </main>
 
 
+
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-    <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+    <div id="contenedor-footer-texto">
         <!--Contenedor con los links de texto-->
         <div>
-            <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+            <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
         </div>
         <!--Parrafo con el nombre de la empresa y el copyright-->
         <p class="parrafo-negrita">© GTI Copyright 2023</p>
     </div>
 </footer>
 <!-- Termina el footer-->
+
 <!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
 <!-- JavaScript Documento codigoParaComercial.js-->
 <script src="js/codigoParaComercial.js"></script>
+<!--JavaScript Documento popups_trabajadores.js para los popups en formularios de trabajadores -->
+<script src="js/popups_trabajadores.js" defer></script>
+
+
+<!-- Comienza el popup -->
+<section  id="popup">
+    <div class="popup-contenido">
+        <p>El formulario se ha enviado con éxito</p>
+        <button id="cerrar-popup">Volver</button>
+    </div>
+</section>
+<!-- Termina el popup -->
+
 </body>
 </html>

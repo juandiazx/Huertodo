@@ -1,0 +1,77 @@
+/*Estilos para terminos y condiciones / Politica de privacidad*/
+
+/*----Estilos para tablet---------*/
+
+@media (min-width: 768px) {
+
+    /*Estilo general para la sección de los parrafos*/
+    .información{
+
+        margin-bottom: 4em;
+
+    }
+    /*Estilo para el titulo principal de la web*/
+    .tituloPrincipal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        color: #333333;
+        font-weight: lighter;
+        font-size: 0.9em;
+        margin-top: 8em;
+        margin-bottom: 2em;
+    }
+
+    /*Estilo para cada seccion de información por separado*/
+    .seccionInformación{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 4em;
+        margin-right: 4em;
+
+    }
+
+    /*Estilo para los titulos secundarios*/
+    .tituloSecundario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        height: auto;
+        color: #333333;
+        font-weight: lighter;
+        font-size: 0.85em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    /*Estilos para los parrafos de texto*/
+    .texto{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+        font-size: 0.9em;
+        margin-bottom:1em;
+        margin-top: 1em;
+
+    }
+
+    /*Estilo para las lineas horizontales de separación de texto*/
+    .linea-horizontal {
+
+        margin-left: 4em;
+        margin-right: 1em;
+        margin-bottom:4em;
+        margin-top: 2em;
+
+    }
+
+
+}

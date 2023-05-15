@@ -105,9 +105,10 @@
 
       <!--Chekbox aceptar terminos y condiciones-->
       <div id="chekbox">
-        <input type="checkbox" id="aceptar-terminos">
-        <label for="aceptar-terminos">Acepto los términos y condiciones</label>
+        <input type="checkbox" id="aceptar-terminos" required>
+        <label for="aceptar-terminos">Acepto los <a href="TerminosYCondiciones.html">términos y condiciones</a></label>
       </div>
+
 
       <!-- Comienza la seccion boton -->
       <div class="boton-enviar">
@@ -119,21 +120,35 @@
 </main>
 <!-- Termina la seccion general -->
 
+
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-  <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
     <!--Contenedor con los links de texto-->
     <div>
-      <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
     </div>
     <!--Parrafo con el nombre de la empresa y el copyright-->
     <p class="parrafo-negrita">© GTI Copyright 2023</p>
   </div>
 </footer>
 <!-- Termina el footer-->
-<!-- JavaScript Documento formulario-solicitud.js-->
-<script src="js/formulario-solicitud.js"></script>
+
+<!-- Comienza el popup -->
+<section  id="popup">
+  <div class="popup-contenido">
+    <p>El formulario se ha enviado con éxito</p>
+    <button id="cerrar-popup">Volver</button>
+  </div>
+</section>
+<!-- Termina el popup -->
+
+
 <!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
+
+<!-- JavaScript Documento popup_solicitud.js-->
+<script src="js/popup_solicitud.js"></script>
+
 </body>
 </html>

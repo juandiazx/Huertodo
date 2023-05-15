@@ -1,0 +1,170 @@
+/*-------------------------------------------ESTILOS RESPONSIVE--------------------------------------*/
+
+/*Estilos responsive para terminos y condiciones y política de privacidad*/
+
+/* Estilos para tamaños de pantalla de tablet (entre 600px y 1200px) */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .tituloPrincipal {
+        margin-top: 10em;
+        margin-bottom: 3em;
+        font-size: 1.1em;
+    }
+
+    .seccionInformación {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .tituloSecundario {
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .texto {
+        font-size: 0.85em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .linea-horizontal {
+        margin-left: 3em;
+        margin-right: 3em;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+    }
+}
+
+/* Estilos para tamaños de pantalla mayores a 1200px */
+@media screen and (min-width: 1200px) {
+    .tituloPrincipal {
+        margin-top: 10em;
+        margin-bottom: 4em;
+        font-size: 1.2em;
+    }
+
+    .seccionInformación {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    .tituloSecundario {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .texto {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .linea-horizontal {
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+    }
+}
+
+/*Estilos responsive para formulario de solicitud,inicio de sesión y contraseña olvidada*/
+
+/* Estilos para tamaños de pantalla de tablet (entre 600px y 1200px) */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    /* Estilos para el título de inicio de sesión */
+
+    #inicio-de-sesion-titulo {
+        margin-bottom: 2.5em;
+        margin-top: 1em;
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    /* Estilos para las secciones de email y contraseña */
+
+    #email,
+    #password {
+        margin-bottom: 2.5em;
+        margin-top: 1em;
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    /* Estilos para la sección de "¿Has olvidado la contraseña?" */
+
+    .contraseña-olvidada a {
+        font-size: 0.9em;
+        margin-left: 0.7em;
+        margin-top: 0.7em;
+    }
+    /*-----------------------------------------------------------------------------------------*/
+
+    /*Estilos para los botones de inicio de sesion y formularios*/
+
+    .boton-inicio {
+        margin-bottom: 3.5em;
+        margin-top: 4em;
+
+    }
+
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    /* Estilos para el enlace de "SOLICITAR ACCESO" */
+
+    #solicitar-acceso {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+}
+
+/* Estilos para tamaños de pantalla mayores a 1200px */
+@media screen and (min-width: 1200px) {
+    #inicio-de-sesion-titulo {
+        margin-bottom: 2.5em;
+        margin-top: 1em;
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    /* Estilos para las secciones de email y contraseña */
+
+    #email,
+    #password {
+        margin-bottom: 2.5em;
+        margin-top: 1em;
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    /* Estilos para la sección de "¿Has olvidado la contraseña?" */
+
+    .contraseña-olvidada a {
+        font-size: 0.9em;
+        margin-left: 0.7em;
+        margin-top: 0.7em;
+    }
+    /*-----------------------------------------------------------------------------------------*/
+
+    /*Estilos para los botones de inicio de sesion y formularios*/
+
+    .boton-inicio {
+        margin-bottom: 3.5em;
+        margin-top: 4em;
+
+    }
+
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    /* Estilos para el enlace de "SOLICITAR ACCESO" */
+
+    #solicitar-acceso {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+

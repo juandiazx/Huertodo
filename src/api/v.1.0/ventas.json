@@ -1,0 +1,44 @@
+[
+  {
+        "id": 1,
+        "vendedor": {
+            "id": 10,
+            "nombre": "Color",
+            "apellidos": "#23"
+        },
+        "cliente": {
+            "id": 1,
+            "nombre": "Producto"
+        },
+        "fecha": "2023-04-18",
+        "importe": " "
+    },
+  {
+    "id": 23,
+    "vendedor": {
+      "id": 143,
+      "nombre": "Registro",
+      "apellidos": " "
+    },
+    "cliente": {
+      "id": 1222,
+      "nombre": "David Mintenson"
+    },
+    "fecha": "2023-04-18",
+    "importe": " "
+  },
+    {
+        "id": 2,
+        "vendedor": {
+            "id": 3,
+            "nombre": "Imagen",
+            "apellidos": "#128"
+        },
+        "cliente": {
+            "id": 14,
+            "nombre": "Sobre Nosotros"
+        },
+        "fecha": "2023-02-20",
+        "importe": " "
+    }
+    ]

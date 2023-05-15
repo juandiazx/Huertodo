@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Ejercicio login
+  description: Api para autentificación de usuarios y control de acceso
+  version: 1.0.0
+servers:
+  - url: 'http://localhost/ejercico-login/src/api/'
+    description: 'Servidor de desarrollo'
+paths:
+  /sesion:
+    get:
+      summary: Devuelve la sesión activa, si existe
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: id del usuario
+                  nombre:
+                    type: string
+                    description: nombre del usuario
+                  idRol:
+                    type: integer
+                    description: id del rol del usuario
+                  rol:
+                    type: string
+                    description: nombre del rol del usuario
+        '401':
+          description: No existe sesión.
+        '5XX':
+          description: Error del servidor.
+    post:
+      summary: Crea una sesión para un usuario.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                password:
+                  type: string
+              required:
+                - nombre
+                - password
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nombre:
+                    type: string
+                  rol:
+                    type: string
+        '401':
+          description: No autorizado
+        '5XX':
+          description: Error del servidor.
+    delete: 
+      summary: Elimina la sesión
+      responses:
+        '200':
+          description: OK
+        '5XX':
+          description: Error del servidor.

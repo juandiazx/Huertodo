@@ -97,8 +97,10 @@ CREATE TABLE `notificaciones` (
 
 CREATE TABLE `roles` (
                          `id` int(11) NOT NULL,
-                         `nombre` varchar(30) NOT NULL
+                         `rol` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `roles` (`rol`) VALUES ('usuario'), ('comercial'), ('tecnico'), ('administrador');
 
 -- --------------------------------------------------------
 
@@ -135,18 +137,19 @@ CREATE TABLE `tecnico_comercial` (
 
 CREATE TABLE `Usuario` (
                            `id` int(11) NOT NULL,
+                           `email` varchar(60) NOT NULL,
                            `nombreApellidos` varchar(70) NOT NULL,
                            `contrasenya` varchar(30) NOT NULL,
-                           `direccion` varchar(100) NOT NULL,
-                           `email` varchar(60) NOT NULL,
-                           `rol` int(11) NOT NULL
+                           `rol` int(11) NOT NULL,
+                           `direccion` varchar(100) NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `Usuario` (`id`,`email`,`nombreApellidos`, `contrasenya`,`rol`, `direccion`) VALUES
-                                                                                             (1,'joselgarciamant1@gmail.com','Jose Luis Garcia Mantero', 'mementoMori45',0, 'Calle Espanya 19, Piso 2, 47630, Gandia, Valencia'),
-                                                                                             (2,'lanternmartin@gmail.com','Martin Gutierrez Lant', 'upvMejorUniLoremIpsum',1, NULL),
-                                                                                             (3,'saavedrarogg@gmail.com','Eduardo Saavedra Rodriguez', 'hartoDeLosArduinos400',2, NULL),
-                                                                                             (4,'mauforonxl@gmail.com','Mauricio Foronda Taliente', 'vivaWordpress2012',3, NULL);
+INSERT INTO `Usuario` (`email`,`nombreApellidos`, `contrasenya`,`rol`, `direccion`) VALUES
+                                                                                             ('joselgarciamant1@gmail.com','Jose Luis Garcia Mantero', 'mementoMori45',1, 'Calle Espanya 19, Piso 2, 47630, Gandia, Valencia'),
+                                                                                             ('lanternmartin@gmail.com','Martin Gutierrez Lant', 'upvMejorUniLoremIpsum',2, NULL),
+                                                                                             ('saavedrarogg@gmail.com','Eduardo Saavedra Rodriguez', 'hartoDeLosArduinos400',3, NULL),
+                                                                                             ('mauforonxl@gmail.com','Mauricio Foronda Taliente', 'vivaWordpress2012',4, NULL);
 --
 -- Índices para tablas volcadas
 --
@@ -247,7 +250,7 @@ ALTER TABLE `notificaciones`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;;
 
 --
 -- AUTO_INCREMENT de la tabla `solicitud`

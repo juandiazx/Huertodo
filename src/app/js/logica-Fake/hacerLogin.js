@@ -1,39 +1,40 @@
-// ---------------------------------------------------
-//
-// versión fake de una función de la lógica
-//
-// nombre:Texto, password:Texto -> hacerLogin() -> Boolean
-//
-// (Boolean devuelto via callback)
-//
-// ---------------------------------------------------
-async function hacerLogin( event ) {
-    event.preventDefault();
-    let form = new FormData(event.target);
-    let email = form.get('email');
-    let password = form.get('password');
-    form.delete('email');
-    form.delete('password');
+document.getElementById("login-form").addEventListener('submit', login);
 
-    let respuesta = await fetch('../api/v1.0/' + email + password,{ //NO SE SI EL REQUEST VA ASI
+/**
+ * Se ejecutará cuando se envíe el formulario.
+ * Puesto que se usa fetch, es una función asíncrona
+ * @param event Objeto con información del evento.
+ */
+async function login(event) {
+    // eliminamos el mensaje de error previo, si lo hay
+    const output = document.getElementById("output");
+    output.classList.remove("error");
+
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    const respuesta = await fetch('../../api/v.1.0/sesion/', {
         method: 'post',
-        body: form
-    });
-    let resultado = await respuesta.json();
-    if(resultado.rol == 0){
-        location.href = "monitorizacion.html";
+        body: formData
+    })
+    const data = await respues.json();
+    // si el resultado de la petición es OK (i.e. código HTTP 200)
+    if (respuesta.ok && data.rol == 0) {
+        // redirigimos a la página correspondiente
+        location.href = './../monitorizacion.html';
     }
-    else if(resultado.rol == 2){
-        location.href = "Tecnico.html";
+    else if(respuesta.ok && data.rol == 1){
+        location.href = './../Comercial.html';
     }
-    else if(resultado.rol == 1){
-        location.href = "Comercial.html";
+    else if(respuesta.ok && data.rol == 2){
+        location.href = './../Tecnico.html';
     }
-    else if(resultado.rol == 3){
-        location.href = "Administrador_Web.html";
+    else if(respuesta.ok && data.rol == 3){
+        location.href = './../Administrador_Web.html';
     }
-    else{
-        alert("Usuario incorrecto, inténtalo de nuevo");
+    else {
+        // si no, mostramos un mensaje de error
+        output.innerText = "Credenciales no válidas";
+        output.classList.add("error");
     }
-    //Aqui ya se gestiona la respuesta, si es afirmativa pues inicia sesion, si no pues se muestra error
-} // ()
+}

@@ -16,8 +16,13 @@
     <link rel='stylesheet' href="css/estilos.css"/>
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <style>
+        .loading {
+            display: none;
+        }
+    </style>
 </head>
-<body>
+<body class="loading">
 <!-- Comienza la cabecera-->
 <header>
     <nav id="main-menu">
@@ -41,6 +46,7 @@
             <li><a href="Producto.html">Producto</a></li>
             <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
             <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+            <li class="boton-cerrar-sesion"><a href="../../index.html" onclick="logout()">Cerrar sesión</a></li>
         </ul>
     </nav>
 </header>
@@ -221,5 +227,7 @@
 <script src="js/index.js"></script>
 <!-- JavaScript Documento getMedidas.js-->
 <script src="js/getMedidas.js"></script>
+
+<script src="js/logica-Fake/control-acceso.js"></script>
 </body>
 </html>

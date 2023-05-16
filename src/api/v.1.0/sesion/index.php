@@ -13,10 +13,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
         break;
     case 'POST':
-        $bbdd_servidor = 'localhost';
-        $bbdd_nombre = 'huertodo';
-        $bbdd_user = 'arosjim';
-        $bbdd_password = '1234';
+        $bbdd_servidor = 'localhost:3306';
+        $bbdd_nombre = 'jdiagut1_proyectoHuertodo';
+        $bbdd_user = 'jdiagut1_master';
+        $bbdd_password = 'Huertodo1234';
 
         try {
             $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
@@ -27,16 +27,17 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         mysqli_query($connexion, 'SET NAMES utf8mb4');
 
-        $usuario = $_POST['nombre'];
+        $usuario = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "SELECT `usuarios`.`id`, 
-       `usuarios`.`nombre`, 
-       `roles`.`id` as `idRol`, 
-       `roles`.`rol` 
-	FROM `usuarios` 
-		INNER JOIN `roles` ON `usuarios`.`rol` = `roles`.`id`
-	WHERE `usuarios`.`nombre` = '$usuario' AND `usuarios`.`password` = '$password'";
+        $sql = "SELECT `Usuario`.`id`, 
+       `Usuario`.`email`, 
+       `Usuario`.`rol`, 
+       `roles`.`rol`,
+	   `roles`.`id`
+	FROM `Usuario` 
+		INNER JOIN `roles` ON `Usuario`.`rol` = `roles`.`id`
+	WHERE `Usuario`.`email` = '$usuario' AND `Usuario`.`contrasenya` = '$password'";
 
 
         $resultado = mysqli_query($connexion, $sql);

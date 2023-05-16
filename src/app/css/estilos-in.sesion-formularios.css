@@ -79,8 +79,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3.5em;
-    margin-top: 4em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 
 }
 
@@ -105,7 +105,7 @@
 #solicitar-acceso {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 5em;
 }
 
 #solicitar-acceso p {
@@ -384,17 +384,25 @@ textarea:focus {
 
 /*Estilo para las lineas horizontales de separación de texto*/
 .linea-horizontal {
-
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom:3em;
     margin-top: 3em;
-
 }
 
 
-/*-------------------FIn de estilos de informacion-------------------*/
+/*-------------------Fin de estilos de informacion-------------------*/
 
+
+/*-----------MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN-----------*/
+
+#mensaje-error{
+    display: none;
+    color: #c70202;
+    padding: 0.5rem;
+}
+
+/*--------ACABA MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN--------*/
 
 /*---------------------Estilos para los popups de inicio de sesión, formularios y trabajadores------------*/
 /* Popup de fondo oscuro */

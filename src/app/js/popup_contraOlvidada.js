@@ -26,12 +26,12 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 popup.addEventListener("click", function(event) {
     if (event.target === popup) {
         popup.classList.remove("mostrar");
-        window.location.href = "../Inicio_sesion.html";
+        window.location.href = "../app/Inicio_sesion.html";
     }
 });
 
 // Cerrar popup y redirigir a otra página al hacer clic en el botón "Volver"
 cerrarPopupBtn.addEventListener("click", function() {
     popup.classList.remove("mostrar");
-    window.location.href = "../Inicio_sesion.html";
+    window.location.href = "../app/Inicio_sesion.html";
 });

@@ -22,21 +22,25 @@
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
         <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+
+        <!-- Contenedor para los iconos de inicio de sesión y menú -->
+        <div class="icon-container">
+            <!-- Icono de inicio de sesión -->
+            <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+
+            <!-- Menu hamburguesa-->
+            <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
         <ul>
             <li><a href="Producto.html">Producto</a></li>
             <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
             <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
         </ul>
-
-        <!-- Icono de iniciar sesion-->
-        <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
-
-        <!-- Menu hamburguesa-->
-        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </nav>
 </header>
 <!--Termina la cabecera-->

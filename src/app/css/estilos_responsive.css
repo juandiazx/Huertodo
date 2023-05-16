@@ -68,16 +68,22 @@
     }
 }
 
-/*Estilos responsive para formulario de solicitud,inicio de sesión y contraseña olvidada*/
+/*----------------------------------------------------------------------------*/
 
-/* Estilos para tamaños de pantalla de tablet (entre 600px y 1200px) */
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-    /* Estilos para el título de inicio de sesión */
+/*Comienzan estilos para inicio de sesión*/
+
+
+@media screen and (min-width: 550px) and (max-width: 1200px) {
+    /*---------------------------------------- Inicio de Sesión ------------------------------------*/
 
     #inicio-de-sesion-titulo {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: var(--main-color-black);
         margin-bottom: 2.5em;
-        margin-top: 1em;
-    }
+        }
 
     /*-----------------------------------------------------------------------------------------*/
 
@@ -85,7 +91,10 @@
 
     #email,
     #password {
-        margin-bottom: 2.5em;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         margin-top: 1em;
     }
 
@@ -93,19 +102,46 @@
 
     /* Estilos para la sección de "¿Has olvidado la contraseña?" */
 
+    .contraseña olvidada {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .contraseña-olvidada a {
         font-size: 0.9em;
         margin-left: 0.7em;
         margin-top: 0.7em;
+        color: #06884D;
+        font-weight: 600;
     }
     /*-----------------------------------------------------------------------------------------*/
 
     /*Estilos para los botones de inicio de sesion y formularios*/
 
     .boton-inicio {
+        flex-direction: column;
+        align-content: center;
+        text-align: justify-all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 3.5em;
         margin-top: 4em;
 
+    }
+
+    .boton-iniciar-sesion{
+        width: 100%;
+        height: 7%;
+        border-radius: 1.3em;
+        border: none;
+        box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+        background: var(--second-color-green);
+        color: var(--main-color-white);
+        font-family:'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 140%;
+        padding: 7px;
     }
 
 
@@ -114,57 +150,69 @@
     /* Estilos para el enlace de "SOLICITAR ACCESO" */
 
     #solicitar-acceso {
+        text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
     }
 
-}
-
-/* Estilos para tamaños de pantalla mayores a 1200px */
-@media screen and (min-width: 1200px) {
-    #inicio-de-sesion-titulo {
-        margin-bottom: 2.5em;
-        margin-top: 1em;
-    }
-
-    /*-----------------------------------------------------------------------------------------*/
-
-    /* Estilos para las secciones de email y contraseña */
-
-    #email,
-    #password {
-        margin-bottom: 2.5em;
-        margin-top: 1em;
-    }
-
-    /*-----------------------------------------------------------------------------------------*/
-
-    /* Estilos para la sección de "¿Has olvidado la contraseña?" */
-
-    .contraseña-olvidada a {
+    #solicitar-acceso p{
         font-size: 0.9em;
-        margin-left: 0.7em;
-        margin-top: 0.7em;
-    }
-    /*-----------------------------------------------------------------------------------------*/
-
-    /*Estilos para los botones de inicio de sesion y formularios*/
-
-    .boton-inicio {
-        margin-bottom: 3.5em;
-        margin-top: 4em;
-
+        color: #000000;
+        font-weight: 400;
     }
 
-
-    /*-----------------------------------------------------------------------------------------*/
-
-    /* Estilos para el enlace de "SOLICITAR ACCESO" */
-
-    #solicitar-acceso {
-        margin-top: 1em;
-        margin-bottom: 1em;
+    #solicitar-acceso a{
+        color: #06884D;
+        font-weight: 700;
     }
+
 }
 
-
+/* Estilos específicos para tamaños de pantalla pequeños (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+    .wrapper-forms {
+        padding: 10% 5%;
+    }
+}
+/* Estilos específicos para tamaños de pantalla medianos (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .wrapper-forms {
+        padding: 3% 5%;
+    }
+}
+/* Estilos específicos para tamaños de pantalla grandes (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper-forms {
+        padding: 2.5% 5%;
+    }
+}
+/* Estilos específicos para tamaños de pantalla extra grandes (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .wrapper-forms {
+        padding: 2% 5%;
+    }
+}
+/* Pantallas de 1200px a 1499px */
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .wrapper-forms {
+        padding: 1.5% 5%
+    }
+}
+/* Pantallas de 1500px a 1799px */
+@media only screen and (min-width: 1500px) and (max-width: 1799px) {
+    .wrapper-forms {
+        padding: 1% 5%
+    }
+}
+/* Pantallas de 1800px a 1999px */
+@media only screen and (min-width: 1800px) and (max-width: 1999px) {
+    .wrapper-forms {
+        padding: 0.5% 5%
+    }
+}
+/* Pantallas de 2000px o mayores */
+@media only screen and (min-width: 2000px) {
+    .wrapper-forms {
+        padding: 0.2% 5%
+    }
+}

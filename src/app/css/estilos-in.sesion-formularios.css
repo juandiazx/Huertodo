@@ -1,4 +1,96 @@
 
+/*Importamos la fuente Poppins de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*Se usa tal que:      font-family: 'Poppins', sans-serif;*/
+/*Estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    word-break: break-word;
+}
+/*Declaramos variables en la raíz del documento*/
+:root {
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --second-color-green: rgb(6, 136, 77);
+    --tamaño-28-letra: 1.6em;
+}
+/*Estilos del body*/
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color-white);
+    color: var(--main-color-black);
+    flex-direction: column;
+}
+/*Separación para no ocultar contenido bajo el menú de navegación*/
+.separacion-menu{
+    height: 5rem;
+}
+/*Separación entre partes de la página*/
+.separacion-contenido{
+    height: 4rem;
+}
+.pequeña-separacion-contenido{
+    height: 2rem;
+}
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+/* Estilos de texto de la web */
+p {
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+}
+h1 {
+    font-weight: 800;
+    font-size: 220%;
+}
+h2 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-bottom: 0.4em;
+}
+h3 {
+    font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+/*Estilo botones verdes y blancos como CTA*/
+.boton-verde-blanco {
+    text-align: center;
+    align-content: center;
+    width: 72%;
+    height: 7%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.1em 0.1em;
+}
+/*Margen de las secciones del main y body*/
+main>section, body>section{
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+}
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.parrafo-negrita {
+    font-size: 110%;
+    font-weight: 600;
+}
+/*----------------ESITLOS PARA INICIO DE SESIÓN-------------*/
 
 /*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
 .wrapper {
@@ -9,7 +101,8 @@
 
 /*Wrapper para los formularios e inicio de sesion*/
 .wrapper-forms{
-    margin-top: 12vh;
+    max-width: 1400px; /* Anchura máxima del contenedor main */
+    margin: 12vh auto 0; /* Margen superior de 12vh y margen inferior y lateral automatico */
     padding: 10% 7% 15%;
     height: 100%;
 }
@@ -28,6 +121,12 @@
 
 /* Estilos para el título de inicio de sesión */
 
+#inicio-sesion{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 #inicio-de-sesion-titulo {
     display: flex;
     justify-content: center;
@@ -43,6 +142,7 @@
 
 #email,
 #password {
+    justify-content: center;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -105,7 +205,7 @@
 #solicitar-acceso {
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 }
 
 #solicitar-acceso p {
@@ -181,7 +281,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-bottom: 21.8vh;
+    margin-bottom: 20vh;
     margin-top: 10px;
 }
 
@@ -198,7 +298,7 @@
     text-align: center;
     color: #333333;
     font-size: 0.9em;
-    margin-bottom: 1em;
+    margin-bottom: 2.6em;
 
 }
 
@@ -209,7 +309,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 7vh;
+    height: 10vh;
     margin-bottom: 0.7em;
     margin-top: 0.5em;
 }
@@ -233,7 +333,7 @@
 
 .datos input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 15px;
     font-size: 0.9em;
     border-radius: 10px;
     border-width: 1px;
@@ -465,3 +565,35 @@ textarea:focus {
     font-size: 1rem;
     padding: 7px;
 }
+
+/*------------------------Comienza footer------------------------*/
+/*Wrapper para aplicar el padding al footer*/
+.wrapper-footer {
+    padding: 1em 7%;
+    bottom: 0;
+}
+/*Estilo footer*/
+#footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 500;
+    height: 10%;
+    width: 100%;
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
+    margin-top: 1vh;
+}
+/*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
+#footer-bottom a{
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+}
+/*Margenes para el texto de copyrigth del footer*/
+#footer-bottom p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+/*------------------------Termina footer------------------------*/

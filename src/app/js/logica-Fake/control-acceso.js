@@ -1,6 +1,8 @@
-
+document.addEventListener('DOMContentLoaded',comprobarSesion);
 //Function asincrona autoejecutable cuando se carga la pagina,
-(async () => {
+//GET ../api/v.1.0/sesion  comprobarSesion()
+//Comprueba si existe una sesión, si existe pues carga la página, si no, no la muestra y redirige al Inicio de sesión
+async function comprobarSesion() {
     const respuesta = await fetch('../api/v.1.0/sesion/');
     if(respuesta.ok) {
         const data = await respuesta.json();
@@ -12,11 +14,12 @@
         location.href = './Inicio_sesion.html';
         alert("Acceso restringido, no puede acceder");
     }
-})()
+}
 
 
 //Funcion asincrona para borrar la sesion y salir del espacio personal
-async function logout() {
+// DELETE ../api/v.1.0/sesion  borrarSesion()
+async function borrarSesion() {
     const respuesta = await fetch('../api/v.1.0/sesion/', {
         method: 'delete'
     });

@@ -4,7 +4,7 @@ info:
   description: Api para autentificación de usuarios y control de acceso
   version: 1.0.0
 servers:
-  - url: 'http://localhost/ejercico-login/src/api/'
+  - url: 'http://localhost/Huertodo-PW-G01/src/api/'
     description: 'Servidor de desarrollo'
 paths:
   /sesion:

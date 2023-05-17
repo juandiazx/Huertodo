@@ -111,7 +111,7 @@
 }
 
 /*Estilo contenedor del menu de navegacion*/
-.icon-container {
+.contenedor-iconos {
     display: flex;
     align-items: center;
     gap: 1em; /* Ajusta el valor según el espaciado deseado */

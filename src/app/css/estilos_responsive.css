@@ -198,34 +198,47 @@
     }
 }
 
-/*Estilos para el menu responsive*/
+/* Estilos para pantallas de escritorio */
+@media screen and (min-width: 768px) {
 
-@media (min-width: 768px) {
-    /* Ocultar el icono del menú */
+    /*Oculta el icono del menu*/
     .menu-hamburguesa {
         display: none;
     }
 
-    /* Alinear los elementos del menú en línea */
+
+    /*para mostrar los elementos del menu en línea horizontal*/
     #main-menu ul {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+    }
+
+    /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
+    #main-menu ul li {
+        font-size: 16px; /
+        font-weight: normal;
+        color: var(--second-color-green);
+    }
+
+    /*agrega margenes entre los elementos del menu*/
+    #main-menu ul li {
+        margin-right: 30px; /* Margen derecho entre elementos */
+    }
+
+
+    /*agrega margenes entre el borde de pantalla y los elementos*/
+    #icono-inicio-sesion {
+        margin-right: 30px; /* Margen derecho entre el icono y el borde */
+    }
+
+    /*une el icono de inicio de sesión con los elementos del menu*/
+
+    .icon-container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-        height: var(--menu-height);
+        gap: 1em; /* Ajusta el valor según el espaciado deseado */
     }
-
-    /* Estilo de cada elemento del menú */
-    #main-menu li {
-        margin: 0 1em;
-        color: var(--txt-color);
-        font-size: 16px;
-        font-weight: 400;
-        display: inline;
-    }
-
 }

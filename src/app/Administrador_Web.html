@@ -46,11 +46,10 @@
 </header>
 <!--Termina la cabecera-->
 
-<!-- Sección Registros -->
-
+<main>
   <section>
 
-    <!--Comienza la seccion Notificaciones Usuarios  -->
+    <!--Comienza la seccion Registros  -->
 
     <section class="seccion-preguntas" >
       <section class="separacion-contenido"></section>
@@ -64,7 +63,7 @@
       <div class="acordeon-trabajador">
         <div class="acordeon-item">
           <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Solicitud producto</div>
+            <div class="texto-desplegable-trabajadores">Usuario #37</div>
             <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
           </div>
           <div class="acordeon-item-body">
@@ -80,7 +79,7 @@
       <div class="acordeon-trabajador">
         <div class="acordeon-item">
           <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Problema compra</div>
+            <div class="texto-desplegable-trabajadores">Usuario #36</div>
             <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
           </div>
           <div class="acordeon-item-body">
@@ -96,7 +95,7 @@
       <div class="acordeon-trabajador">
         <div class="acordeon-item">
           <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Compra denegada</div>
+            <div class="texto-desplegable-trabajadores">Usuario #35</div>
             <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
           </div>
           <div class="acordeon-item-body">
@@ -112,7 +111,7 @@
       <div class="acordeon-trabajador">
         <div class="acordeon-item">
           <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Solicitud compra</div>
+            <div class="texto-desplegable-trabajadores">Usuario #34</div>
             <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
           </div>
           <div class="acordeon-item-body">
@@ -128,7 +127,7 @@
       <div class="acordeon-trabajador">
         <div class="acordeon-item">
           <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Problema registro</div>
+            <div class="texto-desplegable-trabajadores">Usuario #33</div>
             <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
           </div>
           <div class="acordeon-item-body">
@@ -142,50 +141,13 @@
 
       <!--Termina la seccion Notificaciones Usuarios  -->
 
+    </section>
+    <!--Termina la seccion Notificaciones técnico  -->
 
-<!-- Menu Navegación Notificaciones -->
+  </section>
+</main>
 
-<div>
 
-  <div id="paginador">
-    <button onclick="cambiarPagina(1)">1</button>
-    <button onclick="cambiarPagina(2)">2</button>
-    <button onclick="cambiarPagina(3)">3</button>
-    <span class="btn-input">
-			<button onclick="mostrarInput(this)">...</button>
-			<input type="number" value="1"
-                   onchange="cambiarPagina(this.value)"
-                   onblur="ocultarInput(this)"/>
-		</span>
-    <button>n</button>
-  </div>
-</div>
-
-<table>
-  <thead>
-  <tr>
-    <th>Nombre
-      <button>^</button>
-    </th>
-    <th>Correo
-      <button>^</button>
-    </th>
-    <th>Fecha
-      <button>v</button>
-    </th>
-    <th>
-    </th>
-  </tr>
-  </thead>
-  <tbody id="tablaVentas">
-
-  </tbody>
-</table>
-
-</body>
-</html>
-
-<!-- Acaba Menu Navegación Notificaciones -->
 
 <!-- Comienza el footer-->
 <footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
@@ -200,14 +162,12 @@
 </footer>
 <!-- Termina el footer-->
 
-
-<!-- JavaScript Documento index.js para el menu desplegable-->
+<!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
-<script src="js/navegacion-notificaciones.js"></script>
-
-<!-- Sección de Actualizaciones en desplegables-->
-<script src="js/desplegables_trabajadores.js" defer></script>
-
+<!--JavaScript Documento popups_trabajadores.js para los popups en formularios de trabajadores -->
+<script src="js/popups_trabajadores.js" defer></script>
+<!--JavaScript Documento desplegables_trabajadores.js para los desplegables de trabajadores -->
+<script src="js/desplegables_trabajadores.js"></script>
 
 </body>
 </html>

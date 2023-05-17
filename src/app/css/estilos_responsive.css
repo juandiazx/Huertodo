@@ -121,13 +121,80 @@
     }
 } /*
 
-/*Estilos responsive para la LandingPage*/
 
-@media screen and (min-width: 800px){
+/*LANDING PAGE RESPONSIVE*/
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
 
     /* Contenedor de la sección hero */
     #landing-page-hero {
-        background-image: url("../images/landingpagehero_2.png");
+        background-image: url("../images/landing-hero-respons1.png");
+    }
+
+    .contenedor-pc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #seccion-info1 .columnas-pc,
+    #seccion-info2 .columnas-pc,
+    #seccion-info3 .columnas-pc {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    #seccion-info1 .columnas-pc .content,
+    #seccion-info2 .columnas-pc .content,
+    #seccion-info3 .columnas-pc .content {
+        flex: 1;
+        margin-right: 5vh; /* Margen entre el texto y la imagen */
+    }
+
+    #seccion-info1 .imagenes-landing,
+    #seccion-info2 .imagenes-landing,
+    #seccion-info3 .imagenes-landing {
+        max-width: 400px;
+        margin: 20px auto; /* Margen igual en todos los lados */
+    }
+
+    #seccion-mantenimiento .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #seccion-mantenimiento .content {
+        flex: 1;
+        text-align: center;
+        margin-right: 5vh; /* Margen entre el texto y la imagen */
+    }
+
+    #seccion-mantenimiento h3, #seccion-mantenimiento p {
+        text-align: left;
+    }
+
+    #seccion-mantenimiento .imagenes-landing {
+        max-width: 400px;
+        margin: 20px auto; /* Margen igual en todos los lados */
+        display: block;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1400px){
+
+    /* Contenedor de la sección hero */
+    #landing-page-hero {
+        background-image: url("../images/landing-hero-respons2.png");
     }
 
     .contenedor-pc {
@@ -198,7 +265,9 @@
     }
 }
 
-/* Estilos para pantallas de escritorio */
+
+/*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
+
 @media screen and (min-width: 768px) {
 
     /*Oculta el icono del menu*/

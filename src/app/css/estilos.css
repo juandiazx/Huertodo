@@ -454,6 +454,8 @@ tbody tr:nth-child(even) {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 550px; /* Establece el ancho máximo deseado para el botón */
+    margin: 0 auto; /* Centra el botón horizontalmente en su contenedor */
     font-size: 92%;
 }
 
@@ -490,7 +492,6 @@ tbody tr:nth-child(even) {
     margin-bottom: 6em;
 }
 /*------------------------Termina landing page hero------------------------*/
-
 
 /*------------------------Comienza sección mantenimiento------------------------*/
 /*Estilo de la sección de mantenimiento en la landing page*/

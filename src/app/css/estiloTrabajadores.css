@@ -519,10 +519,11 @@ h3 {
 
 /* Fecha Desplegable Icono */
 .acordeon-item-header::after {
-    content: "\21D1";
-    font-size: 2.5rem;
+    content: "\27A1";
+    font-size: 2rem;
     margin-left: 0.3rem;
     align-self: center;
+    rotate: -90deg;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -554,7 +555,7 @@ h3 {
 
 .acordeon-trabajador {
     max-width: 700px;
-    margin: 0.5rem auto;
+    margin:  auto;
 }
 
 .close-icon{

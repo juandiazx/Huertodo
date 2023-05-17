@@ -15,10 +15,12 @@
   <link rel='stylesheet' href="css/estilos.css"/>
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <link rel='stylesheet' href="css/estilos_responsive.css"/>
 </head>
 
 <body>
 <!-- Comienza la cabecera-->
+<div class="page">
 <header>
   <nav id="main-menu">
     <!-- Logotipo Link Landing Page-->
@@ -48,18 +50,18 @@
 
 <!-- Comienza la seccion general -->
 
-<main class="wrapper-forms">
+<main  class="wrapper-forms">
   <section id="inicio-sesion">
 
     <!-- Comienza la seccion titulo -->
-    <div class="introduce-correo">
+    <div id="inicio-de-sesion-titulo">
       <h1 class="h1-formularios-titulos">Introduce tu correo</h1>
     </div>
 
-    <form id="login-form">
+    <form id="login-form" onsubmit="login()">
 
     <!-- Comienza la seccion email -->
-    <div id="correo">
+    <div id="email" class="form-section">
       <div class="datos">
         <input type="email" id="email-input" name="email" required>
       </div>
@@ -107,6 +109,6 @@
 <!-- JavaScript Documento index.js para el menu desplegable-->
 <script src="js/index.js"></script>
 
-
+</div>
 </body>
 </html>

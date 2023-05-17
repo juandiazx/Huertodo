@@ -14,6 +14,7 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="src/app/css/estilos.css"/>
     <link rel='stylesheet' href="src/app/css/main-menu.css"/>
+    <link rel='stylesheet' href="src/app/css/estilos_responsive.css"/>
 
 </head>
 <body>
@@ -54,38 +55,53 @@
 
 <!-- Comienza la sección primera de explicación general-->
 <main class="wrapper">
-    <section>
-        <h2>Huerto doméstico</h2>
-        <p>Cultiva y cuida de tu huerto sin preocuparte por el riego o su cuidado. Nuestro sistema hidropónico te permite aprovechar tu tiempo sin perjudicar a tu huerto.</p>
-        <img class="imagenes-landing" src="src/app/images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
-    </section>
+    <div class="contenedor-pc">
 
-    <section>
-        <h2>Monitorización</h2>
-        <p>Visualiza en tiempo real el estado de tu huerto. Nuestros sensores recopilan datos constantemente, lo que te permite controlar el cuidado de tu huerto constantemente.</p>
-        <img class="imagenes-landing" src="src/app/images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
-    </section>
-
-    <section>
-        <h2>Estadísticas</h2>
-        <p>Estadísticas de tu huerto de manera clara y concisa. Visualiza los datos históricos de tu huerto rápidamente y sin complicaciones.</p>
-        <img class="imagenes-landing" src="src/app/images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
-    </section>
+        <div class="columnas-pc">
+            <section>
+                <h2>Huerto doméstico</h2>
+                <p>Cultiva y cuida de tu huerto sin preocuparte por el riego o su cuidado. Nuestro sistema hidropónico te permite aprovechar tu tiempo sin perjudicar a tu huerto.</p>
+                <img class="imagenes-landing" src="src/app/images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
+            </section>
+        </div>
+        <div class="columnas-pc">
+            <section>
+                <h2>Monitorización</h2>
+                <p>Visualiza en tiempo real el estado de tu huerto. Nuestros sensores recopilan datos constantemente, lo que te permite controlar el cuidado de tu huerto constantemente.</p>
+                <img class="imagenes-landing" src="src/app/images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
+            </section>
+        </div>
+        <div class="columnas-pc">
+            <section>
+                <h2>Estadísticas</h2>
+                <p>Estadísticas de tu huerto de manera clara y concisa. Visualiza los datos históricos de tu huerto rápidamente y sin complicaciones.</p>
+                <img class="imagenes-landing" src="src/app/images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
+            </section>
+        </div>
+    </div>
+    <div class="contenedor-pc">
     <section id="contenedor-boton-saber-mas">
         <!--Boton Saber Más-->
         <button class="boton-verde-blanco"><a href="src/app/Producto.html">Saber más</a></button>
     </section>
+    </div>
+
 </main>
 <!-- Termina el main, explicación general -->
 
 <!-- Comienza la sección de explicación mantenimiento-->
 <section id="seccion-mantenimiento" class="wrapper">
-    <h3>Mantenimiento constante de tu equipo</h3>
-    <p class="parrafo-negrita">No te preocupes por las averias</p>
-    <p>Nuestro equipo de expertos estará siempre disponible para ayudarte con cualquier problema técnico que puedas tener. Te proveemos con cambios de sensores, cambios de baterías y fallos en la monitorización.</p>
-    <img class="imagenes-landing" src="src/app/images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
+    <div class="flex-container">
+        <div class="content">
+            <h3>Mantenimiento constante de tu equipo</h3>
+            <p class="parrafo-negrita">No te preocupes por las averías</p>
+            <p>Nuestro equipo de expertos estará siempre disponible para ayudarte con cualquier problema técnico que puedas tener. Te proveemos con cambios de sensores, cambios de baterías y fallos en la monitorización.</p>
+        </div>
+        <img class="imagenes-landing" src="src/app/images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
+    </div>
 </section>
 <!-- Termina la sección de mantenimiento-->
+
 
 <!-- Comienza la sección de reseñas-->
 <section id="seccion-resenyas" class="wrapper">

@@ -300,7 +300,7 @@
 
     /*Contenedor para estrellas reseñas*/
     #contenedor-estrellas-opiniones {
-        margin-bottom: 4em;
+        /*margin-bottom: 4em;*/
     }
 
     /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/

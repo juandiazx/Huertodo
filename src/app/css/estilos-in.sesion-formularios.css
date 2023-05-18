@@ -72,7 +72,6 @@ h3 {
     text-align: center;
     align-content: center;
     width: 72%;
-    height: 7%;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -137,9 +136,8 @@ h3 {
 /*Wrapper para los formularios e inicio de sesion*/
 .wrapper-forms{
     margin-top: 12vh;
-    padding: 10% 7% 15%;
-    height: 80%;
-    max-width: 800px; /* Establece la anchura máxima deseada */
+    /*padding: 10% 7% 15%;*/
+    height: auto;
     margin-left: auto; /* Centra horizontalmente el contenido */
     margin-right: auto; /* Centra horizontalmente el contenido */
     display: flex;
@@ -177,11 +175,13 @@ h3 {
 
 /* Estilos para el título de inicio de sesión */
 
-#inicio-sesion{
+/*#inicio-sesion{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
     align-items: center;
-}
+    width: 100%;
+}*/
 
 #inicio-de-sesion-titulo {
     display: flex;
@@ -189,7 +189,7 @@ h3 {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 10vh;
+    height: auto;
     color: #333333;
     font-weight: lighter;
     font-size: 0.8em;
@@ -204,7 +204,6 @@ h3 {
 #email,
 #password {
     justify-content: center;
-    width: 100%;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -246,7 +245,6 @@ h3 {
 
 .boton-iniciar-sesion {
     width: 100%;
-    height: 7%;
     border-radius: 1.3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -291,7 +289,6 @@ h3 {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 10vh;
     color: #333333;
     font-weight: lighter;
     font-size: 0.8em;
@@ -307,7 +304,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 10vh;
     margin-bottom: 0.7em;
     margin-top: 0.5em;
 }

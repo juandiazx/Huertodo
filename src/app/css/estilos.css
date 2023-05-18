@@ -469,6 +469,28 @@ tbody tr:nth-child(even) {
     margin-bottom: 3em;
 }
 
+#boton-CTA{
+
+}
+
+.contenedor-flecha-bajar{
+    text-align: center;
+    align-content: center;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 0.2em 0.2em;
+}
+
+#flecha-bajar{
+    margin-top: 5vh;
+    width: 110%;
+}
+
 
 /*------------------------Comienza landing page------------------------*/
 /*------------------------Comienza landing page hero------------------------*/

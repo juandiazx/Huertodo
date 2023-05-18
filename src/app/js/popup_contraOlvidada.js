@@ -8,8 +8,11 @@ function validarFormulario() {
     const email = document.getElementById("email-input").value.trim();
     if (email === "") {
         alert("Rellena este campo");
+        console.log('return false');
         return false;
+
     }
+    console.log('return true');
     return true;
 }
 
@@ -24,6 +27,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
 // Cerrar popup al hacer clic en el fondo negro
 popup.addEventListener("click", function(event) {
+    console.log('click volver');
     if (event.target === popup) {
         popup.classList.remove("mostrar");
         window.location.href = "../app/Inicio_sesion.html";

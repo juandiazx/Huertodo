@@ -15,16 +15,7 @@
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
-<!--
-  <style>
-    .loading {
-      display: none;
-    }
-  </style>
-  <script src="js/logica-Fake/control-acceso.js"></script>
-  <script>document.addEventListener('DOMContentLoaded',comprobarSesion("administrador"));</script>
-  -->
-</head>
+  <link rel='stylesheet' href="css/estilo_popup_1.css"/>
 
 <body class="loading">
 <div class="page">
@@ -76,7 +67,11 @@
           <div class="acordeon-item">
             <div class="acordeon-item-header">
               <div class="texto-desplegable-trabajadores">Usuario #37</div>
-              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+              <div class="close-icon">
+                <button class="delete-button">
+                  <img src="images/icono-x-50.png">
+                </button>
+              </div>
             </div>
             <div class="acordeon-item-body">
               <p class="acordeon-item-body-content">
@@ -84,81 +79,95 @@
               </p>
             </div>
           </div>
-        </div>
+      <!-- Desplegable 2 -->
 
-        <!-- Desplegable 2 -->
-
-        <div class="acordeon-trabajador">
-          <div class="acordeon-item">
-            <div class="acordeon-item-header">
-              <div class="texto-desplegable-trabajadores">Usuario #36</div>
-              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+      <div class="acordeon-trabajador">
+        <div class="acordeon-item">
+          <div class="acordeon-item-header">
+            <div class="texto-desplegable-trabajadores">Usuario #36</div>
+            <div class="close-icon">
+              <button class="delete-button">
+                <img src="images/icono-x-50.png">
+              </button>
             </div>
-            <div class="acordeon-item-body">
-              <p class="acordeon-item-body-content">
-                Para el funcionamiento de un huerto vertical hidropónico, necesitarás un sistema de riego, bomba de agua, sustrato o solución nutritiva, un recipiente de agua, luz adecuada, semillas o plantas y un soporte.
-              </p>
-            </div>
+          </div>
+          <div class="acordeon-item-body">
+            <p class="acordeon-item-body-content">
+              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
+            </p>
           </div>
         </div>
 
         <!-- Desplegable 3 -->
 
-        <div class="acordeon-trabajador">
-          <div class="acordeon-item">
-            <div class="acordeon-item-header">
-              <div class="texto-desplegable-trabajadores">Usuario #35</div>
-              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+      <div class="acordeon-trabajador">
+        <div class="acordeon-item">
+          <div class="acordeon-item-header">
+            <div class="texto-desplegable-trabajadores">Usuario #35</div>
+            <div class="close-icon">
+              <button class="delete-button">
+                <img src="images/icono-x-50.png">
+              </button>
             </div>
-            <div class="acordeon-item-body">
-              <p class="acordeon-item-body-content">
-                Un huerto hidropónico doméstico puede ser configurado en una pequeña área, como en una ventana o en una esquina de la casa. El espacio necesario dependerá de la cantidad y el tamaño de las plantas, pero en general, los huertos hidropónicos son ideales para espacios pequeños.
-              </p>
-            </div>
+          </div>
+          <div class="acordeon-item-body">
+            <p class="acordeon-item-body-content">
+              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
+            </p>
           </div>
         </div>
 
         <!-- Desplegable 4 -->
 
-        <div class="acordeon-trabajador">
-          <div class="acordeon-item">
-            <div class="acordeon-item-header">
-              <div class="texto-desplegable-trabajadores">Usuario #34</div>
-              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+      <div class="acordeon-trabajador">
+        <div class="acordeon-item">
+          <div class="acordeon-item-header">
+            <div class="texto-desplegable-trabajadores">Usuario #34</div>
+            <div class="close-icon">
+              <button class="delete-button">
+                <img src="images/icono-x-50.png">
+              </button>
             </div>
-            <div class="acordeon-item-body">
-              <p class="acordeon-item-body-content">
-                La monitorización de un huerto hidropónico proporcionará información valiosa, como el nivel de pH y nutrientes en la solución, la temperatura del agua y del aire, la humedad, y la intensidad de la luz. Estos datos pueden ayudar a los cultivadores a optimizar el rendimiento de las plantas y ajustar las condiciones de crecimiento para obtener mejores resultados.
-              </p>
-            </div>
+          </div>
+          <div class="acordeon-item-body">
+            <p class="acordeon-item-body-content">
+              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
+            </p>
           </div>
         </div>
 
         <!-- Desplegable 5 -->
 
-        <div class="acordeon-trabajador">
-          <div class="acordeon-item">
-            <div class="acordeon-item-header">
-              <div class="texto-desplegable-trabajadores">Usuario #33</div>
-              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+      <div class="acordeon-trabajador">
+        <div class="acordeon-item">
+          <div class="acordeon-item-header">
+            <div class="texto-desplegable-trabajadores">Usuario #33</div>
+            <div class="close-icon">
+              <button class="delete-button" id="close-icon">
+                <img src="images/icono-x-50.png">
+              </button>
             </div>
-            <div class="acordeon-item-body">
-              <p class="acordeon-item-body-content">
-                El mantenimiento del huerto hidropónico incluirá tareas como controlar y ajustar el nivel de nutrientes y pH de la solución, limpiar el sistema y reemplazar el agua regularmente, verificar la iluminación y la temperatura, y monitorear el crecimiento de las plantas. El mantenimiento también puede incluir la poda y cosecha de las plantas para asegurar su salud y el rendimiento del huerto.
-              </p>
-            </div>
+          </div>
+          <div class="acordeon-item-body">
+            <p class="acordeon-item-body-content">
+              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
+            </p>
           </div>
         </div>
 
-
-        <!--Termina la seccion Notificaciones Usuarios  -->
-
-      </section>
-      <!--Termina la seccion Notificaciones técnico  -->
-
     </section>
-  </main>
+    <!--Termina la seccion Notificaciones tecnico  -->
 
+
+<!-- Comienza el popup -->
+<div class="modal-container" id="modal_container">
+  <div class="modal">
+    <p>¿Estás seguro de que quieres eliminar la notificación?</p>
+    <button id="confirm" class="boton-popup">Confirmar</button>
+    <button id="close" class="boton-popup">Cerrar</button>
+  </div>
+</div>
+<!-- Termina el popup -->
 
 <!-- Comienza el footer-->
 <footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
@@ -175,9 +184,9 @@
 </div>
 <!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
-<!--JavaScript Documento popups_trabajadores.js para los popups en formularios de trabajadores -->
-<script src="js/popups_trabajadores.js" defer></script>
 <!--JavaScript Documento desplegables_trabajadores.js para los desplegables de trabajadores -->
 <script src="js/desplegables_trabajadores.js"></script>
+
+
 </body>
 </html>

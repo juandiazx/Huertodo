@@ -35,8 +35,6 @@ async function crearSesion(event) {
         }
     }
     else {
-        //Me esta entrando aqui cuando el usuario esta correcto porque el fetch y la respuesta ya de por si van mal
-        //Igual me esta creando la sesion y comprobando si el correo y la contraseña esta bien, raro
         alert("Usuario incorrecto, inténtelo de nuevo");
         // si no, mostramos un mensaje de error
         /* output.innerText = "Credenciales no válidas";

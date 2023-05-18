@@ -16,6 +16,7 @@ function comprobarSesion(){
     session_start();
     if(!isset($_SESSION['user'])) {
         http_response_code(401);
+        echo json_encode($_SESSION ['user']);
     } else {
         http_response_code(200);
         header('Access-Control-Allow-Origin: *');

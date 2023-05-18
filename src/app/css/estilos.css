@@ -521,7 +521,7 @@ tbody tr:nth-child(even) {
 
 /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
 #estrellas-media-resenyas {
-    height: 3.5em;
+    height: 2em;
     max-width: 100%;
     margin-bottom: 0.5em;
 }

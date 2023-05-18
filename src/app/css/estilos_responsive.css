@@ -241,6 +241,7 @@
         border-radius: 2em;
         padding: 1.5rem 2rem;
         height: 10rem;
+        width: 32rem;
     }
 
     /*Estilo del nombre de la persona dentro de cada reseña*/
@@ -339,6 +340,7 @@
         border-radius: 2em;
         padding: 1.5rem 2rem;
         height: 12rem;
+        width: 45rem;
     }
 
     /*Estilo del nombre de la persona dentro de cada reseña*/

@@ -355,6 +355,37 @@
 }
 
 
+/* Estilos para el diseño responsivo a partir de 800px */
+@media (min-width: 700px) {
+    /* Contenedor de las columnas */
+    .columnas-paralelas {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Columna de las imágenes */
+    .columna-imagenes {
+        width: 50%;
+        margin-right: 2em;
+    }
+
+    /* Columna de la descripción y botón */
+    .columna-descripcion {
+        width: 50%;
+        margin-left: 2em;
+    }
+
+    .image-selector {
+        width: 100%;
+        max-width: 600px;
+        max-height: 400px;
+    }
+
+}
+
+
+
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
 
 @media screen and (min-width: 768px) {

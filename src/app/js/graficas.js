@@ -25,7 +25,7 @@ let opciones = {
             color: '#000000'
         },
         title: {
-            display: true, text: 'Gráfica humedad',
+            display: true, text: 'Gráfica agua',
             font: {
                 size:17,
                 family: 'Poppins',

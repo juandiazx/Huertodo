@@ -35,9 +35,11 @@ async function crearSesion(event) {
         }
     }
     else {
-        alert("Usuario incorrecto, inténtelo de nuevo");
-        // si no, mostramos un mensaje de error
-        /* output.innerText = "Credenciales no válidas";
-         output.classList.add("error");*/
+        mostrarMensajeError()
     }
+}
+
+function mostrarMensajeError() {
+    let mensajeError = document.getElementById("mensaje-error");
+    mensajeError.style.display = "block";
 }

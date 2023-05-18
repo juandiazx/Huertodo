@@ -13,12 +13,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/main-menu.css"/>
-    <link rel='stylesheet' href="css/estiloTrabajadores.css"/>
     <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
     <link rel='stylesheet' href="css/estilos_responsive.css"/>
 
+    <!-- JavaScript Documento index.js-->
+    <script src="js/index.js"></script>
+    <!--
+    <style>
+        .loading {
+            display: none;
+        }
+    </style>
+    <script src="js/logica-Fake/control-acceso.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',comprobarSesion("tecnico"));</script>
+    -->
 </head>
-<body>
+
+<body class="loading">
+<div class="page">
 <!-- Comienza la cabecera-->
 <header>
     <nav id="main-menu">
@@ -41,6 +53,7 @@
                 <li><a href="Producto.html">Producto</a></li>
                 <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
                 <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+                <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
             </ul>
 
         </div>
@@ -54,13 +67,11 @@
 
 <!--Comienza la seccion general-->
 
-<main>
+<main class="wrapper-forms">
     <section>
 
         <!--Comienza la seccion Notificaciones Citas  -->
         <section class="seccion-preguntas">
-                <section class="separacion-contenido"></section>
-
                 <!--titulo de Notificaciones Citas-->
 
                 <div class="títulos-trabajadores">
@@ -149,7 +160,9 @@
         </section>
         <!--Termina la seccion Notificaciones Citas  -->
 
+
         <!--Titulo de formulario reportes generales-->
+        <section id="inicio-sesion" >
         <div class="títulos-trabajadores">
             <h2>Reportes generales</h2>
         </div>
@@ -176,11 +189,11 @@
             <button type="submit" class="boton-iniciar-sesion">Enviar</button>
         </div>
         </form>
+        </section>
 
 
     </section>
 </main>
-
 
 
 <!-- Comienza el footer-->
@@ -214,5 +227,8 @@
 </section>
 <!-- Termina el popup -->
 
+</div>
+
 </body>
+
 </html>

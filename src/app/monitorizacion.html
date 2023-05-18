@@ -18,6 +18,16 @@
 
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <style>
+        .loading {
+            display: none;
+        }
+    </style>
+    <script src="js/logica-Fake/control-acceso.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));
+    </script>
+</script>
    </head>
 <body class="loading">
 <!-- Comienza la cabecera-->
@@ -42,6 +52,7 @@
                 <li><a href="Producto.html">Producto</a></li>
                 <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
                 <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+                <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
             </ul>
 
         </div>
@@ -225,7 +236,5 @@
 <script src="js/index.js"></script>
 <!-- JavaScript Documento getMedidas.js-->
 <script src="js/getMedidas.js"></script>
-
-<script src="js/logica-Fake/control-acceso.js"></script>
 </body>
 </html>

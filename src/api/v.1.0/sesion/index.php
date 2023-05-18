@@ -1,88 +1,17 @@
 <?php
+include('rest.php');
+//Varios casos de petición HTTP, GET, POST y DELETE, sino devuelve 405
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
-        session_start();
-        if(!isset($_SESSION['user'])) {
-            http_response_code(401);
-        } else {
-            http_response_code(200);
-            header('Access-Control-Allow-Origin: *');
-            header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE');
-            header('Content-Type: application/json; charset=utf-8');
-            echo json_encode($_SESSION ['user']);
-        }
+        echo comprobarSesion();
         break;
     case 'POST':
-        $bbdd_servidor = 'localhost:3306';
-        $bbdd_nombre = 'jdiagut1_proyectoHuertodo';
-        $bbdd_user = 'jdiagut1_master';
-        $bbdd_password = 'Huertodo1234';
-
-        try {
-            $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
-        } catch (Exception $e) {
-            http_response_code(500);
-            die("Error: " . mysqli_connect_errno() . " " . mysqli_connect_error());
-        }
-
-        mysqli_query($connexion, 'SET NAMES utf8mb4');
-
-        $usuario = $_POST['email'];
-        $password = $_POST['password'];
-
-        $sql = "SELECT `Usuario`.`id`, 
-       `Usuario`.`email`, 
-       `Usuario`.`rol`, 
-       `roles`.`rol`,
-	   `roles`.`id`
-	FROM `Usuario` 
-		INNER JOIN `roles` ON `Usuario`.`rol` = `roles`.`id`
-	WHERE `Usuario`.`email` = '$usuario' AND `Usuario`.`contrasenya` = '$password'";
-
-
-        $resultado = mysqli_query($connexion, $sql);
-
-        if (mysqli_affected_rows($connexion) === 1) {
-            $registro = mysqli_fetch_assoc($resultado);
-
-            session_start();
-            $_SESSION['user'] = $registro;
-
-            $salida = [];
-            $salida['id'] = $registro['id'];
-            $salida['nombre'] = $registro['nombre'];
-            $salida['rol'] = $registro['rol'];
-
-            http_response_code(200);
-
-            header('Access-Control-Allow-Origin: *');
-            header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE');
-            header('Content-Type: application/json; charset=utf-8');
-
-            echo json_encode($salida);
-        } else {
-            http_response_code(401);
-        }
+        echo crearSesion('localhost:3306','jdiagut1_master','Huertodo1234','jdiagut1_proyectoHuertodo');
         break;
     case 'DELETE':
-        // Inicializar la sesión.
-        session_start();
-
-        // Destruir todas las variables de sesión.
-        $_SESSION = array();
-
-        // Si se desea destruir la sesión completamente, borre también la cookie de sesión.
-        if (ini_get("session.use_cookies")) {
-            $params = session_get_cookie_params();
-            setcookie(session_name(), '', time() - 42000,
-                $params["path"], $params["domain"],
-                $params["secure"], $params["httponly"]
-            );
-        }
-
-        // Finalmente, destruir la sesión.
-        session_destroy();
+        echo borrarSesion();
         break;
     default:
+        //Si ninguno de los casos anteriores se cumple, devolver codigo HTTP 405
         http_response_code(405);
 }

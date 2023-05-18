@@ -14,7 +14,6 @@
   <!-- Para que sea compatible con Microsoft Edge-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CSS DOCUMENTO estilos.css-->
-  <link rel='stylesheet' href="css/estilos.css"/>
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
@@ -53,7 +52,7 @@
 <!-- Comienza la seccion general -->
 
 <main class="wrapper-forms">
-  <div id="inicio-sesion">
+  <section>
 
     <!-- Comienza la seccion titulo -->
     <div class="solicitud-producto">
@@ -61,7 +60,7 @@
     </div>
 
     <!--Input de nombre-->
-    <form id="login-form">
+    <form id="login-form" onsubmit="login()">
       <div id="name">
         <div class="datos">
           <label for="name">Nombre y Apellidos*</label>
@@ -114,7 +113,7 @@
       </div>
     </form>
 
-  </div>
+  </section>
 </main>
 <!-- Termina la seccion general -->
 

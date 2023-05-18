@@ -218,7 +218,7 @@ select {
 #contenedor-fecha-hora-huerto {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -230,7 +230,6 @@ select {
     align-items: center;
     justify-content: center;
     padding-top: 0.4em;
-    padding-bottom: 0.4em;
     margin-bottom: 0;
     font-size: 100%;
 }
@@ -239,13 +238,17 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    justify-items: center;
 
+}
+
+#contenedor-parametros-tiempo-real-huerto-temperatura{
+    justify-content: center;
 }
 
 /*Cada contenedor de parametros en tiempo real especifico*/
 .contenedor-parametro-monitorizacion-especifico {
     display: flex;
-    align-content: center; /*NO SE CENTRA NO SE POR QUE*/
     align-items: center;
     text-align: center;
     width: 50%;
@@ -276,6 +279,7 @@ select {
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.85em;
     padding: 0.2em;
+    margin-top: 0.2rem;
     margin-bottom: 0.7em;
 }
 /*Contenedor con solo la grafica de parametros, sin los botones de filtrar por dia,mes,año*/
@@ -333,6 +337,11 @@ select {
 .icono-estado-metereologico {
     width: 2em;
     height: 2em;
+}
+
+#datos-cada-30-s{
+    text-align: center;
+    margin-top: 0.2rem;
 }
 
 /*Estilo contenedor con el boton para acceder al mapa con los huertos*/

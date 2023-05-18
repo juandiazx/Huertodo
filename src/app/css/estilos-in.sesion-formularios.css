@@ -19,6 +19,23 @@
     --second-color-green: rgb(6, 136, 77);
     --tamaño-28-letra: 1.6em;
 }
+
+/*El estilo que tendrán las secciones hijas directas de body main y footer*/
+body>section, main>section,footer>section{
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Margen de las secciones del main y body*/
+main>section, body>section{
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+}
+
 /*Estilos del body*/
 body {
     display: flex;
@@ -27,22 +44,7 @@ body {
     color: var(--main-color-black);
     flex-direction: column;
 }
-/*Separación para no ocultar contenido bajo el menú de navegación*/
-.separacion-menu{
-    height: 5rem;
-}
-/*Separación entre partes de la página*/
-.separacion-contenido{
-    height: 4rem;
-}
-.pequeña-separacion-contenido{
-    height: 2rem;
-}
-/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
-.wrapper {
-    padding-left: 7%;
-    padding-right: 7%;
-}
+
 /* Estilos de texto de la web */
 p {
     font-size: 90%;
@@ -64,6 +66,7 @@ h3 {
     margin-bottom: 0.8em;
     margin-top: 1.2em;
 }
+
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
     text-align: center;
@@ -80,17 +83,40 @@ h3 {
     font-size: 170%;
     padding: 0.1em 0.1em;
 }
-/*Margen de las secciones del main y body*/
-main>section, body>section{
-    margin-top: 1.7em;
-    margin-bottom: 1.7em;
-}
+
 /*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
 .parrafo-negrita {
     font-size: 110%;
     font-weight: 600;
 }
-/*----------------ESITLOS PARA INICIO DE SESIÓN-------------*/
+
+/*Estilo para el titulo h1 de los formularios*/
+.h1-formularios-titulos {
+    font-weight: 500;
+    font-size: 1.9em;
+}
+
+/*----------------------TERMINAN ESTILOS GENERALES---------------------*/
+
+
+/*--------------------ESTILOS PARA EL MENU-----------------------------*/
+
+/*Separación para no ocultar contenido bajo el menú de navegación*/
+.separacion-menu{
+    height: 5rem;
+}
+/*Separación entre partes de la página*/
+.separacion-contenido{
+    height: 4rem;
+}
+.pequeña-separacion-contenido{
+    height: 2rem;
+}
+
+/*-------------------FIN ESTILOS PARA EL MENU--------------------------*/
+
+
+/*-----ESITLOS GENERALES PARA TODOS LOS FORMULARIOS Y TRABAJADORES-----*/
 
 .page{
 
@@ -120,16 +146,7 @@ main>section, body>section{
     justify-content: center;
     align-items: center;
 }
-/*------------------------------------------------------------------------------------------------*/
 
-/*Estilo para el titulo h1 de los formularios*/
-.h1-formularios-titulos {
-    font-weight: 500;
-    font-size: 1.9em;
-}
-/*------------------------------------------------------------------------------------------------*/
-
-/*Estilos Inicio de sesion y formularios*/
 /*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
 
 
@@ -154,7 +171,6 @@ main>section, body>section{
     margin-bottom: 10vh;
     margin-top: 10px;
 }
-
 
 
 /*---------------------------------------- Inicio de Sesión ------------------------------------*/
@@ -196,7 +212,24 @@ main>section, body>section{
 }
 
 
-/*-----------------------------------------------------------------------------------------*/
+
+/*-----------------------------*/
+
+/* Estilos para los labels */
+
+/*.form-group label {
+    display: flex;
+    text-align: left;
+    font-size: 0.9em;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    color: #333333;
+    font-weight: 400;
+}*/
+
+/*--------------------------------*/
+
+
 
 /*-----------------------------------------------------------------------------------------*/
 
@@ -299,6 +332,14 @@ main>section, body>section{
 }
 
 
+
+/*#message{
+
+    height: 28vh;
+
+}*/
+
+
 /*-----------------------------------------------------------------------------------------*/
 
 /* Estilos para los labels */
@@ -308,6 +349,7 @@ main>section, body>section{
     text-align: left;
     font-size: 1em;
     margin-bottom: 0.3em;
+    margin-top: 0.3em;
     color: #333333;
 }
 
@@ -336,6 +378,21 @@ main>section, body>section{
     margin-top: 0.5em;
     margin-bottom: 1em;
 }
+
+
+/*
+#message input {
+
+    height: 180px;
+    font-family:'Poppins', sans-serif;
+
+}
+
+#message input:focus {
+    border-color: #06884D;
+}
+*/
+
 
 textarea {
     resize: none;
@@ -381,7 +438,7 @@ textarea:focus {
     font-size: 140%;
     padding: 7px ;
 }
-/*-----------------------------------------------------------------------------------------*/
+
 
 /*Estilo para el contenedor del checkbox */
 #chekbox {
@@ -403,6 +460,187 @@ textarea:focus {
     color: #06884D;
     font-weight: 700;
 }
+
+/*------------FIN ESTILOS PARA FORMULARIO DE SOLICITUD-----------*/
+
+/*----------------COMIENZAN ESTILOS PARA TRABAJADORES------------*/
+
+
+
+/*Títulos comunes para trabajadores*/
+
+.títulos-trabajadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4vh;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+/*-----------El titulo de Notificaciones técnico,-----------------------------
+ va separado para solucionar el problema de margenes entre desplegables---------*/
+
+.titulo-notf-tec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4vh;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 3.5em;
+    margin-bottom: 2em;
+
+}
+
+.dual-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.dual-button {
+    display: flex;
+}
+
+.left-button,
+.right-button {
+    flex: 1;
+    height: 70%;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 0.8em;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-button {
+    border-radius: 0 10px 10px 0;
+    width: 10%;
+}
+
+.left-button {
+    border-radius: 10px 0 0 10px;
+    width: 10%;
+}
+
+.left-button.active,
+.right-button.active {
+    background-color: #06884D;
+    color: white;
+}
+
+.left-button:not(.active):hover,
+.right-button:not(.active):hover {
+    background-color: #06884D;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.acordeon {
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+.acordeon-item {
+    background-color: #06884D;
+    color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.acordeon-item-header {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Fecha Desplegable Icono */
+.acordeon-item-header::after {
+    content: "\27A1";
+    font-size: 2rem;
+    margin-left: 0.3rem;
+    align-self: center;
+    rotate: -90deg;
+    transition: transform 0.2s ease-in-out;
+}
+
+.acordeon-item-header.active::after {
+    transform: rotate(180deg);
+}
+
+.acordeon-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.acordeon-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid white;
+}
+
+.seccion-registros{
+
+}
+
+.texto-desplegable-trabajadores{
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: space-evenly;
+}
+
+.acordeon-trabajador {
+    max-width: 700px;
+    margin:  auto;
+}
+
+.close-icon{
+    order: 10;
+}
+
+
+/* ACABA ESTILOS DE DESPLEGABLES */
+
+.seccion-preguntas{
+    margin-top: 2vh;
+
+}
+
+
+/*--------------------FIN ESTILOS DE TRABAJADORES----------------*/
+
 /*----------------------------------------------- Estilos para terminos y condiciones y politica de privacidad ------------------------------------------*/
 
 /*Estilo general para la sección de los parrafos*/

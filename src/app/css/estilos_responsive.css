@@ -83,11 +83,17 @@
     .wrapper-forms {
         padding: 0 5%;
     }
+    .estilo-form-inicio-sesion {
+        width: auto;
+    }
 }
 /* Estilos específicos para tamaños de pantalla grandes (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .wrapper-forms {
         padding: 0 5%;
+    }
+    .estilo-form-inicio-sesion {
+        width: auto;
     }
 }
 /* Estilos específicos para tamaños de pantalla extra grandes (1025px - 1280px) */
@@ -95,11 +101,17 @@
     .wrapper-forms {
         padding: 0 5%;
     }
+    .estilo-form-inicio-sesion {
+        width: auto;
+    }
 }
 /* Pantallas de 1200px a 1499px */
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
     .wrapper-forms {
         padding: 0 5%
+    }
+    .estilo-form-inicio-sesion {
+        width: auto;
     }
 }
 /* Pantallas de 1500px a 1799px */
@@ -107,17 +119,26 @@
     .wrapper-forms {
         padding: 0 5%
     }
+    .estilo-form-inicio-sesion {
+        width: auto;
+    }
 }
 /* Pantallas de 1800px a 1999px */
 @media only screen and (min-width: 1800px) and (max-width: 1999px) {
     .wrapper-forms {
         padding: 0 5%
     }
+    .estilo-form-inicio-sesion {
+        width: auto;
+    }
 }
 /* Pantallas de 2000px o mayores */
 @media only screen and (min-width: 2000px) {
     .wrapper-forms {
         padding: 0 5%
+    }
+    .estilo-form-inicio-sesion {
+        width: auto;
     }
 } /*
 

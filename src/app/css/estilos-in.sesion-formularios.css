@@ -140,9 +140,18 @@ h3 {
     height: auto;
     margin-left: auto; /* Centra horizontalmente el contenido */
     margin-right: auto; /* Centra horizontalmente el contenido */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.estilo-form-inicio-sesion {
+    width:90%;
+}
+
+.estilo-form-inicio-sesion>section {
+    width: 100%;
 }
 
 /*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/

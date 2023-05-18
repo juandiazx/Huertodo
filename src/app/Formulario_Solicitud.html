@@ -17,6 +17,7 @@
   <link rel='stylesheet' href="css/estilos.css"/>
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <link rel='stylesheet' href="css/estilos_responsive.css"/>
 </head>
 
 <body>
@@ -25,20 +26,25 @@
   <nav id="main-menu">
     <!-- Logotipo Link Landing Page-->
     <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
-    <ul>
-      <li><a href="Producto.html">Producto</a></li>
-      <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
-      <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
-    </ul>
 
-    <!-- Icono de iniciar sesion-->
-    <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+    <!-- Contenedor para los iconos de inicio de sesión y menú -->
+    <div class="contenedor-iconos">
+      <!-- Icono de inicio de sesión -->
+      <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
-    <!-- Menu hamburguesa-->
-    <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-      <div></div>
-      <div></div>
-      <div></div>
+      <!-- Menu hamburguesa-->
+      <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <ul >
+        <li><a href="Producto.html">Producto</a></li>
+        <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
+        <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+      </ul>
+
     </div>
   </nav>
 </header>
@@ -47,7 +53,7 @@
 <!-- Comienza la seccion general -->
 
 <main class="wrapper-forms">
-  <section id="inicio-sesion">
+  <div id="inicio-sesion">
 
     <!-- Comienza la seccion titulo -->
     <div class="solicitud-producto">
@@ -58,16 +64,8 @@
     <form id="login-form">
       <div id="name">
         <div class="datos">
-          <label for="name">Nombre*</label>
+          <label for="name">Nombre y Apellidos*</label>
           <input type="text" id="name-input" name="name" required>
-        </div>
-      </div>
-
-      <!--Input de apellidos-->
-      <div id="last-name">
-        <div class="datos">
-          <label for="last-name">Apellidos*</label>
-          <input type="text" id="last-name-input" name="last-name" required>
         </div>
       </div>
 
@@ -105,9 +103,10 @@
 
       <!--Chekbox aceptar terminos y condiciones-->
       <div id="chekbox">
-        <input type="checkbox" id="aceptar-terminos">
-        <label for="aceptar-terminos">Acepto los términos y condiciones</label>
+        <input type="checkbox" id="aceptar-terminos" required>
+        <label for="aceptar-terminos">Acepto los <a href="TerminosYCondiciones.html">términos y condiciones</a></label>
       </div>
+
 
       <!-- Comienza la seccion boton -->
       <div class="boton-enviar">
@@ -115,25 +114,41 @@
       </div>
     </form>
 
-  </section>
+  </div>
 </main>
 <!-- Termina la seccion general -->
 
+
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-  <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
     <!--Contenedor con los links de texto-->
     <div>
-      <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
     </div>
     <!--Parrafo con el nombre de la empresa y el copyright-->
     <p class="parrafo-negrita">© GTI Copyright 2023</p>
   </div>
 </footer>
 <!-- Termina el footer-->
-<!-- JavaScript Documento formulario-solicitud.js-->
-<script src="js/formulario-solicitud.js"></script>
+
+<!-- Comienza el popup -->
+<section  id="popup">
+  <div class="popup-contenido">
+    <p>El formulario se ha enviado con éxito</p>
+    <button id="cerrar-popup">Volver</button>
+  </div>
+</section>
+<!-- Termina el popup -->
+
+
 <!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
+
+<!-- JavaScript Documento popup_solicitud.js-->
+<script src="js/popup_solicitud.js"></script>
+
+</div>
+
 </body>
 </html>

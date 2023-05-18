@@ -109,3 +109,10 @@
 #main-menu.activo .menu-hamburguesa div:nth-child(3) {
     transform: translateY(-.9em) rotate(-45deg);
 }
+
+/*Estilo contenedor del menu de navegacion*/
+.contenedor-iconos {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Ajusta el valor según el espaciado deseado */
+}

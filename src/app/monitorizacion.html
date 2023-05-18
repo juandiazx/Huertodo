@@ -14,6 +14,8 @@
     <link rel='stylesheet' href="css/monitorizacion.css"/>
     <link rel='stylesheet' href="css/main-menu.css"/>
     <link rel='stylesheet' href="css/estilos.css"/>
+    <link rel='stylesheet' href="css/estilos_responsive.css"/>
+
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
     <style>
@@ -21,32 +23,41 @@
             display: none;
         }
     </style>
-</head>
+    <script src="js/logica-Fake/control-acceso.js">
+    document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));
+</script>
+   </head>
 <body class="loading">
 <!-- Comienza la cabecera-->
 <header>
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
         <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
-        <ul>
-            <li><a href="Producto.html">Producto</a></li>
-            <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
-            <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
-            <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
-        </ul>
 
-        <!-- Icono de iniciar sesion-->
-        <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+        <!-- Contenedor para los iconos de inicio de sesión y menú -->
+        <div class="contenedor-iconos">
+            <!-- Icono de inicio de sesión -->
+            <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
-        <!-- Menu hamburguesa-->
-        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-            <div></div>
-            <div></div>
-            <div></div>
+            <!-- Menu hamburguesa-->
+            <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul >
+                <li><a href="Producto.html">Producto</a></li>
+                <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
+                <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+                <li class="boton-cerrar-sesion"><a href="../../index.html" onclick="logout()">Cerrar sesión</a></li>
+            </ul>
+
         </div>
     </nav>
 </header>
 <!--Termina la cabecera-->
+
 <!-- Comienza la seccion de espacio personal sin banner ni footer-->
 <section id="contenedor-espacio-personal-completo" class="wrapper">
 
@@ -201,18 +212,20 @@
     <!--Termina desplegable para el mapa de huertos-->
 
 </section>
+
 <!-- Comienza el footer-->
 <footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
     <div id="contenedor-footer-texto">
         <!--Contenedor con los links de texto-->
         <div>
-            <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+            <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
         </div>
         <!--Parrafo con el nombre de la empresa y el copyright-->
         <p class="parrafo-negrita">© GTI Copyright 2023</p>
     </div>
 </footer>
 <!-- Termina el footer-->
+
 <!-- JavaScript Documento graficas.js para la gráfica-->
 <script src="js/graficas.js"></script>
 <!-- JavaScript Documento popups-monitorizacion.js para el mapa y las notificaciones-->
@@ -221,9 +234,5 @@
 <script src="js/index.js"></script>
 <!-- JavaScript Documento getMedidas.js-->
 <script src="js/getMedidas.js"></script>
-
-<script src="js/logica-Fake/control-acceso.js">
-    document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));
-</script>
 </body>
 </html>

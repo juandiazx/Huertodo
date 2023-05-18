@@ -1,8 +1,124 @@
+
+/*Importamos la fuente Poppins de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*Se usa tal que:      font-family: 'Poppins', sans-serif;*/
+/*Estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    word-break: break-word;
+}
+/*Declaramos variables en la raíz del documento*/
+:root {
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --second-color-green: rgb(6, 136, 77);
+    --tamaño-28-letra: 1.6em;
+}
+/*Estilos del body*/
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color-white);
+    color: var(--main-color-black);
+    flex-direction: column;
+}
+/*Separación para no ocultar contenido bajo el menú de navegación*/
+.separacion-menu{
+    height: 5rem;
+}
+/*Separación entre partes de la página*/
+.separacion-contenido{
+    height: 4rem;
+}
+.pequeña-separacion-contenido{
+    height: 2rem;
+}
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+/* Estilos de texto de la web */
+p {
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+}
+h1 {
+    font-weight: 800;
+    font-size: 220%;
+}
+h2 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-bottom: 0.4em;
+}
+h3 {
+    font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+/*Estilo botones verdes y blancos como CTA*/
+.boton-verde-blanco {
+    text-align: center;
+    align-content: center;
+    width: 72%;
+    height: 7%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.1em 0.1em;
+}
+/*Margen de las secciones del main y body*/
+main>section, body>section{
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+}
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.parrafo-negrita {
+    font-size: 110%;
+    font-weight: 600;
+}
+/*----------------ESITLOS PARA INICIO DE SESIÓN-------------*/
+
+.page{
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
 /*Wrapper para los formularios e inicio de sesion*/
 .wrapper-forms{
     margin-top: 12vh;
     padding: 10% 7% 15%;
-    height: 100%;
+    height: 80%;
+    max-width: 800px; /* Establece la anchura máxima deseada */
+    margin-left: auto; /* Centra horizontalmente el contenido */
+    margin-right: auto; /* Centra horizontalmente el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*------------------------------------------------------------------------------------------------*/
 
@@ -14,18 +130,55 @@
 /*------------------------------------------------------------------------------------------------*/
 
 /*Estilos Inicio de sesion y formularios*/
+/*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
+
+
+.boton-enviar {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+
+}
+
+.parrafo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10vh;
+    margin-top: 10px;
+}
+
+
 
 /*---------------------------------------- Inicio de Sesión ------------------------------------*/
 
 /* Estilos para el título de inicio de sesión */
 
-#inicio-de-sesion-titulo {
-    display: flex;
+#inicio-sesion{
     justify-content: center;
     text-align: center;
     align-items: center;
-    color: var(--main-color-black);
-    margin-bottom: 2.5em;
+}
+
+#inicio-de-sesion-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 10vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin-top: 3.2em;
+    margin-bottom: 10px;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -34,12 +187,14 @@
 
 #email,
 #password {
+    justify-content: center;
     width: 100%;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 0.5rem;
 }
+
 
 /*-----------------------------------------------------------------------------------------*/
 
@@ -70,8 +225,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 5em;
+    margin-bottom: 4.95em;
+    margin-top: 2em;
 
 }
 
@@ -95,8 +250,8 @@
 
 #solicitar-acceso {
     text-align: center;
-    margin-top: 4em;
-    margin-bottom: 15vh;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #solicitar-acceso p {
@@ -110,71 +265,6 @@
     font-weight: 700;
 }
 
-/*-----------------------------------------------------------------------------------------*/
-
-/*---------------------------------------- Formulario enviado------------------------------------*/
-
-.formulario-enviado {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    color: #333333;
-    font-weight: lighter;
-    font-size: 0.6em;
-    margin-top: 225px;
-    margin-bottom: 7em;
-}
-
-.boton-volver {
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 7em;
-    margin-top: 10em;
-}
-/*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
-
-.introduce-correo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    height: 10vh;
-    color: #333333;
-    font-weight: lighter;
-    font-size: 0.8em;
-    margin-top: 14em;
-    margin-bottom: 10px;
-}
-
-.boton-enviar {
-    flex-direction: column;
-    align-content: center;
-    text-align: justify-all;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 35px;
-    margin-top: 35px;
-
-}
-
-.parrafo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 20vh;
-    margin-top: 10px;
-}
-
 /*--------------------------------------------Formulario de solicitud-------------------------------------------------*/
 
 #login-form {
@@ -186,9 +276,13 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    height: 10vh;
     color: #333333;
-    font-size: 0.9em;
-    margin-bottom: 2.6em;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin-top: 2em;
+    margin-bottom: 1em;
 
 }
 
@@ -305,4 +399,185 @@ textarea:focus {
     font-size: 1em;
     color: #333333;
 }
-/*-----------------------------------------------------------------------------------------*/
+#chekbox a {
+    color: #06884D;
+    font-weight: 700;
+}
+/*----------------------------------------------- Estilos para terminos y condiciones y politica de privacidad ------------------------------------------*/
+
+/*Estilo general para la sección de los parrafos*/
+.información{
+
+    margin-bottom: 7em;
+
+}
+/*Estilo para el titulo principal de la web*/
+.tituloPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 1vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.78em;
+    margin-top: 13em;
+    margin-bottom: 3em;
+}
+
+
+/*Estilo para cada seccion de información por separado*/
+.seccionInformación{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+/*Estilo para los titulos secundarios*/
+.tituloSecundario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 5vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*Estilos para los parrafos de texto*/
+.texto{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    font-size: 0.8em;
+    margin-bottom:1em;
+    margin-top: 1em;
+
+}
+
+/*Estilo para las lineas horizontales de separación de texto*/
+.linea-horizontal {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom:3em;
+    margin-top: 3em;
+}
+
+
+/*-------------------Fin de estilos de informacion-------------------*/
+
+
+/*-----------MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN-----------*/
+
+#mensaje-error{
+    display: none;
+    color: #c70202;
+    padding: 0.5rem;
+}
+
+/*--------ACABA MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN--------*/
+
+/*---------------------Estilos para los popups de inicio de sesión, formularios y trabajadores------------*/
+/* Popup de fondo oscuro */
+#popup {
+    /* Agregar flexbox para centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Posición fija y a pantalla completa */
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: visibility 0s, opacity 0.5s;
+}
+
+/* Mostrar popup cuando se agrega la clase "mostrar" */
+#popup.mostrar {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+/* Contenido del popup */
+.popup-contenido {
+    /* Agregar flexbox para centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Fondo blanco y borde redondeado */
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 60%;
+    max-height: 25%;
+    overflow: auto;
+    height: 70%;
+}
+
+/* Botón de cerrar */
+#cerrar-popup {
+    /* Establecer el diseño del botón */
+    width: 100%;
+    height: 20%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 7px;
+}
+
+/*------------------------Comienza footer------------------------*/
+/*Wrapper para aplicar el padding al footer*/
+.wrapper-footer {
+    padding: 1em 7%;
+    bottom: 0;
+}
+/*Estilo footer*/
+#footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 500;
+    height: 10%;
+    width: 100%;
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
+    margin-top: auto;
+}
+/*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
+#footer-bottom a{
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+}
+/*Margenes para el texto de copyrigth del footer*/
+#footer-bottom p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+/*------------------------Termina footer------------------------*/

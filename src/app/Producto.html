@@ -14,6 +14,7 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/estilos.css"/>
     <link rel='stylesheet' href="css/main-menu.css"/>
+    <link rel='stylesheet' href="css/estilos_responsive.css"/>
 
 </head>
 <body>
@@ -22,20 +23,25 @@
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
         <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
-        <ul>
-            <li><a href="Producto.html">Producto</a></li>
-            <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
-            <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
-        </ul>
 
-        <!-- Icono de iniciar sesion-->
-        <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
+        <!-- Contenedor para los iconos de inicio de sesión y menú -->
+        <div class="contenedor-iconos">
+            <!-- Icono de inicio de sesión -->
+            <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
-        <!-- Menu hamburguesa-->
-        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-            <div></div>
-            <div></div>
-            <div></div>
+            <!-- Menu hamburguesa-->
+            <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul >
+                <li><a href="Producto.html">Producto</a></li>
+                <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
+                <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+            </ul>
+
         </div>
     </nav>
 </header>
@@ -126,7 +132,7 @@
             <div class="acordeon">
                 <div class="acordeon-item">
                     <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">¿Necesito experiencia en jardinería para comenzar un huerto hidropónico doméstico?</div>
+                        <div class="texto-desplegable">¿Necesito experiencia en jardinería para comenzar un huerto hidropónico doméstico?</div>
                     </div>
                     <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
@@ -139,7 +145,7 @@
             <div class="acordeon">
                 <div class="acordeon-item">
                     <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">¿Qué necesitaré para el funcionamiento del producto?</div>
+                        <div class="texto-desplegable">¿Qué necesitaré para el funcionamiento del producto?</div>
                     </div>
                     <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
@@ -152,7 +158,7 @@
             <div class="acordeon">
                 <div class="acordeon-item">
                     <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">¿Cuánto espacio necesito para un huerto hidropónico doméstico?</div>
+                        <div class="texto-desplegable">¿Cuánto espacio necesito para un huerto hidropónico doméstico?</div>
                     </div>
                     <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
@@ -165,7 +171,7 @@
             <div class="acordeon">
                 <div class="acordeon-item">
                     <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">¿Qué datos e información me aportará la monitorización del huerto?</div>
+                        <div class="texto-desplegable">¿Qué datos e información me aportará la monitorización del huerto?</div>
                     </div>
                     <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
@@ -178,7 +184,7 @@
             <div class="acordeon">
                 <div class="acordeon-item">
                     <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">¿Cómo funcionará el mantenimiento del producto?</div>
+                        <div class="texto-desplegable">¿Cómo funcionará el mantenimiento del producto?</div>
                     </div>
                     <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
@@ -191,7 +197,7 @@
             <div class="acordeon">
                 <div class="acordeon-item">
                     <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">¿Cómo hago para solicitar el producto?</div>
+                        <div class="texto-desplegable">¿Cómo hago para solicitar el producto?</div>
                     </div>
                     <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
@@ -206,18 +212,20 @@
 </main>
 <!-- Termina el main de la página de producto -->
 
+
 <!-- Comienza el footer-->
-<footer id="footer-bottom" role="contentinfo">
-    <div class="wrapper-footer">
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+    <div id="contenedor-footer-texto">
         <!--Contenedor con los links de texto-->
         <div>
-            <a href="#">Política de privacidad</a>  |  <a href="#">Condiciones generales</a>
+            <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
         </div>
-        <!--Párrafo con el nombre de la empresa y el copyright-->
+        <!--Parrafo con el nombre de la empresa y el copyright-->
         <p class="parrafo-negrita">© GTI Copyright 2023</p>
     </div>
 </footer>
 <!-- Termina el footer-->
+
 
 <!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>

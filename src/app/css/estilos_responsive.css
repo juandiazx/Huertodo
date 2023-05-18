@@ -1,0 +1,313 @@
+/*-------------------------------------------ESTILOS RESPONSIVE--------------------------------------*/
+
+/*Estilos responsive para terminos y condiciones y política de privacidad*/
+
+/* Estilos para tamaños de pantalla de tablet (entre 600px y 1200px) */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .tituloPrincipal {
+        margin-top: 10em;
+        margin-bottom: 3em;
+        font-size: 1.1em;
+    }
+
+    .seccionInformación {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .tituloSecundario {
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .texto {
+        font-size: 0.85em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .linea-horizontal {
+        margin-left: 3em;
+        margin-right: 3em;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+    }
+}
+
+/* Estilos para tamaños de pantalla mayores a 1200px */
+@media screen and (min-width: 1200px) {
+    .tituloPrincipal {
+        margin-top: 10em;
+        margin-bottom: 4em;
+        font-size: 1.2em;
+    }
+
+    .seccionInformación {
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+
+    .tituloSecundario {
+        font-size: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .texto {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .linea-horizontal {
+        margin-left: 5em;
+        margin-right: 5em;
+        margin-bottom: 1.5em;
+        margin-top: 1.5em;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+
+/* Estilos específicos para tamaños de pantalla pequeños (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+    .wrapper-forms {
+        padding: 0 5%;
+    }
+}
+/* Estilos específicos para tamaños de pantalla medianos (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .wrapper-forms {
+        padding: 0 5%;
+    }
+}
+/* Estilos específicos para tamaños de pantalla grandes (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper-forms {
+        padding: 0 5%;
+    }
+}
+/* Estilos específicos para tamaños de pantalla extra grandes (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .wrapper-forms {
+        padding: 0 5%;
+    }
+}
+/* Pantallas de 1200px a 1499px */
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .wrapper-forms {
+        padding: 0 5%
+    }
+}
+/* Pantallas de 1500px a 1799px */
+@media only screen and (min-width: 1500px) and (max-width: 1799px) {
+    .wrapper-forms {
+        padding: 0 5%
+    }
+}
+/* Pantallas de 1800px a 1999px */
+@media only screen and (min-width: 1800px) and (max-width: 1999px) {
+    .wrapper-forms {
+        padding: 0 5%
+    }
+}
+/* Pantallas de 2000px o mayores */
+@media only screen and (min-width: 2000px) {
+    .wrapper-forms {
+        padding: 0 5%
+    }
+} /*
+
+
+/*LANDING PAGE RESPONSIVE*/
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+
+    /* Contenedor de la sección hero */
+    #landing-page-hero {
+        background-image: url("../images/landing-hero-respons1.png");
+    }
+
+    .contenedor-pc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #seccion-info1 .columnas-pc,
+    #seccion-info2 .columnas-pc,
+    #seccion-info3 .columnas-pc {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    #seccion-info1 .columnas-pc .content,
+    #seccion-info2 .columnas-pc .content,
+    #seccion-info3 .columnas-pc .content {
+        flex: 1;
+        margin-right: 5vh; /* Margen entre el texto y la imagen */
+    }
+
+    #seccion-info1 .imagenes-landing,
+    #seccion-info2 .imagenes-landing,
+    #seccion-info3 .imagenes-landing {
+        max-width: 400px;
+        margin: 20px auto; /* Margen igual en todos los lados */
+    }
+
+    #seccion-mantenimiento .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #seccion-mantenimiento .content {
+        flex: 1;
+        text-align: center;
+        margin-right: 5vh; /* Margen entre el texto y la imagen */
+    }
+
+    #seccion-mantenimiento h3, #seccion-mantenimiento p {
+        text-align: left;
+    }
+
+    #seccion-mantenimiento .imagenes-landing {
+        max-width: 400px;
+        margin: 20px auto; /* Margen igual en todos los lados */
+        display: block;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1400px){
+
+    /* Contenedor de la sección hero */
+    #landing-page-hero {
+        background-image: url("../images/landing-hero-respons2.png");
+    }
+
+    .contenedor-pc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .columnas-pc {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #seccion-mantenimiento .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #seccion-mantenimiento .content {
+        flex: 1;
+        text-align: center;
+        margin-right: 5vh; /* Margen entre el texto y la imagen */
+    }
+
+    #seccion-mantenimiento h3, #seccion-mantenimiento p {
+        text-align: left;
+    }
+
+    #seccion-mantenimiento .imagenes-landing {
+        max-width: 400px;
+        margin: 20px auto; /* Margen igual en todos los lados */
+        display: block;
+    }
+
+    /*Contenedor para estrellas reseñas*/
+    #contenedor-estrellas-opiniones {
+        margin-bottom: 4em;
+    }
+
+    /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
+    #estrellas-media-resenyas {
+        height: 3.5em;
+    }
+
+    /*Los párrafos de dentro del contenedor padre con las estrellas*/
+    #contenedor-estrellas-opiniones > p {
+        font-size: 1.4em;
+    }
+
+    /*Estilo contenedor donde deslizan todos los paneles*/
+    .contenedor-resenyas-deslizables {
+        border-radius: 2em;
+        padding: 1.5rem 2rem;
+    }
+
+    /*Estilo del nombre de la persona dentro de cada reseña*/
+    .contenedor-cabecera-resenya p {
+        font-size: 1.4em;
+    }
+
+    /*Estilo para las estrellas verdes específicas de cada reseña de usuarios*/
+    .estrellas-resenya-especifica {
+        height: 2em;
+    }
+}
+
+
+/*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
+
+@media screen and (min-width: 768px) {
+
+    /*Oculta el icono del menu*/
+    .menu-hamburguesa {
+        display: none;
+    }
+
+
+    /*para mostrar los elementos del menu en línea horizontal*/
+    #main-menu ul {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+    }
+
+    /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
+    #main-menu ul li {
+        font-size: 16px; /
+        font-weight: normal;
+        color: var(--second-color-green);
+    }
+
+    /*agrega margenes entre los elementos del menu*/
+    #main-menu ul li {
+        margin-right: 30px; /* Margen derecho entre elementos */
+    }
+
+
+    /*agrega margenes entre el borde de pantalla y los elementos*/
+    #icono-inicio-sesion {
+        margin-right: 30px; /* Margen derecho entre el icono y el borde */
+    }
+
+    /*une el icono de inicio de sesión con los elementos del menu*/
+
+    .icon-container {
+        display: flex;
+        align-items: center;
+        gap: 1em; /* Ajusta el valor según el espaciado deseado */
+    }
+}

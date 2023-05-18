@@ -13,7 +13,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- CSS DOCUMENTO estilos.css-->
   <link rel='stylesheet' href="css/main-menu.css"/>
-  <link rel='stylesheet' href="css/estiloTrabajadores.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
 <!--
@@ -40,125 +39,126 @@
       <!-- Icono de inicio de sesión -->
       <a href="Inicio_sesion.html"><img id="icono-inicio-sesion" src="images/icono-usuario.png" alt="Icono Inicio Sesión Usuario"></a>
 
-      <!-- Menu hamburguesa-->
-      <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-        <div></div>
-        <div></div>
-        <div></div>
+        <!-- Menu hamburguesa-->
+        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul >
+          <li><a href="Producto.html">Producto</a></li>
+          <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
+          <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
+          <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
+        </ul>
+
       </div>
+    </nav>
+  </header>
+  <!--Termina la cabecera-->
 
-      <ul >
-        <li><a href="Producto.html">Producto</a></li>
-        <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
-        <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
-        <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
-      </ul>
+  <main>
+    <section>
 
-    </div>
-  </nav>
-</header>
-<!--Termina la cabecera-->
+      <!--Comienza la seccion Registros  -->
 
-<main>
-  <section>
+      <section class="seccion-preguntas" >
+        <section class="separacion-contenido"></section>
 
-    <!--Comienza la seccion Registros  -->
+        <div class="títulos-trabajadores">
+          <h2>Registros</h2>
+        </div>
 
-    <section class="seccion-preguntas" >
-      <section class="separacion-contenido"></section>
+        <!-- Desplegable 1 -->
 
-      <div class="títulos-trabajadores">
-        <h2>Registros</h2>
-      </div>
-
-      <!-- Desplegable 1 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #37</div>
-            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
+        <div class="acordeon-trabajador">
+          <div class="acordeon-item">
+            <div class="acordeon-item-header">
+              <div class="texto-desplegable-trabajadores">Usuario #37</div>
+              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+            </div>
+            <div class="acordeon-item-body">
+              <p class="acordeon-item-body-content">
+                No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Desplegable 2 -->
+        <!-- Desplegable 2 -->
 
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #36</div>
-            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              Para el funcionamiento de un huerto vertical hidropónico, necesitarás un sistema de riego, bomba de agua, sustrato o solución nutritiva, un recipiente de agua, luz adecuada, semillas o plantas y un soporte.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desplegable 3 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #35</div>
-            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              Un huerto hidropónico doméstico puede ser configurado en una pequeña área, como en una ventana o en una esquina de la casa. El espacio necesario dependerá de la cantidad y el tamaño de las plantas, pero en general, los huertos hidropónicos son ideales para espacios pequeños.
-            </p>
+        <div class="acordeon-trabajador">
+          <div class="acordeon-item">
+            <div class="acordeon-item-header">
+              <div class="texto-desplegable-trabajadores">Usuario #36</div>
+              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+            </div>
+            <div class="acordeon-item-body">
+              <p class="acordeon-item-body-content">
+                Para el funcionamiento de un huerto vertical hidropónico, necesitarás un sistema de riego, bomba de agua, sustrato o solución nutritiva, un recipiente de agua, luz adecuada, semillas o plantas y un soporte.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Desplegable 4 -->
+        <!-- Desplegable 3 -->
 
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #34</div>
-            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              La monitorización de un huerto hidropónico proporcionará información valiosa, como el nivel de pH y nutrientes en la solución, la temperatura del agua y del aire, la humedad, y la intensidad de la luz. Estos datos pueden ayudar a los cultivadores a optimizar el rendimiento de las plantas y ajustar las condiciones de crecimiento para obtener mejores resultados.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desplegable 5 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #33</div>
-            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              El mantenimiento del huerto hidropónico incluirá tareas como controlar y ajustar el nivel de nutrientes y pH de la solución, limpiar el sistema y reemplazar el agua regularmente, verificar la iluminación y la temperatura, y monitorear el crecimiento de las plantas. El mantenimiento también puede incluir la poda y cosecha de las plantas para asegurar su salud y el rendimiento del huerto.
-            </p>
+        <div class="acordeon-trabajador">
+          <div class="acordeon-item">
+            <div class="acordeon-item-header">
+              <div class="texto-desplegable-trabajadores">Usuario #35</div>
+              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+            </div>
+            <div class="acordeon-item-body">
+              <p class="acordeon-item-body-content">
+                Un huerto hidropónico doméstico puede ser configurado en una pequeña área, como en una ventana o en una esquina de la casa. El espacio necesario dependerá de la cantidad y el tamaño de las plantas, pero en general, los huertos hidropónicos son ideales para espacios pequeños.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+
+        <!-- Desplegable 4 -->
+
+        <div class="acordeon-trabajador">
+          <div class="acordeon-item">
+            <div class="acordeon-item-header">
+              <div class="texto-desplegable-trabajadores">Usuario #34</div>
+              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+            </div>
+            <div class="acordeon-item-body">
+              <p class="acordeon-item-body-content">
+                La monitorización de un huerto hidropónico proporcionará información valiosa, como el nivel de pH y nutrientes en la solución, la temperatura del agua y del aire, la humedad, y la intensidad de la luz. Estos datos pueden ayudar a los cultivadores a optimizar el rendimiento de las plantas y ajustar las condiciones de crecimiento para obtener mejores resultados.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desplegable 5 -->
+
+        <div class="acordeon-trabajador">
+          <div class="acordeon-item">
+            <div class="acordeon-item-header">
+              <div class="texto-desplegable-trabajadores">Usuario #33</div>
+              <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+            </div>
+            <div class="acordeon-item-body">
+              <p class="acordeon-item-body-content">
+                El mantenimiento del huerto hidropónico incluirá tareas como controlar y ajustar el nivel de nutrientes y pH de la solución, limpiar el sistema y reemplazar el agua regularmente, verificar la iluminación y la temperatura, y monitorear el crecimiento de las plantas. El mantenimiento también puede incluir la poda y cosecha de las plantas para asegurar su salud y el rendimiento del huerto.
+              </p>
+            </div>
+          </div>
+        </div>
 
 
-      <!--Termina la seccion Notificaciones Usuarios  -->
+        <!--Termina la seccion Notificaciones Usuarios  -->
+
+      </section>
+      <!--Termina la seccion Notificaciones técnico  -->
 
     </section>
-    <!--Termina la seccion Notificaciones técnico  -->
+  </main>
 
-  </section>
-</main>
 
 <!-- Comienza el footer-->
 <footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
@@ -167,18 +167,17 @@
     <div>
       <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
     </div>
-    <!--Parrafo con el nombre de la empresa y el copyright-->
-    <p class="parrafo-negrita">© GTI Copyright 2023</p>
-  </div>
+      <!--Parrafo con el nombre de la empresa y el copyright-->
+      <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </div>
 </footer>
-<!-- Termina el footer-->
-
+  <!-- Termina el footer-->
+</div>
 <!-- JavaScript Documento index.js-->
 <script src="js/index.js"></script>
 <!--JavaScript Documento popups_trabajadores.js para los popups en formularios de trabajadores -->
 <script src="js/popups_trabajadores.js" defer></script>
 <!--JavaScript Documento desplegables_trabajadores.js para los desplegables de trabajadores -->
 <script src="js/desplegables_trabajadores.js"></script>
-</div>
 </body>
 </html>

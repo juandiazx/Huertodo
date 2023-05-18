@@ -525,17 +525,17 @@ textarea:focus {
     /* Fondo blanco y borde redondeado */
     background-color: white;
     border-radius: 20px;
-    padding: 10px;
+    padding: 2rem;
     text-align: center;
     font-size: 1.2em;
-    max-width: 60%;
-    max-height: 25%;
+    max-width: 65%;
+    max-height: 30%;
     overflow: auto;
     height: 70%;
 }
 
 /* Botón de cerrar */
-#cerrar-popup {
+.cerrar-popup, .confirmar-popup, .cancelar-popup {
     /* Establecer el diseño del botón */
     width: 100%;
     height: 20%;
@@ -547,8 +547,11 @@ textarea:focus {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 1rem;
-    padding: 7px;
+    padding: 5px;
+    margin-top: 0.5rem;
 }
+
+
 
 /*------------------------Comienza footer------------------------*/
 /*Wrapper para aplicar el padding al footer*/

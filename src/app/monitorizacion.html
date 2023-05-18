@@ -23,8 +23,10 @@
             display: none;
         }
     </style>
-    <script src="js/logica-Fake/control-acceso.js">
+    <script src="js/logica-Fake/control-acceso.js"></script>
+    <script>
     document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));
+    </script>
 </script>
    </head>
 <body class="loading">
@@ -50,7 +52,7 @@
                 <li><a href="Producto.html">Producto</a></li>
                 <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
                 <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
-                <li class="boton-cerrar-sesion"><a href="../../index.html" onclick="logout()">Cerrar sesión</a></li>
+                <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
             </ul>
 
         </div>

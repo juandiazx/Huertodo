@@ -157,8 +157,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 35px;
-    margin-top: 35px;
+    margin-bottom: 4.95em;
+    margin-top: 2em;
 
 }
 
@@ -210,25 +210,6 @@ h3 {
     text-align: center;
     margin-top: 0.5rem;
 }
-
-
-
-/*-----------------------------*/
-
-/* Estilos para los labels */
-
-/*.form-group label {
-    display: flex;
-    text-align: left;
-    font-size: 0.9em;
-    margin-bottom: 0em;
-    margin-top: 0em;
-    color: #333333;
-    font-weight: 400;
-}*/
-
-/*--------------------------------*/
-
 
 
 /*-----------------------------------------------------------------------------------------*/

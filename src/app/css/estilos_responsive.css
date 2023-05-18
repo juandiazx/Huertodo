@@ -380,6 +380,7 @@
         height: auto;
         transform: none;
         order: 0;
+        align-items: center;
     }
 
     /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
@@ -388,6 +389,15 @@
         font-weight: normal;
         color: var(--second-color-green);
     }
+
+    .boton-cerrar-sesion {
+        padding-top: 0.4rem;
+    }
+    .boton-cerrar-sesion a {
+        margin-top: 3rem;
+        color: var(--main-color-white);
+    }
+
 
     /*agrega margenes entre los elementos del menu*/
     #main-menu ul li {
@@ -401,4 +411,8 @@
         order: 1;
     }
 
+    .boton-cerrar-sesion {
+        width: 8rem;
+        height: 2.3rem;
+    }
 }

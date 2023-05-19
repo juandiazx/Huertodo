@@ -127,3 +127,7 @@
     font-weight: 700;
     font-size: 1.3rem;
 }
+/*Propiedad loading para todos espacios personales*/
+.loading {
+    display: none;
+}

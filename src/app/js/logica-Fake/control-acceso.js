@@ -9,7 +9,7 @@ async function comprobarSesion(rol) {
         /*document.getElementById('user-name').innerText = data.nombre; //HAY QUE HACER QUE PONGA QUE USUARIO ES*/
         let body = document.querySelector("body");
         document.body.classList.remove("loading");
-        document.getElementById("contenedor-nombre-usuario").innerText = "Bienvenido " + data.nombreApellidos;
+        document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos+"!";
         //Hay que ponerle a todo el body de los espacios personales, la clase loading que tendra un display none
     }
     //Si hay una sesion pero el rol en esta sesion es distinto al del que llama a la funcion

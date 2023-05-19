@@ -433,7 +433,7 @@
 
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 890px) {
 
     /*Oculta el icono del menu*/
     .menu-hamburguesa {

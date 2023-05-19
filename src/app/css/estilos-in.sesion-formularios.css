@@ -545,6 +545,15 @@ textarea:focus {
 
 }
 
+/* Boton cerrar desplegable */
+.delete-button{
+    background-color: var(--second-color-green);
+}
+
+#close-icon{
+    background-color: var(--second-color-green);
+}
+
 /*-----------El titulo de Notificaciones técnico,-----------------------------
  va separado para solucionar el problema de margenes entre desplegables---------*/
 

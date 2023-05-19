@@ -231,6 +231,10 @@ main>section, body>section{
     margin-top: 3em;
 }
 
+#producto-page h2 {
+    text-align: left;
+}
+
 /* Botones de la página de Producto */
 .boton-producto {
     flex-direction: column;
@@ -462,7 +466,7 @@ tbody tr:nth-child(even) {
 }
 
 #boton-CTA{
-
+    max-width: 500px;
 }
 
 .contenedor-flecha-bajar{

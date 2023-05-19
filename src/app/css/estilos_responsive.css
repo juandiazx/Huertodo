@@ -500,7 +500,7 @@
     /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
     #main-menu ul li {
         font-size: 16px; /
-        font-weight: normal;
+    font-weight: normal;
         color: var(--second-color-green);
     }
 

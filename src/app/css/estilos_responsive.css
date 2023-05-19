@@ -190,7 +190,7 @@
     }
 
     #contenedor-boton-saber-mas{
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
         margin-top: 1rem;
     }
 
@@ -229,6 +229,8 @@
     /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
     #estrellas-media-resenyas {
         height: 3em;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
     }
 
     /*Los párrafos de dentro del contenedor padre con las estrellas*/
@@ -289,7 +291,7 @@
     }
 
     #contenedor-boton-saber-mas{
-        margin-bottom: 1rem;
+        margin-bottom: 5rem;
         margin-top: 1rem;
     }
 
@@ -328,6 +330,8 @@
     /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
     #estrellas-media-resenyas {
         height: 3em;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
     }
 
     /*Los párrafos de dentro del contenedor padre con las estrellas*/
@@ -355,8 +359,9 @@
 }
 
 
-/* Estilos para el diseño responsivo a partir de 800px */
-@media (min-width: 700px) {
+/*ESILOS PARA LA PÁGINA DE PRODUCTO*/
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
     /* Contenedor de las columnas */
     .columnas-paralelas {
         display: flex;
@@ -366,23 +371,64 @@
 
     /* Columna de las imágenes */
     .columna-imagenes {
-        width: 50%;
+        width: 40%;
         margin-right: 2em;
     }
 
     /* Columna de la descripción y botón */
     .columna-descripcion {
-        width: 50%;
+        width: 60%;
         margin-left: 2em;
     }
 
     .image-selector {
         width: 100%;
-        max-width: 600px;
-        max-height: 400px;
+        max-width: 500px;
+        max-height: 600px;
+    }
+
+    .demo cursor{
+        width: 50%;
+        max-width: 30px;
+        max-height: 20px;
     }
 
 }
+
+@media screen and (min-width: 1000px) {
+    /* Contenedor de las columnas */
+    .columnas-paralelas {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Columna de las imágenes */
+    .columna-imagenes {
+        width: 30%;
+        margin-right: 2em;
+    }
+
+    /* Columna de la descripción y botón */
+    .columna-descripcion {
+        width: 70%;
+        margin-left: 2em;
+    }
+
+    .image-selector {
+        width: 100%;
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    .demo cursor{
+        width: 50%;
+        max-width: 30px;
+        max-height: 20px;
+    }
+
+}
+
 
 
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/

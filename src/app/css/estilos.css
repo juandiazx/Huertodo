@@ -408,6 +408,7 @@ tbody tr:nth-child(even) {
     display: flex;
     align-items: center;
     cursor: pointer;
+    justify-content: space-between; /* Alineación a la derecha */
 }
 
 /* Fecha Desplegable Icono */
@@ -418,10 +419,13 @@ tbody tr:nth-child(even) {
     align-self: center;
     rotate: -90deg;
     transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+    transform-box: fill-box;
+    transform: rotate(180deg); /* Flecha inicialmente rotada */
 }
 
 .acordeon-item-header.active::after {
-    transform: rotate(180deg);
+    transform: rotate(0deg); /* Flecha rotada al abrir el desplegable */
 }
 
 .acordeon-item-body {
@@ -437,50 +441,6 @@ tbody tr:nth-child(even) {
 }
 
 /* ACABA ESTILOS DE DESPLEGABLES */
-
-/*Botón saber mas clase estilo*/
-#contenedor-boton-saber-mas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 550px; /* Establece el ancho máximo deseado para el botón */
-    margin: 0 auto; /* Centra el botón horizontalmente en su contenedor */
-    font-size: 92%;
-}
-
-/*Estilo imágenes de la landing page*/
-.imagenes-landing {
-    height: 6%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3em;
-}
-
-#boton-CTA{
-
-}
-
-.contenedor-flecha-bajar{
-    text-align: center;
-    align-content: center;
-    border-radius: 3em;
-    border: none;
-    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
-    background: var(--second-color-green);
-    color: var(--main-color-white);
-    font-family:'Poppins', sans-serif;
-    font-weight: 500;
-    padding: 0.2em 0.2em;
-}
-
-#flecha-bajar{
-    margin-top: 18vh;
-    width: 90%;
-    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
-}
-
 
 /*------------------------Comienza landing page------------------------*/
 /*------------------------Comienza landing page hero------------------------*/

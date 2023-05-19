@@ -151,7 +151,10 @@
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons2.png");
     }
-
+    .contenedor-flecha-bajar {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
     .contenedor-pc {
         display: flex;
         flex-wrap: wrap;
@@ -266,7 +269,10 @@
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons1.png");
     }
-
+    .contenedor-flecha-bajar {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
     .contenedor-pc {
         display: flex;
         flex-wrap: wrap;

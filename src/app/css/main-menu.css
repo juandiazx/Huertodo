@@ -116,3 +116,14 @@
     align-items: center;
     gap: 1em; /* Ajusta el valor según el espaciado deseado */
 }
+
+/*Estilo nombre usuario bienvenida*/
+#contenedor-nombre-usuario {
+    margin-top: 4em;
+    font-weight: 700;
+}
+
+#contenedor-nombre-usuario>p {
+    font-weight: 700;
+    font-size: 1.3rem;
+}

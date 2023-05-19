@@ -501,6 +501,7 @@ tbody tr:nth-child(even) {
     background-image: url("../images/landing-hero.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-bottom: 2rem;
 }
 
 #landing-page-hero h1{
@@ -514,12 +515,26 @@ tbody tr:nth-child(even) {
 }
 /*------------------------Termina landing page hero------------------------*/
 
+.content{
+
+}
+
 /*------------------------Comienza sección mantenimiento------------------------*/
 /*Estilo de la sección de mantenimiento en la landing page*/
 #seccion-mantenimiento {
     background-color: var(--second-color-green);
     color: var(--main-color-white);
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 /*------------------------Termina sección mantenimiento------------------------*/
 
 /*------------------------Comienza reseñas------------------------*/

@@ -373,7 +373,6 @@ h3 {
     color: #333333;
     font-weight: lighter;
     font-size: 0.8em;
-    margin-top: 2em;
     margin-bottom: 1em;
 
 }
@@ -412,7 +411,7 @@ h3 {
 }
 
 #campos-obligatorios{
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
 }
 
 /*-----------------------------------------------------------------------------------------*/

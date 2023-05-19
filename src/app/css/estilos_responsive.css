@@ -2,41 +2,31 @@
 
 /*Estilos responsive para terminos y condiciones y política de privacidad*/
 
-/*----------------------------------------------------ESTILOS RESPONSIVE--------------------------------------------------------*/
-
-/* Estilos responsive para terminos y condiciones y política de privacidad */
-
 /* Estilos para tamaños de pantalla de tablet (entre 600px y 1200px) */
 @media screen and (min-width: 600px) and (max-width: 1200px) {
-
-    /* Estilos para el título principal */
     .tituloPrincipal {
         margin-top: 10em;
         margin-bottom: 3em;
         font-size: 1.1em;
     }
 
-    /* Estilos para la sección de información */
     .seccionInformación {
         margin-left: 3em;
         margin-right: 3em;
     }
 
-    /* Estilos para los títulos secundarios */
     .tituloSecundario {
         font-size: 0.9em;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
 
-    /* Estilos para el texto */
     .texto {
         font-size: 0.85em;
         margin-bottom: 0.5em;
         margin-top: 0.5em;
     }
 
-    /* Estilos para la línea horizontal */
     .linea-horizontal {
         margin-left: 3em;
         margin-right: 3em;
@@ -47,35 +37,29 @@
 
 /* Estilos para tamaños de pantalla mayores a 1200px */
 @media screen and (min-width: 1200px) {
-
-    /* Estilos para el título principal */
     .tituloPrincipal {
         margin-top: 10em;
         margin-bottom: 4em;
         font-size: 1.2em;
     }
 
-    /* Estilos para la sección de información */
     .seccionInformación {
         margin-left: 5em;
         margin-right: 5em;
     }
 
-    /* Estilos para los títulos secundarios */
     .tituloSecundario {
         font-size: 1em;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
 
-    /* Estilos para el texto */
     .texto {
         font-size: 0.9em;
         margin-bottom: 0.5em;
         margin-top: 0.5em;
     }
 
-    /* Estilos para la línea horizontal */
     .linea-horizontal {
         margin-left: 5em;
         margin-right: 5em;
@@ -84,9 +68,9 @@
     }
 }
 
-/---------------------------------------------------------------------------------------------------------------------------/
+/*----------------------------------------------------------------------------*/
 
-/*ESTILOS PARA LOS FORMULAIOS*/
+
 
 /* Estilos específicos para tamaños de pantalla pequeños (320px - 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
@@ -159,25 +143,18 @@
 } /*
 
 
-/-------------------------------------------------------LANDING PAGE RESPONSIVE------------------------------------------------------/
+/*LANDING PAGE RESPONSIVE*/
 
-/* Estilos responsive para la página de inicio */
-
-/* Estilos para tamaños de pantalla de tablet (entre 768px y 1400px) */
 @media screen and (min-width: 768px) and (max-width: 1400px) {
 
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons2.png");
     }
-
-    /* Estilos para el contenedor de la flecha de bajar */
     .contenedor-flecha-bajar {
         width: 3.2rem;
         height: 3.2rem;
     }
-
-    /* Estilos para el contenedor de PC */
     .contenedor-pc {
         display: flex;
         flex-wrap: wrap;
@@ -185,12 +162,10 @@
         gap: 20px;
     }
 
-    /* Estilos para el botón CTA */
-    #boton-CTA {
+    #boton-CTA{
         max-width: 500px;
     }
 
-    /* Estilos para las secciones de información 1, 2 y 3 */
     #seccion-info1 .columnas-pc,
     #seccion-info2 .columnas-pc,
     #seccion-info3 .columnas-pc {
@@ -202,7 +177,6 @@
         background-color: transparent;
     }
 
-    /* Estilos para el contenido de las secciones de información 1, 2 y 3 */
     #seccion-info1 .columnas-pc .content,
     #seccion-info2 .columnas-pc .content,
     #seccion-info3 .columnas-pc .content {
@@ -210,7 +184,6 @@
         margin-right: 5vh; /* Margen entre el texto y la imagen */
     }
 
-    /* Estilos para las imágenes de las secciones de información 1, 2 y 3 */
     #seccion-info1 .imagenes-landing,
     #seccion-info2 .imagenes-landing,
     #seccion-info3 .imagenes-landing {
@@ -218,24 +191,21 @@
         margin: 20px auto; /* Margen igual en todos los lados */
     }
 
-    /* Estilos para el tamaño 1 */
-    .tamanyos1 {
+    .tamanyos1{
         height: 17rem;
         width: 23rem;
     }
 
-    /* Estilos para el contenedor del botón "Saber más" */
-    #contenedor-boton-saber-mas {
+    #contenedor-boton-saber-mas{
         margin-bottom: 4rem;
         margin-top: 1rem;
     }
 
-    /* Estilos para el botón verde y blanco */
-    .boton-verde-blanco {
+    .boton-verde-blanco{
         height: 3rem;
     }
 
-    /* Estilos para la sección de mantenimiento */
+
     #seccion-mantenimiento .flex-container {
         display: flex;
         flex-wrap: wrap;
@@ -243,44 +213,40 @@
         align-items: center;
     }
 
-    /* Estilos para el contenido de la sección de mantenimiento */
     #seccion-mantenimiento .content {
         flex: 1;
         text-align: center;
         margin-right: 5vh; /* Margen entre el texto y la imagen */
     }
 
-    /* Estilos para los encabezados y párrafos de la sección de mantenimiento */
-    #seccion-mantenimiento h3,
-    #seccion-mantenimiento p {
+    #seccion-mantenimiento h3, #seccion-mantenimiento p {
         text-align: left;
     }
 
-    /* Estilos para las imágenes de la sección de mantenimiento */
     #seccion-mantenimiento .imagenes-landing {
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
         display: block;
     }
 
-    /* Estilos para el contenedor de estrellas de opiniones */
+    /*Contenedor para estrellas reseñas*/
     #contenedor-estrellas-opiniones {
         margin-bottom: 4em;
     }
 
-    /* Estilos para las estrellas de la media de las reseñas de los usuarios (estrellas grandes) */
+    /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
     #estrellas-media-resenyas {
         height: 3em;
         margin-top: 5vh;
         margin-bottom: 1vh;
     }
 
-    /* Estilos para los párrafos dentro del contenedor padre de las estrellas */
+    /*Los párrafos de dentro del contenedor padre con las estrellas*/
     #contenedor-estrellas-opiniones > p {
         font-size: 1.4em;
     }
 
-    /* Estilos para el contenedor donde deslizan todos los paneles de reseñas */
+    /*Estilo contenedor donde deslizan todos los paneles*/
     .contenedor-resenyas-deslizables {
         border-radius: 2em;
         padding: 1.5rem 2rem;
@@ -288,39 +254,36 @@
         width: 29rem;
     }
 
-    /* Estilos para el nombre de la persona dentro de cada reseña */
+    /*Estilo del nombre de la persona dentro de cada reseña*/
     .contenedor-cabecera-resenya p {
         font-size: 1.4em;
     }
 
-    /* Estilos para las estrellas verdes específicas de cada reseña de usuarios */
+    /*Estilo para las estrellas verdes específicas de cada reseña de usuarios*/
     .estrellas-resenya-especifica {
         height: 2em;
     }
+
+
 }
 
-/* Estilos para tamaños de pantalla mayores a 1400px */
-@media screen and (min-width: 1400px) {
+
+@media screen and (min-width: 1400px){
 
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons1.png");
     }
-
-    /* Estilos para el contenedor de la flecha de bajar */
     .contenedor-flecha-bajar {
         width: 2.6rem;
         height: 2.6rem;
     }
-
-    /* Estilos para el contenedor de PC */
     .contenedor-pc {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    /* Estilos para las columnas de PC */
     .columnas-pc {
         width: 100%;
         max-width: 400px;
@@ -328,35 +291,29 @@
         text-align: center;
     }
 
-    /* Estilos para el botón CTA */
-    #boton-CTA {
+    #boton-CTA{
         max-width: 500px;
     }
 
-    /* Estilos para el tamaño 1 */
-    .tamanyos1 {
+    .tamanyos1{
         height: 15rem;
         width: 40rem;
     }
 
-    /* Estilos para el tamaño 2 */
-    .tamanyos2 {
+    .tamanyos2{
         height: 25rem;
         width: 60rem;
     }
 
-    /* Estilos para el contenedor del botón "Saber más" */
-    #contenedor-boton-saber-mas {
+    #contenedor-boton-saber-mas{
         margin-bottom: 5rem;
         margin-top: 1rem;
     }
 
-    /* Estilos para el botón verde y blanco */
-    .boton-verde-blanco {
+    .boton-verde-blanco{
         height: 3rem;
     }
 
-    /* Estilos para la sección de mantenimiento */
     #seccion-mantenimiento .flex-container {
         display: flex;
         flex-wrap: wrap;
@@ -364,44 +321,40 @@
         align-items: center;
     }
 
-    /* Estilos para el contenido de la sección de mantenimiento */
     #seccion-mantenimiento .content {
         flex: 1;
         text-align: center;
         margin-right: 5vh; /* Margen entre el texto y la imagen */
     }
 
-    /* Estilos para los encabezados y párrafos de la sección de mantenimiento */
-    #seccion-mantenimiento h3,
-    #seccion-mantenimiento p {
+    #seccion-mantenimiento h3, #seccion-mantenimiento p {
         text-align: left;
     }
 
-    /* Estilos para las imágenes de la sección de mantenimiento */
     #seccion-mantenimiento .imagenes-landing {
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
         display: block;
     }
 
-    /* Estilos para el contenedor de estrellas de opiniones */
+    /*Contenedor para estrellas reseñas*/
     #contenedor-estrellas-opiniones {
-    /margin-bottom: 4em;/
+        /*margin-bottom: 4em;*/
     }
 
-    /* Estilos para las estrellas de la media de las reseñas de los usuarios (estrellas grandes) */
+    /*Estilo de las estrellas con la media de las reseñas de los usuarios, estrellas grandes*/
     #estrellas-media-resenyas {
         height: 3em;
         margin-top: 5vh;
         margin-bottom: 1vh;
     }
 
-    /* Estilos para los párrafos dentro del contenedor padre de las estrellas */
+    /*Los párrafos de dentro del contenedor padre con las estrellas*/
     #contenedor-estrellas-opiniones > p {
         font-size: 1.4em;
     }
 
-    /* Estilos para el contenedor donde deslizan todos los paneles de reseñas */
+    /*Estilo contenedor donde deslizan todos los paneles*/
     .contenedor-resenyas-deslizables {
         border-radius: 2em;
         padding: 1.5rem 2rem;
@@ -409,16 +362,17 @@
         width: 40rem;
     }
 
-    /* Estilos para el nombre de la persona dentro de cada reseña */
+    /*Estilo del nombre de la persona dentro de cada reseña*/
     .contenedor-cabecera-resenya p {
         font-size: 1.4em;
     }
 
-    /* Estilos para las estrellas verdes específicas de cada reseña de usuarios */
+    /*Estilo para las estrellas verdes específicas de cada reseña de usuarios*/
     .estrellas-resenya-especifica {
         height: 2em;
     }
 }
+
 
 /*ESILOS PARA LA PÁGINA DE PRODUCTO*/
 
@@ -465,6 +419,7 @@
         max-width: 30px;
         max-height: 20px;
     }
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -509,12 +464,16 @@
         max-width: 30px;
         max-height: 20px;
     }
+
 }
 
 
+
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
+
 @media screen and (min-width: 890px) {
-    /* Oculta el icono del menú */
+
+    /*Oculta el icono del menu*/
     .menu-hamburguesa {
         display: none;
     }
@@ -526,7 +485,8 @@
         gap: 30px;
     }
 
-    /* Para mostrar los elementos del menú en línea horizontal */
+
+    /*para mostrar los elementos del menu en línea horizontal*/
     #main-menu ul {
         flex-direction: row;
         position: static;
@@ -537,28 +497,29 @@
         align-items: center;
     }
 
-    /* Para especificar los tamaños, el grosor y el color de la letra de los elementos del menú */
+    /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
     #main-menu ul li {
-        font-size: 16px;
-        font-weight: normal;
+        font-size: 16px; /
+    font-weight: normal;
         color: var(--second-color-green);
     }
 
     .boton-cerrar-sesion {
         padding-top: 0.4rem;
     }
-
     .boton-cerrar-sesion a {
         margin-top: 3rem;
         color: var(--main-color-white);
     }
 
-    /* Agrega márgenes entre los elementos del menú */
+
+    /*agrega margenes entre los elementos del menu*/
     #main-menu ul li {
         margin-right: 30px; /* Margen derecho entre elementos */
     }
 
-    /* Agrega márgenes entre el borde de la pantalla y los elementos */
+
+    /*agrega margenes entre el borde de pantalla y los elementos*/
     #icono-inicio-sesion {
         margin-right: 30px; /* Margen derecho entre el icono y el borde */
         order: 1;

@@ -161,40 +161,47 @@
         <!--Termina la seccion Notificaciones Citas  -->
 
 
-        <!--Titulo de formulario reportes generales-->
-        <section id="inicio-sesion" >
-        <div class="títulos-trabajadores">
-            <h2>Reportes generales</h2>
-        </div>
-
-        <form id="login-form">
-        <!--Input 1 Asunto-->
-        <div id="subject">
-            <div class="datos">
-                <label for="subject-input">Asunto*</label>
-                <input type="text" id="subject-input" name="subject" required>
+        <section id="inicio-sesion">
+            <div class="títulos-trabajadores">
+                <h2>Reportes generales</h2>
             </div>
-        </div>
 
-        <!--Input 2 Texto-->
-        <div id="message">
-            <div class="datos">
-                <label for="message-input">Texto*</label>
-                <textarea type="text" id="message-input" name="message" required></textarea>
-            </div>
-        </div>
+            <form id="login-form">
 
-        <!-- Boton enviar formulario -->
-        <div class="boton-enviar">
-            <button type="submit" class="boton-iniciar-sesion" id="abrir-popup">Enviar</button>
-        </div>
-        </form>
+                <!-- Comienza la seccion email -->
+                <div id="email">
+                    <div class="datos">
+                        <label for="email">Asunto*</label>
+                        <input type="text" id="email-input" name="email" required>
+                    </div>
+                </div>
+
+                <div id="message">
+                    <div class="datos">
+                        <label for="message">Mensaje*</label>
+                        <textarea type="text" id="message-input" name="message" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Comienza la seccion boton -->
+                <div class="boton-enviar">
+                    <button type="submit" id="abrir-popup-admin" class="boton-iniciar-sesion">Enviar</button>
+                </div>
+
+            </form>
         </section>
-
 
     </section>
 </main>
 
+    <!-- Comienza el popup -->
+    <dialog id="popup">
+        <div class="popup-contenido">
+            <p>El formulario se ha enviado con éxito</p>
+            <button id="cerrar-popup">Volver</button>
+        </div>
+    </dialog>
+    <!-- Termina el popup -->
 
 <!-- Comienza el footer-->
 <footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
@@ -215,17 +222,8 @@
 <!-- JavaScript Documento deslizables.js para los deslizables de reseñas-->
 <script src="js/deslizables.js"></script>
 
-<!--JavaScript Documento popups_trabajadores.js para los popups en formularios de trabajadores -->
-<script src="js/popups_trabajadores.js" defer></script>
-
-<!-- Comienza el popup -->
-<section  id="popup">
-    <div class="popup-contenido">
-        <p>El formulario se ha enviado con éxito</p>
-        <button id="cerrar-popup">Volver</button>
-    </div>
-</section>
-<!-- Termina el popup -->
+    <!--JavaScript Documento popup_form_trabajadores.js para los popups en formularios de trabajadores -->
+    <script src="js/popup_tecnico.js"></script>
 
 </div>
 

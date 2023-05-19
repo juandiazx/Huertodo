@@ -548,6 +548,8 @@ textarea:focus {
 /* Boton cerrar desplegable */
 .delete-button{
     background-color: var(--second-color-green);
+    border: none;
+    outline: none;
 }
 
 #close-icon{

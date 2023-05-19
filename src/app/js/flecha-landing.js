@@ -8,7 +8,7 @@ function bajarPagina() {
     var alturaVentana = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
     // Obtener la cantidad de desplazamiento relativo
-    var porcentajeDesplazamiento = 0.53; // (0.5 representa el 50% de la altura de la ventana)
+    var porcentajeDesplazamiento = 0.35; // (0.5 representa el 50% de la altura de la ventana)
 
     // Calcular la cantidad de desplazamiento en píxeles
     var desplazamiento = alturaPagina - alturaVentana;

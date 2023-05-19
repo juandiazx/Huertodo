@@ -16,6 +16,9 @@
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
   <link rel='stylesheet' href="css/estilo_popup_1.css"/>
+
+  <script src="js/logica-Fake/control-acceso.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',comprobarSesion("comercial"));</script>
 <body class="loading">
 <div class="page">
 <!-- Comienza la cabecera-->
@@ -53,7 +56,9 @@
 
       <section class="seccion-preguntas" >
         <section class="separacion-contenido"></section>
-
+        <div id="contenedor-nombre-usuario">
+          <p id=nombre-usuario">Bienvenido</p>
+        </div>
         <div class="títulos-trabajadores">
           <h2>Registros Usuarios</h2>
         </div>

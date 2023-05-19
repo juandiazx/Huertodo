@@ -123,12 +123,11 @@ main>section, body>section{
     height: 13em;
     border-radius: 1.1em;
     display: flex;
-    max-width: 100%;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    max-width: 100%;
     flex-direction: column;
     text-align: justify-all;
-    align-items: center;
 }
 
 /* Añadir fondo verde de contraste predeterminado del proyecto */
@@ -140,17 +139,19 @@ main>section, body>section{
 
 /* Estilos de las secciones de la Página Sobre Nosotros */
 /* Sección de Visión */
+
+
 .seccion-vision {
     color: var(--main-color-white);
     height: 24rem;
     margin-top: 2vh;
-    border: 0px solid black;
+    border: 0 solid black;
     flex-direction: column;
     align-content: center;
     text-align: justify-all;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
 /* Todas las imágenes de la sección de Visión */
 #imagenes-vision{
@@ -163,21 +164,9 @@ main>section, body>section{
     flex-direction: column;
     text-align: justify-all;
     align-items: center;
-    border: 0px solid black;
+    border: 0 solid black;
     margin: 0 auto;
 }
-
-.imagenes-vision {
-     height: 13em;
-     border-radius: 1.1em;
-     display: flex;
-     max-width: 100%;
-     align-content: center;
-     justify-content: center;
-     flex-direction: column;
-     text-align: justify-all;
-     align-items: center;
- }
 
 /* Sección de Valores */
 #seccion-valores{

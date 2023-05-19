@@ -72,7 +72,6 @@
             <!--Comienza la seccion Notificaciones Usuarios  -->
 
             <section class="seccion-preguntas" >
-                <section class="separacion-contenido"></section>
 
                 <div class="títulos-trabajadores">
                     <h2>Notificaciones usuarios</h2>
@@ -273,62 +272,77 @@
                     <div class="títulos-trabajadores">
                         <h2>Registros usuarios administrador</h2>
                     </div>
-                    <form id="login-form" onsubmit="login()">
-                    <div id="subject">
-                        <div class="datos">
-                            <label for="subject">Asunto*</label>
-                            <input type="text" id="subject-input" name="subject" required>
-                        </div>
-                    </div>
+                    <form id="login-form">
 
-                    <div id="message">
-                        <div class="datos">
-                            <label for="message">Texto*</label>
-                            <textarea type="text" id="message-input" name="message" required></textarea>
+                        <!-- Comienza la seccion email -->
+                        <div id="email">
+                            <div class="datos">
+                                <label for="email">Asunto*</label>
+                                <input type="text" id="email-input" name="email" required>
+                            </div>
                         </div>
-                    </div>
+
+                        <div id="message">
+                            <div class="datos">
+                                <label for="message">Mensaje*</label>
+                                <textarea type="text" id="message-input" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Comienza la seccion boton -->
+                        <div class="boton-enviar">
+                            <button type="submit" id="abrir-popup-admin" class="boton-iniciar-sesion">Enviar</button>
+                        </div>
+
                     </form>
                 </section>
 
 
                 <!--Termina la sección de registros de usuario administrador-->
 
-
-                <!--Comienza la sección de notificar técnico-->
-
                 <section id="formulario-tecnico" class="formulario hidden">
                     <div class="títulos-trabajadores">
-                        <h2>Notificar técnico</h2>
+                        <h2>Notificar Técnico</h2>
                     </div>
-                    <form id="login-form" onsubmit="login()">
-                    <div id="subject">
-                        <div class="datos">
-                            <label for="subject">Asunto*</label>
-                            <input type="text" id="subject-input" name="subject" required>
-                        </div>
-                    </div>
+                    <form id="login-form2">
 
-                    <div id="message">
-                        <div class="datos">
-                            <label for="message">Texto*</label>
-                            <textarea type="text" id="message-input" name="message" required></textarea>
+                        <!-- Comienza la seccion email -->
+                        <div id="email2">
+                            <div class="datos">
+                                <label for="email">Asunto*</label>
+                                <input type="text" id="email-input2" name="email" required>
+                            </div>
                         </div>
-                    </div>
+
+                        <div id="message2">
+                            <div class="datos">
+                                <label for="message">Mensaje*</label>
+                                <textarea type="text" id="message-input2" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Comienza la seccion boton -->
+                        <div class="boton-enviar">
+                            <button type="submit" id="abrir-popup-tecnico" class="boton-iniciar-sesion">Enviar</button>
+                        </div>
+
                     </form>
                 </section>
 
                 <!--Termina la sección de notificar técnico-->
 
-
-                <!--Boton enviar formulario-->
-
-                <div class="boton-enviar">
-                    <button type="submit" class="boton-iniciar-sesion">Enviar</button>
-                </div>
             </section>
 
             <!------------------------------------------Termina la sección de formularios--------------------------------------->
 
+            <!-- Comienza el popup -->
+            <dialog id="popup">
+                <div class="popup-contenido">
+                    <p>El formulario se ha enviado con éxito</p>
+                    <button id="cerrar-popup">Volver</button>
+                </div>
+            </dialog>
+            <!-- Termina el popup -->
 
         </section>
     </main>
@@ -351,19 +365,9 @@
     <script src="js/index.js"></script>
     <!-- JavaScript Documento codigoParaComercial.js-->
     <script src="js/codigoParaComercial.js"></script>
-    <!--JavaScript Documento popups_trabajadores.js para los popups en formularios de trabajadores -->
-    <script src="js/popups_trabajadores.js" defer></script>
+    <!--JavaScript Documento popup_form_trabajadores.js para los popups en formularios de trabajadores -->
+    <script src="js/popup_form_trabajadores.js"></script>
 
-
-    <!-- Comienza el popup -->
-    <section  id="popup">
-        <div class="popup-contenido">
-            <p>El formulario se ha enviado con éxito</p>
-            <button id="cerrar-popup">Volver</button>
-        </div>
-    </section>
-    <!-- Termina el popup -->
-
-</div>
+ </div>
 </body>
 </html>

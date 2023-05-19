@@ -1,25 +1,34 @@
 // Seleccionar elementos del DOM
-const abrirPopupBtn = document.getElementById("abrir-popup");
+const abrirPopupAdminBtn = document.getElementById("abrir-popup-admin");
+const abrirPopupTecnicoBtn = document.getElementById("abrir-popup-tecnico");
 const cerrarPopupBtn = document.getElementById("cerrar-popup");
 const popup = document.getElementById("popup");
 
 // Función para comprobar si todos los campos del formulario están completos
-function validarFormulario() {
-    const email = document.getElementById("email-input").value.trim();
-    if (email === "") {
-        alert("Rellena este campo");
-        console.log('return false');
+function validarFormulario(formId) {
+    const form = document.getElementById(formId);
+    const email = form.querySelector(`#${formId} input[name="email"]`).value.trim();
+    const message = form.querySelector(`#${formId} textarea[name="message"]`).value.trim();
+    if (email === "" || message === "") {
+        alert("Rellena todos los campos");
         return false;
-
     }
-    console.log('return true');
     return true;
 }
 
-// Abrir popup al enviar el formulario con datos válidos
+// Abrir popup al enviar el formulario con datos válidos (formulario admin)
 document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
-    if (validarFormulario()) {
+    if (validarFormulario("login-form")) {
+        popup.classList.add("mostrar");
+        document.querySelector(".popup-contenido").classList.add("mostrar");
+    }
+});
+
+// Abrir popup al enviar el formulario con datos válidos (formulario técnico)
+document.getElementById("login-form2").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+    if (validarFormulario("login-form2")) {
         popup.classList.add("mostrar");
         document.querySelector(".popup-contenido").classList.add("mostrar");
     }
@@ -27,7 +36,6 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 
 // Cerrar popup al hacer clic en el fondo negro
 popup.addEventListener("click", function(event) {
-    console.log('click volver');
     if (event.target === popup) {
         popup.classList.remove("mostrar");
     }

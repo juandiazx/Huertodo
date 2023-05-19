@@ -2,7 +2,7 @@
 
 // usuario:String, password:String ---->consultarUsuarioContrasenya() ------> consultaSQL:String
 function consultarUsuarioContrasenya($usuario,$password){
-    return "SELECT `Usuario`.`id`, `Usuario`.`email`, `Usuario`.`rol`, `roles`.`rol`,`roles`.`id` FROM `Usuario` INNER JOIN `roles` ON`Usuario`.`rol` = `roles`.`id`
+    return "SELECT `Usuario`.`id`, `Usuario`.`email`, `Usuario`.`rol`,`Usuario`.`nombreApellidos`, `roles`.`rol`,`roles`.`id` FROM `Usuario` INNER JOIN `roles` ON`Usuario`.`rol` = `roles`.`id`
 	WHERE `Usuario`.`email` = '$usuario' AND `Usuario`.`contrasenya` = '$password'";
 }
 
@@ -54,6 +54,7 @@ function crearSesion($bbdd_servidor,$bbdd_user,$bbdd_password,$bbdd_nombre){
         $_SESSION['user'] = $registro;
         $salida = [];
         $salida['id'] = $registro['id'];
+        $salida['nombreApellidos'] = $registro['nombreApellidos'];
         $salida['email'] = $registro['email'];
         $salida['rol'] = $registro['rol'];
         http_response_code(200);

@@ -25,7 +25,7 @@ let opciones = {
             color: '#000000'
         },
         title: {
-            display: true, text: 'Gráfica humedad',
+            display: true, text: 'Gráfica agua',
             font: {
                 size:17,
                 family: 'Poppins',
@@ -55,19 +55,19 @@ let miGrafica = new Chart(referenciaContenedor,{
 });
 document.getElementById("contenedor-humedad").querySelector("img").addEventListener("click",function (){
     datos.datasets[0].data= [57, 100, 37, 10,46,68,82]
-    opciones.plugins.title.text = 'Gráfica humedad'
+    opciones.plugins.title.text = 'Gráfica agua'
     miGrafica.update();
 })
 
 document.getElementById("contenedor-salinidad").querySelector("img").addEventListener("click",function (){
     datos.datasets[0].data= [38, 30, 37, 10,10,50,72]
-    opciones.plugins.title.text = 'Gráfica salinidad'
+    opciones.plugins.title.text = 'Gráfica sal'
     miGrafica.update();
 })
 
 document.getElementById("contenedor-iluminacion").querySelector("img").addEventListener("click",function (){
     datos.datasets[0].data= [40, 100, 37, 10,30,68,50]
-    opciones.plugins.title.text = 'Gráfica iluminacion'
+    opciones.plugins.title.text = 'Gráfica luz'
     miGrafica.update();
 })
 

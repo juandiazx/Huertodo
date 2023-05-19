@@ -84,7 +84,7 @@
                     <div class="acordeon-item">
                         <div class="acordeon-item-header">
                             <div class="texto-desplegable-trabajadores">Montaje - 18/03/23</div>
-                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png" alt="icono cerrar"></div>
                         </div>
                         <div class="acordeon-item-body">
                             <p class="acordeon-item-body-content">
@@ -100,7 +100,7 @@
                     <div class="acordeon-item">
                         <div class="acordeon-item-header">
                             <div class="texto-desplegable-trabajadores">Avería - 17/03/23</div>
-                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png" alt="icono cerrar"></div>
                         </div>
                         <div class="acordeon-item-body">
                             <p class="acordeon-item-body-content">
@@ -116,7 +116,7 @@
                     <div class="acordeon-item">
                         <div class="acordeon-item-header">
                             <div class="texto-desplegable-trabajadores">Montaje - 17/03/23</div>
-                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png" alt="icono cerrar"></div>
                         </div>                    <div class="acordeon-item-body">
                         <p class="acordeon-item-body-content">
                             Un huerto hidropónico doméstico puede ser configurado en una pequeña área, como en una ventana o en una esquina de la casa. El espacio necesario dependerá de la cantidad y el tamaño de las plantas, pero en general, los huertos hidropónicos son ideales para espacios pequeños.
@@ -131,7 +131,7 @@
                     <div class="acordeon-item">
                         <div class="acordeon-item-header">
                             <div class="texto-desplegable-trabajadores">Medición - 15/03/23</div>
-                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png" alt="icono cerrar"></div>
                         </div>
                         <div class="acordeon-item-body">
                             <p class="acordeon-item-body-content">
@@ -147,7 +147,7 @@
                     <div class="acordeon-item">
                         <div class="acordeon-item-header">
                             <div class="texto-desplegable-trabajadores">Medición - 12/03/23</div>
-                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png"></div>
+                            <div class="close-icon close-all-acordeon-items"><img src="images/icono-x-50.png" alt="icono cerrar"></div>
                         </div>
                         <div class="acordeon-item-body">
                             <p class="acordeon-item-body-content">
@@ -171,7 +171,7 @@
         <!--Input 1 Asunto-->
         <div id="subject">
             <div class="datos">
-                <label for="subject">Asunto*</label>
+                <label for="subject-input">Asunto*</label>
                 <input type="text" id="subject-input" name="subject" required>
             </div>
         </div>
@@ -179,14 +179,14 @@
         <!--Input 2 Texto-->
         <div id="message">
             <div class="datos">
-                <label for="message">Texto*</label>
-                <input type="text" id="message-input" name="message" required>
+                <label for="message-input">Texto*</label>
+                <textarea type="text" id="message-input" name="message" required></textarea>
             </div>
         </div>
 
         <!-- Boton enviar formulario -->
         <div class="boton-enviar">
-            <button type="submit" class="boton-iniciar-sesion">Enviar</button>
+            <button type="submit" class="boton-iniciar-sesion" id="abrir-popup">Enviar</button>
         </div>
         </form>
         </section>

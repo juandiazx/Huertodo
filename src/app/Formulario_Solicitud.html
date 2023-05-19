@@ -19,7 +19,8 @@
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
 </head>
 
-<body>
+<body class="loading">
+<div class="page">
 <!-- Comienza la cabecera-->
 <header>
   <nav id="main-menu">
@@ -52,7 +53,7 @@
 <!-- Comienza la seccion general -->
 
 <main class="wrapper-forms">
-  <section>
+  <section class="seccion-solicitud">
 
     <!-- Comienza la seccion titulo -->
     <div class="solicitud-producto">
@@ -100,10 +101,12 @@
         </div>
       </div>
 
+      <label id="campos-obligatorios">*Campos Obligatorios</label>
+
       <!--Chekbox aceptar terminos y condiciones-->
       <div id="chekbox">
         <input type="checkbox" id="aceptar-terminos" required>
-        <label for="aceptar-terminos">Acepto los <a href="TerminosYCondiciones.html">términos y condiciones</a></label>
+        <label for="aceptar-terminos">Acepto <a href="TerminosYCondiciones.html">términos y condiciones</a></label>
       </div>
 
 

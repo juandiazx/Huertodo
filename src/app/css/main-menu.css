@@ -126,6 +126,7 @@
 #contenedor-nombre-usuario>p {
     font-weight: 700;
     font-size: 1.3rem;
+    margin-bottom:1em;
 }
 /*Propiedad loading para todos espacios personales*/
 .loading {

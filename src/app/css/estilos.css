@@ -487,8 +487,9 @@ tbody tr:nth-child(even) {
 }
 
 #flecha-bajar{
-    margin-top: 5vh;
-    width: 110%;
+    margin-top: 18vh;
+    width: 90%;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
 }
 
 
@@ -507,6 +508,10 @@ tbody tr:nth-child(even) {
     background-image: url("../images/landing-hero.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+#landing-page-hero h1{
+    margin-top: 12vh;
 }
 
 /*Márgenes para el párrafo de la hero, */

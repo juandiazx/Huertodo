@@ -2,8 +2,8 @@
 
 // usuario:String, password:String ---->consultarUsuarioContrasenya() ------> consultaSQL:String
 function consultarUsuarioContrasenya($usuario,$password){
-    return "SELECT `Usuario`.`id`, `Usuario`.`email`, `Usuario`.`rol`,`Usuario`.`nombreApellidos`, `roles`.`rol`,`roles`.`id` FROM `Usuario` INNER JOIN `roles` ON`Usuario`.`rol` = `roles`.`id`
-	WHERE `Usuario`.`email` = '$usuario' AND `Usuario`.`contrasenya` = '$password'";
+    return "SELECT `usuario`.`id`, `usuario`.`email`, `usuario`.`rol`,`usuario`.`nombreApellidos`, `roles`.`rol`,`roles`.`id` FROM `usuario` INNER JOIN `roles` ON`usuario`.`rol` = `roles`.`id`
+	WHERE `usuario`.`email` = '$usuario' AND `usuario`.`contrasenya` = '$password'";
 }
 
 //--------------------------------------------------------------------------------------------------------------
@@ -38,7 +38,7 @@ function comprobarSesion(){
 // (email:Texto, password:Texto) | error:Texto : devuelto en un mismo JSON
 function crearSesion($bbdd_servidor,$bbdd_user,$bbdd_password,$bbdd_nombre){
     try {
-        $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
+        $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password,$bbdd_nombre); //$bbdd_nombre
     } catch (Exception $e) {
         http_response_code(500);
         die("Error: " . mysqli_connect_errno() . " " . mysqli_connect_error());

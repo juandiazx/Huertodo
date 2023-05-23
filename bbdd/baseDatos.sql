@@ -100,8 +100,6 @@ CREATE TABLE `roles` (
                          `rol` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `roles` (`rol`) VALUES ('usuario'), ('comercial'), ('tecnico'), ('administrador');
-
 -- --------------------------------------------------------
 
 --
@@ -135,7 +133,7 @@ CREATE TABLE `tecnico_comercial` (
 -- Estructura de tabla para la tabla `Usuario`
 --
 
-CREATE TABLE `Usuario` (
+CREATE TABLE `usuario` (
                            `id` int(11) NOT NULL,
                            `email` varchar(60) NOT NULL,
                            `nombreApellidos` varchar(70) NOT NULL,
@@ -144,12 +142,6 @@ CREATE TABLE `Usuario` (
                            `direccion` varchar(100) NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO `Usuario` (`email`,`nombreApellidos`, `contrasenya`,`rol`, `direccion`) VALUES
-                                                                                        ('joselgarciamant1@gmail.com','Jose Luis Garcia Mantero', 'mementoMori45',1, 'Calle Espanya 19, Piso 2, 47630, Gandia, Valencia'),
-                                                                                        ('lanternmartin@gmail.com','Martin Gutierrez Lant', 'upvMejorUniLoremIpsum',2, NULL),
-                                                                                        ('saavedrarogg@gmail.com','Eduardo Saavedra Rodriguez', 'hartoDeLosArduinos400',3, NULL),
-                                                                                        ('mauforonxl@gmail.com','Mauricio Foronda Taliente', 'vivaWordpress2012',4, NULL);
 --
 -- Índices para tablas volcadas
 --
@@ -208,7 +200,7 @@ ALTER TABLE `tecnico_comercial`
 --
 -- Indices de la tabla `Usuario`
 --
-ALTER TABLE `Usuario`
+ALTER TABLE `usuario`
     ADD PRIMARY KEY (`id`),
   ADD KEY `fk_usuario_rol` (`rol`);
 
@@ -267,7 +259,7 @@ ALTER TABLE `tecnico_comercial`
 --
 -- AUTO_INCREMENT de la tabla `Usuario`
 --
-ALTER TABLE `Usuario`
+ALTER TABLE `usuario`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -278,7 +270,7 @@ ALTER TABLE `Usuario`
 -- Filtros para la tabla `huertos`
 --
 ALTER TABLE `huertos`
-    ADD CONSTRAINT `fk_usuario` FOREIGN KEY (`usuario`) REFERENCES `Usuario` (`id`);
+    ADD CONSTRAINT `fk_usuario` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`id`);
 
 --
 -- Filtros para la tabla `medicion`
@@ -295,9 +287,17 @@ ALTER TABLE `notificaciones`
 --
 -- Filtros para la tabla `Usuario`
 --
-ALTER TABLE `Usuario`
+ALTER TABLE `usuario`
     ADD CONSTRAINT `fk_usuario_rol` FOREIGN KEY (`rol`) REFERENCES `roles` (`id`);
 COMMIT;
+
+INSERT INTO `roles` (`rol`) VALUES ('usuario'), ('comercial'), ('tecnico'), ('administrador');
+INSERT INTO `usuario` (`email`,`nombreApellidos`, `contrasenya`,`rol`, `direccion`) VALUES
+                                                                                        ('joselgarciamant1@gmail.com','Jose Luis Garcia Mantero', 'mementoMori45',1, 'Calle Espanya 19, Piso 2, 47630, Gandia, Valencia'),
+                                                                                        ('lanternmartin@gmail.com','Martin Gutierrez Lant', 'upvMejorUniLoremIpsum',2, NULL),
+                                                                                        ('saavedrarogg@gmail.com','Eduardo Saavedra Rodriguez', 'hartoDeLosArduinos400',3, NULL),
+                                                                                        ('mauforonxl@gmail.com','Mauricio Foronda Taliente', 'vivaWordpress2012',4, NULL);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

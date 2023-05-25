@@ -155,3 +155,65 @@
         width: 100%;
     }
 }
+
+/*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
+
+@media screen and (min-width: 890px) {
+
+    /*Oculta el icono del menu*/
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    /* Ajusta el orden de los elementos en el header */
+    .contenedor-iconos {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    /*para mostrar los elementos del menu en línea horizontal*/
+    #main-menu ul {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+        order: 0;
+        align-items: center;
+    }
+
+    /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
+    #main-menu ul li {
+        font-size: 16px; /
+    font-weight: normal;
+        color: var(--second-color-green);
+    }
+
+    .boton-cerrar-sesion {
+        padding-top: 0.4rem;
+    }
+    .boton-cerrar-sesion a {
+        margin-top: 3rem;
+        color: var(--main-color-white);
+    }
+
+
+    /*agrega margenes entre los elementos del menu*/
+    #main-menu ul li {
+        margin-right: 30px; /* Margen derecho entre elementos */
+    }
+
+
+    /*agrega margenes entre el borde de pantalla y los elementos*/
+    #icono-inicio-sesion {
+        margin-right: 30px; /* Margen derecho entre el icono y el borde */
+        order: 1;
+    }
+
+    .boton-cerrar-sesion {
+        width: 8rem;
+        height: 2.3rem;
+    }
+}

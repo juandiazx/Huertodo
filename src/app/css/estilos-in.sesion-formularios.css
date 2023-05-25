@@ -340,6 +340,11 @@ h3 {
     padding: 7px ;
 }
 
+.boton-iniciar-sesion:hover{
+    cursor: pointer;
+    background: var(--second-color-green-hover);
+}
+
 /*-----------------------------------------------------------------------------------------*/
 
 /* Estilos para el enlace de "SOLICITAR ACCESO" */
@@ -647,7 +652,13 @@ textarea:focus {
 
 .left-button:not(.active):hover,
 .right-button:not(.active):hover {
-    background-color: #06884D;
+    background: var(--second-color-green-hover);
+    color: white;
+}
+
+.left-button.active:hover,
+.right-button.active:hover {
+    background: var(--second-color-green-hover);
     color: white;
 }
 

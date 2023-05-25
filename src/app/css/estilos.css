@@ -75,6 +75,11 @@ h3 {
     margin-top: 1.2em;
 }
 
+/*Estilo para textos que envian a otras paginas de la web*/
+.texto-link:hover{
+    color: var(--second-color-green-hover);
+}
+
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
     text-align: center;

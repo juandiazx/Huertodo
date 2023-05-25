@@ -1,0 +1,9 @@
+Estos botones tienen la característica hover para que cambien de color al pasar el ratón por encima, el cursor cambia a la mano de selección, todo el botón funciona como link, y utilizan el mismo estilo y variables de color.
+
+Botones (si el <a> ya está dentro de una <section> con otras cosas, no es necesario añadir otra <section>):
+
+    <section id="contenedor-lo-que-sea">
+        <!--Boton Lo Que Sea-->
+        <a class="boton-verde-blanco" href="src/app/Link_a_lo_que_sea.html">Lo que pone en el botón</a>
+    </section>
+

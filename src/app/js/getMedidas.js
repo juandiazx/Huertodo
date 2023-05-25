@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
             iluminacion.innerText = "Alta"
             ph.innerText = getRandomNumber(3,6)
             temperatura.innerText = getRandomNumber(14,20)+"ºC"
-    }, 30000);
+    }, 1800000);
 });

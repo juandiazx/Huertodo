@@ -8,8 +8,8 @@ let datos = {
         {
             data: [57, 100, 37, 10,46,68,82],
             fill: true,
-            backgroundColor: 'rgb(21,215,123)',
-            borderColor: 'rgb(6,136,77)',
+            backgroundColor : 'rgb(109,224,234)',
+            borderColor : 'rgb(56,153,217)',
             tension: 0.5,
         }
     ]
@@ -53,32 +53,42 @@ let miGrafica = new Chart(referenciaContenedor,{
     data: datos,
     options: opciones
 });
-document.getElementById("contenedor-humedad").querySelector("img").addEventListener("click",function (){
+document.getElementById("contenedor-humedad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
     datos.datasets[0].data= [57, 100, 37, 10,46,68,82]
+    datos.datasets[0].backgroundColor = 'rgb(109,224,234)';
+    datos.datasets[0].borderColor = 'rgb(56,153,217)';
     opciones.plugins.title.text = 'Gráfica agua'
     miGrafica.update();
 })
 
-document.getElementById("contenedor-salinidad").querySelector("img").addEventListener("click",function (){
+document.getElementById("contenedor-salinidad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
     datos.datasets[0].data= [38, 30, 37, 10,10,50,72]
     opciones.plugins.title.text = 'Gráfica sal'
+    datos.datasets[0].backgroundColor = 'rgb(178,178,178)';
+    datos.datasets[0].borderColor = 'rgb(101,101,101)';
     miGrafica.update();
 })
 
-document.getElementById("contenedor-iluminacion").querySelector("img").addEventListener("click",function (){
+document.getElementById("contenedor-iluminacion").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
     datos.datasets[0].data= [40, 100, 37, 10,30,68,50]
     opciones.plugins.title.text = 'Gráfica luz'
+    datos.datasets[0].backgroundColor = 'rgb(246,255,2)';
+    datos.datasets[0].borderColor = 'rgb(241,187,56)';
     miGrafica.update();
 })
 
-document.getElementById("contenedor-ph").querySelector("img").addEventListener("click",function (){
+document.getElementById("contenedor-ph").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
     datos.datasets[0].data= [12, 50, 37, 10,46,28,82]
     opciones.plugins.title.text = 'Gráfica ph'
+    datos.datasets[0].backgroundColor = 'rgb(97,108,234)';
+    datos.datasets[0].borderColor = 'rgb(43,31,225)';
     miGrafica.update();
 })
 
-document.getElementById("contenedor-temperatura").querySelector("img").addEventListener("click",function (){
+document.getElementById("contenedor-temperatura").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
     datos.datasets[0].data= [10, 100, 37, 60,46,98,42]
     opciones.plugins.title.text = 'Gráfica temperatura'
+    datos.datasets[0].backgroundColor = 'rgb(243,131,135)';
+    datos.datasets[0].borderColor = 'rgb(243,31,72)';
     miGrafica.update();
 })

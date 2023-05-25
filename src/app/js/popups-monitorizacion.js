@@ -14,6 +14,22 @@ botonCerrarPanelNotificaciones.addEventListener('click', ()=>{
     popup.close()
 });
 
+//JS Popup Cambiar Nombre Huerto
+const popupNombre = document.getElementById("desplegable-popup-cambiar-nombre-huerto")
+const botonPanelNombre = document.getElementById("icono-editar-nombre")
+const botonCerrarPanelNombre = document.getElementById("cerrar-dialogo-cambiar-nombre")
+
+//Cuando se toque en el panel, se abre el popup
+botonPanelNombre.addEventListener('click', ()=>{
+    popupNombre.showModal();
+})
+
+
+//Cuando se toque en el boton de cerrar el popup, dentro de él mismo, se cierra el popup
+botonCerrarPanelNombre.addEventListener('click', ()=>{
+    popupNombre.close()
+});
+
 //JS Popup Mapa
 const popupMapa = document.getElementById("desplegable-popup-mapa")
 const botonPanelMapa = document.getElementById("boton-mapas-huertos")

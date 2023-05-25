@@ -71,6 +71,7 @@ h3 {
     font-weight: 500;
     font-size: 170%;
     padding: 0.5em 0.6em;
+    display: block;
 }
 
 /*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
@@ -81,7 +82,7 @@ h3 {
 
 /*Contenedor completo, wrapper de toda la monitorización*/
 .wrapper {
-    margin-top: 9vh;
+    margin-top: 12vh;
     padding: 10% 7% 15%;
 }
 
@@ -103,6 +104,7 @@ h3 {
     padding: 0.4em;
     width: 60%;
     height: auto;
+    margin-bottom: 0.7rem;
 }
 
 /*Estilo parrafo con el numero de notificaciones*/
@@ -206,12 +208,111 @@ select {
     border-radius: 0.26em;
     background-image: none;
     border:0!important;
-    width: 100%;
+    width: 80%;
     height: 1.3em;
     cursor:pointer;
     text-align: center;
     font-size: 170%;
     overflow: hidden;
+    margin-right: 1rem;
+}
+
+/*Estilo para el contenedor que cubre al boton de editar el nombre del huerto*/
+#contenedor-boton-editar-nombre-huerto  {
+    font-size: 1.7rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Estilo del dialogo depopup cambiar nombre*/
+#desplegable-popup-cambiar-nombre-huerto {
+    width: 20em;
+    height: 23.5em;
+    border-radius: 1.1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    padding: 1.7em;
+    outline: 0;
+    border: none;
+    top: 50%; /* Distancia desde la parte superior */
+    left: 50%; /* Distancia desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+}
+
+/*Estilo popup de su backdrop dialogo*/
+#desplegable-popup-cambiar-nombre-huerto::backdrop {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 50%; /* Distancia desde la parte superior */
+    left: 50%; /* Distancia desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+    /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(1px);
+    position: fixed; /* Posición fija */
+}
+
+/*Estilo cabecera del popup*/
+#cabecera-popup-cambiar-nombre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.2em;
+}
+/*Estilo para icono de cerrar del dialogo desplegable*/
+#cerrar-dialogo-cambiar-nombre {
+    margin-left: 0.7rem;
+    width: 2.3em;
+    height: 2.3em;
+}
+
+/*Estilo formulario para cambiar el nombre del huerto*/
+#formulario-cambiar-nombre-huerto {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+/*Estilo para el label del formulario de cambiar nombre de huerto*/
+#formulario-cambiar-nombre-huerto label {
+    display: flex;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 0.3em;
+    margin-top: 1.1rem;
+    color: #333333;
+}
+
+/*Estilo para el button del formulario de cambiar nombre de huerto*/
+#formulario-cambiar-nombre-huerto button {
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 1.8rem;
+    font-size: 130%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+/*Estilo para el input de cambiar nombre del popup*/
+#nombre-huerto-form {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+}
+/*Estilo para el borde del input*/
+#nombre-huerto-form:focus {
+    outline: none;
+    border: 2px #06884DFF solid;
 }
 
 /*Contenedor con la fecha y la hora del huerto*/
@@ -234,6 +335,7 @@ select {
     font-size: 100%;
 }
 
+/*Estilo para el contenedor de parametros en tiemop real*/
 .contenedor-parametros-tiempo-real-huerto{
     display: flex;
     flex-direction: row;
@@ -242,10 +344,16 @@ select {
 
 }
 
+/*Estilo para el contenedor de temperatura tiempo real*/
 #contenedor-parametros-tiempo-real-huerto-temperatura{
     justify-content: center;
 }
 
+/*Estilo para todos los iconos de representacion de cada dato en tiempo real*/
+.icono-dato-tiempo-real {
+    width: 1.6em;
+    height: 1.6em;
+}
 /*Cada contenedor de parametros en tiempo real especifico*/
 .contenedor-parametro-monitorizacion-especifico {
     display: flex;
@@ -261,8 +369,8 @@ select {
 
 /*Estilo parrafos dentro de cada contenedor de los parametros de monitorizacion*/
 .contenedor-parametro-monitorizacion-especifico p{
-    font-weight: 550;
-    font-size: 84%;
+    font-weight: 450;
+    font-size: 90%;
     margin: 0;
 }
 
@@ -279,7 +387,7 @@ select {
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     border-radius: 0.85em;
     padding: 0.2em;
-    margin-top: 0.2rem;
+    margin-top: 0.7rem;
     margin-bottom: 0.7em;
 }
 /*Contenedor con solo la grafica de parametros, sin los botones de filtrar por dia,mes,año*/
@@ -341,7 +449,9 @@ select {
 
 #datos-cada-30-s{
     text-align: center;
-    margin-top: 0.2rem;
+    font-weight: 500;
+    margin-top: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 
 /*Estilo contenedor con el boton para acceder al mapa con los huertos*/

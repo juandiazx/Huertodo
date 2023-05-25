@@ -483,6 +483,7 @@ tbody tr:nth-child(even) {
 .flecha-bajar{
     margin-top: 18vh;
     width: 3rem;
+    padding: 0.5rem 0 0 0; /* Arriba, Derecha, Abajo, Izquierda*/
 }
 
 

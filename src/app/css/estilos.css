@@ -18,6 +18,7 @@
     --main-color-white: #ffffff;
     --main-color-black: #000000;
     --second-color-green: rgb(6, 136, 77);
+    --second-color-green-hover: rgb(5, 166, 94);
     --tamaño-28-letra: 1.6em;
 }
 
@@ -74,12 +75,16 @@ h3 {
     margin-top: 1.2em;
 }
 
+/*Estilo para textos que envian a otras paginas de la web*/
+.texto-link:hover{
+    color: var(--second-color-green-hover);
+}
+
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
     text-align: center;
     align-content: center;
     width: 72%;
-    height: 7%;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -89,6 +94,11 @@ h3 {
     font-weight: 500;
     font-size: 170%;
     padding: 0.1em 0.1em;
+    cursor: pointer;
+}
+
+.boton-verde-blanco:hover{
+    background: var(--second-color-green-hover);
 }
 
 /*Margen de las secciones del main y body*/
@@ -292,6 +302,7 @@ main>section, body>section{
     max-width: 100%;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* Características cuando se selecciona una imagen inferior del selector */
@@ -469,25 +480,11 @@ tbody tr:nth-child(even) {
     max-width: 500px;
 }
 
-.contenedor-flecha-bajar{
-    text-align: center;
-    align-content: center;
-    border-radius: 3em;
-    border: none;
-    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
-    background: var(--second-color-green);
-    color: var(--main-color-white);
-    font-family:'Poppins', sans-serif;
-    font-weight: 500;
-    padding: 0.2em 0.2em;
-}
-
-#flecha-bajar{
+.flecha-bajar{
     margin-top: 18vh;
-    width: 90%;
-    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+    width: 3rem;
+    padding: 0.5rem 0 0 0; /* Arriba, Derecha, Abajo, Izquierda*/
 }
-
 
 
 /*------------------------Comienza landing page------------------------*/
@@ -617,6 +614,10 @@ tbody tr:nth-child(even) {
     flex-wrap: wrap;
     margin-top: 1.7em;
     justify-content: center;
+}
+
+#deslizar-izquierda-resenya, #deslizar-derecha-resenya{
+    cursor: pointer;
 }
 
 /*Clase para cuando un elemento esta activo*/

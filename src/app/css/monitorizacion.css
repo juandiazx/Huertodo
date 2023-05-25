@@ -506,6 +506,7 @@ select {
     box-shadow: rgba(0, 0, 0, 0.32) 0 5px 8px;
     width: 2.3em;
     height: 2.3em;
+    cursor: pointer;
 }
 
 .contenedor-icono-huerto-mapa {
@@ -519,6 +520,7 @@ select {
     width: 3em;
     height: 3em;
     background-color: white;
+    cursor: pointer;
 }
 
 /*------------------------Termina el estilo del espacio peresonal------------------------*/

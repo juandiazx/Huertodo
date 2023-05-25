@@ -25,12 +25,14 @@
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
     <!-- Sección de Actualizaciones en desplegables -->
-<script src="js/desplegables_trabajadores.js" defer></script>
-</head>
-<body class="loading">
-<div class="page">
-<!-- Comienza la cabecera-->
-<header>
+    <script src="js/desplegables_trabajadores.js" defer></script>
+    </head>
+    <body class="loading">
+        <div class="page">
+
+    <!-- Comienza la cabecera-->
+
+    <header>
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
         <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
@@ -48,10 +50,10 @@
                 </div>
 
                 <ul >
-                    <li><a href="Producto.html">Producto</a></li>
-                    <li><a href="Formulario_Solicitud.html">Solicita el producto</a></li>
-                    <li><a href="Sobre_Nosotros.html">Sobre nosotros</a></li>
-                    <li class="boton-cerrar-sesion"><a onclick="borrarSesion()">Cerrar sesión</a></li>
+                    <li><a href="Producto.html" class="texto-link">Producto</a></li>
+                    <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+                    <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+                    <li class="boton-cerrar-sesion boton-verde-blanco"><a onclick="borrarSesion()">Cerrar sesión</a></li>
                 </ul>
 
             </div>
@@ -358,9 +360,9 @@
                         </div>
 
                         <!-- Comienza la seccion boton -->
-                        <div class="boton-enviar">
-                            <button type="submit" id="abrir-popup-tecnico" class="boton-iniciar-sesion">Enviar</button>
-                        </div>
+                        <section class="boton-enviar">
+                            <button type="submit" id="abrir-popup-tecnico" class="boton-iniciar-sesion boton-verde-blanco">Enviar</button>
+                        </section>
 
                     </form>
                 </section>

@@ -498,7 +498,12 @@ textarea:focus {
     font-family:'Poppins', sans-serif;
     font-weight: 400;
     font-size: 140%;
-    padding: 7px ;
+    padding: 7px;
+}
+
+.boton-enviar-formulario-solicitud-activo:hover {
+    cursor: pointer;
+    background: var(--second-color-green-hover);
 }
 
 .boton-enviar-formulario-solicitud-desactivado {
@@ -535,6 +540,10 @@ textarea:focus {
 #chekbox a {
     color: #06884D;
     font-weight: 700;
+}
+
+#chekbox a:hover{
+    color: var(--second-color-green-hover);
 }
 
 /*------------FIN ESTILOS PARA FORMULARIO DE SOLICITUD-----------*/

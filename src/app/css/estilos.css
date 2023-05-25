@@ -302,6 +302,7 @@ main>section, body>section{
     max-width: 100%;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* Características cuando se selecciona una imagen inferior del selector */

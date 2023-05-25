@@ -1,0 +1,157 @@
+/* Estilos para la página SOBRE NOSOTROS */
+
+/*margen superior para la página*/
+.margen-superior{
+    margin-top: 15vh;
+}
+
+/*Estilos para el titulo sobre nosotros*/
+.titulo-sobrenosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: normal;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+/* Estilos para la sección quienes-somos */
+#quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+}
+
+/* Estilos para la sección nuestros-valores */
+#nuestros-valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    color: white; /* Agrega esta propiedad para establecer el color del texto en blanco */
+}
+
+/* Estilos para la sección-texto */
+.seccion-texto {
+    text-align: left;
+}
+
+/* Estilos para la sección-imagen */
+.seccion-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Añade un margen superior para separar el texto de la imagen */
+}
+
+#nuestros-valores .titulo-valores {
+    width: 87%;
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-top: 0;
+    margin-bottom: 3vh;
+}
+
+/* Estilos para la sección parte */
+.parte1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar las secciones "parte" */
+}
+
+/* Estilos para la sección parte2 */
+.parte2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar las secciones "parte" */
+}
+
+/*Estilos para el fondo verde de la sección nuestros valores*/
+.fondo-verde{
+    background-color: var(--second-color-green);
+    padding-top: 5vh; /* Ajusta el valor de padding según tus necesidades */
+    padding-bottom: 5vh;
+    /*border: 0px solid blue;*/
+}
+
+/*ESTILOS RESPONSIVE PARA SOBRE NOSOTROS*/
+
+@media (min-width: 550px) {
+
+    /*Estilos para la columna1*/
+    .seccion-texto.columna1 {
+        flex-basis: 50%;
+        max-width: 50%;
+        margin-right: 10px;
+    }
+
+    /*Estilos para la columna2*/
+    .seccion-imagen.columna2 {
+        flex-basis: 50%;
+        max-width: 50%;
+        margin-left: 10px;
+    }
+
+    /* Contenedor principal */
+    #quienes-somos.wrapper {
+        flex-direction: row;
+    }
+
+    /* Contenedor principal */
+    #nuestros-valores .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Estilos para la parte 1 */
+    .parte1 {
+        flex-basis: 50%;
+        max-width: 50%;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilos para la parte 2 */
+    .parte2 {
+        flex-basis: 50%;
+        max-width: 50%;
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilos para el texto dentro de las partes */
+    .parte1 .seccion-texto,
+    .parte2 .seccion-texto {
+        flex-basis: 100%;
+        text-align: center;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+
+    /* Estilos para las imágenes dentro de las partes */
+    .parte1 .seccion-imagen,
+    .parte2 .seccion-imagen {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+    #seccion-resenyas {
+        display: flex;
+        align-items: stretch;
+    }
+
+    /*Estilo contenedor donde deslizan todos los paneles*/
+    .contenedor-resenyas-deslizables {
+        width: 100%;
+    }
+}

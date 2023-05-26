@@ -928,10 +928,15 @@ textarea:focus {
     background: var(--second-color-green);
     color: var(--main-color-white);
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 1.3rem;
     padding: 5px;
     margin-top: 0.5rem;
+    cursor: pointer;
+}
+/* Estilo de botones Pop Ups para cuando el ratón pasa por encima */
+#cerrar-popup:hover, #confirmar-popup:hover, #cancelar-popup:hover{
+    background: var(--second-color-green-hover);
 }
 
 .show{

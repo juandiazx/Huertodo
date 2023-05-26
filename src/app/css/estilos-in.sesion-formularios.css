@@ -344,7 +344,7 @@ h3 {
 }
 
 .boton-iniciar-sesion {
-    width: 100%;
+    width: 69%;
     border-radius: 1.3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -509,7 +509,7 @@ textarea:focus {
 }
 
 .boton-enviar-formulario-solicitud-activo {
-    width: 100%;
+    width: 69%;
     height: 7%;
     border-radius: 1.3em;
     border: none;
@@ -528,7 +528,7 @@ textarea:focus {
 }
 
 .boton-enviar-formulario-solicitud-desactivado {
-    width: 100%;
+    width: 69%;
     height: 7%;
     border-radius: 1.3em;
     border: none;

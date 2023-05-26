@@ -530,3 +530,20 @@
         height: 2.3rem;
     }
 }
+
+
+/*ESTILOS RESPONSIVE PARA MONITORIZACIÓN*/
+
+@media screen and (min-width: 700px) {
+    #contenedor-espacio-personal-completo{
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*Contenedor completo, wrapper de toda la monitorización*/
+    .wrapper {
+        margin-top: 12vh;
+        padding: 5vh 7% 5vh;
+    }
+}

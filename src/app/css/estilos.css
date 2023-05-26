@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /*Se usa tal que:      font-family: 'Poppins', sans-serif;*/
 
+/* Iconos Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 /*Estilos generales*/
 * {
     padding: 0;
@@ -268,6 +271,17 @@ main>section, body>section{
 /* Características de la sección de preguntas frecuentes */
 .seccion-preguntas{
     margin-top: 4vh;
+    margin-bottom: 6vh;
+}
+
+.titulo-preguntas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 1.8em;
 }
 
 /* SELECTOR DE IMÁGENES PRODUCTO */
@@ -412,7 +426,7 @@ tbody tr:nth-child(even) {
 /* COMIENZA ESTILOS DE DESPLEGABLES GENERALES */
 
 .acordeon {
-    max-width: 1000px;
+    max-width: 600px;
     margin: 2rem auto;
 }
 
@@ -436,21 +450,10 @@ tbody tr:nth-child(even) {
     justify-content: space-between; /* Alineación a la derecha */
 }
 
-/* Fecha Desplegable Icono */
-.acordeon-item-header::after {
-    content: "\27A1";
-    font-size: 2rem;
+.plus-desplegables{
+    font-size: 1.6rem;
     margin-left: 0.3rem;
     align-self: center;
-    rotate: -90deg;
-    transition: transform 0.2s ease-in-out;
-    transform-origin: center center;
-    transform-box: fill-box;
-    transform: rotate(180deg); /* Flecha inicialmente rotada */
-}
-
-.acordeon-item-header.active::after {
-    transform: rotate(0deg); /* Flecha rotada al abrir el desplegable */
 }
 
 .acordeon-item-body {
@@ -466,6 +469,7 @@ tbody tr:nth-child(even) {
 }
 
 /* ACABA ESTILOS DE DESPLEGABLES */
+
 /*Botón saber mas clase estilo*/
 #contenedor-boton-saber-mas {
     display: flex;

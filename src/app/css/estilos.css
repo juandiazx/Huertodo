@@ -113,6 +113,16 @@ main>section, body>section{
     font-weight: 600;
 }
 
+.tituloPrincipal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 1.1em;
+}
+
 
 /*------------------------Comienza QUIENES SOMOS------------------------*/
 

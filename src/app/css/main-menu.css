@@ -2,6 +2,9 @@
 /*HOJA DE ESTILOS PARA EL BANNER Y EL MENU DESPLEGABLE*/
 /*--------------------------------------------------------*/
 /*Variables del menu principal NAV*/
+/* Iconos Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 #main-menu {
     --bg-color: var(--main-color-white); /*Variable para */
     --txt-color: var(--main-color-black);
@@ -16,10 +19,15 @@
 
 /*Icono de inicio sesión usuario*/
 #icono-inicio-sesion {
-    width: 3.2em;
-    height: 3.2em;
+    font-size: 3rem;
     margin-top: 0.4em;
+    color: var(--second-color-green);
 }
+
+#icono-inicio-sesion:hover{
+    color: var(--second-color-green-hover);
+}
+
 /*Estilo del menu principal*/
 #main-menu {
     background-color: var(--bg-color);

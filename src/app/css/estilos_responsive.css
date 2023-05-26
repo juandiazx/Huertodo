@@ -5,7 +5,7 @@
 /* Estilos para tamaños de pantalla de tablet (entre 600px y 1200px) */
 @media screen and (min-width: 600px) and (max-width: 1200px) {
     .tituloPrincipal {
-        margin-top: 10em;
+        margin-top: 3em;
         margin-bottom: 3em;
         font-size: 1.1em;
     }
@@ -38,7 +38,7 @@
 /* Estilos para tamaños de pantalla mayores a 1200px */
 @media screen and (min-width: 1200px) {
     .tituloPrincipal {
-        margin-top: 10em;
+        margin-top: 3em;
         margin-bottom: 4em;
         font-size: 1.2em;
     }

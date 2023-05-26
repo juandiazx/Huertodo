@@ -8,11 +8,12 @@
 /*Estilos para el titulo sobre nosotros*/
 .titulo-sobrenosotros{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-weight: normal;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-top: 10em;
+    margin-bottom: 3em;
+    font-size: 1.1em;
 }
 
 /* Estilos para la sección quienes-somos */

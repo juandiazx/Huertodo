@@ -13,7 +13,7 @@
     font-weight: normal;
     margin-top: 3em;
     margin-bottom: 3em;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 /* Estilos para la sección quienes-somos */
@@ -216,5 +216,125 @@
     .boton-cerrar-sesion {
         width: 8rem;
         height: 2.3rem;
+    }
+}
+
+
+/*ESTILOS PARA NUESTROS VALORES DESLIZABLES*/
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.pequeña-separacion-contenido{
+    height: 2rem;
+}
+
+/* Sección de Valores */
+#seccion-valores{
+    display: flex;
+    border: 0px solid yellow;
+    justify-content: space-between;
+}
+
+#seccion-resenyas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-resenyas-deslizables{
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    border-radius: 1.1em;
+    display: none;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    /*padding: 0.8rem 1rem;*/
+    text-align: center;
+}
+
+/*Clase para cuando un elemento esta activo*/
+.resenya-activa {
+    display: flex;
+}
+
+.contenedor-cabecera-valores{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Todas las imágenes de la sección de Visión */
+#imagenes-vision{
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    width: 19em;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
+    border: 0 solid black;
+    margin: 0 auto;
+}
+
+/*Estilo contenedor botones deslizables reseñas*/
+#contenedor-botones-deslizable-resenyas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.7em;
+    justify-content: center;
+}
+
+#deslizar-izquierda-resenya, #deslizar-derecha-resenya{
+    cursor: pointer;
+}
+
+
+/*ESTILOS RESPONSIVE PARA NUESTROS VALORES*/
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    /* Sección de Valores */
+    #seccion-valores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contenedor-resenyas-deslizables{
+        width: 30rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* Sección de Valores */
+    #seccion-valores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contenedor-resenyas-deslizables{
+        width: 55rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

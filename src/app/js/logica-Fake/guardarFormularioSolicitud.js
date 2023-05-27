@@ -10,7 +10,7 @@ document.getElementById("login-form").addEventListener('submit', guardarFormular
 async function guardarFormularioSolicitud(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const respuesta = await fetch('../api/v.1.0/formularioSolicitud/', {
+    const respuesta = await fetch('../api/v.1.0/formularioSolicitud/guardarFormularioSolicitud.php', {
         method: 'post',
         body: formData
     })

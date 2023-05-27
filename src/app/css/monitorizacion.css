@@ -72,6 +72,11 @@ h3 {
     font-size: 170%;
     padding: 0.5em 0.6em;
     display: block;
+    cursor: pointer;
+}
+
+.boton-verde-blanco-mapa:hover {
+    background: var(--second-color-green-hover);
 }
 
 /*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
@@ -105,6 +110,7 @@ h3 {
     width: 60%;
     height: auto;
     margin-bottom: 0.7rem;
+    cursor: pointer;
 }
 
 /*Estilo parrafo con el numero de notificaciones*/
@@ -163,6 +169,7 @@ h3 {
 #cerrar-dialogo-notificaciones {
     width: 2.3em;
     height: 2.3em;
+    cursor: pointer;
 }
 
 /*Estilo para cada contenedor de notificaciones especificas dentro del dialog*/
@@ -224,6 +231,12 @@ select {
     align-content: center;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+/*Hover para cuando pasas por encima del boton de editar nombre*/
+#contenedor-boton-editar-nombre-huerto:hover {
+    color: var(--second-color-green-hover);
 }
 
 /*Estilo del dialogo depopup cambiar nombre*/
@@ -266,6 +279,7 @@ select {
     margin-left: 0.7rem;
     width: 2.3em;
     height: 2.3em;
+    cursor: pointer;
 }
 
 /*Estilo formulario para cambiar el nombre del huerto*/
@@ -376,6 +390,7 @@ select {
 
 /*Estilo del icono de grafica para acceder a el histórico de cada parámetro*/
 .icono-boton-grafica-historico {
+    cursor: pointer;
     width: 1.7em;
     height: 1.7em;
     border-radius: 0.3em;
@@ -416,6 +431,7 @@ select {
     font-size: 3.3vw;
     padding: 0.2em 0.3em;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 /*Contenedor con la tarjeta de la informacion metereologica*/

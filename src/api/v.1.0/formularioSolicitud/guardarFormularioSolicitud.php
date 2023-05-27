@@ -15,25 +15,14 @@ $bbdd_password = '';
     $address = $_POST['address'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
-    //$sql = consultarUsuarioContrasenya($usuario,$password);
-    $resultado = mysqli_query($connexion, $sql);
-    if (mysqli_affected_rows($connexion) === 1) {
-        $registro = mysqli_fetch_assoc($resultado);
-        session_start();
-        $_SESSION['user'] = $registro;
-        $salida = [];
-        $salida['id'] = $registro['id'];
-        $salida['nombreApellidos'] = $registro['nombreApellidos'];
-        $salida['email'] = $registro['email'];
-        $salida['rol'] = $registro['rol'];
-        http_response_code(200);
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE');
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($salida);
-    } else {
-        echo json_encode(mysqli_affected_rows($connexion));
-        http_response_code(401);
-    }
-
-http_response_code(405);
+    $sql = "INSERT INTO `solicitud` (`nombreApellidos`, `email`, `direccion`, `asunto`, `mensaje`) 
+            VALUES ('$name', '$email', '$address', '$subject', '$message')";
+// Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
+try {
+    mysqli_query($connexion, $sql);
+    http_response_code(200);
+} catch (Exception $exception) {
+    http_response_code(500);
+    // podemos usar mysqli_errno para concretar el código de respuesta
+    die(mysqli_errno($connexion));
+}

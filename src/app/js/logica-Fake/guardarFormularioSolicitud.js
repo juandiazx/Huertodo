@@ -10,26 +10,14 @@ document.getElementById("login-form").addEventListener('submit', guardarFormular
 async function guardarFormularioSolicitud(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const respuesta = await fetch('../api/v.1.0/sesion/', {
+    const respuesta = await fetch('../api/v.1.0/formularioSolicitud/', {
         method: 'post',
         body: formData
     })
     const data = await respuesta.json();
     // si el resultado de la petición es OK (i.e. código HTTP 200)
     if(respuesta.ok){
-        if (data.rol == "usuario") {
-            // redirigimos a la página correspondiente
-            location.href = 'monitorizacion.html';
-        }
-        else if(data.rol == "comercial"){
-            location.href = 'Comercial.html';
-        }
-        else if(data.rol == "tecnico"){
-            location.href = 'Tecnico.html';
-        }
-        else if(data.rol == "administrador"){
-            location.href = 'Administrador_Web.html';
-        }
+
     }
 }
 

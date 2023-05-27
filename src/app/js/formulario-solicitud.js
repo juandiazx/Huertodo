@@ -1,9 +1,3 @@
-//Se crea un evento para cuando el formulario de solicitud haga submit
-document
-    .querySelector("form")
-    .addEventListener("submit", enviarFormulario);
-
-
 //Guardamos los id del checkbox de aceptar terminos y el boton de enviar el formulario
 const aceptarTerminos = document.getElementById("aceptar-terminos")
 const botonSolicitud = document.getElementById("boton-enviar-formulario-solicitud")
@@ -21,25 +15,3 @@ aceptarTerminos.addEventListener("click", function (){
         botonSolicitud.classList.remove("boton-enviar-formulario-solicitud-activo")
     }
 })
-
-
-//Funcion que se ejecuta cuando el submit del formulario de solicitud se dispara, comprueba si cada campo del formulario
-//es válido, y si es válido, muestra un popup de correcto
-
-
-// event:EventoListener---------->enviarFormulario()
-async function enviarFormulario(event) {
-    event.preventDefault();
-    const emailInput = document.getElementById("email-input")
-    const nombreInput = document.getElementById("name-input")
-    const apellidosInput = document.getElementById("last-name-input")
-    const direccionInput = document.getElementById("address-input")
-    const asuntoInput = document.getElementById("subject-input")
-    const mensajeInput = document.getElementById("message-input")
-    const aceptarTerminos = document.getElementById("aceptar-terminos")
-    if (emailInput.validity.valid &&  nombreInput.validity.valid &&  apellidosInput.validity.valid &&
-        direccionInput.validity.valid && asuntoInput.validity.valid && mensajeInput.validity.valid &&
-        aceptarTerminos.checked) {
-
-    }
-}

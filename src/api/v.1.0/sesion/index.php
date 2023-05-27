@@ -6,6 +6,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         echo comprobarSesion();
         break;
     case 'POST':
+        //Para produccion: 'localhost:3306','jdiagut1_masterS','Huertodo1234','jdiagut1_proyectoHuertodo'
         echo crearSesion('localhost','root','','test_local');
         break;
     case 'DELETE':

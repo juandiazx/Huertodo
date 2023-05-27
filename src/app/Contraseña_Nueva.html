@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+<head>
+  <meta charset="UTF-8">
+  <title>Recuperar Contraseña</title>
+  <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+  <!-- Para que pueda verse bien en movil-->
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+  <!-- Palabras clave para el SEO de la Web-->
+  <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+  <!-- Para que sea compatible con Microsoft Edge-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS DOCUMENTO estilos.css-->
+  <link rel='stylesheet' href="css/estilos.css"/>
+  <link rel='stylesheet' href="css/main-menu.css"/>
+  <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <link rel='stylesheet' href="css/estilos_responsive.css"/>
+</head>
+
+<!-- ESTA PÁGINA SOLO SE PUEDE ACCEDER AL RECIBIR UN EMAIL AL SOLICITAR EL CAMBIO DE CONTRASEÑA Y CLICAR EN EL LINK ADJUNTO, IGUAL QUE CUALQUIER OTRA WEB -->
+
+<body>
+
+<div class="page">
+
+  <!-- Comienza la cabecera-->
+  <header>
+    <nav id="main-menu">
+      <!-- Logotipo Link Landing Page-->
+      <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+
+      <!-- Contenedor para los iconos de inicio de sesión y menú -->
+      <div class="contenedor-iconos">
+        <!-- Icono de inicio de sesión -->
+        <a href="Inicio_sesion.html"><i id="icono-inicio-sesion" class="bi bi-person-circle"></i></a>
+
+        <!-- Menu hamburguesa-->
+        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul >
+          <li><a href="Producto.html" class="texto-link">Producto</a></li>
+          <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+          <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!--Termina la cabecera-->
+
+  <!-- Comienza la seccion general -->
+
+  <main  class="wrapper-forms">
+    <section>
+
+      <!-- Comienza la seccion titulo -->
+      <div id="inicio-de-sesion-titulo">
+        <h1 class="h1-formularios-titulos">Introduce la nueva Contraseña</h1>
+      </div>
+
+      <form id="login-form">
+
+        <!-- Comienza la seccion contraseña -->
+        <div id="password">
+          <div class="datos">
+            <label for="password">Contraseña nueva*</label>
+            <input type="password" id="password-input" name="password" required>
+          </div>
+        </div>
+
+        <!-- Repite la contraseña -->
+        <div id="password_2">
+          <div class="datos">
+            <label for="password_2">Repite contraseña nueva*</label>
+            <input type="password" id="password-input_2" name="password" required>
+          </div>
+        </div>
+
+        <!-- Comienza la seccion texto error contraseñas no son iguales -->
+        <p id="mensaje-error-contraseña">Las contraseñas no son iguales, inténtelo de nuevo.</p>
+
+        <!-- Comienza la seccion boton -->
+        <section class="boton-enviar">
+          <button type="submit" id="enviar-contraseña abrir-popup" class="boton-iniciar-sesion boton-verde-blanco">Enviar</button>
+        </section>
+
+      </form>
+    </section>
+  </main>
+  <!-- Termina la seccion general -->
+
+  <!-- Comienza el footer-->
+  <footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+    <div id="contenedor-footer-texto">
+      <!--Contenedor con los links de texto-->
+      <div>
+        <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+      </div>
+      <!--Parrafo con el nombre de la empresa y el copyright-->
+      <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </div>
+  </footer>
+  <!-- Termina el footer-->
+
+  <!-- Comienza el popup -->
+  <dialog id="popup">
+    <div class="popup-contenido">
+      <p>La contraseña se ha restablecido con éxito</p>
+      <button id="cerrar-popup">Volver</button>
+    </div>
+  </dialog>
+  <!-- Termina el popup -->
+
+  <!-- JavaScript Documento index.js para el menu desplegable-->
+  <script src="js/index.js"></script>
+
+</div>
+
+<!-- JavaScript Documento index.js para el menu desplegable-->
+<script src="js/popup_contraNueva.js"></script>
+
+</body>
+</html>

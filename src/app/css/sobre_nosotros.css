@@ -1,0 +1,340 @@
+/* Estilos para la página SOBRE NOSOTROS */
+
+/*margen superior para la página*/
+.margen-superior{
+    margin-top: 15vh;
+}
+
+/*Estilos para el titulo sobre nosotros*/
+.titulo-sobrenosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 1em;
+}
+
+/* Estilos para la sección quienes-somos */
+#quienes-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+}
+
+/* Estilos para la sección nuestros-valores */
+#nuestros-valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    color: white; /* Agrega esta propiedad para establecer el color del texto en blanco */
+}
+
+/* Estilos para la sección-texto */
+.seccion-texto {
+    text-align: left;
+}
+
+/* Estilos para la sección-imagen */
+.seccion-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Añade un margen superior para separar el texto de la imagen */
+}
+
+#nuestros-valores .titulo-valores {
+    width: 87%;
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-top: 0;
+    margin-bottom: 3vh;
+}
+
+/* Estilos para la sección parte */
+.parte1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar las secciones "parte" */
+}
+
+/* Estilos para la sección parte2 */
+.parte2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Añade un margen inferior para separar las secciones "parte" */
+}
+
+/*Estilos para el fondo verde de la sección nuestros valores*/
+.fondo-verde{
+    background-color: var(--second-color-green);
+    padding-top: 5vh; /* Ajusta el valor de padding según tus necesidades */
+    padding-bottom: 5vh;
+    /*border: 0px solid blue;*/
+}
+
+/*ESTILOS RESPONSIVE PARA SOBRE NOSOTROS*/
+
+@media (min-width: 550px) {
+
+    /*Estilos para la columna1*/
+    .seccion-texto.columna1 {
+        flex-basis: 50%;
+        max-width: 50%;
+        margin-right: 10px;
+    }
+
+    /*Estilos para la columna2*/
+    .seccion-imagen.columna2 {
+        flex-basis: 50%;
+        max-width: 50%;
+        margin-left: 10px;
+    }
+
+    /* Contenedor principal */
+    #quienes-somos.wrapper {
+        flex-direction: row;
+    }
+
+    /* Contenedor principal */
+    #nuestros-valores .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Estilos para la parte 1 */
+    .parte1 {
+        flex-basis: 50%;
+        max-width: 50%;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilos para la parte 2 */
+    .parte2 {
+        flex-basis: 50%;
+        max-width: 50%;
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilos para el texto dentro de las partes */
+    .parte1 .seccion-texto,
+    .parte2 .seccion-texto {
+        flex-basis: 100%;
+        text-align: center;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+
+    /* Estilos para las imágenes dentro de las partes */
+    .parte1 .seccion-imagen,
+    .parte2 .seccion-imagen {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 5vh;
+        margin-right: 5vh;
+    }
+    #seccion-resenyas {
+        display: flex;
+        align-items: stretch;
+    }
+
+    /*Estilo contenedor donde deslizan todos los paneles*/
+    .contenedor-resenyas-deslizables {
+        width: 100%;
+    }
+}
+
+/*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
+
+@media screen and (min-width: 890px) {
+
+    /*Oculta el icono del menu*/
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    /* Ajusta el orden de los elementos en el header */
+    .contenedor-iconos {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    /*para mostrar los elementos del menu en línea horizontal*/
+    #main-menu ul {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+        order: 0;
+        align-items: center;
+    }
+
+    /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
+    #main-menu ul li {
+        font-size: 16px; /
+    font-weight: normal;
+        color: var(--second-color-green);
+    }
+
+    .boton-cerrar-sesion {
+        padding-top: 0.4rem;
+    }
+    .boton-cerrar-sesion a {
+        margin-top: 3rem;
+        color: var(--main-color-white);
+    }
+
+
+    /*agrega margenes entre los elementos del menu*/
+    #main-menu ul li {
+        margin-right: 30px; /* Margen derecho entre elementos */
+    }
+
+
+    /*agrega margenes entre el borde de pantalla y los elementos*/
+    #icono-inicio-sesion {
+        margin-right: 30px; /* Margen derecho entre el icono y el borde */
+        order: 1;
+    }
+
+    .boton-cerrar-sesion {
+        width: 8rem;
+        height: 2.3rem;
+    }
+}
+
+
+/*ESTILOS PARA NUESTROS VALORES DESLIZABLES*/
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.pequeña-separacion-contenido{
+    height: 2rem;
+}
+
+/* Sección de Valores */
+#seccion-valores{
+    display: flex;
+    border: 0px solid yellow;
+    justify-content: space-between;
+}
+
+#seccion-resenyas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-resenyas-deslizables{
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    border-radius: 1.1em;
+    display: none;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    /*padding: 0.8rem 1rem;*/
+    text-align: center;
+}
+
+/*Clase para cuando un elemento esta activo*/
+.resenya-activa {
+    display: flex;
+}
+
+.contenedor-cabecera-valores{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Todas las imágenes de la sección de Visión */
+#imagenes-vision{
+    height: 13em;
+    border-radius: 1.1em;
+    display: flex;
+    width: 19em;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify-all;
+    align-items: center;
+    border: 0 solid black;
+    margin: 0 auto;
+}
+
+/*Estilo contenedor botones deslizables reseñas*/
+#contenedor-botones-deslizable-resenyas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.7em;
+    justify-content: center;
+}
+
+#deslizar-izquierda-resenya, #deslizar-derecha-resenya{
+    cursor: pointer;
+}
+
+
+/*ESTILOS RESPONSIVE PARA NUESTROS VALORES*/
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    /* Sección de Valores */
+    #seccion-valores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contenedor-resenyas-deslizables{
+        width: 30rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* Sección de Valores */
+    #seccion-valores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contenedor-resenyas-deslizables{
+        width: 55rem;
+        height: 30rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

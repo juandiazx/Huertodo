@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Espacio personal</title>
+    <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+    <!-- Para que pueda verse bien en movil-->
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+    <!-- Palabras clave para el SEO de la Web-->
+    <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+    <!-- Para que sea compatible con Microsoft Edge-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap Iconos Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel='stylesheet' href="css/monitorizacion.css"/>
+    <link rel='stylesheet' href="css/main-menu.css"/>
+    <!-- CSS DOCUMENTO estilos.css-->
+    <link rel='stylesheet' href="css/estilos.css"/>
+    <link rel='stylesheet' href="css/estilos_responsive.css"/>
+
+    <!-- Añadir librerias de chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="js/logica-Fake/control-acceso.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));</script>
+
+   </head>
+<body class="loading">
+<!-- Comienza la cabecera-->
+<header>
+    <nav id="main-menu">
+        <!-- Logotipo Link Landing Page-->
+        <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+
+        <!-- Contenedor para los iconos de inicio de sesión y menú -->
+        <div class="contenedor-iconos">
+            <!-- Icono de inicio de sesión -->
+
+            <!-- Menu hamburguesa-->
+            <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul >
+                <li><a href="Producto.html" class="texto-link">Producto</a></li>
+                <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+                <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+                <li class="boton-cerrar-sesion boton-verde-blanco"><a onclick="borrarSesion()">Cerrar sesión</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<!--Termina la cabecera-->
+
+<!-- Comienza la seccion de espacio personal sin banner ni footer-->
+<section id="contenedor-espacio-personal-completo" class="wrapper">
+    <div id="contenedor-nombre-usuario">
+        <p id=nombre-usuario">Bienvenido</p>
+    </div>
+    <!-- Comienza el contenedor de notificaciones espacio personal-->
+    <div id="contenedor-notificaciones">
+        <div id="panel-circular-notificaciones">
+            <img id="icono-campana-notificaciones" src="images/icono-notificaciones-con.png" alt="icono campana notificaciones">
+            <p id="parrafo-numero-notificaciones">5 notificaciones</p>
+        </div>
+    </div>
+    <!-- Termina el contenedor de notificaciones espacio personal-->
+
+    <!-- Desplegable para las notificaciones-->
+    <dialog id="desplegable-popup-notificaciones">
+        <div id="cabecera-popup-notificaciones">
+            <h2>Notificaciones</h2>
+            <img id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
+        </div>
+        <div class="contenedor-notificacion-especifica">
+            <div class="notificacion-especifica-texto">
+                <p>La iluminación está bajando más de lo normal</p>
+            </div>
+            <div class="notificacion-especifica-fecha">
+                <p>16 Julio 2023</p>
+            </div>
+        </div>
+
+        <div class="contenedor-notificacion-especifica">
+            <div class="notificacion-especifica-texto">
+                <p>La humedad ha bajado drásticamente</p>
+            </div>
+            <div class="notificacion-especifica-fecha">
+                <p>14 Julio 2023</p>
+            </div>
+        </div>
+
+        <div class="contenedor-notificacion-especifica">
+            <div class="notificacion-especifica-texto">
+                <p>La humedad ha bajado drásticamente</p>
+            </div>
+            <div class="notificacion-especifica-fecha">
+                <p>10 Julio 2023</p>
+            </div>
+        </div>
+
+        <div class="contenedor-notificacion-especifica">
+            <div class="notificacion-especifica-texto">
+                <p>El Huerto 2 está teniendo una humedad muy alta</p>
+            </div>
+            <div class="notificacion-especifica-fecha">
+                <p>09 Julio 2023</p>
+            </div>
+        </div>
+
+        <div class="contenedor-notificacion-especifica">
+            <div class="notificacion-especifica-texto">
+                <p>La temperatura ha llegado a estar muy alta</p>
+            </div>
+            <div class="notificacion-especifica-fecha">
+                <p>05 Julio 2023</p>
+            </div>
+        </div>
+    </dialog>
+
+    <!--Termina esplegable para las notificaciones-->
+
+    <!-- Comienza el contenedor de monitorizacion-->
+    <div id="contenedor-monitorizacion">
+
+        <div id="contenedor-nombre-huerto">
+            <select name="nombres-huertos" id="nombre-huerto">
+                <option value="Huerto 1">Huerto 1</option>
+                <option value="Huerto 2">Huerto 2</option>
+            </select>
+            <div id="contenedor-boton-editar-nombre-huerto">
+                <i id="icono-editar-nombre" class="bi bi-pencil-square"></i>
+            </div>
+        </div>
+        <dialog id="desplegable-popup-cambiar-nombre-huerto">
+            <div id="cabecera-popup-cambiar-nombre">
+                <h2>Modifica el nombre de tu huerto</h2>
+                <img id="cerrar-dialogo-cambiar-nombre" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
+            </div>
+            <form id="formulario-cambiar-nombre-huerto">
+                <label for="nombre-huerto-form">Nombre nuevo de Huerto 1</label>
+                <input type="text" id="nombre-huerto-form" name="nombre-huerto" required>
+                <button type="submit" class="boton-verde-blanco-mapa">Modificar nombre</button>
+            </form>
+        </dialog>
+
+        <div id="contenedor-fecha-hora-huerto">
+            <div id="contenedor-temperatura-metereologia">
+                <p>18ºC Gandia <img class="icono-estado-metereologico" src="images/icono-soleado.png" alt="icono soleado"></p>
+            </div>
+            <p class="parrafo-negrita">18:32</p>
+        </div>
+
+        <div id="datos-cada-30-s">Actualización de datos cada 30 minutos</div>
+
+                <!--Comienza contenedor con los parametros en tiempo real del huerto-->
+        <div class="contenedor-parametros-tiempo-real-huerto">
+            <div id="contenedor-humedad" class="contenedor-parametro-monitorizacion-especifico">
+                <img class="icono-dato-tiempo-real" src="images/drop.png" alt="icono gota agua">
+                <p><span>98%</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
+            </div>
+            <div id="contenedor-salinidad" class="contenedor-parametro-monitorizacion-especifico">
+                <img class="icono-dato-tiempo-real" src="images/salt.png" alt="icono sal">
+                <p><span>12%</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
+            </div>
+        </div>
+        <div class="contenedor-parametros-tiempo-real-huerto">
+            <div id="contenedor-iluminacion" class="contenedor-parametro-monitorizacion-especifico">
+                <img class="icono-dato-tiempo-real" src="images/brightness.png" alt="icono iluminosidad">
+                <p><span>Muy alta</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
+            </div>
+            <div id="contenedor-ph" class="contenedor-parametro-monitorizacion-especifico">
+                <img class="icono-dato-tiempo-real" src="images/ph.png" alt="icono ph">
+                <p><span>6.53</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
+            </div>
+        </div>
+        <div id="contenedor-parametros-tiempo-real-huerto-temperatura" class="contenedor-parametros-tiempo-real-huerto">
+            <div id="contenedor-temperatura" class="contenedor-parametro-monitorizacion-especifico">
+                <img class="icono-dato-tiempo-real" src="images/thermometer.png" alt="icono temperatura">
+                <p><span>22ºC</span></p>
+                <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
+            </div>
+        </div>
+        <!--Termina contenedor con los parametros en tiempo real del huerto-->
+
+        <!-- Comienza el historial de mediciones grafica-->
+        <div id="contenedor-graficas-con-filtros">
+            <!--Contenedor donde va solamente la grafica-->
+            <div id="contenedor-grafica-historial">
+                <canvas id="grafica-historial" aria-label="Grafica Interactiva Histórico Parámetros" role="img"></canvas>
+            </div>
+            <!--Contenedor con los botones de filtrar de la gráfica-->
+            <!--
+            <div id="contenedor-botones-filtro-grafica">
+                <button id="boton-filtro-grafica-anyo">Año</button>
+                <button id="boton-filtro-grafica-mes">Mes</button>
+                <button id="boton-filtro-grafica-semana">Semana</button>
+                <button id="boton-filtro-grafica-dia">Dia</button>
+            </div>
+			-->
+        </div>
+        <!-- Termina el historial de mediciones grafica-->
+
+    <!-- Termina el contenedor de monitorizacion-->
+    </div>
+
+    <section id="contenedor-boton-mapas">
+        <button id="boton-mapas-huertos" class="boton-verde-blanco-mapa boton-verde-blanco">Mapa con tus huertos</button>
+    </section>
+
+    <!-- Desplegable para el mapa de huertos-->
+    <dialog id="desplegable-popup-mapa">
+        <section id="cabecera-popup-mapa">
+            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-mapa.png" alt="Icono cruz Cerrar notificaciones">
+        </section>
+        <section class="contenedor-icono-huerto-mapa">
+            <img id="icono-huerto1" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
+            <p>Huerto 1</p>
+        </section>
+        <section class="contenedor-icono-huerto-mapa">
+            <img id="icono-huerto2" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
+            <p>Huerto 2</p>
+        </section>
+    </dialog>
+    <!--Termina desplegable para el mapa de huertos-->
+
+</section>
+
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+    <div id="contenedor-footer-texto">
+        <!--Contenedor con los links de texto-->
+        <div>
+            <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+        </div>
+        <!--Parrafo con el nombre de la empresa y el copyright-->
+        <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </div>
+</footer>
+<!-- Termina el footer-->
+
+<!-- JavaScript Documento graficas.js para la gráfica-->
+<script src="js/graficas.js"></script>
+<!-- JavaScript Documento popups-monitorizacion.js para el mapa y las notificaciones-->
+<script src="js/popups-monitorizacion.js"></script>
+<!-- JavaScript Documento index.js para el menu desplegable-->
+<script src="js/index.js"></script>
+<!-- JavaScript Documento getMedidas.js-->
+<script src="js/getMedidas.js"></script>
+</body>
+</html>

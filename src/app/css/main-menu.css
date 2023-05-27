@@ -1,0 +1,142 @@
+/*--------------------------------------------------------*/
+/*HOJA DE ESTILOS PARA EL BANNER Y EL MENU DESPLEGABLE*/
+/*--------------------------------------------------------*/
+/*Variables del menu principal NAV*/
+/* Iconos Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+#main-menu {
+    --bg-color: var(--main-color-white); /*Variable para */
+    --txt-color: var(--main-color-black);
+    --menu-height: 12vh;
+}
+
+/*Estilo imagen LOGOTIPO del menu de navegacion*/
+#logo-menu-inicio {
+    width: 10em;
+    height: 7em;
+}
+
+/*Icono de inicio sesión usuario*/
+#icono-inicio-sesion {
+    font-size: 3rem;
+    margin-top: 0.4em;
+    color: var(--second-color-green);
+}
+
+#icono-inicio-sesion:hover{
+    color: var(--second-color-green-hover);
+}
+
+/*Estilo del menu principal*/
+#main-menu {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    height: var(--menu-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+/*Estilo de la lista desplegable, que parte desde el borde inferior de la barra de navegación*/
+#main-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    height: 89vh;
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
+}
+
+/*Para cuando el menu este activo, esto hará la lista*/
+#main-menu.activo ul{
+    transform: translate(0) scaleY(1);
+    align-items: center;
+}
+
+/*Estilo entre cada sección de la lista del menu*/
+#main-menu li {
+    text-align: center;
+    font-size: var(--tamaño-28-letra);
+    font-weight: 600;
+}
+
+/*Botón Cerrar Sesión*/
+.boton-cerrar-sesion {
+    text-align: center;
+    width: 72%;
+    height: 7%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.2em;
+}
+
+/*Dimensiones del menu hamburguesa*/
+.menu-hamburguesa {
+    width: 3em;
+    height: 2.5em;
+    margin-right: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+/*Estilo de cada linea del menu hamburgesa*/
+.menu-hamburguesa div {
+    background-color: var(--second-color-green);
+    width: 2.4em;
+    height: .27em;
+    border-radius: .6em;
+    margin-top: 0.63em;
+}
+
+/*Estilo de la linea del medio del menu para cuando este activo*/
+#main-menu.activo .menu-hamburguesa div:nth-child(2) {
+    opacity:0;
+}
+
+/*Estilo de la primera linea de arriba del menu cuando este esté activo */
+#main-menu.activo .menu-hamburguesa div:nth-child(1) {
+    transform: translateY(.9em) rotate(45deg);
+}
+
+/*Estilo de la ultima linea de abajo del menu cuando este esté activo */
+#main-menu.activo .menu-hamburguesa div:nth-child(3) {
+    transform: translateY(-.9em) rotate(-45deg);
+}
+
+/*Estilo contenedor del menu de navegacion*/
+.contenedor-iconos {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Ajusta el valor según el espaciado deseado */
+}
+
+/*Estilo nombre usuario bienvenida*/
+#contenedor-nombre-usuario {
+    margin-bottom: 1.6em;
+    font-weight: 700;
+}
+
+#contenedor-nombre-usuario>p {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom:1em;
+}
+/*Propiedad loading para todos espacios personales*/
+.loading {
+    display: none;
+}

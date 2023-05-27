@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Solicita el producto</title>
+  <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+  <!-- Para que pueda verse bien en movil-->
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+  <!-- Palabras clave para el SEO de la Web-->
+  <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+  <!-- Para que sea compatible con Microsoft Edge-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS DOCUMENTO estilos.css-->
+  <link rel='stylesheet' href="css/main-menu.css"/>
+  <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <link rel='stylesheet' href="css/estilos_responsive.css"/>
+</head>
+
+<body>
+<div class="page">
+<!-- Comienza la cabecera-->
+<header>
+  <nav id="main-menu">
+    <!-- Logotipo Link Landing Page-->
+    <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+
+    <!-- Contenedor para los iconos de inicio de sesión y menú -->
+    <div class="contenedor-iconos">
+      <!-- Icono de inicio de sesión -->
+      <a href="Inicio_sesion.html"><i id="icono-inicio-sesion" class="bi bi-person-circle"></i></a>
+
+      <!-- Menu hamburguesa-->
+      <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <ul >
+        <li><a href="Producto.html" class="texto-link">Producto</a></li>
+        <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+        <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</header>
+<!--Termina la cabecera-->
+
+<!-- Comienza la seccion general -->
+
+<main class="wrapper-forms">
+  <section class="seccion-solicitud">
+
+    <!-- Comienza la seccion titulo -->
+    <div class="solicitud-producto">
+      <h1 class="h1-formularios-titulos">Solicitud de producto</h1>
+    </div>
+
+    <!--Input de nombre-->
+    <form id="login-form">
+      <div id="name">
+        <div class="datos">
+          <label for="name">Nombre y Apellidos*</label>
+          <input type="text" id="name-input" name="name" required>
+        </div>
+      </div>
+
+      <!--Input de email-->
+      <div id="email">
+        <div class="datos">
+          <label for="email">Email*</label>
+          <input type="email" id="email-input" name="email" required>
+        </div>
+      </div>
+
+      <!--Input de dirección-->
+      <div id="address">
+        <div class="datos">
+          <label for="address">Dirección completa*</label>
+          <input type="text" id="address-input" name="address" required>
+        </div>
+      </div>
+
+      <!--Input de asunto-->
+      <div id="subject">
+        <div class="datos">
+          <label for="subject">Asunto*</label>
+          <input type="text" id="subject-input" name="subject" required>
+        </div>
+      </div>
+
+      <!--Input de Mensaje-->
+      <div id="message">
+        <div class="datos">
+          <label for="message">Mensaje*</label>
+          <textarea type="text" id="message-input" name="message" required></textarea>
+        </div>
+      </div>
+
+      <label id="campos-obligatorios">*Campos Obligatorios</label>
+
+      <!--Chekbox aceptar terminos y condiciones-->
+      <div id="chekbox">
+        <input type="checkbox" id="aceptar-terminos" required>
+        <label for="aceptar-terminos">Acepto <a href="TerminosYCondiciones.html">términos y condiciones</a></label>
+      </div>
+
+
+      <!-- Comienza la seccion boton -->
+      <section class="boton-enviar">
+        <button type="submit" id="boton-enviar-formulario-solicitud" class="boton-enviar-formulario-solicitud-desactivado">Enviar</button>
+      </section>
+    </form>
+
+  </section>
+</main>
+<!-- Termina la seccion general -->
+
+
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
+    <!--Contenedor con los links de texto-->
+    <div>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+    </div>
+    <!--Parrafo con el nombre de la empresa y el copyright-->
+    <p class="parrafo-negrita">© GTI Copyright 2023</p>
+  </div>
+</footer>
+<!-- Termina el footer-->
+
+<!-- Comienza el popup -->
+<section  id="popup">
+  <div class="popup-contenido">
+    <p>El formulario se ha enviado con éxito</p>
+    <button id="cerrar-popup">Volver</button>
+  </div>
+</section>
+<!-- Termina el popup -->
+
+  <!-- JavaScript Documento Logica Fake para guardar datos en bbdd-->
+<script src="js/logica-Fake/guardarFormularioSolicitud.js"></script>
+
+<!-- JavaScript Documento index.js-->
+<script src="js/index.js"></script>
+
+<!-- JavaScript Documento popup_solicitud.js-->
+<script src="js/popup_solicitud.js"></script>
+
+</div>
+</body>
+</html>

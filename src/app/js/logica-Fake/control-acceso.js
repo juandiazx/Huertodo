@@ -3,8 +3,14 @@
 //GET ../api/v.1.0/sesion  rol:String----->comprobarSesion()
 //Comprueba si existe una sesión, si existe pues carga la página, si no, no la muestra y redirige al Inicio de sesión
 async function comprobarSesion(rol) {
-    const respuesta = await fetch('../api/v.1.0/sesion/');
-    const data = await respuesta.json();
+    try{
+        var respuesta = await fetch('../api/v.1.0/sesion/');
+        var data = await respuesta.json();
+    }
+    catch(err){
+        location.href = './Inicio_sesion.html';
+        alert("Acceso restringido, no puede acceder");
+    }
     if(respuesta.ok && data.rol ==rol) {
         /*document.getElementById('user-name').innerText = data.nombre; //HAY QUE HACER QUE PONGA QUE USUARIO ES*/
         let body = document.querySelector("body");
@@ -32,14 +38,15 @@ async function comprobarSesion(rol) {
             alert("Acceso restringido");
         }
     }
-    else {
-        location.href = './Inicio_sesion.html';
-        alert("Acceso restringido, no puede acceder");
-    }
 }
 async function comprobarSiSesionIniciadaEnLogin(){
-    const respuesta = await fetch('../api/v.1.0/sesion/');
-    const data = await respuesta.json();
+    try{
+        var respuesta = await fetch('../api/v.1.0/sesion/');
+        var data = await respuesta.json();
+    }
+    catch(err){
+        document.querySelector("body").classList.remove("loading");
+    }
     if(respuesta.ok){
         if(data.rol == "comercial"){
             location.href = './Comercial.html';
@@ -54,6 +61,7 @@ async function comprobarSiSesionIniciadaEnLogin(){
             location.href = './Administrador_Web.html';
         }
     }
+
 }
 
 //Funcion asincrona para borrar la sesion y salir del espacio personal

@@ -40,14 +40,6 @@ async function enviarFormulario(event) {
     if (emailInput.validity.valid &&  nombreInput.validity.valid &&  apellidosInput.validity.valid &&
         direccionInput.validity.valid && asuntoInput.validity.valid && mensajeInput.validity.valid &&
         aceptarTerminos.checked) {
-        // Si el campo de entrada es válido, mostrar un mensaje de éxito
-        alert('El formulario se ha enviado correctamente');
-        //Vaciamos el formulario
-        document.querySelector("form").reset();
 
-        //AQUI AHORA DEBERIA DE HABER LO DE POPUP QUE SE ABRA Y SE CIERRA SI SE PULSA ACEPTAR
-
-        //Se vuelve a la landing page
-        location.href = "../../index.html";
     }
 }

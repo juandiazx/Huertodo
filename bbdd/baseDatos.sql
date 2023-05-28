@@ -292,13 +292,16 @@ ALTER TABLE `usuario`
 COMMIT;
 
 INSERT INTO `roles` (`rol`) VALUES ('usuario'), ('comercial'), ('tecnico'), ('administrador');
+
 INSERT INTO `usuario` (`email`,`nombreApellidos`, `contrasenya`,`rol`, `direccion`) VALUES
                                                                                         ('joselgarciamant1@gmail.com','Jose Luis Garcia Mantero', 'mementoMori45',1, 'Calle Espanya 19, Piso 2, 47630, Gandia, Valencia'),
                                                                                         ('lanternmartin@gmail.com','Martin Gutierrez Lant', 'upvMejorUniLoremIpsum',2, NULL),
                                                                                         ('saavedrarogg@gmail.com','Eduardo Saavedra Rodriguez', 'hartoDeLosArduinos400',3, NULL),
                                                                                         ('mauforonxl@gmail.com','Mauricio Foronda Taliente', 'vivaWordpress2012',4, NULL);
 
-
+INSERT INTO `huertos` (`nombre`, `latitud`, `longitud`, `usuario`) 
+VALUES ('Huerto 1', 30.946249, 118.756589, 1);
+('Huerto 2', 45.9113179, 16.1242534, 1);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -16,6 +16,18 @@ async function comprobarSesion(rol) {
         let body = document.querySelector("body");
         document.body.classList.remove("loading");
         document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos+"!";
+        if(data.rol == "comercial"){
+            //Se cargan todos los datos de comercial con las funciones
+        }
+        else if(data.rol == "usuario"){
+            //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
+        }
+        else if(data.rol == "tecnico"){
+            //Se cargan todos los datos de tecnico con las funciones
+        }
+        else if(data.rol == "administrador"){
+            //Se cargan todos los datos de administrador con las funciones
+        }
         //Hay que ponerle a todo el body de los espacios personales, la clase loading que tendra un display none
     }
     //Si hay una sesion pero el rol en esta sesion es distinto al del que llama a la funcion

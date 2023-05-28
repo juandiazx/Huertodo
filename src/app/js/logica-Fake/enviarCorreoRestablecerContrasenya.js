@@ -17,6 +17,9 @@ async function enviarCorreoRestablecerContrasenya(event) {
     const data = await respuesta.json();
     // si el resultado de la petición es OK (i.e. código HTTP 200)
     if(respuesta.ok){
-
+        //Popup de exito
+    }
+    else{
+        //Error
     }
 }

@@ -15,9 +15,13 @@ async function guardarFormularioSolicitud(event) {
         body: formData
     })
     const data = await respuesta.json();
+    //Realmente no hace falta gestionar esto, porque el form de por si solo se envia cuando cumple con todos
+    //los requisitos de los inputs, hay otro JS Document con el popup de envío exito, solo hay que cambiar el boton
     // si el resultado de la petición es OK (i.e. código HTTP 200)
+    /*
     if(respuesta.ok){
 
     }
+     */
 }
 

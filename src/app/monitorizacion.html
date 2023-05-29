@@ -20,6 +20,9 @@
 
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <!--JS Funcion cargarHuertosUsuario() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/cargarHuertosUsuario.js"></script>
+    <!--JS con la funcion de comprobarSesion()-->
     <script src="js/logica-Fake/control-acceso.js"></script>
     <script>document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));</script>
 
@@ -127,8 +130,6 @@
 
         <div id="contenedor-nombre-huerto">
             <select name="nombres-huertos" id="nombre-huerto">
-                <option value="Huerto 1">Huerto 1</option>
-                <option value="Huerto 2">Huerto 2</option>
             </select>
             <div id="contenedor-boton-editar-nombre-huerto">
                 <i id="icono-editar-nombre" class="bi bi-pencil-square"></i>

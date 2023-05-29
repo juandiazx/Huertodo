@@ -1,4 +1,3 @@
-
 //Function asincrona autoejecutable cuando se carga la pagina,
 //GET ../api/v.1.0/sesion  rol:String----->comprobarSesion()
 //Comprueba si existe una sesión, si existe pues carga la página, si no, no la muestra y redirige al Inicio de sesión
@@ -12,14 +11,11 @@ async function comprobarSesion(rol) {
         alert("Acceso restringido, no puede acceder");
     }
     if(respuesta.ok && data.rol ==rol) {
-        /*document.getElementById('user-name').innerText = data.nombre; //HAY QUE HACER QUE PONGA QUE USUARIO ES*/
-        let body = document.querySelector("body");
-        document.body.classList.remove("loading");
-        document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos+"!";
         if(data.rol == "comercial"){
             //Se cargan todos los datos de comercial con las funciones
         }
         else if(data.rol == "usuario"){
+            await cargarHuertosUsuario();
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         }
         else if(data.rol == "tecnico"){
@@ -28,6 +24,10 @@ async function comprobarSesion(rol) {
         else if(data.rol == "administrador"){
             //Se cargan todos los datos de administrador con las funciones
         }
+        let body = document.querySelector("body");
+        document.body.classList.remove("loading");
+        document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos+"!";
+
         //Hay que ponerle a todo el body de los espacios personales, la clase loading que tendra un display none
     }
     //Si hay una sesion pero el rol en esta sesion es distinto al del que llama a la funcion
@@ -98,11 +98,7 @@ async function comprobarSesion(rol) {
     var respuesta = await fetch('../api/v.1.0/sesion/');
     var data = await respuesta.json();
     if(respuesta.ok && data.rol ==rol) {
-        //document.getElementById('user-name').innerText = data.nombre; HAY QUE HACER QUE PONGA QUE USUARIO ES
-let body = document.querySelector("body");
-document.body.classList.remove("loading");
-document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos+"!";
-if(data.rol == "comercial"){
+        if(data.rol == "comercial"){
             //Se cargan todos los datos de comercial con las funciones
         }
         else if(data.rol == "usuario"){
@@ -114,7 +110,9 @@ if(data.rol == "comercial"){
         else if(data.rol == "administrador"){
             //Se cargan todos los datos de administrador con las funciones
         }
-//Hay que ponerle a todo el body de los espacios personales, la clase loading que tendra un display none
+        let body = document.querySelector("body");
+        document.body.classList.remove("loading");
+        document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos+"!";
 }
 //Si hay una sesion pero el rol en esta sesion es distinto al del que llama a la funcion
 else if(respuesta.ok && rol !=data.rol){

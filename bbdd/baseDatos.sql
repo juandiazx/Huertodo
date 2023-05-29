@@ -300,7 +300,7 @@ INSERT INTO `usuario` (`email`,`nombreApellidos`, `contrasenya`,`rol`, `direccio
                                                                                         ('mauforonxl@gmail.com','Mauricio Foronda Taliente', 'vivaWordpress2012',4, NULL);
 
 INSERT INTO `huertos` (`nombre`, `latitud`, `longitud`, `usuario`) 
-VALUES ('Huerto 1', 30.946249, 118.756589, 1);
+VALUES ('Huerto 1', 30.946249, 118.756589, 1),
 ('Huerto 2', 45.9113179, 16.1242534, 1);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

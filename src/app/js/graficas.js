@@ -64,8 +64,8 @@ document.getElementById("contenedor-humedad").querySelector("img.icono-boton-gra
 document.getElementById("contenedor-salinidad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
     datos.datasets[0].data= [38, 30, 37, 10,10,50,72]
     opciones.plugins.title.text = 'Gráfica sal'
-    datos.datasets[0].backgroundColor = 'rgb(178,178,178)';
-    datos.datasets[0].borderColor = 'rgb(101,101,101)';
+    datos.datasets[0].backgroundColor = 'rgb(217,217,217)';
+    datos.datasets[0].borderColor = 'rgb(171,171,171)';
     miGrafica.update();
 })
 

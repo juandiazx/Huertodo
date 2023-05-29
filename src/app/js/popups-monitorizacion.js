@@ -43,8 +43,10 @@ select.addEventListener("change",cambiarNombrePopUpCambiarNombre)
 async function cambiarNombrePopUpCambiarNombre(){
     let label = document.getElementById("formulario-cambiar-nombre-huerto").querySelector("label")
     let selector = document.getElementById("nombre-huerto")
+    let inputClandestino = document.getElementById("input-clandestino")
     let nombreSelect = selector.options[selector.selectedIndex].textContent
     label.innerText = "Nombre nuevo para " + nombreSelect;
+    inputClandestino.value = selector.value; //Le asignamos al input clandestino el valor del select
 }
 
 //---------------------------------------------------------------------------------------

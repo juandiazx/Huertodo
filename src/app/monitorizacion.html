@@ -143,6 +143,8 @@
             <form id="formulario-cambiar-nombre-huerto">
                 <label for="nombre-huerto-form">Nombre nuevo de Huerto 1</label>
                 <input type="text" id="nombre-huerto-form" name="nombre-huerto" required>
+                <input type="number" id="input-clandestino" name="id">
+                <div id="mensaje-exito-cambiar-nombre">Nombre modificado con éxito</div>
                 <button type="submit" class="boton-verde-blanco-mapa">Modificar nombre</button>
             </form>
         </dialog>
@@ -199,10 +201,9 @@
             <!--Contenedor con los botones de filtrar de la gráfica-->
             <!--
             <div id="contenedor-botones-filtro-grafica">
-                <button id="boton-filtro-grafica-anyo">Año</button>
+                <button id="boton-filtro-grafica-anyo">Trimestre</button>
                 <button id="boton-filtro-grafica-mes">Mes</button>
                 <button id="boton-filtro-grafica-semana">Semana</button>
-                <button id="boton-filtro-grafica-dia">Dia</button>
             </div>
 			-->
         </div>
@@ -222,11 +223,11 @@
         </section>
         <section class="contenedor-icono-huerto-mapa">
             <img id="icono-huerto1" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
-            <p>Huerto 1</p>
+            <p>Calabazas</p>
         </section>
         <section class="contenedor-icono-huerto-mapa">
             <img id="icono-huerto2" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
-            <p>Huerto 2</p>
+            <p>Tomates</p>
         </section>
     </dialog>
     <!--Termina desplegable para el mapa de huertos-->
@@ -248,6 +249,8 @@
 
 <!-- JavaScript Documento graficas.js para la gráfica-->
 <script src="js/graficas.js"></script>
+<!-- JavaScript cambiarNombreHuerto-->
+<script src="js/logica-Fake/cambiarNombreHuerto.js"></script>
 <!-- JavaScript Documento popups-monitorizacion.js para el mapa y las notificaciones-->
 <script src="js/popups-monitorizacion.js"></script>
 <!-- JavaScript Documento index.js para el menu desplegable-->

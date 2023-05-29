@@ -300,6 +300,20 @@ select {
     color: #333333;
 }
 
+/*Estilo para el input oculto que contiene el id del huerto a cambiar*/
+#input-clandestino {
+    display: none;
+}
+
+/*Estilo mensaje exito para cambiar nombre*/
+#mensaje-exito-cambiar-nombre{
+    display: none;
+    font-size: 0.9rem;
+    color: var(--second-color-green);
+    text-align: left;
+    margin-top: 0.3rem;
+}
+
 /*Estilo para el button del formulario de cambiar nombre de huerto*/
 #formulario-cambiar-nombre-huerto button {
     text-align: center;

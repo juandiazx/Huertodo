@@ -16,6 +16,8 @@ async function comprobarSesion(rol) {
         }
         else if(data.rol == "usuario"){
             await cargarHuertosUsuario();
+            //Funcion para poner el nombre predeterminado en el popup de cambiar nombre, popups-monitorizacion.js
+            await cambiarNombrePopUpCambiarNombre()
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         }
         else if(data.rol == "tecnico"){
@@ -102,6 +104,7 @@ async function comprobarSesion(rol) {
             //Se cargan todos los datos de comercial con las funciones
         }
         else if(data.rol == "usuario"){
+            await cargarHuertosUsuario();
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         }
         else if(data.rol == "tecnico"){

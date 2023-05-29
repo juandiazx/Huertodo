@@ -1,4 +1,9 @@
 <?php
+/*
+ * email:POST--------------> enviarCorreoRestablecerContrasenya()----->HTTP:200 | HTTP:401
+ *
+ * */
+
 $bbdd_servidor = 'localhost';
 $bbdd_nombre = 'test_local';
 $bbdd_user = 'root';

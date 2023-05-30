@@ -302,7 +302,7 @@
 /*ESTILOS RESPONSIVE PARA NUESTROS VALORES*/
 
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     /* Sección de Valores */
     #seccion-valores{
         display: flex;
@@ -313,8 +313,8 @@
     }
 
     .contenedor-resenyas-deslizables{
-        width: 30rem;
-        height: 30rem;
+        width: 35rem;
+        height: 25rem;
         margin-right: auto;
         margin-left: auto;
     }
@@ -333,7 +333,7 @@
 
     .contenedor-resenyas-deslizables{
         width: 55rem;
-        height: 30rem;
+        height: 25rem;
         margin-right: auto;
         margin-left: auto;
     }

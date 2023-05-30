@@ -452,6 +452,8 @@ h3 {
 
 /*-----------------------------------------------------------------------------------------*/
 
+
+
 /* Estilos para los inputs */
 
 .datos input {
@@ -761,6 +763,41 @@ textarea:focus {
 
 }
 
+/*ESTILOS PARA LOS DROPLISTS DENTRO DE LOS FORMULARIOS*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.droplist select {
+    width: 100%;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+    padding: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.droplist select option:hover {
+    background-color: #06884DFF; /* Cambia el color a rojo al pasar el ratón */
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+.droplist select:focus{
+    outline: none;
+    border: 2px #06884DFF solid;
+}
+
+
+/*---------------------------------*/
 
 /*--------------------FIN ESTILOS DE TRABAJADORES----------------*/
 

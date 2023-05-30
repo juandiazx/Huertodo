@@ -1,3 +1,7 @@
+//--------------------------------------------------------
+//      POST
+//--------------------------------------------------------
+
 document.getElementById("formulario-cambiar-nombre-huerto").addEventListener("submit",cambiarNombreHuerto);
 
 /**

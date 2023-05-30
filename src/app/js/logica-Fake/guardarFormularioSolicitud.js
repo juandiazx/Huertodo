@@ -1,5 +1,7 @@
 document.getElementById("login-form").addEventListener('submit', guardarFormularioSolicitud);
-
+//--------------------------------------------------------
+//      POST
+//--------------------------------------------------------
 /**
  * Se ejecutará cuando se envíe el formulario.
  * Puesto que se usa fetch, es una función asíncrona

@@ -113,6 +113,13 @@ h3 {
     cursor: pointer;
 }
 
+/*Estilo panel circular notificaciones espacio personal cuando hover*/
+#panel-circular-notificaciones:hover {
+
+    box-shadow: rgba(5, 166, 94, 0.5) 0 3px 8px;
+
+}
+
 /*Estilo parrafo con el numero de notificaciones*/
 #parrafo-numero-notificaciones {
     display: flex;
@@ -411,6 +418,11 @@ select {
     box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
 }
 
+/*Estilo del icono de grafica para acceder a el histórico de cada parámetro cuando hover*/
+.icono-boton-grafica-historico:hover {
+    box-shadow: rgb(5, 166, 94) 0 50px 100px -20px, rgb(5, 166, 94) 0 30px 60px -30px, rgb(5, 166, 94) 0 -2px 6px 0 inset;
+}
+
 /*Contenedor con la grafica de parametros y los botones de filtrar*/
 #contenedor-graficas-con-filtros {
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
@@ -531,9 +543,7 @@ select {
 }
 /*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
 #cerrar-dialogo-mapa {
-    background-color: #06884D;
-    border-radius: 0.4em;
-    box-shadow: rgba(0, 0, 0, 0.32) 0 5px 8px;
+    background: transparent;
     width: 2.3em;
     height: 2.3em;
     cursor: pointer;

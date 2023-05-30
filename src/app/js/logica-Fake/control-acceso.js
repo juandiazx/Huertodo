@@ -18,6 +18,7 @@ async function comprobarSesion(rol) {
             await cargarHuertosUsuario();
             //Funcion para poner el nombre predeterminado en el popup de cambiar nombre, popups-monitorizacion.js
             await cambiarNombrePopUpCambiarNombre()
+            await cargarMedidasActual()
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         }
         else if(data.rol == "tecnico"){

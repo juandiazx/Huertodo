@@ -1,4 +1,9 @@
+//--------------------------------------------------------
+//      POST pero deberia ser GET
+//--------------------------------------------------------
+
 document.getElementById("login-form").addEventListener('submit', enviarCorreoRestablecerContrasenya);
+
 
 /**
  * Se ejecutará cuando se envíe el formulario.

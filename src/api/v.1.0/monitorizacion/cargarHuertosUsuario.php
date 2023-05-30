@@ -1,5 +1,8 @@
 <?php
-//ESTO SE LLAMA CON GET desde JS
+//--------------------------------------------------------
+//      GET
+//--------------------------------------------------------
+
 //TIENE QUE DEVOLVER UN ARRAY DE NOMBRES DE LOS HUERTOS DEL USUARIO
 
 /*

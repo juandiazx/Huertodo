@@ -22,6 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
     <!--JS Funcion cargarHuertosUsuario() llamada desde control-acceso.js-->
     <script src="js/logica-Fake/cargarHuertosUsuario.js"></script>
+    <!--JS Funcion cargarMedidasActual() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/cargarMedidasActual.js"></script>
     <!--JS con la funcion de comprobarSesion()-->
     <script src="js/logica-Fake/control-acceso.js"></script>
     <script>document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));</script>
@@ -156,7 +158,7 @@
             <p class="parrafo-negrita">18:32</p>
         </div>
 
-        <div id="datos-cada-30-s">Actualización de datos cada 30 minutos</div>
+        <div id="datos-cada-30-s">Actualización de datos cada hora</div>
 
                 <!--Comienza contenedor con los parametros en tiempo real del huerto-->
         <div class="contenedor-parametros-tiempo-real-huerto">
@@ -174,7 +176,7 @@
         <div class="contenedor-parametros-tiempo-real-huerto">
             <div id="contenedor-iluminacion" class="contenedor-parametro-monitorizacion-especifico">
                 <img class="icono-dato-tiempo-real" src="images/brightness.png" alt="icono iluminosidad">
-                <p><span>Muy alta</span></p>
+                <p><span>70%</span></p>
                 <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
             <div id="contenedor-ph" class="contenedor-parametro-monitorizacion-especifico">

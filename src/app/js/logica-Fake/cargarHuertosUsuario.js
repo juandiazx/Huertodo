@@ -1,7 +1,9 @@
-
+//--------------------------------------------------------
+//      GET
+//--------------------------------------------------------
 //En el servidor recibe los datos de la sesion implicitamente ya, aqui recibe array de objeto, nombres de huerto e id
 //Esta funcion de JS solo se cargará en usuario final, no hay que preocuparse por trabajadores
-//GET
+
 
 //Se exporta de forma que se incluye en etiquetas <script> antes de control-acceso.js
 async function cargarHuertosUsuario(){

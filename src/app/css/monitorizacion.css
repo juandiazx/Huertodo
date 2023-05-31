@@ -551,14 +551,20 @@ select {
 
 .contenedor-icono-huerto-mapa {
     color: white;
+    border-radius: 50%;
+    height: 5.6em;
+    width: 7.2em;
     margin: 4em;
     text-align: center;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 /*Estilo para cada icono de huerto dentro del mapa despleglable*/
 .icono-huerto-mapa {
-    width: 3em;
-    height: 3em;
+    margin-top: 0.6em;
+    width: 2.6em;
+    height: 2.6em;
     background-color: white;
     cursor: pointer;
 }

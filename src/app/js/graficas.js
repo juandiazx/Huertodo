@@ -150,4 +150,4 @@ setTimeout(function () {
         logoImage.logo = logo.src = "images/thermometer.png"
         miGrafica.update();
     })
-}, 200);
+}, 300);

@@ -73,6 +73,7 @@ h3 {
     padding: 0.5em 0.6em;
     display: block;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 .boton-verde-blanco-mapa:hover {
@@ -111,13 +112,12 @@ h3 {
     height: auto;
     margin-bottom: 0.7rem;
     cursor: pointer;
+    transition: all .4s ease-in-out;
 }
 
 /*Estilo panel circular notificaciones espacio personal cuando hover*/
 #panel-circular-notificaciones:hover {
-
-    box-shadow: rgba(5, 166, 94, 0.5) 0 3px 8px;
-
+    transform: scale(1.05);
 }
 
 /*Estilo parrafo con el numero de notificaciones*/
@@ -153,7 +153,6 @@ h3 {
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
 #desplegable-popup-notificaciones::backdrop {
-    display: flex;
     width: 100%;
     height: 100%;
     top: 50%; /* Distancia desde la parte superior */
@@ -161,7 +160,6 @@ h3 {
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
     /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
 }
 
@@ -229,7 +227,14 @@ select {
     font-size: 170%;
     overflow: hidden;
     margin-right: 1rem;
+    transition: all .4s ease-in-out;
 }
+
+/*Dropdown list para cambiar de huerto y cambiar el nombre con hover*/
+select:hover {
+    transform: scale(1.05);
+}
+
 
 /*Estilo para el contenedor que cubre al boton de editar el nombre del huerto*/
 #contenedor-boton-editar-nombre-huerto  {
@@ -239,11 +244,12 @@ select {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    /*transition: .5s ease;*/
 }
 
-/*Hover para cuando pasas por encima del boton de editar nombre*/
-#contenedor-boton-editar-nombre-huerto:hover {
-    color: var(--second-color-green-hover);
+/*Estilo para el contenedor que cubre al boton de editar el nombre del huerto*/
+#contenedor-boton-editar-nombre-huerto:hover  {
+    color:var(--second-color-green-hover);
 }
 
 /*Estilo del dialogo depopup cambiar nombre*/
@@ -262,7 +268,6 @@ select {
 
 /*Estilo popup de su backdrop dialogo*/
 #desplegable-popup-cambiar-nombre-huerto::backdrop {
-    display: flex;
     width: 100%;
     height: 100%;
     top: 50%; /* Distancia desde la parte superior */
@@ -270,7 +275,6 @@ select {
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
     /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
 }
 
@@ -415,12 +419,13 @@ select {
     width: 1.7em;
     height: 1.7em;
     border-radius: 0.3em;
+    transition: all .4s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
 }
 
 /*Estilo del icono de grafica para acceder a el histórico de cada parámetro cuando hover*/
 .icono-boton-grafica-historico:hover {
-    box-shadow: rgb(5, 166, 94) 0 50px 100px -20px, rgb(5, 166, 94) 0 30px 60px -30px, rgb(5, 166, 94) 0 -2px 6px 0 inset;
+    transform: scale(1.05);
 }
 
 /*Contenedor con la grafica de parametros y los botones de filtrar*/
@@ -522,7 +527,6 @@ select {
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
 #desplegable-popup-mapa::backdrop {
-    display: flex;
     width: 100%;
     height: 100%;
     top: 50%; /* Distancia desde la parte superior */
@@ -530,7 +534,6 @@ select {
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
     /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
 }
 

@@ -81,7 +81,7 @@
 
 /*ESTILOS RESPONSIVE PARA SOBRE NOSOTROS*/
 
-@media (min-width: 550px) {
+@media (min-width: 830px) {
 
     /*Estilos para la columna1*/
     .seccion-texto.columna1 {
@@ -159,7 +159,7 @@
 
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
 
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 760px) {
 
     /*Oculta el icono del menu*/
     .menu-hamburguesa {
@@ -302,7 +302,7 @@
 /*ESTILOS RESPONSIVE PARA NUESTROS VALORES*/
 
 
-@media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (min-width: 830px) and (max-width: 1000px) {
     /* Sección de Valores */
     #seccion-valores{
         display: flex;
@@ -314,7 +314,7 @@
 
     .contenedor-resenyas-deslizables{
         width: 35rem;
-        height: 25rem;
+        height: 30rem;
         margin-right: auto;
         margin-left: auto;
     }
@@ -332,8 +332,8 @@
     }
 
     .contenedor-resenyas-deslizables{
-        width: 55rem;
-        height: 25rem;
+        width: 40rem;
+        height: 30rem;
         margin-right: auto;
         margin-left: auto;
     }

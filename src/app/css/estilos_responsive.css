@@ -473,7 +473,7 @@
 
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
 
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 760px) {
 
     /*Oculta el icono del menu*/
     .menu-hamburguesa {

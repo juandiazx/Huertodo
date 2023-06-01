@@ -147,7 +147,7 @@
 
 /*LANDING PAGE RESPONSIVE*/
 
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 1399px) {
 
     /* Contenedor de la sección hero */
     #landing-page-hero {
@@ -199,7 +199,7 @@
     }
 
     #contenedor-boton-saber-mas{
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
         margin-top: 1rem;
     }
 
@@ -207,6 +207,10 @@
         height: 3rem;
     }
 
+    #seccion-mantenimiento{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
     #seccion-mantenimiento .flex-container {
         display: flex;
@@ -229,6 +233,11 @@
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
         display: block;
+    }
+
+    #seccion-resenyas{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     /*Contenedor para estrellas reseñas*/
@@ -272,6 +281,7 @@
 
 @media screen and (min-width: 1400px){
 
+
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons1.png");
@@ -288,9 +298,20 @@
 
     .columnas-pc {
         width: 100%;
-        max-width: 400px;
-        padding: 3em;
+        max-width: 350px;
+        /*padding: 1.5em;*/
         text-align: center;
+    }
+
+    #seccion-info1{
+        margin-right: 2.4em;
+    }
+    #seccion-info2{
+        margin-left: 2.4em;
+        margin-right: 2.4em;
+    }
+    #seccion-info3{
+        margin-left: 2.4em;
     }
 
     #boton-CTA{
@@ -308,12 +329,17 @@
     }
 
     #contenedor-boton-saber-mas{
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
         margin-top: 1rem;
     }
 
     .boton-verde-blanco{
         height: 3rem;
+    }
+
+    #seccion-mantenimiento{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     #seccion-mantenimiento .flex-container {
@@ -337,6 +363,11 @@
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
         display: block;
+    }
+
+    #seccion-resenyas{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     /*Contenedor para estrellas reseñas*/

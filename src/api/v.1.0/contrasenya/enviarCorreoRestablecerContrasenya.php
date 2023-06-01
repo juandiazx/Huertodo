@@ -1,10 +1,10 @@
 <?php
 //--------------------------------------------------------
-//      POST pero debería ser GET
+//      GET
 //--------------------------------------------------------
 
 /*
- * email:POST--------------> enviarCorreoRestablecerContrasenya()----->HTTP:200 | HTTP:401
+ * email:GET--------------> enviarCorreoRestablecerContrasenya()----->HTTP:200 | HTTP:401
  *
  * */
 
@@ -19,20 +19,13 @@ try {
     die("Error: " . mysqli_connect_errno() . " " . mysqli_connect_error());
 }
 mysqli_query($connexion, 'SET NAMES utf8mb4');
-$usuario = $_POST['email'];
+$email = $_GET['email'];
 $sql = "SELECT `usuario`.`email` FROM `usuario`
-	WHERE `usuario`.`email` = '$usuario'";
-$resultado = mysqli_query($connexion, $sql);
+	WHERE `usuario`.`email` = '$email'";
+mysqli_query($connexion, $sql);
 if (mysqli_affected_rows($connexion) === 1) {
-    $registro = mysqli_fetch_assoc($resultado);
-    $salida = [];
-    $salida['email'] = $registro['email'];
     http_response_code(200);
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE');
-    header('Content-Type: application/json; charset=utf-8');
-    echo json_encode($salida);
 } else {
-    echo json_encode(mysqli_affected_rows($connexion));
     http_response_code(401);
+    die(mysqli_errno($connexion));
 }

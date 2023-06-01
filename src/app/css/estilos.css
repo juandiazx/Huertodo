@@ -490,22 +490,34 @@ tbody tr:nth-child(even) {
     margin-bottom: 3em;
 }
 
+.imagenes-landing {
+    width: 370px;
+    height: auto;
+    display: block;
+    margin: 5vh auto;
+}
+
 #boton-CTA{
     max-width: 500px;
 }
 
 .flecha-bajar{
-    margin-top: 25vh;
+    /*color: #06884DFF;*/
+    margin-top: 22vh;
     width: 3rem;
     padding: 0.5rem 0 0 0;
+    position: relative;
+    z-index: 2;
 }
 
-.flecha-bajar a{
-    color: #fff;
-    font-size: 3rem;
+.flecha-bajar a {
+    color: white;
+    font-size: 4rem;
     display: inline-block;
     animation: flecha_animada 1s ease-in-out infinite;
+    padding: 0.3rem;
 }
+
 
 @keyframes flecha_animada {
     from{
@@ -522,6 +534,13 @@ tbody tr:nth-child(even) {
 
 /*------------------------Comienza landing page------------------------*/
 /*------------------------Comienza landing page hero------------------------*/
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper-landing{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 /*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
 #landing-page-hero {
     margin-top: 12vh;

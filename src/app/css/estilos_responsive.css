@@ -149,6 +149,12 @@
 
 @media screen and (min-width: 768px) and (max-width: 1399px) {
 
+    /*Contenedor completo, wrapper de toda la monitorización*/
+    .wrapper-landing {
+        margin-top: 5vh;
+        padding: 5vh 7% 5vh;
+    }
+
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons2.png");
@@ -280,6 +286,12 @@
 
 
 @media screen and (min-width: 1400px){
+
+    /*Contenedor completo, wrapper de toda la monitorización*/
+    .wrapper-landing {
+        margin-top: 5vh;
+        padding: 5vh 7% 5vh;
+    }
 
 
     /* Contenedor de la sección hero */
@@ -441,16 +453,31 @@
         margin-left: 2em;
     }
 
-    .image-selector {
+    /*.image-selector {
         width: 100%;
         max-width: 500px;
         max-height: 600px;
+    }*/
+
+    .image-selector {
+        width: 370px;
+        height: auto;
+        display: block;
+        margin: 5vh auto;
     }
 
-    .demo cursor{
+
+    /*.demo cursor{
         width: 50%;
         max-width: 30px;
         max-height: 20px;
+    }*/
+
+    .demo cursor{
+        width: 1px;
+        height: auto;
+        display: block;
+        margin: 5vh auto;
     }
 
 }

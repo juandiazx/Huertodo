@@ -11,10 +11,14 @@
     <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
     <!-- Para que sea compatible con Microsoft Edge-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/main-menu.css"/>
     <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
     <link rel='stylesheet' href="css/estilos_responsive.css"/>
+    <link rel="stylesheet" href="css/tablas_trabajadores.css">
 
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
@@ -53,127 +57,43 @@
 </header>
 <!--Termina la cabecera-->
 
-<!-- Sección de Actualizaciones en desplegables -->
-<script src="js/desplegables_trabajadores.js" defer></script>
-
-
 <!--Comienza la seccion general-->
 
 <main class="wrapper-forms">
-    <section>
 
         <!--Comienza la seccion Notificaciones Citas  -->
-        <section class="seccion-preguntas">
-            <div id="contenedor-nombre-usuario">
-                <p id=nombre-usuario">Bienvenido</p>
-            </div>
-                <!--titulo de Notificaciones Citas-->
+        <div class="container">
+            <table id="tablaSegunda" class="display content-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Tarea</th>
+                    <th>Fecha</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
 
-                <div class="títulos-trabajadores">
-                    <h2>Notificaciones citas</h2>
-                </div>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-                <!-- Desplegable 1 -->
+        <!-- DATATABLES -->
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-            <div class="acordeon-trabajador">
-                <div class="acordeon-item">
-                    <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">Usuario #37</div>
-                        <div class="close-icon">
-                            <button class="delete-button">
-                                <img src="images/icono-x-50.png">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="acordeon-item-body">
-                        <p class="acordeon-item-body-content">
-                            No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
-                <!-- Desplegable 2 -->
+        <!-- JavaScript funcionalidad Tablas -->
+        <script src="js/tabla_tecnico.js"></script>
+        <!-- JavaScript para adjuntar datos JSON en tabla -->
+        <script src="js/adjuntar_tabla.js"></script>
 
-            <div class="acordeon-trabajador">
-                <div class="acordeon-item">
-                    <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">Usuario #37</div>
-                        <div class="close-icon">
-                            <button class="delete-button">
-                                <img src="images/icono-x-50.png">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="acordeon-item-body">
-                        <p class="acordeon-item-body-content">
-                            No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-                <!-- Desplegable 3 -->
-
-            <div class="acordeon-trabajador">
-                <div class="acordeon-item">
-                    <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">Usuario #37</div>
-                        <div class="close-icon">
-                            <button class="delete-button">
-                                <img src="images/icono-x-50.png">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="acordeon-item-body">
-                        <p class="acordeon-item-body-content">
-                            No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-                <!-- Desplegable 4 -->
-
-            <div class="acordeon-trabajador">
-                <div class="acordeon-item">
-                    <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">Usuario #37</div>
-                        <div class="close-icon">
-                            <button class="delete-button">
-                                <img src="images/icono-x-50.png">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="acordeon-item-body">
-                        <p class="acordeon-item-body-content">
-                            No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-                <!-- Desplegable 5 -->
-
-            <div class="acordeon-trabajador">
-                <div class="acordeon-item">
-                    <div class="acordeon-item-header">
-                        <div class="texto-desplegable-trabajadores">Usuario #33</div>
-                        <div class="close-icon">
-                            <button class="delete-button" id="close-icon">
-                                <img src="images/icono-x-50.png">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="acordeon-item-body">
-                        <p class="acordeon-item-body-content">
-                            No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
+        <!-- JavaScript seleccionar fila (adjuntar) en tabla -->
+        <script src="js/adjuntar.js"></script>
         <!--Termina la seccion Notificaciones Citas  -->
 
 

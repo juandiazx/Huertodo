@@ -130,6 +130,11 @@ $(document).ready(function () {
             '<option value="opcion2">Técnico 2</option>' +
             '<option value="opcion3">Técnico 3</option>' +
             '</select>' +
+            '<label for="asunto">Asunto:</label>' +
+            '<select id="asunto" required>' +
+            '<option value="asunto1">Medida</option>' +
+            '<option value="asunto2">Montaje</option>' +
+            '</select>' +
             '<label for="mensaje">Mensaje:</label>' +
             '<textarea type="text" id="mensaje" placeholder="Escribe aquí" required></textarea>' +
             '<button id="cancelar">Cancelar</button>' +

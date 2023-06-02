@@ -607,3 +607,28 @@
         padding: 5vh 7% 5vh;
     }
 }
+
+/*Estilo responsive para el widget monitorizacion*/
+@media screen and (max-width: 560px){
+    .ww-box{
+        width: 17rem;
+        height: 4rem;
+        font-size: 15px;
+    }
+
+    #contenedor-fecha-hora-huerto{
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 385px){
+    .ww-box{
+        width: 15rem;
+        height: 5rem;
+        font-size: 15px;
+    }
+
+    #contenedor-fecha-hora-huerto{
+        margin-bottom: 0.8rem;
+    }
+}

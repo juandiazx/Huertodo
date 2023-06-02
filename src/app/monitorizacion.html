@@ -20,10 +20,13 @@
 
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+
     <!--JS Funcion cargarHuertosUsuario() llamada desde control-acceso.js-->
     <script src="js/logica-Fake/cargarHuertosUsuario.js"></script>
+
     <!--JS Funcion cargarMedidasActual() llamada desde control-acceso.js-->
     <script src="js/logica-Fake/cargarMedidasActual.js"></script>
+
     <!--JS con la funcion de comprobarSesion()-->
     <script src="js/logica-Fake/control-acceso.js"></script>
     <script>document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));</script>
@@ -153,9 +156,14 @@
 
         <div id="contenedor-fecha-hora-huerto">
             <div id="contenedor-temperatura-metereologia">
-                <p>18ºC Gandia <img class="icono-estado-metereologico" src="images/icono-soleado.png" alt="icono soleado"></p>
+                <div id="ww_4b62def8642aa" v='1.3' loc='id' a='{"t":"horizontal","lang":"es","sl_lpl":1,"ids":["wl6604"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3,"el_whr":3,"el_phw":3}'>Weather Data Source: <a href="https://sharpweather.com/weather_valencia_province/30_days/" id="ww_4b62def8642aa_u" target="_blank">Valencia Province weather 30 days</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_4b62def8642aa"></script>
             </div>
-            <p class="parrafo-negrita">18:32</p>
+            <!--
+            Hora anulada temporalmente
+            <div id="contenedor-hora-huerto">
+                <p class="parrafo-negrita" id="hora-huerto">18:32</p>
+            </div>
+            -->
         </div>
 
         <div id="datos-cada-30-s">Actualización de datos cada hora</div>
@@ -259,5 +267,7 @@
 <script src="js/index.js"></script>
 <!-- JavaScript Documento getMedidas.js-->
 <script src="js/getMedidas.js"></script>
+<!-- JavaScript Documento horaLocal.js-->
+<script src="js/horaLocal.js"></script>
 </body>
 </html>

@@ -7,3 +7,7 @@ async function cambiarMedidasActual(){
     await cargarMedidasActual()
 }
 
+//Codigo para que cada cierto intervalo tambien se ejecute la carga de medidas actuales
+
+setInterval(cargarMedidasActual,30000)
+

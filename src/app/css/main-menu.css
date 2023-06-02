@@ -9,6 +9,7 @@
     --bg-color: var(--main-color-white); /*Variable para */
     --txt-color: var(--main-color-black);
     --menu-height: 12vh;
+    z-index: 9999;
 }
 
 /*Estilo imagen LOGOTIPO del menu de navegacion*/

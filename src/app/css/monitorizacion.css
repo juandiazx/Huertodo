@@ -358,9 +358,33 @@ select:hover {
 #contenedor-fecha-hora-huerto {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    margin-bottom: 1rem;
 }
+
+/*------------------Estilos widget meteorologia----------------*/
+.ww-box{
+    margin: 0;
+    width: 19rem;
+    display: flex;
+    height: 5rem;
+    font-family: 'Poppins', sans-serif;
+    position: static;
+    font-size: 17px;
+}
+
+#ww_4b62def8642aa {
+    width: 19rem;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: static;
+    font-size: 15px;
+}
+/*--------------------------------------------------------------------*/
 
 /*Estilo de los parrafos que indican la hora y la fecha del huerto*/
 #contenedor-fecha-hora-huerto p{
@@ -369,9 +393,9 @@ select:hover {
     align-content: center;
     align-items: center;
     justify-content: center;
-    padding-top: 0.4em;
+    padding-bottom: 0.5rem;
     margin-bottom: 0;
-    font-size: 100%;
+    font-size: 95%;
 }
 
 /*Estilo para el contenedor de parametros en tiemop real*/
@@ -387,6 +411,7 @@ select:hover {
 #contenedor-parametros-tiempo-real-huerto-temperatura{
     justify-content: center;
 }
+
 
 /*Estilo para todos los iconos de representacion de cada dato en tiempo real*/
 .icono-dato-tiempo-real {
@@ -469,6 +494,9 @@ select:hover {
 #contenedor-informacion-metereologica {
 
 }
+#contenedor-widget-meteorologia {
+    justify-content: center;
+}
 
 /*Contenedor con la temperatura en tiempo real de la informacion metereologica*/
 #contenedor-temperatura-metereologia p{
@@ -497,7 +525,7 @@ select:hover {
 #datos-cada-30-s{
     text-align: center;
     font-weight: 500;
-    margin-top: 1.6rem;
+    margin-top: 0.45rem;
     margin-bottom: 0.5rem;
 }
 

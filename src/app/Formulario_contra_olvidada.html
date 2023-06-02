@@ -69,15 +69,16 @@
         <input type="email" id="email-input" name="email" required>
       </div>
     </div>
-
+      <!--Seccion error correo-->
+      <p id="mensaje-error">No coincide con una cuenta ya registrada, inténtalo de nuevo</p>
     <!-- Comienza la seccion boton -->
     <section class="boton-enviar">
-      <button type="submit" id="abrir-popup" class="boton-iniciar-sesion boton-verde-blanco">Enviar</button>
+      <button type="submit" id="enviar-form-contrasenya-olvidada" class="boton-iniciar-sesion boton-verde-blanco">Enviar</button>
     </section>
 
     <!-- Comienza la seccion parrafo -->
     <div class="parrafo">
-      <p>Recuerda también comprobar en la bandeja de spam de tu correo</p>
+      <p>Se te enviará un email a tu correo ya registrado, recuerda también comprobar en la bandeja de spam</p>
     </div>
     </form>
   </section>
@@ -100,17 +101,14 @@
 <!-- Comienza el popup -->
 <dialog id="popup">
   <div class="popup-contenido">
-    <p>El formulario se ha enviado con éxito</p>
-    <button id="cerrar-popup">Volver</button>
+    <p>Se te ha enviado correctamente un correo para restablecer tu contraseña</p>
+    <button id="cerrar-popup">Confirmar</button>
   </div>
 </dialog>
 <!-- Termina el popup -->
 
   <!-- JavaScript Documento Para Logica enviarCorreoRestablecerContasenya-->
   <script src="js/logica-Fake/enviarCorreoRestablecerContrasenya.js"></script>
-
-<!-- JavaScript Documento popups_formularios.js para el popup de formulario enviado-->
-<script src="js/popup_contraOlvidada.js"></script>
 
 <!-- JavaScript Documento index.js para el menu desplegable-->
 <script src="js/index.js"></script>

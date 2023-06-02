@@ -11,11 +11,15 @@
   <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorización huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
   <!-- Para que sea compatible con Microsoft Edge-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
   <!-- CSS DOCUMENTO estilos.css-->
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
   <link rel='stylesheet' href="css/estilo_popup_1.css"/>
+  <link rel="stylesheet" href="css/tablas_trabajadores.css">
 
   <script src="js/logica-Fake/control-acceso.js"></script>
   <script>document.addEventListener('DOMContentLoaded',comprobarSesion("administrador"));</script>
@@ -62,104 +66,37 @@
           <h2>Registros Usuarios</h2>
         </div>
 
-        <!-- Desplegable 1 -->
-
-        <div class="acordeon-trabajador">
-          <div class="acordeon-item">
-            <div class="acordeon-item-header">
-              <div class="texto-desplegable-trabajadores">Usuario #37</div>
-              <div class="close-icon">
-                <button class="delete-button">
-                  <img src="images/icono-x-50.png">
-                </button>
-              </div>
-            </div>
-            <div class="acordeon-item-body">
-              <p class="acordeon-item-body-content">
-                No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-              </p>
-            </div>
-          </div>
+        <div class="container">
+          <table id="tablaTercera" class="display content-table">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Fecha</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
-      <!-- Desplegable 2 -->
 
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #36</div>
-            <div class="close-icon">
-              <button class="delete-button">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-        <!-- Desplegable 3 -->
+        <!-- DATATABLES -->
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #35</div>
-            <div class="close-icon">
-              <button class="delete-button">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
-        <!-- Desplegable 4 -->
+        <!-- JavaScript funcionalidad Tablas -->
+        <script src="js/tabla_tercera.js"></script>
+        <!-- JavaScript para adjuntar datos JSON en tabla -->
+        <script src="js/adjuntar_tabla.js"></script>
 
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #34</div>
-            <div class="close-icon">
-              <button class="delete-button">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Desplegable 5 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #33</div>
-            <div class="close-icon">
-              <button class="delete-button" id="close-icon">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
+        <!-- JavaScript seleccionar fila (adjuntar) en tabla -->
+        <script src="js/adjuntar.js"></script>
     </section>
 
     <!--Termina la seccion Notificaciones tecnico  -->

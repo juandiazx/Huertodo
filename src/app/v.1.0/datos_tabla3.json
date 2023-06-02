@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "John Doe",
+    "email": "johndoe@example.com",
+    "fecha": "2023-06-01"
+  },
+  {
+    "id": 2,
+    "nombre": "Jane Smith",
+    "email": "janesmith@example.com",
+    "fecha": "2023-06-02"
+  },
+  {
+    "id": 3,
+    "nombre": "Mike Johnson",
+    "email": "mikejohnson@example.com",
+    "fecha": "2023-06-03"
+  },
+  {
+    "id": 4,
+    "nombre": "Emily Brown",
+    "email": "emilybrown@example.com",
+    "fecha": "2023-06-04"
+  },
+  {
+    "id": 5,
+    "nombre": "Michael Williams",
+    "email": "michaelwilliams@example.com",
+    "fecha": "2023-06-05"
+  },
+  {
+    "id": 6,
+    "nombre": "Sophia Jones",
+    "email": "sophiajones@example.com",
+    "fecha": "2023-06-06"
+  },
+  {
+    "id": 7,
+    "nombre": "William Davis",
+    "email": "williamdavis@example.com",
+    "fecha": "2023-06-07"
+  },
+  {
+    "id": 8,
+    "nombre": "Olivia Miller",
+    "email": "oliviamiller@example.com",
+    "fecha": "2023-06-08"
+  },
+  {
+    "id": 9,
+    "nombre": "James Wilson",
+    "email": "jameswilson@example.com",
+    "fecha": "2023-06-09"
+  },
+  {
+    "id": 10,
+    "nombre": "Ava Taylor",
+    "email": "avataylor@example.com",
+    "fecha": "2023-06-10"
+  },
+  {
+    "id": 11,
+    "nombre": "Benjamin Anderson",
+    "email": "benjaminanderson@example.com",
+    "fecha": "2023-06-11"
+  },
+  {
+    "id": 12,
+    "nombre": "Mia Martinez",
+    "email": "miamartinez@example.com",
+    "fecha": "2023-06-12"
+  },
+  {
+    "id": 13,
+    "nombre": "Henry Thompson",
+    "email": "henrythompson@example.com",
+    "fecha": "2023-06-13"
+  },
+  {
+    "id": 14,
+    "nombre": "Ella Garcia",
+    "email": "ellagarcia@example.com",
+    "fecha": "2023-06-14"
+  },
+  {
+    "id": 15,
+    "nombre": "Alexander Martinez",
+    "email": "alexandermartinez@example.com",
+    "fecha": "2023-06-15"
+  },
+  {
+    "id": 16,
+    "nombre": "Sofia Johnson",
+    "email": "sofiajohnson@example.com",
+    "fecha": "2023-06-16"
+  },
+  {
+    "id": 17,
+    "nombre": "Jacob Wilson",
+    "email": "jacobwilson@example.com",
+    "fecha": "2023-06-17"
+  },
+  {
+    "id": 18,
+    "nombre": "Avery Taylor",
+    "email": "averytaylor@example.com",
+    "fecha": "2023-06-18"
+  },
+  {
+    "id": 19,
+    "nombre": "Emma Davis",
+    "email": "emmadavis@example.com",
+    "fecha": "2023-06-19"
+  },
+  {
+    "id": 20,
+    "nombre": "Daniel Anderson",
+    "email": "danielanderson@example.com",
+    "fecha": "2023-06-20"
+  }
+]

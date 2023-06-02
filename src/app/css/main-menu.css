@@ -16,6 +16,7 @@
 #logo-menu-inicio {
     width: 10em;
     height: 7em;
+    transition: all .5s ease;
 }
 
 /*Icono de inicio sesión usuario*/
@@ -23,6 +24,7 @@
     font-size: 3rem;
     margin-top: 0.4em;
     color: var(--second-color-green);
+    transition: all .5s ease;
 }
 
 #icono-inicio-sesion:hover{
@@ -85,6 +87,7 @@
     font-weight: 500;
     font-size: 170%;
     padding: 0.2em;
+    transition: all .5s ease;
 }
 
 /*Dimensiones del menu hamburguesa*/
@@ -102,6 +105,7 @@
     height: .27em;
     border-radius: .6em;
     margin-top: 0.63em;
+    transition: all .5s ease;
 }
 
 /*Estilo de la linea del medio del menu para cuando este activo*/

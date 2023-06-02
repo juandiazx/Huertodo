@@ -155,6 +155,22 @@
         padding: 5vh 7% 5vh;
     }
 
+    #landing-page-hero h1{
+        margin-top: 25vh;
+    }
+
+    /*Márgenes para el párrafo de la hero, */
+    #landing-page-hero p{
+        margin-top: 1em;
+        margin-bottom: 6em;
+    }
+
+    .flecha-bajar{
+        color: #06884DFF;
+        margin-top: 8vh;
+
+    }
+
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons2.png");
@@ -343,6 +359,7 @@
 
     #boton-CTA{
         max-width: 300px;
+        transition: all .5s ease;
     }
 
     .tamanyos1{
@@ -362,6 +379,7 @@
 
     .boton-verde-blanco{
         height: 3rem;
+        transition: all .5s ease;
     }
 
     #seccion-mantenimiento{
@@ -523,14 +541,17 @@
         font-size: 16px; /
     font-weight: normal;
         color: var(--second-color-green);
+        transition: all .5s ease;
     }
 
     .boton-cerrar-sesion {
         padding-top: 0.4rem;
+        transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
         margin-top: 3rem;
         color: var(--main-color-white);
+        transition: all .5s ease;
     }
 
 
@@ -549,6 +570,7 @@
     .boton-cerrar-sesion {
         width: 8rem;
         height: 2.3rem;
+        transition: all .5s ease;
     }
 }
 

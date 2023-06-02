@@ -190,14 +190,17 @@
         font-size: 16px; /
     font-weight: normal;
         color: var(--second-color-green);
+        transition: all .5s ease;
     }
 
     .boton-cerrar-sesion {
         padding-top: 0.4rem;
+        transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
         margin-top: 3rem;
         color: var(--main-color-white);
+        transition: all .5s ease;
     }
 
 
@@ -216,6 +219,7 @@
     .boton-cerrar-sesion {
         width: 8rem;
         height: 2.3rem;
+        transition: all .5s ease;
     }
 }
 

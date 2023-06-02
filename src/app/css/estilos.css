@@ -98,6 +98,7 @@ h3 {
     font-size: 170%;
     padding: 0.1em 0.1em;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 .boton-verde-blanco:hover{
@@ -305,6 +306,7 @@ main>section, body>section{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease;
 }
 
 /* Características de la sección de preguntas frecuentes */
@@ -536,23 +538,23 @@ tbody tr:nth-child(even) {
 
 #boton-CTA{
     max-width: 500px;
+    transition: all .5s ease;
 }
 
 .flecha-bajar{
-    /*color: #06884DFF;*/
+    color: #06884DFF;
     margin-top: 22vh;
     width: 3rem;
     padding: 0.5rem 0 0 0;
-    position: relative;
-    z-index: 2;
 }
 
 .flecha-bajar a {
-    color: white;
+    color: #06884DFF;
     font-size: 4rem;
     display: inline-block;
     animation: flecha_animada 1s ease-in-out infinite;
     padding: 0.3rem;
+    transition: all .5s ease;
 }
 
 
@@ -726,6 +728,7 @@ tbody tr:nth-child(even) {
     font-size: 1.2em;
     width: 2.4em;
     height: 2.4em;
+    transition: all .5s ease;
 }
 /*------------------------Termina reseñas------------------------*/
 /*------------------------Termina landing page------------------------*/
@@ -750,12 +753,14 @@ tbody tr:nth-child(even) {
     width: 100%;
     background-color: var(--second-color-green);
     color: var(--main-color-white);
+    transition: all .5s ease;
 }
 
 /*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
 #footer-bottom a{
     margin-right: 0.6em;
     margin-left: 0.6em;
+    transition: all .5s ease;
 }
 
 /*Margenes para el texto de copyrigth del footer*/

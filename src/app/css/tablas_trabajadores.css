@@ -1,0 +1,163 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/*Importamos la fuente Poppins de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*Se usa tal que:      font-family: 'Poppins', sans-serif;*/
+/*Estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    word-break: break-word;
+}
+
+:root {
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --second-color-green: rgb(6, 136, 77);
+    --second-color-green-hover: rgb(5, 166, 94);
+    --second-color-green-light-hover: rgba(5, 166, 94, 0.58);
+}
+
+.texto-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.content-table thead tr {
+    background-color: var(--second-color-green);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--second-color-green);
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: var(--second-color-green);
+}
+
+.content-table tbody tr:hover {
+    background-color: var(--second-color-green-light-hover);
+    cursor: pointer;
+}
+
+.bi{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bi:hover{
+    color: var(--second-color-green-hover);
+}
+
+#opciones, #opciones2, #mensaje, #mensaje2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+}
+
+
+/* Estilos para los inputs */
+
+#opciones input, #opciones2 input, #mensaje input, #mensaje2 input {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+}
+
+/*Estilo para el borde del input*/
+
+#opciones:focus, #opciones2:focus, #mensaje:focus, #mensaje2:focus {
+    outline: none;
+    border: 2px #06884DFF solid;
+}
+
+#cancelar , #cancelar2, #confirmar, #confirmar2{
+    text-align: center;
+    align-content: center;
+    width: 8rem;
+    border-radius: 3em;
+    border: none;
+    margin: 1rem;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 140%;
+    padding: 0.1em 0.1em;
+    cursor: pointer;
+}
+
+#cancelar:hover, #cancelar2:hover, #confirmar:hover, #confirmar2:hover{
+    background: var(--second-color-green-hover);
+}
+
+@media (max-width: 767px) {
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+@media (min-width: 576px - max-width:768px) {
+    .container, .dataTables_scrollHead, .content-table {
+        max-width: 750px;
+    }
+}
+
+.page-link{
+    color: var(--second-color-green);
+}
+
+.page-link:hover{
+    color: var(--second-color-green-hover);
+}
+
+.page-item.active .page-link {
+    background-color: var(--second-color-green);
+    border-color: var(--second-color-green);
+}

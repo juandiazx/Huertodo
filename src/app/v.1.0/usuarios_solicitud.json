@@ -1,0 +1,22 @@
+[
+  { "id": 1, "email": "leonardo@gmail.com", "direccion": "Calle Genérica 1", "estado": 1 },
+  { "id": 2, "email": "mariana@gmail.com", "direccion": "Calle Genérica 2", "estado": 2 },
+  { "id": 3, "email": "gabriel@gmail.com", "direccion": "Calle Genérica 3", "estado": 3 },
+  { "id": 4, "email": "lucia@gmail.com", "direccion": "Calle Genérica 4", "estado": 0 },
+  { "id": 5, "email": "sofia@gmail.com", "direccion": "Calle Genérica 5", "estado": 1 },
+  { "id": 6, "email": "mateo@gmail.com", "direccion": "Calle Genérica 6", "estado": 2 },
+  { "id": 7, "email": "valentina@gmail.com", "direccion": "Calle Genérica 7", "estado": 3 },
+  { "id": 8, "email": "santiago@gmail.com", "direccion": "Calle Genérica 8", "estado": 0 },
+  { "id": 9, "email": "isabella@gmail.com", "direccion": "Calle Genérica 9", "estado": 1 },
+  { "id": 10, "email": "emilio@gmail.com", "direccion": "Calle Genérica 10", "estado": 2 },
+  { "id": 11, "email": "olivia@gmail.com", "direccion": "Calle Genérica 11", "estado": 3 },
+  { "id": 12, "email": "luis@gmail.com", "direccion": "Calle Genérica 12", "estado": 0 },
+  { "id": 13, "email": "camila@gmail.com", "direccion": "Calle Genérica 13", "estado": 1 },
+  { "id": 14, "email": "daniel@gmail.com", "direccion": "Calle Genérica 14", "estado": 2 },
+  { "id": 15, "email": "valeria@gmail.com", "direccion": "Calle Genérica 15", "estado": 3 },
+  { "id": 16, "email": "javier@gmail.com", "direccion": "Calle Genérica 16", "estado": 0 },
+  { "id": 17, "email": "emma@gmail.com", "direccion": "Calle Genérica 17", "estado": 1 },
+  { "id": 18, "email": "alejandro@gmail.com", "direccion": "Calle Genérica 18", "estado": 2 },
+  { "id": 19, "email": "mia@gmail.com", "direccion": "Calle Genérica 19", "estado": 3 },
+  { "id": 20, "email": "carlos@gmail.com", "direccion": "Calle Genérica 20", "estado": 0 }
+]

@@ -549,10 +549,10 @@ tbody tr:nth-child(even) {
 }
 
 .flecha-bajar a {
-    color: #06884DFF;
+    color: var(--main-color-white);
     font-size: 4rem;
     display: inline-block;
-    animation: flecha_animada 1s ease-in-out infinite;
+    animation: flecha_animada 1.5s ease-in-out infinite;
     padding: 0.3rem;
     transition: all .5s ease;
 }

@@ -149,6 +149,23 @@ h3 {
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+    scrollbar-width: thin; /* Ajusta el ancho de la barra de desplazamiento */
+    overflow-y: scroll; /* Habilita la barra de desplazamiento vertical solo cuando sea necesario */
+}
+
+/* Estilos para la barra de desplazamiento en Chrome, Edge y Safari */
+#desplegable-popup-notificaciones::-webkit-scrollbar {
+    width: 6px; /* Ajusta el ancho de la barra de desplazamiento */
+}
+
+#desplegable-popup-notificaciones::-webkit-scrollbar-track {
+    background-color: #dddddd; /* Ajusta el color de fondo de la barra de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la barra de desplazamiento */
+}
+
+#desplegable-popup-notificaciones::-webkit-scrollbar-thumb {
+    background-color: #888888; /* Ajusta el color de la perilla de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la perilla de desplazamiento */
 }
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
@@ -182,19 +199,55 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+/*Estilo para el icono de la carita de la prioridad*/
+.icono-prioridad-notificacion>img{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.3rem;
+}
+/*Estilo de contenedor textos de cada notificacion en las notificaciones*/
+.notificacion-especifica-texto {
+    width: 8em;
 }
 
 /*Estilo de textos de cada notificacion en las notificaciones*/
-.notificacion-especifica-texto {
-    width: 11em;
+.notificacion-especifica-texto>p {
+    font-size:0.8rem ;
+    margin: 0;
 }
 
 /*Estilo para el texto de fecha de cada notificacion*/
 .notificacion-especifica-fecha>p{
-    padding-left: 1em;
-    font-weight: 700;
+    font-size: 0.77rem;
+    padding-left: 0.2em;
+    font-weight: 500;
     text-align: center;
+    margin: 0;
 }
+
+/*Estilo para el icono de borrar cada notificacion*/
+.icono-borrar-notificacion{
+    margin-left: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:1.4rem ;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+/*Estilo borrar notificaciones icono hover*/
+.icono-borrar-notificacion:hover {
+    transform: scale(1.08);
+}
+
 /*Estilo del contenedor completo de la monitorizacion, panel con sombra*/
 #contenedor-monitorizacion {
     display: flex;
@@ -244,7 +297,7 @@ select:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    /*transition: .5s ease;*/
+    transition: .5s ease;
 }
 
 /*Estilo para el contenedor que cubre al boton de editar el nombre del huerto*/

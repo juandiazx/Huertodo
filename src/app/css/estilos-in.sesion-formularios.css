@@ -459,7 +459,13 @@ h3 {
 }
 
 #campos-obligatorios{
+    margin-top: -0.2rem;
     margin-bottom: 0.8rem;
+}
+
+#campos-obligatorios-nueva-contrasenya{
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -903,11 +909,13 @@ textarea:focus {
 /*--------ACABA MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN--------*/
 
 /*--------ESTILOS RESTABLECER CONTRASEÑA NUEVA---------*/
-#mensaje-error-contraseña{
+#mensaje-error-contrasenya{
     display: none;
     color: #c70202;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    margin-bottom: 0.4rem;
 }
+
 /*--------ACABA ESTILOS RESTABLECER CONTRASEÑA NUEVA---------*/
 
 /*---------------------Estilos para los popups de inicio de sesión, formularios y trabajadores------------*/

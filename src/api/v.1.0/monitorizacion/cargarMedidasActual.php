@@ -29,6 +29,7 @@ $idHuerto = $_GET['id'];
 $sql = "SELECT `medicion`.`temperatura`,`medicion`.`humedad`,`medicion`.`ph`,`medicion`.`salinidad`,`medicion`.`iluminacion`
     FROM `medicion`
 	WHERE `medicion`.`huerto` = '$idHuerto'
+	ORDER BY `medicion`.`id` DESC
 	LIMIT 1";
 $resultado = mysqli_query($connexion, $sql);
 if (mysqli_affected_rows($connexion) > 0) {

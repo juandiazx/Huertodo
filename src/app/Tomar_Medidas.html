@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+<head>
+    <meta charset="UTF-8">
+    <title>Tomar medidas</title>
+    <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+    <!-- Para que pueda verse bien en movil-->
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+    <!-- Palabras clave para el SEO de la Web-->
+    <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+    <!-- Para que sea compatible con Microsoft Edge-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS DOCUMENTO estilos.css-->
+    <link rel='stylesheet' href="css/estilos.css"/>
+    <link rel='stylesheet' href="css/main-menu.css"/>
+    <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+    <link rel='stylesheet' href="css/estilos_responsive.css"/>
+    <!-- JavaScript Documento de la lógica fake para cargar los huertos existentes-->
+    <script src="js/logica-Fake/cargarHuertosTomarMedida.js"></script>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        button {
+            width: 3rem;
+            height: 2.2rem;
+        }
+        h1{
+            margin-bottom: 7rem;
+        }
+        label{
+            display: flex;
+            margin-bottom: 0.3rem;
+            justify-content: left;
+        }
+        select{
+            width: 16rem;
+            height: 2.3rem;
+            outline: 0;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            border-radius: 0.26em;
+            background-image: none;
+            border:0!important;
+            cursor:pointer;
+            text-align: center;
+            font-size: 170%;
+            overflow: hidden;
+            margin-right: 1rem;
+            transition: all .4s ease-in-out;
+        }
+        select:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">
+        <h1>Tomar medida huertos</h1>
+        <div id="contenedor-tomar-medida-form">
+            <form id="formulario-tomar-medida">
+                <div>
+                    <label for="huerto">Elegir huerto:</label>
+                    <select id="huerto" name="huerto">
+
+                    </select>
+                </div>
+                <br>
+                <button class="boton-verde-blanco" type="submit" style="width:25rem">Tomar medida</button>
+            </form>
+        </div>
+    </main>
+    <!-- JavaScript Documento de la lógica fake para tomar medidas-->
+    <script src="js/logica-Fake/tomarMedida.js"></script>
+</body>
+</html>

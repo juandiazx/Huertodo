@@ -248,6 +248,19 @@ h3 {
     transform: scale(1.08);
 }
 
+/*Estilos para el contenedor del texto que no hay notificaciones*/
+#contenedor-sin-notificaciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Estilo para el texto que indica que no hay notificaciones*/
+#texto-sin-notificaciones{
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
 /*Estilo del contenedor completo de la monitorizacion, panel con sombra*/
 #contenedor-monitorizacion {
     display: flex;
@@ -417,6 +430,14 @@ select:hover {
 }
 
 /*------------------Estilos widget meteorologia----------------*/
+
+/*Estilo para el label que dice, tiempo actual*/
+#label-tiempo-actual{
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
 .ww-box{
     margin: 0;
     width: 19rem;
@@ -596,15 +617,21 @@ select:hover {
     height: 29em;
     border-radius: 1.1em;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    padding: 1.7em;
     outline: 0;
     border: none;
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+
+}
+
+/*Estilo para el hijo div que engloba el mapa sin la cabecera*/
+#desplegable-popup-mapa>div {
+    padding: 1.7em;
     background-image: url("../images/mapa-popup-imagen.png");
     background-repeat: no-repeat;
 }
+
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
 #desplegable-popup-mapa::backdrop {
@@ -624,6 +651,7 @@ select:hover {
     flex-direction: row;
     justify-content: right;
     margin-bottom: 1.2em;
+    padding: 0.8em;
 }
 /*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
 #cerrar-dialogo-mapa {
@@ -632,6 +660,7 @@ select:hover {
     height: 2.3em;
     cursor: pointer;
 }
+
 
 .contenedor-icono-huerto-mapa {
     color: white;

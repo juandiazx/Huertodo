@@ -9,5 +9,5 @@ async function cambiarMedidasActual(){
 
 //Codigo para que cada cierto intervalo tambien se ejecute la carga de medidas actuales
 
-setInterval(cargarMedidasActual,30000)
+setInterval(cargarMedidasActual,10000)
 

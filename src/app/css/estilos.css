@@ -519,56 +519,6 @@ tbody tr:nth-child(even) {
     font-size: 92%;
 }
 
-/*Estilo imágenes de la landing page*/
-.imagenes-landing {
-    height: 6%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3em;
-}
-
-.imagenes-landing {
-    width: 370px;
-    height: auto;
-    display: block;
-    margin: 5vh auto;
-}
-
-#boton-CTA{
-    max-width: 500px;
-    transition: all .5s ease;
-}
-
-.flecha-bajar{
-    color: #06884DFF;
-    margin-top: 22vh;
-    width: 3rem;
-    padding: 0.5rem 0 0 0;
-}
-
-.flecha-bajar a {
-    color: var(--main-color-white);
-    font-size: 4rem;
-    display: inline-block;
-    animation: flecha_animada 1.5s ease-in-out infinite;
-    padding: 0.3rem;
-    transition: all .5s ease;
-}
-
-
-@keyframes flecha_animada {
-    from{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(10px);
-    }
-    to{
-        transform: translateY(0);
-    }
-}
 
 
 /*------------------------Comienza landing page------------------------*/
@@ -596,20 +546,90 @@ tbody tr:nth-child(even) {
     margin-bottom: 2rem;
 }
 
-#landing-page-hero h1{
-    margin-top: 12vh;
+/* Márgenes para el título de la hero */
+#landing-page-hero h1 {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
 }
 
-/*Márgenes para el párrafo de la hero, */
-#landing-page-hero p{
+/* Márgenes para el párrafo de la hero */
+#landing-page-hero p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 1em;
     margin-bottom: 6em;
 }
-/*------------------------Termina landing page hero------------------------*/
 
-.content{
-
+/* Estilos para el botón CTA */
+#boton-CTA {
+    position: absolute;
+    max-width: 500px;
+    transition: all .5s ease;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+/* Estilos para la flecha de bajar */
+.flecha-bajar {
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #06884DFF;
+}
+
+.flecha-bajar a {
+    color: var(--main-color-white);
+    font-size: 4rem;
+    display: inline-block;
+    animation: flecha_animada 1.5s ease-in-out infinite;
+    padding: 0.3rem;
+    transition: all .5s ease;
+}
+
+
+@keyframes flecha_animada {
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+/*Estilo imágenes de la landing page*/
+.imagenes-landing {
+    height: 6%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.imagenes-landing {
+    width: 370px;
+    height: auto;
+    display: block;
+    margin: 5vh auto;
+}
+
+
+
+
+/*------------------------Termina landing page hero------------------------*/
 
 /*------------------------Comienza sección mantenimiento------------------------*/
 /*Estilo de la sección de mantenimiento en la landing page*/

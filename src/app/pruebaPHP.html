@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desplegable 1 Comercial - Tecnico</title>
+</head>
+<body>
+<h1>Desplegable 1 Comercial - Tecnico</h1>
+
+<section class="formulario">
+
+    <!--Titulo para el formulario-->
+    <div class="títulos-trabajadores">
+        <h2>Contacto con técnicos</h2>
+    </div>
+
+    <!--Código para el formulario-->
+
+    <form id="login-form">
+        <!--Droplist para elegir el técnico-->
+        <div id="de" class="droplist">
+            <label for="de-input">Técnico:</label>
+            <select id="de-input" name="de">
+                <option value="2">Comercial 1</option>
+            </select>
+        </div>
+
+
+
+        <!--Droplist para elegir el técnico-->
+        <div id="para" class="droplist">
+            <label for="para-input">Técnico:</label>
+            <select id="para-input" name="para">
+                <option value="3">Tecnico 1</option>
+            </select>
+        </div>
+
+        <!--Droplist para elegir el asunto-->
+        <div id="asunto" class="droplist">
+            <label for="asunto-input">Asunto:</label>
+            <select id="asunto-input" name="asunto">
+                <option value="asunto">Medicion</option>
+            </select>
+        </div>
+
+        <!--Input para el mensaje-->
+        <div id="texto">
+            <div class="datos">
+                <label for="texto-input">Mensaje:</label>
+                <textarea type="text" id="texto-input" name="texto" rows="5" placeholder="Describe el problema"></textarea>
+            </div>
+        </div>
+
+        <!--Droplist para elegir el asunto-->
+        <div id="fecha"class="droplist">
+            <label for="fecha-input">Asunto:</label>
+            <select id="fecha-input" name="fecha">
+                <option value="2023-06-07">2023-06-07</option>
+            </select>
+        </div>
+
+        <!--Droplist para elegir el asunto-->
+        <div id="usuario_solicitud" class="droplist">
+            <label for="usuario_solicitud-input">Asunto:</label>
+            <select id="usuario_solicitud-input" name="usuario_solicitud">
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <!--Botón de enviar formulario-->
+        <div class="boton-enviar">
+            <button type="submit" id="abrir-popup-admin" class="boton-iniciar-sesion">Enviar</button>
+        </div>
+
+    </form>
+
+
+</section>
+<script src="enviarDatosTecnico.js"></script>
+</body>
+</html>

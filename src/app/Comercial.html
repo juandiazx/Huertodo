@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Comienza el head-->
-
 <head>
-
     <meta charset="UTF-8">
     <title>Comercial</title>
     <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
@@ -21,15 +19,28 @@
     <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
     <link rel='stylesheet' href="css/estilos_responsive.css"/>
     <link rel="stylesheet" href="css/tablas_trabajadores.css">
-<!-- Sección de Actualizaciones en desplegables -->
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- DATATABLES -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- JavaScript funcionalidad Tablas -->
+    <script src="js/logica-Fake/cargarSolicitudesUsuarios.js"></script>
+
+    <!-- JavaScript comunicarse tecnico-->
+    <script src="js/logica-Fake/enviarComunicacionesTecnico.js"></script>
 
     <script src="js/logica-Fake/control-acceso.js"></script>
     <script>document.addEventListener('DOMContentLoaded',comprobarSesion("comercial"));</script>
 
     <!-- JavaScript Documento index.js-->
     <script src="js/index.js"></script>
-    <!-- Sección de Actualizaciones en desplegables -->
-    <script src="js/desplegables_trabajadores.js" defer></script>
+
     </head>
     <body class="loading">
         <div class="page">
@@ -74,7 +85,7 @@
                 <table id="tablax" class="content-table">
                     <thead>
                     <tr>
-                        <th>ID</th>
+                        <th class="id-columna">ID</th>
                         <th>Email</th>
                         <th>Dirección</th>
                         <th>Estado</th>
@@ -86,23 +97,6 @@
                 </table>
             </div>
 
-            <!-- JQUERY -->
-            <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-
-            <!-- DATATABLES -->
-            <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-
-            <!-- BOOTSTRAP -->
-            <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-            <!-- JavaScript funcionalidad Tablas -->
-            <script src="js/tablas.js"></script>
-
-            <!-- JavaScript para adjuntar datos JSON en tabla -->
-            <script src="js/adjuntar_tabla.js"></script>
-
-            <!-- JavaScript seleccionar fila (adjuntar) en tabla -->
-            <script src="js/adjuntar.js"></script>
 
             </section>
             <!--Termina la seccion Notificaciones técnico  -->
@@ -193,15 +187,6 @@
         </div>
     </footer>
     <!-- Termina el footer-->
-
-    <!-- JavaScript Documento index.js-->
-    <script src="js/index.js"></script>
-
-
-    <!-- JavaScript Documento codigoParaComercial.js-->
-    <script src="js/codigoParaComercial.js"></script>
-    <!--JavaScript Documento popup_form_trabajadores.js para los popups en formularios de trabajadores -->
-    <script src="js/popup_form_trabajadores.js"></script>
 
  </div>
 </body>

@@ -75,7 +75,6 @@
 
 /*Botón Cerrar Sesión*/
 .boton-cerrar-sesion {
-    text-align: center;
     width: 72%;
     height: 7%;
     border-radius: 3em;
@@ -88,6 +87,12 @@
     font-size: 170%;
     padding: 0.2em;
     transition: all .5s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton-cerrar-sesion:hover{
+    background: var(--second-color-green-hover);
 }
 
 /*Dimensiones del menu hamburguesa*/

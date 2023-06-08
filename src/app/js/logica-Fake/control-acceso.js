@@ -10,7 +10,8 @@ async function comprobarSesion(rol) {
     var data = await respuesta.json();
     if (respuesta.ok && data.rol == rol) {
         if (data.rol == "comercial") {
-            //Se cargan todos los datos de comercial con las funciones
+            await cargarSolicitudesUsuarios(); //Carga los datos de la tabla del Comercial (las solicitudes)
+            await enviarComunicacionesTecnico(); //Funcion para poder hablar con Tecnico y Adm Web
         } else if (data.rol == "usuario") {
             await cargarHuertosUsuario();
             //Funcion para poner el nombre predeterminado en el popup de cambiar nombre, popups-monitorizacion.js
@@ -18,9 +19,9 @@ async function comprobarSesion(rol) {
             await cargarMedidasActual()
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         } else if (data.rol == "tecnico") {
-            //Se cargan todos los datos de tecnico con las funciones
+            await cargarComunicacionesTecnico();//Se cargan las tareas del tecnico
         } else if (data.rol == "administrador") {
-            //Se cargan todos los datos de administrador con las funciones
+            await cargarComunicacionesAdministradorWeb();//Se cargan las tareas del Adm Web
         }
         let body = document.querySelector("body");
         document.body.classList.remove("loading");

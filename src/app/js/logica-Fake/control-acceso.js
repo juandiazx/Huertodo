@@ -17,6 +17,8 @@ async function comprobarSesion(rol) {
             //Funcion para poner el nombre predeterminado en el popup de cambiar nombre, popups-monitorizacion.js
             await cambiarNombrePopUpCambiarNombre()
             await cargarMedidasActual()
+            await cargarNotificacionesHuertos()
+            await  cargarBorrarNotificacionesInterfaz()
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         } else if (data.rol == "tecnico") {
             await cargarComunicacionesTecnico();//Se cargan las tareas del tecnico
@@ -25,7 +27,8 @@ async function comprobarSesion(rol) {
         }
         let body = document.querySelector("body");
         document.body.classList.remove("loading");
-        document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + data.nombreApellidos + "!";
+        let nombre = obtenerPrimeraParteString(data.nombreApellidos)
+        document.getElementById("contenedor-nombre-usuario").innerText = "¡Bienvenido, " + nombre + "!";
 
         //Hay que ponerle a todo el body de los espacios personales, la clase loading que tendra un display none
     }
@@ -78,6 +81,16 @@ async function borrarSesion() {
     }
 }
 
+//Funcion para solo obtener la primera parte de un string, para obtener el nombre solo
+function obtenerPrimeraParteString(str) {
+    // Dividir el string en un array de substrings separados por espacios
+    var partes = str.split(' ');
+
+    // Tomar la primera parte del array
+    var primeraParte = partes[0];
+
+    return primeraParte;
+}
 
 /*
 Este codigo es el que funciona en el servidor de produccion los try y catch solo funcionan en test local

@@ -155,22 +155,6 @@
         padding: 5vh 7% 5vh;
     }
 
-    #landing-page-hero h1{
-        margin-top: 25vh;
-    }
-
-    /*Márgenes para el párrafo de la hero, */
-    #landing-page-hero p{
-        margin-top: 1em;
-        margin-bottom: 6em;
-    }
-
-    .flecha-bajar{
-        color: #06884DFF;
-        margin-top: 8vh;
-
-    }
-
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons2.png");
@@ -307,22 +291,6 @@
     .wrapper-landing {
         margin-top: 5vh;
         padding: 5vh 7% 5vh;
-    }
-
-    #landing-page-hero h1{
-        margin-top: 25vh;
-    }
-
-    /*Márgenes para el párrafo de la hero, */
-    #landing-page-hero p{
-        margin-top: 1em;
-        margin-bottom: 6em;
-    }
-
-    .flecha-bajar{
-        color: #06884DFF;
-        margin-top: 8vh;
-
     }
 
     /* Contenedor de la sección hero */
@@ -475,36 +443,60 @@
 
     /* Columna de las imágenes */
     .columna-imagenes {
-        width: 300px; /* Valor fijo en píxeles */
+        width: 300px;
         margin-right: 2em;
     }
 
     /* Estilos para la imagen grande */
     .columna-imagenes .image-selector {
-        margin: 0 auto; /* Centrar la imagen dentro de la columna */
-        display: block; /* Asegurar que la imagen se comporte como un elemento de bloque */
-        max-width: 100%; /* Asegurar que la imagen no se desborde */
-        height: auto; /* Permitir que la imagen conserve su relación de aspecto */
-        width: 100%; /* Tamaño completo dentro de la columna */
-        margin-bottom: 10px; /* Margen inferior para separar de las imágenes de abajo */
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     /* Estilos para las imágenes pequeñas */
     .columna-imagenes .row .column img {
-        width: 50px; /* Tamaño específico para las imágenes pequeñas */
-        height: 50px; /* Tamaño específico para las imágenes pequeñas */
-        object-fit: cover; /* Ajustar la imagen a su contenedor */
-        margin-bottom: 5px; /* Margen inferior entre las imágenes pequeñas */
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-bottom: 5px;
     }
 
     /* Columna de la descripción y botón */
     .columna-descripcion {
-        flex: 1; /* Ocupar el espacio restante */
+        flex: 1;
         margin-left: 2em;
     }
+
+
+    .boton-producto {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.seccion-preguntas{
+    margin-top: 1vh;
+}
+
+.titulo-preguntas{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 
+@media screen and (min-width: 1200px){
+    .boton-producto {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 
@@ -576,6 +568,29 @@
 
 
 /*ESTILOS RESPONSIVE PARA MONITORIZACIÓN*/
+@media screen and (min-width: 250px) and (max-width: 370px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 70%;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 400px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 80%;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 430px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 90%;
+        font-weight: 500;
+    }
+}
 
 @media screen and (min-width: 700px) {
     #contenedor-espacio-personal-completo{
@@ -614,4 +629,47 @@
     #contenedor-fecha-hora-huerto{
         margin-bottom: 0.8rem;
     }
+}
+
+
+/*ESTILOS PARA CONTRASENYA_NUEVA*/
+
+#inicio-de-sesion-titulo{
+    margin-top: 2vh;
+}
+
+.h1-formularios-titulos{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#enviar-contraseña\ abrir-popup{
+    margin-top: 2vh;
+}
+.boton-enviar{
+    margin-bottom: 3vh;
+}
+
+.datos{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+@media screen and (min-width: 700px) {
+
+    #inicio-de-sesion-titulo{
+        margin-top: 1vh;
+    }
+
+    .h1-formularios-titulos{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+}
+
+/*ESTILOS PARA CONTRASEÑA OLVIDADA*/
+
+.contra-olvidada{
+    margin-top: 10vh;
 }

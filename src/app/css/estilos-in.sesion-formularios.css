@@ -464,8 +464,10 @@ h3 {
 }
 
 #campos-obligatorios-nueva-contrasenya{
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    text-align: right;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.8em;
 }
 
 /*-----------------------------------------------------------------------------------------*/

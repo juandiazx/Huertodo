@@ -21,6 +21,13 @@
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
 
+
+    <!--JS Funcion cargarNotificacionesHuertos() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/cargarNotificacionesHuertos.js"></script>
+
+    <!--JS Funcion borrarNotificacionMonitorizacion() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/borrarNotificacionMonitorizacion.js"></script>
+
     <!--JS Funcion cargarHuertosUsuario() llamada desde control-acceso.js-->
     <script src="js/logica-Fake/cargarHuertosUsuario.js"></script>
 
@@ -78,90 +85,13 @@
 
     <!-- Desplegable para las notificaciones-->
     <dialog id="desplegable-popup-notificaciones">
-        <div id="cabecera-popup-notificaciones">
-            <h2>Notificaciones</h2>
-            <img id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="icono-prioridad-notificacion">
-                <img src="images/icons8-sad-50.png" alt="Icono Prioridad Notificacion">
+            <div id="cabecera-popup-notificaciones">
+                <h2>Notificaciones</h2>
+                <img id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
             </div>
-            <div class="notificacion-especifica-texto">
-                <p>La iluminación está bajando más de lo normal</p>
+            <div id="contenedor-sin-notificaciones">
+                <p id="texto-sin-notificaciones">Sin notificaciones</p>
             </div>
-            <div class="notificacion-especifica-fecha">
-                <p>16/06/23</p>
-            </div>
-            <div class="icono-borrar-notificacion">
-                <!--Boton Eliminar Notificacion-->
-                <i class="bi bi-x-lg"></i>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="icono-prioridad-notificacion">
-                <img src="images/icons8-neutral-50.png" alt="Icono Prioridad Notificacion">
-            </div>
-            <div class="notificacion-especifica-texto">
-                <p>La humedad ha bajado drásticamente</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>14/06/23</p>
-            </div>
-            <div class="icono-borrar-notificacion">
-                <!--Boton Eliminar Notificacion-->
-                <i class="bi bi-x-lg"></i>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="icono-prioridad-notificacion">
-                <img src="images/icons8-neutral-50.png" alt="Icono Prioridad Notificacion">
-            </div>
-            <div class="notificacion-especifica-texto">
-                <p>La humedad ha bajado drásticamente</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>10/06/23</p>
-            </div>
-            <div class="icono-borrar-notificacion">
-                <!--Boton Eliminar Notificacion-->
-                <i class="bi bi-x-lg"></i>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="icono-prioridad-notificacion">
-                <img src="images/icons8-sad-50.png" alt="Icono Prioridad Notificacion">
-            </div>
-            <div class="notificacion-especifica-texto">
-                <p>El Huerto 2 está teniendo una humedad muy alta</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>09/06/23</p>
-            </div>
-            <div class="icono-borrar-notificacion">
-                <!--Boton Eliminar Notificacion-->
-                <i class="bi bi-x-lg"></i>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="icono-prioridad-notificacion">
-                <img src="images/icons8-neutral-50.png" alt="Icono Prioridad Notificacion">
-            </div>
-            <div class="notificacion-especifica-texto">
-                <p>La temperatura ha llegado a estar muy alta</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>05/06/23</p>
-            </div>
-            <div class="icono-borrar-notificacion">
-                <!--Boton Eliminar Notificacion-->
-                <i class="bi bi-x-lg"></i>
-            </div>
-        </div>
     </dialog>
 
     <!--Termina esplegable para las notificaciones-->
@@ -192,6 +122,7 @@
 
         <div id="contenedor-fecha-hora-huerto">
             <div id="contenedor-temperatura-metereologia">
+                <div id="label-tiempo-actual">El tiempo actual:</div>
                 <div id="ww_4b62def8642aa" v='1.3' loc='id' a='{"t":"horizontal","lang":"es","sl_lpl":1,"ids":["wl6604"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3,"el_whr":3,"el_phw":3}'>Weather Data Source: <a href="https://sharpweather.com/weather_valencia_province/30_days/" id="ww_4b62def8642aa_u" target="_blank">Valencia Province weather 30 days</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_4b62def8642aa"></script>
             </div>
             <!--
@@ -245,13 +176,13 @@
                 <canvas id="grafica-historial" aria-label="Grafica Interactiva Histórico Parámetros" role="img"></canvas>
             </div>
             <!--Contenedor con los botones de filtrar de la gráfica-->
-            <!--
+
             <div id="contenedor-botones-filtro-grafica">
-                <button id="boton-filtro-grafica-anyo">Trimestre</button>
+                <button id="boton-filtro-grafica-anyo">Año</button>
                 <button id="boton-filtro-grafica-mes">Mes</button>
                 <button id="boton-filtro-grafica-semana">Semana</button>
             </div>
-			-->
+
         </div>
         <!-- Termina el historial de mediciones grafica-->
 
@@ -265,16 +196,19 @@
     <!-- Desplegable para el mapa de huertos-->
     <dialog id="desplegable-popup-mapa">
         <section id="cabecera-popup-mapa">
-            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-mapa.png" alt="Icono cruz Cerrar notificaciones">
+            <h2>Notificaciones</h2>
+            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar mapa">
         </section>
-        <section class="contenedor-icono-huerto-mapa" id="mapa-huerto-1">
-            <img id="icono-huerto1" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
-            <p>Calabazas</p>
-        </section>
-        <section class="contenedor-icono-huerto-mapa" id="mapa-huerto-2">
-            <img id="icono-huerto2" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
-            <p>Tomates</p>
-        </section>
+        <div>
+            <section class="contenedor-icono-huerto-mapa" id="mapa-huerto-1">
+                <img id="icono-huerto1" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
+                <p>Calabazas</p>
+            </section>
+            <section class="contenedor-icono-huerto-mapa" id="mapa-huerto-2">
+                <img id="icono-huerto2" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
+                <p>Tomates</p>
+            </section>
+        </div>
     </dialog>
     <!--Termina desplegable para el mapa de huertos-->
 

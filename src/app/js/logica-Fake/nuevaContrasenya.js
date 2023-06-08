@@ -5,20 +5,6 @@
 document.getElementById("login-form").addEventListener("submit",nuevaContrasenya);
 
 
-const cerrarPopupBtn = document.getElementById("cerrar-popup");
-const popup = document.getElementById("popup");
-
-// Cerrar popup y redirigir a otra página al hacer clic en el botón "Volver"
-cerrarPopupBtn.addEventListener("click", function() {
-    popup.classList.remove("mostrar");
-    window.location.href = "../app/Inicio_sesion.html";
-});
-// Función para comprobar si todos los campos del formulario están completos
-function popupContrasenyaNueva() {
-    popup.classList.add("mostrar");
-    document.querySelector(".popup-contenido").classList.add("mostrar");
-}
-
 /**
  * Se ejecutará cuando se envíe el formulario.
  * Puesto que se usa fetch, es una función asíncrona
@@ -57,4 +43,19 @@ async function nuevaContrasenya(event) {
             document.getElementById("mensaje-error-contrasenya").style.display = "block"
         }
     }
+}
+
+
+const cerrarPopupBtn = document.getElementById("cerrar-popup");
+const popup = document.getElementById("popup");
+
+// Cerrar popup y redirigir a otra página al hacer clic en el botón "Volver"
+cerrarPopupBtn.addEventListener("click", function() {
+    popup.classList.remove("mostrar");
+    window.location.href = "../app/Inicio_sesion.html";
+});
+// Función para comprobar si todos los campos del formulario están completos
+function popupContrasenyaNueva() {
+    popup.classList.add("mostrar");
+    document.querySelector(".popup-contenido").classList.add("mostrar");
 }

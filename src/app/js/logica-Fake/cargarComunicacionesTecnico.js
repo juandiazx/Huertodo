@@ -16,10 +16,8 @@ async function cargarComunicacionesTecnico() {
                 last: "Último",
             },
             aria: {
-                sortAscending:
-                    ": active para ordenar la columna en orden ascendente",
-                sortDescending:
-                    ": active para ordenar la columna en orden descendente",
+                sortAscending: ": active para ordenar la columna en orden ascendente",
+                sortDescending: ": active para ordenar la columna en orden descendente",
             },
         },
         dom: 'rt<"bottom"p>',
@@ -29,7 +27,6 @@ async function cargarComunicacionesTecnico() {
             details: false,
         },
     });
-
 
     // Función para cargar los datos del archivo JSON a la tabla
     async function cargarDatos3() {
@@ -43,13 +40,14 @@ async function cargarComunicacionesTecnico() {
         console.log(data);
 
         data.forEach((value) => {
-            var fila = tabla.row
-                .add([
+            var fila = tabla
+                .row.add([
                     value.id,
                     value.nombreApellidos,
                     value.direccion,
                     value.asunto,
                     value.fecha,
+                    '<i class="bi bi-tools"></i>',
                 ])
                 .node();
 
@@ -59,57 +57,51 @@ async function cargarComunicacionesTecnico() {
         tabla.draw();
     }
 
-
-
-
-
     await cargarDatos3();
 
     function mostrarDesplegable(fila) {
-        var seccion = $('<tr class="seccion-desplegada"><td colspan="6">' +
+        var seccion = $('<tr class="seccion-desplegada">' +
+            '<td colspan="6">' +
             '<div class="contenido-desplegado">' +
-            '<h4>Comunicacion con Tecnicos</h4>' +
+            '<h4>Comunicacion con Comercial</h4>' +
             '</div>' +
-            '</td></tr>');
+            '</td>' +
+            '</tr>');
 
-        $(fila).after(seccion);
+        fila.after(seccion);
 
         agregarEventoClickCancelar(seccion, fila);
         agregarEventoClickConfirmar(seccion, fila);
 
-        // Agregar el formulario y los botones al div contenido-desplegado
-        var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesTecnico.php"></form>');
+        var form = $('<form method="POST" action="../api/v.1.0/trabajadores/tecnico/enviarTareaCompletadaComercial.php"></form>');
         seccion.find('.contenido-desplegado').append(form);
 
-        var selectDe = $('<select name="de"></select>');
-        var optionDe1 = $('<option value="4">Administrador 1</option>');
-        selectDe.append(optionDe1);
-        form.append(selectDe);
+        var inputDe = $('<input type="text" name="de" readonly>');
+        inputDe.val("3"); // Establecer el valor del campo "De"
+        form.append(inputDe);
 
-        var selectPara = $('<select name="para"></select>');
-        var optionPara1 = $('<option value="2">Comercial 1</option>');
-        selectPara.append(optionPara1);
-        form.append(selectPara);
+        var inputPara = $('<input type="text" name="para" readonly>');
+        inputPara.val("2"); // Establecer el valor del campo "Para"
+        form.append(inputPara);
 
-        var selectAsunto = $('<select name="asunto"></select>');
-        var optionAsunto1 = $('<option value="Medidas">Registro Completado</option>');
-        selectAsunto.append(optionAsunto1);
-        form.append(selectAsunto);
+        var inputAsunto = $('<input type="text" name="asunto">');
+        var tarea = fila.find('td:nth-child(4)').text().trim(); // Obtener el valor de la columna "Tarea" de la fila parent
+        inputAsunto.val(tarea); // Establecer el valor del campo "Asunto" con el valor de la columna "Tarea"
+        form.append(inputAsunto);
 
         var textareaTexto = $('<textarea name="texto" placeholder="Texto"></textarea>');
         form.append(textareaTexto);
 
         var inputFecha = $('<input type="date" name="fecha">');
         var today = new Date();
-        var dateString = today.toISOString().split('T')[0]; // Obtener la fecha actual en formato "YYYY-MM-DD"
-        inputFecha.val(dateString); // Establecer la fecha actual en el campo de fecha
+        var dateString = today.toISOString().split('T')[0];
+        inputFecha.val(dateString);
         form.append(inputFecha);
 
-        // Obtener el valor de la columna "ID" de la tabla
         var id = $(fila).find('td:first-child').text().trim();
 
         var inputUsuarioSolicitud = $('<input type="text" name="usuario_solicitud">');
-        inputUsuarioSolicitud.val(id); // Establecer el valor de usuario_solicitud con el valor de la columna "ID"
+        inputUsuarioSolicitud.val(id);
         form.append(inputUsuarioSolicitud);
 
         var enviarBtn = $('<button class="boton-cerrar-sesion">Enviar</button>');
@@ -126,7 +118,7 @@ async function cargarComunicacionesTecnico() {
     }
 
     function agregarEventoClickCancelar(seccion, fila) {
-        var botonCancelar = seccion.find("#cancelar");
+        var botonCancelar = seccion.find(".boton-cerrar-sesion");
 
         botonCancelar.on("click", function () {
             fila.removeClass("desplegado");
@@ -135,14 +127,12 @@ async function cargarComunicacionesTecnico() {
     }
 
     function agregarEventoClickConfirmar(seccion, fila) {
-        var botonConfirmar = seccion.find("#confirmar");
-        botonConfirmar.type = 'submit';
+        var botonConfirmar = seccion.find(".boton-cerrar-sesion");
 
         botonConfirmar.on("click", function () {
-            // Obtener los valores seleccionados y el texto del textarea
-            var opcionSeleccionada = seccion.find("#opciones").val();
-            var asuntoSeleccionado = seccion.find("#asunto").val();
-            var mensajeTexto = seccion.find("#mensaje").val();
+            var opcionSeleccionada = seccion.find('input[name="de"]').val();
+            var asuntoSeleccionado = seccion.find('input[name="asunto"]').val();
+            var mensajeTexto = seccion.find('textarea[name="texto"]').val();
 
             // Realizar las acciones necesarias con los valores obtenidos
 
@@ -150,6 +140,16 @@ async function cargarComunicacionesTecnico() {
             seccion.remove();
         });
     }
+
+    $("#tablax tbody").on("click", 'i.bi.bi-tools', function (event) {
+        var fila = $(this).closest("tr");
+
+        if (fila.hasClass("desplegado")) {
+            fila.removeClass("desplegado");
+            fila.next(".seccion-desplegada").remove();
+        } else {
+            mostrarDesplegable(fila);
+            fila.addClass("desplegado");
+        }
+    });
 }
-
-

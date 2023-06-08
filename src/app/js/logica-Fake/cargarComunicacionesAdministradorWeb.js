@@ -69,7 +69,7 @@ async function cargarComunicacionesAdministradorWeb() {
             '<tr class="seccion-desplegada">' +
             '<td colspan="6">' +
             '<div class="contenido-desplegado">' +
-            '<h4>Comunicacion con Tecnicos</h4>' +
+            '<h4>Comunicacion con Comercial</h4>' +
             "</div>" +
             "</td>" +
             "</tr>"

@@ -550,15 +550,19 @@ select:hover {
 
 /*Estilo de los botones que estan dentro del contenedor de botones de filtro de la grafica*/
 #contenedor-botones-filtro-grafica>button {
-    width: 22%;
-    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 25px;
     border-radius: 3em;
     border: none;
     background: var(--second-color-green);
     color: var(--main-color-white);
     font-family:'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 3.3vw;
+    font-size: 15px;
+    transition: all .5s ease;
     padding: 0.2em 0.3em;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     cursor: pointer;

@@ -8,7 +8,9 @@
 
 /*
  * [id(huerto)]:GET-------> cargarNotificacioneshuertos()---> http:200,
- *                                                          [JSON{id,fecha,contenido,huerto,prioridad}] | 500
+ *                                                          [JSON{id,fecha,contenido,huerto,prioridad}] |
+ *                                                              http:200, JSON{valor:Boolean}
+ *                                                              |500
  *
  * */
 
@@ -59,9 +61,12 @@ if (mysqli_affected_rows($connexion) > 0) {
     header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE');
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode($salida);
-} else {
+} else if(mysqli_affected_rows($connexion) == 0){
+    http_response_code(200);
     $respuesta = new stdClass(); // Crear un objeto
     $respuesta->valor = false;
     echo json_encode($respuesta);
-    http_response_code(401);
+}
+else{
+    http_response_code(500);
 }

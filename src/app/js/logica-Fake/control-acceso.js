@@ -17,6 +17,7 @@ async function comprobarSesion(rol) {
             await cambiarNombrePopUpCambiarNombre()
             await cargarMedidasActual()
             await cargarNotificacionesHuertos()
+            await  cargarBorrarNotificacionesInterfaz()
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         } else if (data.rol == "tecnico") {
             //Se cargan todos los datos de tecnico con las funciones

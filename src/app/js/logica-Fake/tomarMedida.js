@@ -22,22 +22,16 @@ async function tomarMedida(event) {
     };
     const formData = new FormData();
     formData.append('dataJSON', JSON.stringify(dataJSON));
-    console.log(formData)
     const respuesta = await fetch('../api/v.1.0/monitorizacion/tomarMedida.php', {
         method: 'post',
         body: formData
     })
-    console.log(respuesta)
-    const data = await respuesta.json();
-    console.log(data)
-    //Realmente no hace falta gestionar esto, porque el form de por si solo se envia cuando cumple con todos
-    //los requisitos de los inputs, hay otro JS Document con el popup de envío exito, solo hay que cambiar el boton
-    // si el resultado de la petición es OK (i.e. código HTTP 200)
-    /*
     if(respuesta.ok){
-
+        alert("Medida tomada con éxito")
     }
-     */
+    else{
+        alert("No se ha podido tomar la medida")
+    }
 }
 
 //Funcion para obtener numero integer aleatorio entre dos numeros

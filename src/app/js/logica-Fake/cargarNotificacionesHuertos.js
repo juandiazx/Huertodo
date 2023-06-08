@@ -20,7 +20,8 @@ async function cargarNotificacionesHuertos(){
     }
     let url = '../api/v.1.0/monitorizacion/cargarNotificacionesHuertos.php'
     const respuesta = await fetch(`${url}?${urlParams}`);
-    if(!respuesta.ok){
+    var data = await respuesta.json();
+    if(respuesta.ok && data.valor == false){ //Si no hay notificaciones
         //Pues entonces cambiamos icono de campana e indicamos que no hay notificaciones
         document.getElementById("parrafo-numero-notificaciones").textContent = "No hay notificaciones"
         document.getElementById("icono-campana-notificaciones").src = "images/icono-notificaciones-sin.png"
@@ -29,7 +30,7 @@ async function cargarNotificacionesHuertos(){
     }
     else{
         //Si hay notificaciones pues indicamos cuantas y cambiamos el icono
-        const data = await respuesta.json();
+
         document.getElementById("icono-campana-notificaciones").src = "images/icono-notificaciones-con.png"
         let textoPluralSingular = "notificaciones"
         //Si solo hay una notificacion, pues la palabra sera notificación no notificaciones
@@ -39,15 +40,16 @@ async function cargarNotificacionesHuertos(){
         document.getElementById("parrafo-numero-notificaciones").textContent = `${data.length} ${textoPluralSingular}`
         document.getElementById("texto-sin-notificaciones").style.display = "none"
         document.getElementById("contenedor-sin-notificaciones").style.height = "0%"
+        //Eliminamos todas notificaciones de la interfaz antes:
+        eliminarContenedoresHijos("desplegable-popup-notificaciones", 'contenedor-notificacion-especifica')
 // Iteramos sobre el array y crear los elementos de notificación correspondientes
         data.forEach(function(notificacion) {
             let elementoNotificacion = crearElementoNotificacion(notificacion);
-            console.log(notificacion)
-
             // Agregar el elemento de notificación al contenedor deseado en tu HTML
             let contenedorNotificaciones = document.getElementById("desplegable-popup-notificaciones");
             contenedorNotificaciones.appendChild(elementoNotificacion);
         });
+        //aqui se terminan de crear todos
     }
 }
 
@@ -128,4 +130,18 @@ function formatearFecha(fecha) {
     const dia = partes[2];
     // Construir la fecha en el nuevo formato
     return `${dia}/${mes}/${anio}`;
+}
+
+//Funcion para eliminar los contenedores hijos
+function eliminarContenedoresHijos(contenedorPadreId, claseEspecifica) {
+    // Obtener el contenedor padre
+    const contenedorPadre = document.getElementById(contenedorPadreId);
+
+    // Obtener todos los contenedores hijos con la clase específica
+    const contenedoresHijos = contenedorPadre.querySelectorAll('.' + claseEspecifica);
+
+    // Eliminar cada contenedor hijo
+    contenedoresHijos.forEach(contenedorHijo => {
+        contenedorHijo.remove();
+    });
 }

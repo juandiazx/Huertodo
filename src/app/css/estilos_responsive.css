@@ -481,7 +481,7 @@
 }
 
 .seccion-preguntas{
-    margin-top: 7vh;
+    margin-top: 1vh;
 }
 
 .titulo-preguntas{
@@ -489,6 +489,14 @@
     margin-bottom: 2vh;
 }
 
+
+@media screen and (min-width: 1200px){
+    .boton-producto {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 
@@ -560,6 +568,29 @@
 
 
 /*ESTILOS RESPONSIVE PARA MONITORIZACIÓN*/
+@media screen and (min-width: 250px) and (max-width: 370px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 70%;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 400px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 80%;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 430px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 90%;
+        font-weight: 500;
+    }
+}
 
 @media screen and (min-width: 700px) {
     #contenedor-espacio-personal-completo{

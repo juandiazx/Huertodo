@@ -26,12 +26,6 @@ async function tomarMedida(event) {
         method: 'post',
         body: formData
     })
-    if(respuesta.ok){
-        alert("Medida tomada con éxito")
-    }
-    else{
-        alert("No se ha podido tomar la medida")
-    }
 }
 
 //Funcion para obtener numero integer aleatorio entre dos numeros

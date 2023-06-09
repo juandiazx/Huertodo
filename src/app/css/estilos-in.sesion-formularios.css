@@ -70,8 +70,9 @@ h3 {
 
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
-    text-align: center;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 72%;
     border-radius: 3em;
     border: none;

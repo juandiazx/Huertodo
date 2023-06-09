@@ -76,7 +76,7 @@ async function borrarSesion() {
         method: 'delete'
     });
     if (respuesta.ok) {
-        location.href = "../../index.html";
+        location.href = "../../../index.html";
     }
 }
 

@@ -20,9 +20,6 @@ async function generarNotificaciones(dataPrioridadDireccion,huerto,timestamp,tip
         method: 'post',
         body: formData
     })
-    if(!respuesta.ok){
-        alert("Notificacion generadas error")
-    }
 }
 
 function convertirPrioridadDireccion(dataPrioridadDireccion,parametro,huerto){

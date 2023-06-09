@@ -276,15 +276,71 @@ async function cargarSolicitudesUsuarios() {
         var seccion = $('<tr class="seccion-desplegada"><td colspan="6">' +
             '<div class="contenido-desplegado">' +
             '<h4>Tercer Desplegable</h4>' +
-            '<p>Contenido del tercer desplegable</p>' +
+            '<div id="datos-desplegable"></div>' +
             '<button id="cerrar3">Cerrar</button>' +
             '</div>' +
             '</td></tr>');
 
-        fila.after(seccion);
+        var datosDesplegable = seccion.find("#datos-desplegable");
 
-        agregarEventoClickCerrar3(seccion, fila);
+        obtenerIdFila(fila, function(id) {
+            obtenerDatosFila(id, function(datos) {
+                datosDesplegable.empty();
+
+                console.log(datos);
+
+                for (var i = 0; i < datos.length; i++) {
+                    var comunicacion = datos[i];
+                    var contenido = '<p>Asunto: ' + comunicacion.asunto + '</p>' +
+                        '<p>Texto: ' + comunicacion.texto + '</p>' +
+                        '<p>Fecha: ' + comunicacion.fecha + '</p>';
+                    datosDesplegable.append(contenido);
+                }
+
+                fila.after(seccion);
+
+                agregarEventoClickCerrar3(seccion, fila);
+            });
+        });
     }
+
+    function obtenerIdFila(fila, callback) {
+        var id = $(fila).find('td:first-child').text().trim();
+        callback(id);
+    }
+
+    function obtenerDatosFila(id, callback) {
+        // Realizar una solicitud AJAX al archivo PHP para obtener los datos del servidor
+        $.ajax({
+            url: '../api/v.1.0/trabajadores/comercial/cargarRespuestasTecnico.php',
+            type: 'GET',
+            dataType: 'json',
+            data: { usuario_solicitud: id }, // Filtrar por el valor de usuario_solicitud
+            success: function(response) {
+                // La respuesta contiene los datos obtenidos del servidor
+                var datos = response;
+                callback(datos);
+            },
+            error: function(xhr, status, error) {
+                console.log('Error en la solicitud AJAX:', error);
+            }
+        });
+    }
+
+    function agregarEventoClickCerrar3(seccion, fila) {
+        var botonCerrar = seccion.find("#cerrar3");
+        botonCerrar.click(function() {
+            seccion.remove();
+            // Realizar cualquier otra acción necesaria al cerrar el tercer desplegable
+        });
+    }
+
+
+
+
+
+
+
 
     function agregarEventoClickCancelar(seccion, fila) {
         var botonCancelar = seccion.find("#cancelar");
@@ -307,15 +363,6 @@ async function cargarSolicitudesUsuarios() {
 
             // Realizar las acciones necesarias con los valores obtenidos
 
-            fila.removeClass("desplegado");
-            seccion.remove();
-        });
-    }
-
-    function agregarEventoClickCerrar3(seccion, fila) {
-        var botonCerrar = seccion.find("#cerrar3");
-
-        botonCerrar.on("click", function () {
             fila.removeClass("desplegado");
             seccion.remove();
         });

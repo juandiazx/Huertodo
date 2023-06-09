@@ -21,11 +21,6 @@
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
 
-    <!--JS Funcion cargarGrafica() llamada cada vez que se recarga o cada boton de grafica y de intervalo-->
-    <script src="js/logica-Fake/cargarGrafica.js"></script>
-
-    <!--JS Funcion generarNotificaciones() llamada cada vez que se toma una medida-->
-    <script src="js/logica-Fake/generarNotificaciones.js"></script>
 
     <!--JS Funcion cargarNotificacionesHuertos() llamada desde control-acceso.js-->
     <script src="js/logica-Fake/cargarNotificacionesHuertos.js"></script>
@@ -49,7 +44,7 @@
 <header>
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
-        <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+        <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
 
         <!-- Contenedor para los iconos de inicio de sesión y menú -->
         <div class="contenedor-iconos">
@@ -183,6 +178,7 @@
             <!--Contenedor con los botones de filtrar de la gráfica-->
 
             <div id="contenedor-botones-filtro-grafica">
+                <button id="boton-filtro-grafica-anyo">Año</button>
                 <button id="boton-filtro-grafica-mes">Mes</button>
                 <button id="boton-filtro-grafica-semana">Semana</button>
             </div>
@@ -199,7 +195,8 @@
 
     <!-- Desplegable para el mapa de huertos-->
     <dialog id="desplegable-popup-mapa">
-        <section id="contenedor-cerrar-mapa">
+        <section id="cabecera-popup-mapa">
+            <h2>Notificaciones</h2>
             <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar mapa">
         </section>
         <div>

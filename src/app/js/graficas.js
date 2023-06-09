@@ -8,7 +8,7 @@ setTimeout(async function () {
         labels: ['lunes', 'martes', 'miércoles', 'jueves', 'viernes','sábado','domingo'],
         datasets: [
             {
-                data: [57, 100, 37, 10,46,68,82],//await cargarGrafica()
+                data: [57, 100, 37, 10,46,68,82],//await cargarGrafica(obtenerFechaHaceUnaSemana(obtenerFechaHoraActual()),obtenerFechaHoraActual(),huertoSelect,"humedad"),//[57, 100, 37, 10,46,68,82],//await cargarGrafica()
                 fill: true,
                 backgroundColor : 'rgb(109,224,234)',
                 borderColor : 'rgb(56,153,217)',
@@ -82,7 +82,6 @@ setTimeout(async function () {
     });
     miGrafica.update()
     document.getElementById("contenedor-humedad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",async function (){
-        //await cargarGrafica() devuelve los datos y luego se meten ahi
         datos.datasets[0].data= [57, 100, 37, 10,46,68,82]
         datos.datasets[0].backgroundColor = 'rgb(109,224,234)';
         datos.datasets[0].borderColor = 'rgb(56,153,217)';
@@ -153,3 +152,43 @@ setTimeout(async function () {
         miGrafica.update();
     })
 }, 600);
+
+function obtenerFechaHaceUnaSemana() {
+    var fechaActual = new Date();  // Fecha de referencia actual
+    fechaActual.setDate(fechaActual.getDate() - 7);  // Retroceder una semana
+
+    var dia = fechaActual.getDate();
+    var mes = fechaActual.getMonth() + 1; // Los meses en JavaScript comienzan en 0
+    var anio = fechaActual.getFullYear();
+    var hora = '01';
+    var minuto = '00';
+    var segundo = '00';
+
+    // Asegurarse de que el formato tenga dos dígitos
+    if (dia < 10) {
+        dia = '0' + dia;
+    }
+    if (mes < 10) {
+        mes = '0' + mes;
+    }
+
+    var fechaFormateada = anio + '-' + mes + '-' + dia + ' ' + hora + ':' + minuto + ':' + segundo;
+    return fechaFormateada;
+}
+
+//Funcion para obtener la fecha actual en formato datetima para SQL
+function obtenerFechaHoraActual() {
+    const fechaActual = new Date();
+    const anyo = fechaActual.getFullYear();
+    const mes = agregarCeroAlInicio(fechaActual.getMonth() + 1);
+    const dia = agregarCeroAlInicio(fechaActual.getDate());
+    const horas = agregarCeroAlInicio(fechaActual.getHours());
+    const minutos = agregarCeroAlInicio(fechaActual.getMinutes());
+    const segundos = agregarCeroAlInicio(fechaActual.getSeconds());
+    return `${anyo}-${mes}-${dia} ${horas}:${minutos}:${segundos}`;
+}
+
+//Funcion que agrega un cero al inicio de cada formato de fecha, cada sección
+function agregarCeroAlInicio(valor) {
+    return valor < 10 ? '0' + valor : valor;
+}

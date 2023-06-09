@@ -126,27 +126,27 @@ async function cargarSolicitudesUsuarios() {
         var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesTecnico.php"></form>');
         seccion.find('.contenido-desplegado').append(form);
 
-        var selectDe = $('<select name="de"></select>');
+        var selectDe = $('<select class="campos-desplegables-ocultos" name="de"></select>');
         var optionDe1 = $('<option value="2">Comercial 1</option>');
         selectDe.append(optionDe1);
         form.append(selectDe);
 
-        var selectPara = $('<select name="para"></select>');
+        var selectPara = $('<select class="selectores-tablas" name="para"></select>');
         var optionPara1 = $('<option value="3">Técnico 1</option>');
         selectPara.append(optionPara1);
         form.append(selectPara);
 
-        var selectAsunto = $('<select name="asunto"></select>');
+        var selectAsunto = $('<select class="selectores-tablas" name="asunto"></select>');
         var optionAsunto1 = $('<option value="Medidas">Medidas</option>');
         var optionAsunto2 = $('<option value="Montaje">Montaje</option>');
         selectAsunto.append(optionAsunto1);
         selectAsunto.append(optionAsunto2);
         form.append(selectAsunto);
 
-        var textareaTexto = $('<textarea name="texto" placeholder="Texto"></textarea>');
+        var textareaTexto = $('<textarea class="selectores-tablas" name="texto" placeholder="Texto"></textarea>');
         form.append(textareaTexto);
 
-        var inputFecha = $('<input type="date" name="fecha">');
+        var inputFecha = $('<input class="campos-desplegables-ocultos" type="date" name="fecha">');
         var today = new Date();
         var dateString = today.toISOString().split('T')[0]; // Obtener la fecha actual en formato "YYYY-MM-DD"
         inputFecha.val(dateString); // Establecer la fecha actual en el campo de fecha
@@ -155,17 +155,17 @@ async function cargarSolicitudesUsuarios() {
         // Obtener el valor de la columna "ID" de la tabla
         var id = $(fila).find('td:first-child').text().trim();
 
-        var inputUsuarioSolicitud = $('<input type="text" name="usuario_solicitud">');
+        var inputUsuarioSolicitud = $('<input class="campos-desplegables-ocultos" type="text" name="usuario_solicitud">');
         inputUsuarioSolicitud.val(id); // Establecer el valor de usuario_solicitud con el valor de la columna "ID"
         form.append(inputUsuarioSolicitud);
 
-        var enviarBtn = $('<button class="boton-cerrar-sesion">Enviar</button>');
+        var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
         enviarBtn.on('click', function() {
             form.submit();
         });
         form.append(enviarBtn);
 
-        var cancelarBtn = $('<button class="boton-cerrar-sesion">Cancelar</button>');
+        var cancelarBtn = $('<button class="boton-verde-blanco-tablas">Cancelar</button>');
         cancelarBtn.on('click', function() {
             seccion.remove();
         });
@@ -208,25 +208,25 @@ async function cargarSolicitudesUsuarios() {
         var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesAdministradorWeb.php"></form>');
         seccion.find('.contenido-desplegado').append(form);
 
-        var selectDe = $('<select name="de"></select>');
+        var selectDe = $('<select class="campos-desplegables-ocultos" name="de"></select>');
         var optionDe1 = $('<option value="2">Comercial 1</option>');
         selectDe.append(optionDe1);
         form.append(selectDe);
 
-        var selectPara = $('<select name="para"></select>');
+        var selectPara = $('<select class="selectores-tablas" name="para"></select>');
         var optionPara1 = $('<option value="4">Administrador Web 1</option>');
         selectPara.append(optionPara1);
         form.append(selectPara);
 
-        var selectAsunto = $('<select name="asunto"></select>');
+        var selectAsunto = $('<select class="selectores-tablas" name="asunto"></select>');
         var optionAsunto1 = $('<option value="Registro">Registro</option>');
         selectAsunto.append(optionAsunto1);
         form.append(selectAsunto);
 
-        var textareaTexto = $('<textarea name="texto" placeholder="Texto"></textarea>');
+        var textareaTexto = $('<textarea class="selectores-tablas" name="texto" placeholder="Texto"></textarea>');
         form.append(textareaTexto);
 
-        var inputFecha = $('<input type="date" name="fecha">');
+        var inputFecha = $('<input class="campos-desplegables-ocultos" type="date" name="fecha">');
         var today = new Date();
         var dateString = today.toISOString().split('T')[0]; // Obtener la fecha actual en formato "YYYY-MM-DD"
         inputFecha.val(dateString); // Establecer la fecha actual en el campo de fecha
@@ -235,17 +235,17 @@ async function cargarSolicitudesUsuarios() {
         // Obtener el valor de la columna "ID" de la tabla
         var id = $(fila).find('td:first-child').text().trim();
 
-        var inputUsuarioSolicitud = $('<input type="text" name="usuario_solicitud">');
+        var inputUsuarioSolicitud = $('<input class="campos-desplegables-ocultos" type="text" name="usuario_solicitud">');
         inputUsuarioSolicitud.val(id); // Establecer el valor de usuario_solicitud con el valor de la columna "ID"
         form.append(inputUsuarioSolicitud);
 
-        var enviarBtn = $('<button class="boton-cerrar-sesion">Enviar</button>');
+        var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
         enviarBtn.on('click', function() {
             form.submit();
         });
         form.append(enviarBtn);
 
-        var cancelarBtn = $('<button class="boton-cerrar-sesion">Cancelar</button>');
+        var cancelarBtn = $('<button class="boton-verde-blanco-tablas">Cancelar</button>');
         cancelarBtn.on('click', function() {
             seccion.remove();
         });
@@ -275,9 +275,9 @@ async function cargarSolicitudesUsuarios() {
     function mostrarTercerDesplegable(fila) {
         var seccion = $('<tr class="seccion-desplegada"><td colspan="6">' +
             '<div class="contenido-desplegado">' +
-            '<h4>Tercer Desplegable</h4>' +
+            '<h4>Información Usuario</h4>' +
             '<div id="datos-desplegable"></div>' +
-            '<button id="cerrar3">Cerrar</button>' +
+            '<button id="cerrar3" class="boton-verde-blanco-tablas">Cerrar</button>' +
             '</div>' +
             '</td></tr>');
 

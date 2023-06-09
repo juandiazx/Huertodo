@@ -76,23 +76,23 @@ async function cargarComunicacionesTecnico() {
         var form = $('<form method="POST" action="../api/v.1.0/trabajadores/tecnico/enviarTareaCompletadaComercial.php"></form>');
         seccion.find('.contenido-desplegado').append(form);
 
-        var inputDe = $('<input type="text" name="de" readonly>');
+        var inputDe = $('<input class="campos-desplegables-ocultos" type="text" name="de" readonly>');
         inputDe.val("3"); // Establecer el valor del campo "De"
         form.append(inputDe);
 
-        var inputPara = $('<input type="text" name="para" readonly>');
+        var inputPara = $('<input class="campos-desplegables-ocultos" type="text" name="para" readonly>');
         inputPara.val("2"); // Establecer el valor del campo "Para"
         form.append(inputPara);
 
-        var inputAsunto = $('<input type="text" name="asunto">');
+        var inputAsunto = $('<input class="campos-desplegables-ocultos" type="text" name="asunto">');
         var tarea = fila.find('td:nth-child(4)').text().trim(); // Obtener el valor de la columna "Tarea" de la fila parent
         inputAsunto.val(tarea); // Establecer el valor del campo "Asunto" con el valor de la columna "Tarea"
         form.append(inputAsunto);
 
-        var textareaTexto = $('<textarea name="texto" placeholder="Texto"></textarea>');
+        var textareaTexto = $('<textarea class="selectores-tablas" name="texto" placeholder="Escribe las medidas o confirma el montaje"></textarea>');
         form.append(textareaTexto);
 
-        var inputFecha = $('<input type="date" name="fecha">');
+        var inputFecha = $('<input class="campos-desplegables-ocultos" type="date" name="fecha">');
         var today = new Date();
         var dateString = today.toISOString().split('T')[0];
         inputFecha.val(dateString);
@@ -100,17 +100,17 @@ async function cargarComunicacionesTecnico() {
 
         var id = $(fila).find('td:first-child').text().trim();
 
-        var inputUsuarioSolicitud = $('<input type="text" name="usuario_solicitud">');
+        var inputUsuarioSolicitud = $('<input class="campos-desplegables-ocultos" type="text" name="usuario_solicitud">');
         inputUsuarioSolicitud.val(id);
         form.append(inputUsuarioSolicitud);
 
-        var enviarBtn = $('<button class="boton-cerrar-sesion">Enviar</button>');
+        var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
         enviarBtn.on('click', function () {
             form.submit();
         });
         form.append(enviarBtn);
 
-        var cancelarBtn = $('<button class="boton-cerrar-sesion">Cancelar</button>');
+        var cancelarBtn = $('<button class="boton-verde-blanco-tablas">Cancelar</button>');
         cancelarBtn.on('click', function () {
             seccion.remove();
         });

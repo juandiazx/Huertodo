@@ -86,24 +86,24 @@ async function cargarComunicacionesAdministradorWeb() {
         seccion.find(".contenido-desplegado").append(form);
 
         var inputContrasenya = $(
-            '<input type="text" name="contrasenya" placeholder="Contraseña">'
+            '<input type="text" class="inputs-texto-trabajadores" name="contrasenya" placeholder="Contraseña">'
         );
         form.append(inputContrasenya);
 
         // Obtener el valor de la columna "ID" de la tabla
         var id = $(fila).find('td:first-child').text().trim();
 
-        var inputUsuarioSolicitud = $('<input type="text" name="usuario_solicitud">');
+        var inputUsuarioSolicitud = $('<input class="campos-desplegables-ocultos" type="text" name="usuario_solicitud">');
         inputUsuarioSolicitud.val(id); // Establecer el valor de usuario_solicitud con el valor de la columna "ID"
         form.append(inputUsuarioSolicitud);
 
-        var enviarBtn = $('<button class="boton-cerrar-sesion">Enviar</button>');
+        var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
         enviarBtn.on('click', function() {
             form.submit();
         });
         form.append(enviarBtn);
 
-        var cancelarBtn = $('<button class="boton-cerrar-sesion">Cancelar</button>');
+        var cancelarBtn = $('<button class="boton-verde-blanco-tablas">Cancelar</button>');
         cancelarBtn.on('click', function() {
             seccion.remove();
         });

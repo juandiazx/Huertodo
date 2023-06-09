@@ -27,7 +27,6 @@
     color: inherit;
 }
 
-
 table{
     width: 100%;
     border-collapse: collapse;
@@ -134,6 +133,53 @@ table{
 
 #cancelar:hover, #cancelar2:hover, #confirmar:hover, #confirmar2:hover{
     background: var(--second-color-green-hover);
+}
+
+.boton-verde-blanco-tablas {
+    text-align: center;
+    align-content: center;
+    width: 8rem;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.1em 0.1em;
+    cursor: pointer;
+    transition: all .5s ease;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boton-verde-blanco-tablas:hover{
+    background: var(--second-color-green-hover);
+}
+
+.campos-desplegables-ocultos{
+    display: none;
+}
+
+.selectores-tablas{
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    border-color: var(--second-color-green);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.inputs-texto-trabajadores{
+    width: 40%;
+    padding: 9px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 @media (max-width: 767px) {

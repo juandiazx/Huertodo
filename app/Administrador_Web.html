@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+<head>
+  <meta charset="UTF-8">
+  <title>Administrador Web</title>
+  <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+  <!-- Para que pueda verse bien en móvil-->
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+  <!-- Palabras clave para el SEO de la Web-->
+  <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorización huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+  <!-- Para que sea compatible con Microsoft Edge-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- CSS DOCUMENTO estilos.css-->
+  <link rel='stylesheet' href="css/main-menu.css"/>
+  <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <link rel='stylesheet' href="css/estilos_responsive.css"/>
+  <link rel="stylesheet" href="css/tablas_trabajadores.css">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+  <!-- DATATABLES -->
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+  <!-- JavaScript funcionalidad Tablas -->
+  <script src="js/logica-Fake/cargarComunicacionesAdministradorWeb.js"></script>
+
+  <script src="js/logica-Fake/control-acceso.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',comprobarSesion("administrador"));</script>
+
+  <!-- JavaScript Documento index.js-->
+  <script src="js/index.js"></script>
+</head>
+
+<body class="loading">
+<div class="page">
+<!-- Comienza la cabecera-->
+<header>
+  <nav id="main-menu">
+    <!-- Logotipo Link Landing Page-->
+    <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+    
+    <!-- Contenedor para los iconos de inicio de sesión y menú -->
+    <div class="contenedor-iconos">
+      <!-- Icono de inicio de sesión -->
+
+        <!-- Menu hamburguesa-->
+        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <ul >
+          <li><a href="Producto.html" class="texto-link">Producto</a></li>
+          <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+          <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+          <li class="boton-cerrar-sesion boton-verde-blanco"><a onclick="borrarSesion()">Cerrar sesión</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!--Termina la cabecera-->
+
+  <main>
+      <!--Comienza la seccion Registros  -->
+
+      <section class="seccion-preguntas" >
+        <section class="separacion-contenido"></section>
+        <div id="contenedor-nombre-usuario">
+          <p id=nombre-usuario">Bienvenido</p>
+        </div>
+        <div class="títulos-trabajadores">
+          <h2>Registros Usuarios</h2>
+        </div>
+
+        <div class="container">
+          <table id="tablax" class="display content-table">
+            <thead>
+            <tr>
+              <th class="id-columna">ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Fecha</th>
+              <th>Registrar</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-datos">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+
+<!-- Comienza el popup -->
+<div class="modal-container" id="modal_container">
+  <div class="modal">
+    <p>¿Estás seguro de que quieres eliminar la notificación?</p>
+    <button id="confirm" class="boton-popup">Confirmar</button>
+    <button id="close" class="boton-popup">Cerrar</button>
+  </div>
+</div>
+<!-- Termina el popup -->
+  </main>
+
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
+    <!--Contenedor con los links de texto-->
+    <div>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+    </div>
+      <!--Parrafo con el nombre de la empresa y el copyright-->
+      <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </div>
+</footer>
+  <!-- Termina el footer-->
+
+</div>
+</body>
+</html>

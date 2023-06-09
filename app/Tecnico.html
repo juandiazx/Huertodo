@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+<head>
+    <meta charset="UTF-8">
+    <title>Técnico</title>
+    <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+    <!-- Para que pueda verse bien en movil-->
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+    <!-- Palabras clave para el SEO de la Web-->
+    <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+    <!-- Para que sea compatible con Microsoft Edge-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+    <!-- CSS DOCUMENTO estilos.css-->
+    <link rel='stylesheet' href="css/main-menu.css"/>
+    <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+    <link rel='stylesheet' href="css/estilos_responsive.css"/>
+    <link rel="stylesheet" href="css/tablas_trabajadores.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- DATATABLES -->
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- JavaScript funcionalidad Tablas -->
+    <script src="js/logica-Fake/cargarComunicacionesTecnico.js"></script>
+
+    <script src="js/logica-Fake/control-acceso.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',comprobarSesion("tecnico"));</script>
+
+    <!-- JavaScript Documento index.js-->
+    <script src="js/index.js"></script>
+</head>
+
+<body class="loading">
+<div class="page">
+<!-- Comienza la cabecera-->
+<header>
+    <nav id="main-menu">
+        <!-- Logotipo Link Landing Page-->
+        <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+
+        <!-- Contenedor para los iconos de inicio de sesión y menú -->
+        <div class="contenedor-iconos">
+
+            <!-- Menu hamburguesa-->
+            <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <ul >
+                <li><a href="Producto.html" class="texto-link">Producto</a></li>
+                <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+                <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+                <li class="boton-cerrar-sesion boton-verde-blanco"><a onclick="borrarSesion()">Cerrar sesión</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<!--Termina la cabecera-->
+
+<!--Comienza la seccion general-->
+
+<main>
+
+        <section class="seccion-preguntas">
+            <section class="separacion-contenido"></section>
+            <section class="separacion-contenido"></section>
+
+        <!--Comienza la seccion Notificaciones Citas  -->
+            <div class="container">
+                <table id="tablax" class="display content-table">
+                    <thead>
+                    <tr>
+                        <th class="id-columna">ID</th>
+                        <th>Nombre</th>
+                        <th>Direccion</th>
+                        <th>Tarea</th>
+                        <th>Fecha</th>
+                        <th>Completar</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tabla-datos">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="formulario">
+
+            <!--Titulo para el formulario-->
+            <div class="títulos-trabajadores">
+                <h2>Contacto con comerciales</h2>
+            </div>
+
+            <!--Código para el formulario-->
+
+            <form id="login-form">
+                <!--Droplist para elegir el técnico-->
+                <div class="droplist">
+                    <label for="tecnico">Comercial:</label>
+                    <select id="tecnico" name="tecnico">
+                        <option value="tecnico1">Fernando Navarro</option>
+                        <option value="tecnico2">Vicente Calatayud</option>
+                        <option value="tecnico3">Pablo Alario</option>
+                    </select>
+                </div>
+
+                <!--Droplist para elegir el asunto-->
+                <div class="droplist">
+                    <label for="subject">Asunto:</label>
+                    <select id="subject" name="subject">
+                        <option value="Asunto1">Montaje realizado</option>
+                        <option value="Asunto2">Mediciones realizadas</option>
+                    </select>
+
+                </div>
+
+                <!--Input para el correo del usuario-->
+                <div id="email">
+                    <div class="datos">
+                        <label for="user">Usuario:</label>
+                        <input type="email" id="user" name="user" placeholder="Introduce el correo del usuario" />
+                    </div>
+                </div>
+
+                <!--Input para el mensaje-->
+                <div id="message">
+                    <div class="datos">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message-input" name="message" rows="5" placeholder="Describe el problema"></textarea>
+                    </div>
+                </div>
+
+                <!--Botón de enviar formulario-->
+                <div class="boton-enviar">
+                    <button type="submit" id="abrir-popup-admin" class="boton-iniciar-sesion">Enviar</button>
+                </div>
+
+            </form>
+        </section>
+
+
+
+
+    <!-- Comienza el popup -->
+    <dialog id="popup">
+        <div class="popup-contenido">
+            <p>El formulario se ha enviado con éxito</p>
+            <button id="cerrar-popup">Volver</button>
+        </div>
+    </dialog>
+    <!-- Termina el popup -->
+</main>
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+    <div id="contenedor-footer-texto">
+        <!--Contenedor con los links de texto-->
+        <div>
+            <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+        </div>
+        <!--Parrafo con el nombre de la empresa y el copyright-->
+        <p class="parrafo-negrita">© GTI Copyright 2023</p>
+    </div>
+</footer>
+<!-- Termina el footer-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,1075 @@
+
+/*Importamos la fuente Poppins de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*Se usa tal que:      font-family: 'Poppins', sans-serif;*/
+/*Estilos generales*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    word-break: break-word;
+}
+/*Declaramos variables en la raíz del documento*/
+:root {
+    --main-color-white: #ffffff;
+    --main-color-black: #000000;
+    --second-color-green: rgb(6, 136, 77);
+    --second-color-green-hover: rgb(5, 166, 94);
+    --tamaño-28-letra: 1.6em;
+}
+
+/*El estilo que tendrán las secciones hijas directas de body main y footer*/
+body>section, main>section,footer>section{
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Margen de las secciones del main y body*/
+main>section, body>section{
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+}
+
+/*Estilos del body*/
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--main-color-white);
+    color: var(--main-color-black);
+    flex-direction: column;
+}
+
+/* Estilos de texto de la web */
+p {
+    font-size: 90%;
+    font-weight: 400;
+    margin-bottom: 1.4em;
+}
+h1 {
+    font-weight: 800;
+    font-size: 220%;
+}
+h2 {
+    font-weight: 600;
+    font-size: 140%;
+    margin-bottom: 0.4em;
+}
+h3 {
+    font-weight: 700;
+    font-size: 150%;
+    margin-bottom: 0.8em;
+    margin-top: 1.2em;
+}
+
+/*Estilo botones verdes y blancos como CTA*/
+.boton-verde-blanco {
+    text-align: center;
+    align-content: center;
+    width: 72%;
+    border-radius: 3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    padding: 0.1em 0.1em;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+/*Estilo para cambiar el color de los botones al poner el ratón encima*/
+.boton-verde-blanco:hover{
+    background: var(--second-color-green-hover);
+}
+
+/*Estilo para los párrafos SemiBold de un poco más de tamaño que los párrafos estándar*/
+.parrafo-negrita {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+/*Estilo para el titulo h1 de los formularios*/
+.h1-formularios-titulos {
+    font-weight: 500;
+    font-size: 1.9em;
+}
+
+.h3-formularios-titulos{
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+/*Estilo para textos que envian a otras paginas de la web*/
+.texto-link:hover{
+    color: var(--second-color-green-hover);
+}
+
+/*----------------------TERMINAN ESTILOS GENERALES---------------------*/
+
+
+/*--------------------ESTILOS PARA EL MENU-----------------------------*/
+
+/*Separación para no ocultar contenido bajo el menú de navegación*/
+.separacion-menu{
+    height: 5rem;
+}
+/*Separación entre partes de la página*/
+.separacion-contenido{
+    height: 4rem;
+}
+.pequeña-separacion-contenido{
+    height: 2rem;
+}
+
+/*-------------------FIN ESTILOS PARA EL MENU--------------------------*/
+
+/*-----Responsive Menu (cuando no se usa el archivo estilos_responsive.css) -----*/
+
+@media screen and (min-width: 768px) {
+
+    /*Oculta el icono del menu*/
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    /* Ajusta el orden de los elementos en el header */
+    .contenedor-iconos {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    /*para mostrar los elementos del menu en línea horizontal*/
+    #main-menu ul {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+        order: 0;
+        align-items: center;
+    }
+
+    /*para especificar los tamaños, el grosor y el color de la letra de los elementos del menu*/
+    #main-menu ul li {
+        font-size: 16px; /
+    font-weight: normal;
+        color: var(--second-color-green);
+        transition: all .5s ease;
+    }
+
+    .boton-cerrar-sesion {
+        padding-top: 0.4rem;
+        transition: all .5s ease;
+    }
+    .boton-cerrar-sesion a {
+        margin-top: 3rem;
+        color: var(--main-color-white);
+        transition: all .5s ease;
+    }
+
+
+    /*agrega margenes entre los elementos del menu*/
+    #main-menu ul li {
+        margin-right: 30px; /* Margen derecho entre elementos */
+    }
+
+
+    /*agrega margenes entre el borde de pantalla y los elementos*/
+    #icono-inicio-sesion {
+        margin-right: 30px; /* Margen derecho entre el icono y el borde */
+        order: 1;
+        transition: all .5s ease;
+    }
+
+    .boton-cerrar-sesion {
+        width: 8rem;
+        height: 2.3rem;
+        transition: all .5s ease;
+    }
+}
+
+/*-----Acaba Responsive Menu-----*/
+
+
+/*-----ESITLOS GENERALES PARA TODOS LOS FORMULARIOS Y TRABAJADORES-----*/
+
+.page{
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
+/*Wrapper para los formularios e inicio de sesion*/
+.wrapper-forms{
+    margin-top: 12vh;
+    /*padding: 10% 7% 15%;*/
+    height: auto;
+    margin-left: auto; /* Centra horizontalmente el contenido */
+    margin-right: auto; /* Centra horizontalmente el contenido */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.estilo-form-inicio-sesion {
+    width:90%;
+}
+
+.estilo-form-inicio-sesion>section {
+    width: 100%;
+}
+
+/*---------------------------------------- Formulario Contraseña Olvidada------------------------------------*/
+
+
+.boton-enviar {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4.95em;
+    margin-top: 2em;
+    transition: all .5s ease;
+
+}
+
+.parrafo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10vh;
+    margin-top: 10px;
+}
+
+
+/*---------------------------------------- Inicio de Sesión ------------------------------------*/
+
+/* Estilos para el título de inicio de sesión */
+
+/*#inicio-sesion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}*/
+
+#inicio-de-sesion-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin-top: 7em;
+    margin-bottom: 10px;
+}
+
+#inicio-de-sesion-subtitulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #333333;
+    font-weight: lighter;
+}
+
+    /*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para las secciones de email y contraseña */
+
+#email,
+#password {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para la sección de "¿Has olvidado la contraseña?" */
+
+.contraseña-olvidada {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contraseña-olvidada a {
+    font-size: 0.9em;
+    margin-left: 0.7em;
+    margin-top: 0.7em;
+    color: #06884D;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+/*Estilos para los botones de inicio de sesion y formularios*/
+
+.boton-inicio {
+    flex-direction: column;
+    align-content: center;
+    text-align: justify-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4.95em;
+    margin-top: 2em;
+    transition: all .5s ease;
+
+}
+
+.boton-iniciar-sesion {
+    width: 69%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 140%;
+    padding: 7px ;
+    transition: all .5s ease;
+}
+
+.boton-iniciar-sesion:hover{
+    cursor: pointer;
+    background: var(--second-color-green-hover);
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para el enlace de "SOLICITAR ACCESO" */
+
+#solicitar-acceso {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#solicitar-acceso p {
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 400;
+}
+
+#solicitar-acceso a {
+    color: #06884D;
+    font-weight: 700;
+    transition: all .5s ease;
+}
+
+#solicitar-acceso a:hover{
+    color: var(--second-color-green-hover);
+}
+
+/*--------------------------------------------Formulario de solicitud-------------------------------------------------*/
+
+.seccion-solicitud{
+    width: 100%;
+    max-width: 450px;
+}
+
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+.solicitud-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+
+}
+
+/*Estilos para la introduccion de datos*/
+
+#email, #last-name,#name, #subject,#address {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+}
+
+
+
+/*#message{
+
+    height: 28vh;
+
+}*/
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+/* Estilos para los labels */
+
+.datos label {
+    display: flex;
+    text-align: left;
+    font-size: 1em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    color: #333333;
+}
+
+#campos-obligatorios{
+    margin-top: -0.2rem;
+    margin-bottom: 0.8rem;
+}
+
+#campos-obligatorios-nueva-contrasenya{
+    text-align: right;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.8em;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+
+/* Estilos para los inputs */
+
+.datos input {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+}
+
+/*Estilo para el borde del input*/
+
+.datos input:focus {
+    outline: none;
+    border: 2px #06884DFF solid;
+}
+/*Id del contenedor con el mensaje de texto grande del formulario de solicitud*/
+#message {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+/*
+#message input {
+
+    height: 180px;
+    font-family:'Poppins', sans-serif;
+
+}
+
+#message input:focus {
+    border-color: #06884D;
+}
+*/
+
+
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+    height: 10em;
+}
+
+textarea:focus {
+    outline: none;
+    border: 2px #06884DFF solid;
+}
+
+.boton-enviar-formulario-solicitud-activo {
+    width: 69%;
+    height: 7%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 140%;
+    padding: 7px;
+    transition: all .5s ease;
+}
+
+.boton-enviar-formulario-solicitud-activo:hover {
+    cursor: pointer;
+    background: var(--second-color-green-hover);
+}
+
+.boton-enviar-formulario-solicitud-desactivado {
+    width: 69%;
+    height: 7%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: gray;
+    color: var(--main-color-white);
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 140%;
+    padding: 7px ;
+}
+
+
+/*Estilo para el contenedor del checkbox */
+#chekbox {
+    display: flex;
+    align-items: center;
+}
+/* Estilos para el input del checkbox*/
+#chekbox input[type="checkbox"] {
+    margin-right: 5px;
+    font-family:'Poppins', sans-serif;
+}
+
+/* Estilos para el label al lado del checkbox, el texto de aceptar terminos */
+#chekbox label {
+    font-size: 1em;
+    color: #333333;
+}
+#chekbox a {
+    color: #06884D;
+    font-weight: 700;
+    transition: all .5s ease;
+}
+
+#chekbox a:hover{
+    color: var(--second-color-green-hover);
+}
+
+/*------------FIN ESTILOS PARA FORMULARIO DE SOLICITUD-----------*/
+
+/*----------------COMIENZAN ESTILOS PARA TRABAJADORES------------*/
+
+
+
+/*Títulos comunes para trabajadores*/
+
+.títulos-trabajadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4vh;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+/* Boton cerrar desplegable */
+.delete-button{
+    background-color: var(--second-color-green);
+    border: none;
+    outline: none;
+    transition: all .5s ease;
+}
+
+#close-icon{
+    background-color: var(--second-color-green);
+}
+
+/*-----------El titulo de Notificaciones técnico,-----------------------------
+ va separado para solucionar el problema de margenes entre desplegables---------*/
+
+.titulo-notf-tec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4vh;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 3.5em;
+    margin-bottom: 2em;
+
+}
+
+.dual-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.dual-button {
+    display: flex;
+}
+
+.left-button,
+.right-button {
+    flex: 1;
+    height: 70%;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 0.8em;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-button {
+    border-radius: 0 10px 10px 0;
+    width: 10%;
+}
+
+.left-button {
+    border-radius: 10px 0 0 10px;
+    width: 10%;
+}
+
+.left-button.active,
+.right-button.active {
+    background-color: #06884D;
+    color: white;
+}
+
+.left-button:not(.active):hover,
+.right-button:not(.active):hover {
+    background: var(--second-color-green-hover);
+    color: white;
+}
+
+.left-button.active:hover,
+.right-button.active:hover {
+    background: var(--second-color-green-hover);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.acordeon {
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+.acordeon-item {
+    background-color: #06884D;
+    color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.acordeon-item-header {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Fecha Desplegable Icono */
+.acordeon-item-header::after {
+    content: "\27A1";
+    font-size: 2rem;
+    margin-left: 0.3rem;
+    align-self: center;
+    rotate: -90deg;
+    transition: transform 0.2s ease-in-out;
+}
+
+.acordeon-item-header.active::after {
+    transform: rotate(180deg);
+}
+
+.acordeon-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.acordeon-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid white;
+}
+
+.seccion-registros{
+
+}
+
+.texto-desplegable-trabajadores{
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: space-evenly;
+}
+
+.acordeon-trabajador {
+    max-width: 700px;
+    margin:  auto;
+}
+
+.close-icon{
+    order: 10;
+}
+
+
+/* ACABA ESTILOS DE DESPLEGABLES */
+
+.seccion-preguntas{
+    margin-top: 2vh;
+
+}
+
+/*ESTILOS PARA LOS DROPLISTS DENTRO DE LOS FORMULARIOS*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.droplist select {
+    width: 100%;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+    padding: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    transition: all .5s ease;
+}
+
+.droplist select option:hover {
+    background-color: #06884DFF; /* Cambia el color a rojo al pasar el ratón */
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+.droplist select:focus{
+    outline: none;
+    border: 2px #06884DFF solid;
+}
+
+
+/*---------------------------------*/
+
+/*--------------------FIN ESTILOS DE TRABAJADORES----------------*/
+
+/*----------------------------------------------- Estilos para terminos y condiciones y politica de privacidad ------------------------------------------*/
+
+/*Estilo general para la sección de los parrafos*/
+.información{
+
+    margin-bottom: 7em;
+
+}
+/*Estilo para el titulo principal de la web*/
+.tituloPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 1vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.78em;
+    margin-top: 13em;
+    margin-bottom: 3em;
+}
+
+
+/*Estilo para cada seccion de información por separado*/
+.seccionInformación{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+
+}
+
+/*Estilo para los titulos secundarios*/
+.tituloSecundario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 5vh;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*Estilos para los parrafos de texto*/
+.texto{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    font-size: 0.8em;
+    margin-bottom:1em;
+    margin-top: 1em;
+
+}
+
+/*Estilo para las lineas horizontales de separación de texto*/
+.linea-horizontal {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom:3em;
+    margin-top: 3em;
+}
+
+
+/*-------------------Fin de estilos de informacion-------------------*/
+
+
+/*-----------MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN-----------*/
+
+#mensaje-error{
+    display: none;
+    color: #c70202;
+    padding: 0.5rem;
+}
+
+/*--------ACABA MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN--------*/
+
+/*--------ESTILOS RESTABLECER CONTRASEÑA NUEVA---------*/
+#mensaje-error-contrasenya{
+    display: none;
+    color: #c70202;
+    padding: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+/*--------ACABA ESTILOS RESTABLECER CONTRASEÑA NUEVA---------*/
+
+/*---------------------Estilos para los popups de inicio de sesión, formularios y trabajadores------------*/
+/* Popup de fondo oscuro */
+#popup {
+    /* Agregar flexbox para centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Posición fija y a pantalla completa */
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.popup{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 10vw;
+}
+
+/* Mostrar popup cuando se agrega la clase "mostrar" */
+#popup.mostrar {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+/* Contenido del popup */
+.popup-contenido {
+    /* Agregar flexbox para centrar contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Fondo blanco y borde redondeado */
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2em;
+    /*max-width: 65%;
+    max-height: 30%;*/
+    overflow: auto;
+    width: 30%;
+    height: 30%;
+}
+
+/*ESTILOS RESPONSIVE PARA LOS POPUPS*/
+@media screen and (min-width: 250px) and (max-width: 450px) {
+    .popup-contenido {
+        width: 65%;
+        height: 30%;
+        font-size: 0.9em;
+    }
+}
+
+/*ESTILOS RESPONSIVE PARA LOS POPUPS*/
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .popup-contenido {
+        width: 50%;
+        height: 30%;
+        font-size: 1em;
+    }
+}
+
+/*ESTILOS RESPONSIVE PARA LOS POPUPS*/
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .popup-contenido {
+        width: 45%;
+        height: 30%;
+        font-size: 1.1em;
+    }
+}
+
+/* Botón de cerrar */
+#cerrar-popup, #confirmar-popup, #cancelar-popup {
+    /* Establecer el diseño del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    border-radius: 1.3em;
+    border: none;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
+    background: var(--second-color-green);
+    color: var(--main-color-white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding: 5px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+/* Estilo de botones Pop Ups para cuando el ratón pasa por encima */
+#cerrar-popup:hover, #confirmar-popup:hover, #cancelar-popup:hover{
+    background: var(--second-color-green-hover);
+}
+
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+/*------------------------Comienza footer------------------------*/
+/*Wrapper para aplicar el padding al footer*/
+.wrapper-footer {
+    padding: 1em 7%;
+    bottom: 0;
+}
+/*Estilo footer*/
+#footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 500;
+    height: 10%;
+    width: 100%;
+    background-color: var(--second-color-green);
+    color: var(--main-color-white);
+    margin-top: auto;
+}
+/*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
+#footer-bottom a{
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+    transition: all .5s ease;
+}
+/*Margenes para el texto de copyrigth del footer*/
+#footer-bottom p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+/*------------------------Termina footer------------------------*/

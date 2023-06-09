@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Comienza el head-->
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Inicio de sesión</title>
+  <link rel="shortcut icon" href="./images/icono-gti-sin-letras.png" />
+  <!-- Para que pueda verse bien en movil-->
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
+  <!-- Palabras clave para el SEO de la Web-->
+  <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorizacion huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
+  <!-- Para que sea compatible con Microsoft Edge-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS DOCUMENTO estilos.css-->
+  <link rel='stylesheet' href="css/main-menu.css"/>
+  <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
+  <script src="js/logica-Fake/control-acceso.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',comprobarSiSesionIniciadaEnLogin());</script>
+</head>
+
+<body class="loading">
+
+<div class="page">
+
+<!-- Comienza la cabecera-->
+<header>
+  <nav id="main-menu">
+    <!-- Logotipo Link Landing Page-->
+    <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+
+    <!-- Contenedor para los iconos de inicio de sesión y menú -->
+    <div class="contenedor-iconos">
+      <!-- Icono de inicio de sesión -->
+      <a href="Inicio_sesion.html"><i id="icono-inicio-sesion" class="bi bi-person-circle"></i></a>
+
+      <!-- Menu hamburguesa-->
+      <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    <ul >
+      <li><a href="Producto.html" class="texto-link">Producto</a></li>
+      <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+      <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+    </ul>
+
+    </div>
+  </nav>
+</header>
+<!--Termina la cabecera-->
+
+<!-- Comienza la seccion general -->
+
+<main class="wrapper-forms estilo-form-inicio-sesion">
+  <section class="seccion-solicitud">
+
+    <!-- Comienza la seccion titulo -->
+    <div id="inicio-de-sesion-titulo">
+      <h1 class="h1-formularios-titulos">Inicio de sesión</h1>
+    </div>
+
+    <form id="login-form">
+    <!-- Comienza la seccion email -->
+    <div id="email">
+      <div class="datos">
+        <label for="email">Email</label>
+        <input type="email" id="email-input" name="email" required>
+      </div>
+    </div>
+
+    <!-- Comienza la seccion contraseña -->
+    <div id="password">
+      <div class="datos">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password-input" name="password" required>
+      </div>
+      <div class="contraseña-olvidada">
+        <a href="Formulario_contra_olvidada.html" class="texto-link">¿Has olvidado la contraseña?</a>
+      </div>
+    </div>
+
+      <!-- Comienza la seccion texto error datos incorrectos -->
+      <p id="mensaje-error">Datos incorrectos, inténtalo de nuevo.</p>
+
+    <!-- Comienza la seccion boton -->
+    <section class="boton-inicio">
+      <button type="submit" class="boton-iniciar-sesion boton-verde-blanco">Iniciar sesión</button>
+    </section>
+    </form>
+
+    <!-- Comienza la seccion de solicitar acceso -->
+    <div id="solicitar-acceso">
+      ¿No tienes cuenta? <a href="Formulario_Solicitud.html" class="texto-link">Solicitar producto</a>.
+    </div>
+
+  </section>
+</main>
+<!-- Termina la seccion general -->
+
+<!-- Comienza el footer-->
+<footer id="footer-bottom" role="contentinfo" class="wrapper-footer">
+  <div id="contenedor-footer-texto">
+    <!--Contenedor con los links de texto-->
+    <div>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+    </div>
+    <!--Parrafo con el nombre de la empresa y el copyright-->
+    <p class="parrafo-negrita">© GTI Copyright 2023</p>
+  </div>
+</footer>
+<!-- Termina el footer-->
+
+<!-- JavaScript Documento index.js para el menu desplegable-->
+<script src="js/index.js"></script>
+
+</div>
+<!-- JavaScript Documento inicio-sesion.js-->
+<script src="js/logica-Fake/hacerLogin.js"></script>
+</body>
+
+</html>

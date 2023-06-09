@@ -1,5 +1,5 @@
 //setTimeout porque la carga de fuentes poppins para el chart, tarda sus 100ms, con el DOM, no funcionaba
-setTimeout(function () {
+setTimeout(async function () {
     //Comienza el script para añadir en el HTML todos los datos al canvas
 //PODRIA SER UN POPUP EN VEZ,LOS DATOS CAMBIARÍAN SEGUN BOTON
 
@@ -8,7 +8,7 @@ setTimeout(function () {
         labels: ['lunes', 'martes', 'miércoles', 'jueves', 'viernes','sábado','domingo'],
         datasets: [
             {
-                data: [57, 100, 37, 10,46,68,82],
+                data: [57, 100, 37, 10,46,68,82],//await cargarGrafica()
                 fill: true,
                 backgroundColor : 'rgb(109,224,234)',
                 borderColor : 'rgb(56,153,217)',
@@ -81,7 +81,8 @@ setTimeout(function () {
         plugins: [logoImage]
     });
     miGrafica.update()
-    document.getElementById("contenedor-humedad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
+    document.getElementById("contenedor-humedad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",async function (){
+        //await cargarGrafica() devuelve los datos y luego se meten ahi
         datos.datasets[0].data= [57, 100, 37, 10,46,68,82]
         datos.datasets[0].backgroundColor = 'rgb(109,224,234)';
         datos.datasets[0].borderColor = 'rgb(56,153,217)';
@@ -93,9 +94,10 @@ setTimeout(function () {
         }
         logoImage.logo = logo.src = "images/drop.png"
         miGrafica.update();
+        //Se asigna a cada boton la funcion de una forma, el evento que se dispara
     })
 
-    document.getElementById("contenedor-salinidad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
+    document.getElementById("contenedor-salinidad").querySelector("img.icono-boton-grafica-historico").addEventListener("click",async function (){
         datos.datasets[0].data= [38, 30, 37, 10,10,50,72]
         opciones.plugins.title.text = 'Gráfica sal'
         datos.datasets[0].backgroundColor = 'rgb(217,217,217)';
@@ -109,7 +111,7 @@ setTimeout(function () {
         miGrafica.update();
     })
 
-    document.getElementById("contenedor-iluminacion").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
+    document.getElementById("contenedor-iluminacion").querySelector("img.icono-boton-grafica-historico").addEventListener("click",async function (){
         datos.datasets[0].data= [40, 100, 37, 10,30,68,50]
         opciones.plugins.title.text = 'Gráfica luz'
         datos.datasets[0].backgroundColor = 'rgb(246,255,2)';
@@ -123,7 +125,7 @@ setTimeout(function () {
         miGrafica.update();
     })
 
-    document.getElementById("contenedor-ph").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
+    document.getElementById("contenedor-ph").querySelector("img.icono-boton-grafica-historico").addEventListener("click",async function (){
         datos.datasets[0].data= [6, 5, 3, 4,7,5,8]
         opciones.plugins.title.text = 'Gráfica ph'
         datos.datasets[0].backgroundColor = 'rgb(140,201,245)';
@@ -137,7 +139,7 @@ setTimeout(function () {
         miGrafica.update();
     })
 
-    document.getElementById("contenedor-temperatura").querySelector("img.icono-boton-grafica-historico").addEventListener("click",function (){
+    document.getElementById("contenedor-temperatura").querySelector("img.icono-boton-grafica-historico").addEventListener("click",async function (){
         datos.datasets[0].data= [11, 14, 19, 15,25,16,17]
         opciones.plugins.title.text = 'Gráfica temperatura'
         datos.datasets[0].backgroundColor = 'rgb(243,131,135)';

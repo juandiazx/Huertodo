@@ -24,10 +24,8 @@ $timestamp = $objeto['timestamp'];
 $prioridad = $objeto['prioridad'];
 $mensaje = $objeto['mensaje'];
 
-$sql = "IF NOT EXISTS (SELECT * FROM `notificaciones` WHERE `notificaciones`.`contenido` = '$mensaje') THEN
- INSERT INTO `notificaciones` (`fecha`, `contenido`, `huerto`, `prioridad`)
-    VALUES ('$timestamp', '$mensaje', '$idHuerto', '$prioridad');
-            END IF;";
+$sql = "INSERT INTO `notificaciones` (`fecha`, `contenido`, `huerto`, `prioridad`)
+VALUES ('$timestamp', '$mensaje', '$idHuerto', '$prioridad')";
 
 // Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
 try {

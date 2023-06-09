@@ -626,15 +626,9 @@ select:hover {
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
-
-}
-
-/*Estilo para el hijo div que engloba el mapa sin la cabecera*/
-#desplegable-popup-mapa>div {
-    padding: 1.7em;
     background-image: url("../images/mapa-popup-imagen.png");
-    background-repeat: no-repeat;
 }
+
 
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
@@ -664,7 +658,11 @@ select:hover {
     height: 2.3em;
     cursor: pointer;
 }
-
+#contenedor-cerrar-mapa{
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+}
 
 .contenedor-icono-huerto-mapa {
     color: white;

@@ -81,7 +81,7 @@ async function cargarComunicacionesAdministradorWeb() {
         agregarEventoClickConfirmar(seccion, fila);
 
         var form = $(
-            '<form method="POST" action="../api/v.1.0/trabajadores/administrador_web/enviarRegistrosAdministradorWeb.php"></form>'
+            '<form method="POST" action="../api/v.1.0/trabajadores/administrador_web/enviarRegistrosAdministradorWeb.php" target="hidden_iframe"></form>'
         );
         seccion.find(".contenido-desplegado").append(form);
 
@@ -109,6 +109,10 @@ async function cargarComunicacionesAdministradorWeb() {
         });
         form.append(cancelarBtn);
 
+        // Desvincular los controladores de eventos 'click' previos
+        enviarBtn.off('click');
+        cancelarBtn.off('click');
+
         cancelarBtn.on("click", function () {
             fila.removeClass("desplegado");
             seccion.remove();
@@ -117,10 +121,30 @@ async function cargarComunicacionesAdministradorWeb() {
         enviarBtn.on("click", async function () {
             var contrasenya = seccion.find('input[name="contrasenya"]').val();
 
+            // Realizar la solicitud AJAX para enviar los datos del formulario
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function() {
+                    // Borrar el contenido del campo de contraseña después de enviar el formulario
+                    inputContrasenya.val("");
+
+                    // Mostrar el mensaje de éxito
+                    mostrarMensajeExito();
+                },
+                error: function() {
+                    // Mostrar un mensaje de error en caso de que la solicitud falle
+                    console.log("Error al enviar el formulario");
+                }
+            });
+
             fila.removeClass("desplegado");
             seccion.remove();
         });
     }
+
+
 
     function agregarEventoClickCancelar(seccion, fila) {
         var botonCancelar = seccion.find(".boton-cerrar-sesion");

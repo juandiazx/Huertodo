@@ -123,7 +123,7 @@ async function cargarSolicitudesUsuarios() {
         agregarEventoClickConfirmar(seccion, fila);
 
         // Agregar el formulario y los botones al div contenido-desplegado
-        var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesTecnico.php"></form>');
+        var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesTecnico.php" target="hidden_iframe"></form>');
         seccion.find('.contenido-desplegado').append(form);
 
         var selectDe = $('<select class="campos-desplegables-ocultos" name="de"></select>');
@@ -160,8 +160,32 @@ async function cargarSolicitudesUsuarios() {
         form.append(inputUsuarioSolicitud);
 
         var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
-        enviarBtn.on('click', function() {
-            form.submit();
+        enviarBtn.on('click', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            // Guardar el contenido del campo de texto antes de enviar el formulario
+            var texto = textareaTexto.val();
+
+            // Realizar la solicitud AJAX para enviar los datos del formulario
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function() {
+                    // Borrar el contenido del campo de texto después de enviar el formulario
+                    textareaTexto.val("");
+
+                    // Mostrar el mensaje de éxito
+                    mostrarMensajeExito();
+                },
+                error: function() {
+                    // Mostrar un mensaje de error en caso de que la solicitud falle
+                    console.log("Error al enviar el formulario");
+
+                    // Restaurar el contenido del campo de texto en caso de error
+                    textareaTexto.val(texto);
+                }
+            });
         });
         form.append(enviarBtn);
 
@@ -170,6 +194,19 @@ async function cargarSolicitudesUsuarios() {
             seccion.remove();
         });
         form.append(cancelarBtn);
+
+        // Función para mostrar el mensaje de éxito
+        function mostrarMensajeExito() {
+            var mensajeExito = $('<div class="mensaje-exito">Mensaje enviado correctamente</div>');
+            seccion.find('.contenido-desplegado').append(mensajeExito);
+
+            // Ocultar el mensaje después de 3 segundos
+            setTimeout(function() {
+                mensajeExito.fadeOut('slow', function() {
+                    mensajeExito.remove();
+                });
+            }, 3000);
+        }
     }
 
     function obtenerSegundoIcono(fila) {
@@ -205,7 +242,7 @@ async function cargarSolicitudesUsuarios() {
         agregarEventoClickConfirmar(seccion, fila);
 
         // Agregar el formulario y los botones al div contenido-desplegado
-        var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesAdministradorWeb.php"></form>');
+        var form = $('<form method="POST" action="../api/v.1.0/trabajadores/comercial/enviarComunicacionesAdministradorWeb.php" target="hidden_iframe"></form>');
         seccion.find('.contenido-desplegado').append(form);
 
         var selectDe = $('<select class="campos-desplegables-ocultos" name="de"></select>');
@@ -240,8 +277,26 @@ async function cargarSolicitudesUsuarios() {
         form.append(inputUsuarioSolicitud);
 
         var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
-        enviarBtn.on('click', function() {
-            form.submit();
+        enviarBtn.on('click', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            // Realizar la solicitud AJAX para enviar los datos del formulario
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function() {
+                    // Borrar el contenido del campo de texto después de enviar el formulario
+                    textareaTexto.val("");
+
+                    // Mostrar el mensaje de éxito
+                    mostrarMensajeExito();
+                },
+                error: function() {
+                    // Mostrar un mensaje de error en caso de que la solicitud falle
+                    console.log("Error al enviar el formulario");
+                }
+            });
         });
         form.append(enviarBtn);
 
@@ -250,7 +305,21 @@ async function cargarSolicitudesUsuarios() {
             seccion.remove();
         });
         form.append(cancelarBtn);
+
+        // Función para mostrar el mensaje de éxito
+        function mostrarMensajeExito() {
+            var mensajeExito = $('<div class="mensaje-exito">Mensaje enviado correctamente</div>');
+            seccion.find('.contenido-desplegado').append(mensajeExito);
+
+            // Ocultar el mensaje después de 3 segundos
+            setTimeout(function() {
+                mensajeExito.fadeOut('slow', function() {
+                    mensajeExito.remove();
+                });
+            }, 3000);
+        }
     }
+
 
     function obtenerTercerIcono(fila) {
         return $(fila).find('i.bi-info-circle');

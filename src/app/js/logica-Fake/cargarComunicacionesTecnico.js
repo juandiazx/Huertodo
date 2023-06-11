@@ -105,8 +105,26 @@ async function cargarComunicacionesTecnico() {
         form.append(inputUsuarioSolicitud);
 
         var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
-        enviarBtn.on('click', function () {
-            form.submit();
+        enviarBtn.on('click', function (event) {
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+
+            // Realizar la solicitud AJAX para enviar los datos del formulario
+            $.ajax({
+                type: 'POST',
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function() {
+                    // Borrar el contenido del campo de texto después de enviar el formulario
+                    textareaTexto.val("");
+
+                    // Mostrar el mensaje de éxito
+                    mostrarMensajeExito();
+                },
+                error: function() {
+                    // Mostrar un mensaje de error en caso de que la solicitud falle
+                    console.log("Error al enviar el formulario");
+                }
+            });
         });
         form.append(enviarBtn);
 
@@ -115,7 +133,21 @@ async function cargarComunicacionesTecnico() {
             seccion.remove();
         });
         form.append(cancelarBtn);
+
+        // Función para mostrar el mensaje de éxito
+        function mostrarMensajeExito() {
+            var mensajeExito = $('<div class="mensaje-exito">Mensaje enviado correctamente</div>');
+            seccion.find('.contenido-desplegado').append(mensajeExito);
+
+            // Ocultar el mensaje después de 3 segundos
+            setTimeout(function () {
+                mensajeExito.fadeOut('slow', function () {
+                    mensajeExito.remove();
+                });
+            }, 3000);
+        }
     }
+
 
     function agregarEventoClickCancelar(seccion, fila) {
         var botonCancelar = seccion.find(".boton-cerrar-sesion");

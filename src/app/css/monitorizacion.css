@@ -719,3 +719,68 @@ select:hover {
     margin-bottom: 0;
 }
 /*------------------------Termina footer------------------------*/
+
+
+/*------------------------Estilos responsive monitorizacion para pc, movil y tablet ya ready----------------*/
+
+@media screen and (min-width: 1200px){
+    #contenedor-espacio-personal-completo{
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+    }
+    #contenedor-notificaciones{
+        order: 1;
+    }
+    #contenedor-monitorizacion{
+        order: 3;
+    }
+    select{
+        width: 70%;
+    }
+
+    #contenedor-nombre-huerto{
+        justify-content: center;
+    }
+    .contenedor-parametro-monitorizacion-especifico{
+        width: 80%;
+    }
+
+    #contenedor-fecha-hora-huerto{
+        justify-content: left;
+    }
+
+    .contenedor-parametros-tiempo-real-huerto{
+        /*display: block;*/
+    }
+
+    #contenedor-nombre-tiempo-parametros{
+        display: flex;
+        flex-direction: row;
+    }
+    #contenedor-actualizacion-parametros-derecha{
+        width: 100%;
+        margin-left: 2.7rem;
+    }
+    #datos-cada-30-s{
+        margin-top: 0;
+    }
+    #label-tiempo-actual{
+        margin-bottom: 0.6rem;
+        margin-top: 2rem;
+    }
+    #panel-circular-notificaciones{
+        width: 30%;
+    }
+    .wrapper{
+        padding: 5vh 7% 5vh;
+    }
+    #contenedor-boton-mapas{
+        justify-content: right;
+        margin-bottom: 1rem;
+        order: 2;
+    }
+    #boton-mapas-huertos{
+        width: 30%;
+    }
+}

@@ -17,6 +17,7 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/estilos.css"/>
     <link rel='stylesheet' href="css/estilos_responsive.css"/>
+    <link rel='stylesheet' href="css/monitorizacion.css"/>
 
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
@@ -103,7 +104,8 @@
 
     <!-- Comienza el contenedor de monitorizacion-->
     <div id="contenedor-monitorizacion">
-
+        <div id="contenedor-nombre-tiempo-parametros"><!--Inicia contenedor donde cambia el flex,nombre,tiempo,parametro tiempo real, sin grafica-->
+        <div id="contenedor-nombre-metereologia"><!--Inicia contenedor porcion derecha-->
         <div id="contenedor-nombre-huerto">
             <select name="nombres-huertos" id="nombre-huerto">
             </select>
@@ -137,7 +139,8 @@
             </div>
             -->
         </div>
-
+        </div><!--Contenedor porcion de la izquierda-->
+        <div id="contenedor-actualizacion-parametros-derecha"><!--Inicia contenedor porcion derecha-->
         <div id="datos-cada-30-s">Actualización de datos cada hora</div>
 
                 <!--Comienza contenedor con los parametros en tiempo real del huerto-->
@@ -172,6 +175,8 @@
                 <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
         </div>
+        </div><!--Termina contenedor porcion derecha-->
+        </div><!--Acaba contenedor donde cambia flex, ahora va graficas-->
         <!--Termina contenedor con los parametros en tiempo real del huerto-->
 
         <!-- Comienza el historial de mediciones grafica-->

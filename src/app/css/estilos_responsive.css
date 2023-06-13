@@ -147,6 +147,13 @@
 
 /*LANDING PAGE RESPONSIVE*/
 
+@media screen and (max-width: 767px) {
+    .tamanyos0{
+        height: 16rem;
+        width: 23rem;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1399px) {
 
     /*Contenedor completo, wrapper de toda la monitorización*/
@@ -197,6 +204,11 @@
     #seccion-info3 .imagenes-landing {
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
+    }
+
+    .tamanyos0{
+        height: 17rem;
+        width: 23rem;
     }
 
     .tamanyos1{
@@ -328,6 +340,11 @@
     #boton-CTA{
         max-width: 300px;
         transition: all .5s ease;
+    }
+
+    .tamanyos0{
+        height: 15rem;
+        width: 40rem;
     }
 
     .tamanyos1{
@@ -473,9 +490,11 @@
 
 
     .boton-producto {
-        width: 80%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 3em;
     }
 
 }
@@ -489,18 +508,42 @@
     margin-bottom: 2vh;
 }
 
-
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 600px) and (max-width: 850px){
     .boton-producto {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 4em;
+        margin-bottom: 3em;
+    }
+}
+
+
+@media screen and (min-width: 1000px){
+    .boton-producto {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4em;
+        margin-bottom: 3em;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .boton-producto {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4em;
+        margin-bottom: 3em;
     }
 }
 
 
 
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
+
 
 @media screen and (min-width: 760px) {
 

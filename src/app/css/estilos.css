@@ -307,6 +307,8 @@ main>section, body>section{
     justify-content: center;
     align-items: center;
     transition: all .5s ease;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
 /* Características de la sección de preguntas frecuentes */

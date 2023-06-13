@@ -150,3 +150,8 @@
 .loading {
     display: none;
 }
+
+/*Estilo para boton cerrar sesion display block*/
+.boton-cerrar-sesion a{
+    display: block !important;
+}

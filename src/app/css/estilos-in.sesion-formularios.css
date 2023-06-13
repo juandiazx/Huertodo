@@ -70,7 +70,7 @@ h3 {
 
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     width: 72%;
@@ -174,8 +174,8 @@ h3 {
         transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
-        margin-top: 3rem;
-        color: var(--main-color-white);
+        display: block !important;
+        color: var(--main-color-white) !important;
         transition: all .5s ease;
     }
 

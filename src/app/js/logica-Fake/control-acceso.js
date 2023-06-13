@@ -13,12 +13,14 @@ async function comprobarSesion(rol) {
             await cargarSolicitudesUsuarios(); //Carga los datos de la tabla del Comercial (las solicitudes)
             await enviarComunicacionesTecnico(); //Funcion para poder hablar con Tecnico y Adm Web
         } else if (data.rol == "usuario") {
-            await cargarHuertosUsuario();
-            //Funcion para poner el nombre predeterminado en el popup de cambiar nombre, popups-monitorizacion.js
-            await cambiarNombrePopUpCambiarNombre()
-            await cargarMedidasActual()
-            await cargarNotificacionesHuertos()
-            await  cargarBorrarNotificacionesInterfaz()
+            let respuesta = await cargarHuertosUsuario();
+            if(respuesta){
+                //Funcion para poner el nombre predeterminado en el popup de cambiar nombre, popups-monitorizacion.js
+                await cambiarNombrePopUpCambiarNombre()
+                await cargarMedidasActual()
+                await cargarNotificacionesHuertos()
+                await  cargarBorrarNotificacionesInterfaz()
+            }
             //Se cargan numero de notificaciones, datos tiempo real huerto predeterminado, datos huertos, y grafica predeterminada
         } else if (data.rol == "tecnico") {
             await cargarComunicacionesTecnico();//Se cargan las tareas del tecnico

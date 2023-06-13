@@ -541,7 +541,6 @@
         transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
-        margin-top: 3rem;
         color: var(--main-color-white);
         transition: all .5s ease;
     }

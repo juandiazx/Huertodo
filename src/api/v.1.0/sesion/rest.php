@@ -2,7 +2,7 @@
 
 // usuario:String, password:String ---->consultarUsuarioContrasenya() ------> consultaSQL:String
 function consultarUsuarioContrasenya($usuario,$password){
-    return "SELECT `usuario`.`id`, `usuario`.`email`, `usuario`.`rol`,`usuario`.`nombreApellidos`, `roles`.`rol`,`roles`.`id` FROM `usuario` INNER JOIN `roles` ON`usuario`.`rol` = `roles`.`id`
+    return "SELECT `usuario`.`id`, `usuario`.`email`, `usuario`.`rol`,`usuario`.`nombreApellidos`, `roles`.`rol` FROM `usuario` INNER JOIN `roles` ON`usuario`.`rol` = `roles`.`id`
 	WHERE `usuario`.`email` = '$usuario' AND `usuario`.`contrasenya` = '$password'";
 }
 

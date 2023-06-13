@@ -8,15 +8,39 @@
 //Se exporta de forma que se incluye en etiquetas <script> antes de control-acceso.js
 async function cargarHuertosUsuario(){
     var respuesta = await fetch('../api/v.1.0/monitorizacion/cargarHuertosUsuario.php');
-    var data = await respuesta.json();
-    let selector = document.getElementById("nombre-huerto");
+    if(!respuesta.ok){
+        document.getElementById("contenedor-espacio-personal-completo").style.height = "75vh"
+        document.getElementById("contenedor-notificaciones").remove()
+        document.getElementById("contenedor-boton-mapas").remove()
+        eliminarHijos("contenedor-monitorizacion")
+        let padre = document.getElementById("contenedor-monitorizacion")
+        let hijo = document.createElement("div")
+        let parrafo = document.createElement("p")
+        parrafo.style.marginBottom = "0"
+        parrafo.style.textAlign = "center"
+        parrafo.textContent = "No tienes ningún huerto registrado aún, lo tendrás cuanto antes"
+        hijo.appendChild(parrafo)
+        padre.appendChild(hijo)
+    }
+    else{
+        var data = await respuesta.json();
+        let selector = document.getElementById("nombre-huerto");
 
-    //A lo mejor hay que iterar sobre el name del selector, no lo se
-    data.forEach((objetoHuerto)=>{
-        let option = document.createElement("option")
-        //Guardamos el id del huerto porque es importante, ya que se pueden repetir nombres
-        option.value = objetoHuerto.id;
-        option.text = objetoHuerto.nombre;
-        selector.appendChild(option);
-    })
+        //A lo mejor hay que iterar sobre el name del selector, no lo se
+        data.forEach((objetoHuerto)=>{
+            let option = document.createElement("option")
+            //Guardamos el id del huerto porque es importante, ya que se pueden repetir nombres
+            option.value = objetoHuerto.id;
+            option.text = objetoHuerto.nombre;
+            selector.appendChild(option);
+        })
+    }
+}
+
+//Funcion para eliminar todos los hijos de un contenedor
+function eliminarHijos(contenedor) {
+    var elementoPadre = document.getElementById(contenedor);
+    while (elementoPadre.firstChild) {
+        elementoPadre.removeChild(elementoPadre.firstChild);
+    }
 }

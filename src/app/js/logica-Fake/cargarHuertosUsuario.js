@@ -21,6 +21,7 @@ async function cargarHuertosUsuario(){
         parrafo.textContent = "No tienes ningún huerto registrado aún, lo tendrás cuanto antes"
         hijo.appendChild(parrafo)
         padre.appendChild(hijo)
+        return "error"
     }
     else{
         var data = await respuesta.json();

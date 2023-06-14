@@ -21,6 +21,8 @@ async function cambiarNombreHuerto(event) {
     })
     // si el resultado de la petición es OK (i.e. código HTTP 200)
     if(respuesta.ok){
+        document.getElementById("formulario-cambiar-nombre-huerto").querySelector("button").style.background = "grey"
+        document.getElementById("formulario-cambiar-nombre-huerto").querySelector("button").disabled = true
         let mensajeExito = document.getElementById("mensaje-exito-cambiar-nombre");
         mensajeExito.style.display = "block"
         document.getElementById("cerrar-dialogo-cambiar-nombre").addEventListener("click",()=>{

@@ -91,9 +91,9 @@
 
     <!-- Desplegable para las notificaciones-->
     <dialog id="desplegable-popup-notificaciones">
-            <div id="cabecera-popup-notificaciones">
+            <div id="cabecera-popup-notificaciones" class="cabecera-popup">
                 <h2>Notificaciones</h2>
-                <img id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
+                <img class="cerrar-dialogo" id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
             </div>
             <div id="contenedor-sin-notificaciones">
                 <p id="texto-sin-notificaciones">Sin notificaciones</p>
@@ -186,12 +186,11 @@
                 <canvas id="grafica-historial" aria-label="Grafica Interactiva Histórico Parámetros" role="img"></canvas>
             </div>
             <!--Contenedor con los botones de filtrar de la gráfica-->
-<!--
+
             <div id="contenedor-botones-filtro-grafica">
                 <button id="boton-filtro-grafica-mes">Mes</button>
                 <button id="boton-filtro-grafica-semana">Semana</button>
             </div>
--->
         </div>
         <!-- Termina el historial de mediciones grafica-->
 
@@ -204,10 +203,11 @@
 
     <!-- Desplegable para el mapa de huertos-->
     <dialog id="desplegable-popup-mapa">
-        <section id="contenedor-cerrar-mapa">
-            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-mapa.png" alt="Icono cruz Cerrar mapa">
+        <section id="contenedor-cerrar-mapa" class="cabecera-popup">
+            <h2>Mapa con tus huertos</h2>
+            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar mapa">
         </section>
-        <div>
+        <div id="contenedor-mapa">
             <section class="contenedor-icono-huerto-mapa" id="mapa-huerto-1">
                 <img id="icono-huerto1" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
                 <p>Calabazas</p>

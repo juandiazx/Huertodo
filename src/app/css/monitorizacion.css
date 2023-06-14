@@ -181,14 +181,14 @@ h3 {
 }
 
 /*Estilo cabecera del popup de las notificaciones*/
-#cabecera-popup-notificaciones {
+.cabecera-popup {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1.2em;
 }
 /*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
-#cerrar-dialogo-notificaciones {
+.cerrar-dialogo {
     width: 2.3em;
     height: 2.3em;
     cursor: pointer;
@@ -626,10 +626,24 @@ select:hover {
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
-    background-image: url("../images/mapa-popup-imagen.png");
+    scrollbar-width: thin; /* Ajusta el ancho de la barra de desplazamiento */
+    overflow-y: scroll; /* Habilita la barra de desplazamiento vertical solo cuando sea necesario */
 }
 
+/* Estilos para la barra de desplazamiento en Chrome, Edge y Safari */
+#desplegable-popup-mapa::-webkit-scrollbar {
+    width: 6px; /* Ajusta el ancho de la barra de desplazamiento */
+}
 
+#desplegable-popup-mapa::-webkit-scrollbar-track {
+    background-color: #dddddd; /* Ajusta el color de fondo de la barra de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la barra de desplazamiento */
+}
+
+#desplegable-popup-mapa::-webkit-scrollbar-thumb {
+    background-color: #888888; /* Ajusta el color de la perilla de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la perilla de desplazamiento */
+}
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
 #desplegable-popup-mapa::backdrop {
@@ -648,8 +662,8 @@ select:hover {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    margin-bottom: 1.2em;
     padding: 0.8em;
+    margin-bottom: 0;
 }
 /*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
 #cerrar-dialogo-mapa {
@@ -657,19 +671,32 @@ select:hover {
     width: 2.3em;
     height: 2.3em;
     cursor: pointer;
+    margin-left: 0.6rem;
 }
+/*Estilos para la cabecera del contenedor de cerrar mapa*/
 #contenedor-cerrar-mapa{
     display: flex;
     justify-content: right;
     padding: 1em;
+    margin-bottom: 0;
+    align-items: center;
+    padding-bottom: 0;
 }
 
+#contenedor-mapa{
+    height: 100%;
+    background-image: url("../images/mapa-popup-imagen.png");
+}
+#mapa-huerto-2{
+    margin-left: 7em;
+    margin-top: 5em;
+}
 .contenedor-icono-huerto-mapa {
     color: white;
     border-radius: 50%;
     height: 5.6em;
     width: 7.2em;
-    margin: 4em;
+    margin-right: 2.4em;
     text-align: center;
     align-items: center;
     align-content: center;

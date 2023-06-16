@@ -94,10 +94,15 @@ h3 {
 
 /*------------------------Comienza el estilo del espacio personal------------------------*/
 
+#contenedor-espacio-personal-completo{
+    display: flex;
+    flex-direction: column;
+}
 /*Estilo contenedor de las notificaciones huertos*/
 #contenedor-notificaciones {
     display: flex;
     justify-content: flex-end;
+    order: 1;
 }
 /*Estilo panel circular notificaciones espacio personal*/
 #panel-circular-notificaciones {
@@ -271,6 +276,7 @@ h3 {
     border-radius: 1.1em;
     margin-top: 0.7em;
     margin-bottom: 3.2em;
+    order: 3;
 }
 
 /*Estilo contenedor que contiene el select de nombres de huerto*/
@@ -566,11 +572,11 @@ select:hover {
     padding: 0.2em 0.3em;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    transition: all .5s ease;
 }
 
-/*Contenedor con la tarjeta de la informacion metereologica*/
-#contenedor-informacion-metereologica {
-
+#contenedor-botones-filtro-grafica>button:hover{
+    background: var(--second-color-green-hover);
 }
 #contenedor-widget-meteorologia {
     justify-content: center;
@@ -610,9 +616,20 @@ select:hover {
 /*Estilo contenedor con el boton para acceder al mapa con los huertos*/
 #contenedor-boton-mapas {
     display: flex;
-    justify-content: center;
-    font-size: 74%;
+    text-align: right;
+    justify-content: right;
+    font-size: 60%;
     height: auto;
+    order: 2;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#contenedor-boton-mapas button{
+    display: block;
+    text-align: center;
+    justify-content: right;
+    width: 60%;
 }
 
 /*Estilo del dialogo de notifiacones popup*/
@@ -756,12 +773,6 @@ select:hover {
         display: flex;
         flex-direction: column;
     }
-    #contenedor-notificaciones{
-        order: 1;
-    }
-    #contenedor-monitorizacion{
-        order: 3;
-    }
     select{
         width: 70%;
     }
@@ -802,12 +813,7 @@ select:hover {
     .wrapper{
         padding: 5vh 7% 5vh;
     }
-    #contenedor-boton-mapas{
-        justify-content: right;
-        margin-bottom: 1rem;
-        order: 2;
-    }
-    #boton-mapas-huertos{
+    #contenedor-boton-mapas button{
         width: 30%;
     }
 }

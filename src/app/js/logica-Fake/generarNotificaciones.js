@@ -38,6 +38,20 @@ function convertirPrioridadDireccion(dataPrioridadDireccion,parametro,huerto){
             textoOut= `El valor de ph en ${huerto} ha bajado más de 3`
         }
     }
+    else if(parametro=="temperatura"){
+        if(dataPrioridadDireccion.direccion=="alto" && dataPrioridadDireccion.prioridad=="alta" ){
+            textoOut= `El valor de temperatura en ${huerto} ha subido más de 35ºC`
+        }
+        else if(dataPrioridadDireccion.direccion=="alto" && dataPrioridadDireccion.prioridad=="media"){
+            textoOut= `El valor de temperatura en ${huerto} ha subido más de 30ºC`
+        }
+        else if(dataPrioridadDireccion.direccion=="bajo" && dataPrioridadDireccion.prioridad=="alta"){
+            textoOut= `El valor de temperatura en ${huerto} ha bajado más de 10ºC`
+        }
+        else if(dataPrioridadDireccion.direccion=="bajo" && dataPrioridadDireccion.prioridad=="media"){
+            textoOut= `El valor de temperatura en ${huerto} ha bajado más de 14ºC`
+        }
+    }
     else{
         if(dataPrioridadDireccion.direccion=="alto" && dataPrioridadDireccion.prioridad=="alta" ){
             textoOut= `El valor de ${parametro} en ${huerto} ha subido más de 90%`

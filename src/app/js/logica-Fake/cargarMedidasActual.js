@@ -20,7 +20,7 @@ async function cargarMedidasActual(){
         huerto: selectedOptionName,
         idHuerto: document.getElementById("nombre-huerto").value,
         timestamp: obtenerFechaActual(),//Obtiene el date actual en formato SQL
-        temperatura: comprobarParametroNoPh(data.temperatura),
+        temperatura: comprobarParametroTemp(data.temperatura),
         ph: comprobarPh(data.ph),
         humedad: comprobarParametroNoPh(data.humedad),
         salinidad: comprobarParametroNoPh(data.salinidad),
@@ -98,6 +98,29 @@ function comprobarPh(ph) {
     }
     else{
         resultado.prioridad = "nada";
+        resultado.direccion = "nada";
+    }
+    return resultado;
+}
+
+//Funcion para comprobar los rangos de todos los parametros que no son ph
+function comprobarParametroTemp(parametro) {
+    const resultado = {};
+    if (parametro < 10 || parametro > 35) {
+        resultado.prioridad = "alta";
+    } else if (parametro < 14 || parametro > 30) {
+        resultado.prioridad = "media";
+    }
+    else{
+        resultado.prioridad = "nada";
+    }
+
+    if (parametro < 10 || parametro < 14) {
+        resultado.direccion = "bajo";
+    } else if (parametro > 35 || parametro > 30) {
+        resultado.direccion = "alto";
+    }
+    else{
         resultado.direccion = "nada";
     }
     return resultado;

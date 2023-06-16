@@ -14,7 +14,7 @@ async function tomarMedida(event) {
     let dataJSON = {
         value: document.getElementById("huerto").value,
         timestamp: obtenerFechaHoraActual(),//Obtiene el datetime actual cuando se toma la medida
-        temperatura: obtenerNumeroAleatorio(13,26),
+        temperatura: obtenerNumeroAleatorio(10,38),
         ph: obtenerNumeroAleatorio(1,14),
         humedad: obtenerNumeroAleatorio(5,97),
         salinidad: obtenerNumeroAleatorio(5,97),

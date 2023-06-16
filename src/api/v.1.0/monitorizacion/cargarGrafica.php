@@ -8,8 +8,8 @@
 //SE EJECUTA LA FUNCION DE NUEVO PARA RECOGER LOS DATOS
 
 /*
- * id(huerto):GET-------> cargarMedidasActual()---> http:200,
- *                                                          JSON{salinidad,temperatura, ph, humedad, iluminacion} | 500
+ * idHuerto,parametro,primerTimestamp,segundoTimestamp:GET-------> cargarGrafica()---> http:200,
+ *                                                          [JSON{salinidad,temperatura, ph, humedad, iluminacion,tiempo}] | 500
  *
  * */
 
@@ -55,6 +55,6 @@ if (mysqli_affected_rows($connexion) > 0) {
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode($salida);
 } else {
-    echo json_encode(mysqli_affected_rows($connexion));
+    echo json_encode($idHuerto);
     http_response_code(401);
 }

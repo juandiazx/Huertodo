@@ -2,6 +2,7 @@
 
 let selectorNombres = document.getElementById("nombre-huerto")
 selectorNombres.addEventListener("change",cargarMedidasActual)
+selectorNombres.addEventListener("change",graficas)
 
 async function actualizarEspacioPersonal(){
     await cargarMedidasActual()

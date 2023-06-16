@@ -1067,6 +1067,7 @@ textarea:focus {
     margin-right: 0.6em;
     margin-left: 0.6em;
     transition: all .5s ease;
+    color: var(--main-color-white);
 }
 /*Margenes para el texto de copyrigth del footer*/
 #footer-bottom p {

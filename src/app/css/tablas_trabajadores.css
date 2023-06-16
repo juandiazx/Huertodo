@@ -72,10 +72,11 @@ table{
     color: var(--second-color-green);
 }
 
-.content-table tbody tr:hover {
+/*.content-table tbody tr:hover {
     background-color: var(--second-color-green-light-hover);
     cursor: pointer;
-}
+    color: #ffffff;
+}*/
 
 .bi{
     font-size: 1.3rem;
@@ -152,6 +153,7 @@ table{
     transition: all .5s ease;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    float: right;
 }
 
 .boton-verde-blanco-tablas:hover{
@@ -206,4 +208,12 @@ table{
 .page-item.active .page-link {
     background-color: var(--second-color-green);
     border-color: var(--second-color-green);
+}
+
+
+
+/*Estilos para la sección de bienvenido...*/
+
+.bienvenido{
+    margin-left: 10%;
 }

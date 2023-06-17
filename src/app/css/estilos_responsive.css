@@ -579,14 +579,14 @@
         transition: all .5s ease;
     }
 
-    .boton-cerrar-sesion {
+    /*.boton-cerrar-sesion {
         padding-top: 0.4rem;
         transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
         color: var(--main-color-white);
         transition: all .5s ease;
-    }
+    }*/
 
 
     /*agrega margenes entre los elementos del menu*/
@@ -601,11 +601,11 @@
         order: 1;
     }
 
-    .boton-cerrar-sesion {
+    /*.boton-cerrar-sesion {
         width: 8rem;
         height: 2.3rem;
         transition: all .5s ease;
-    }
+    }*/
 }
 
 

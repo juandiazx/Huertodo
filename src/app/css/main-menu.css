@@ -75,8 +75,8 @@
 
 /*Botón Cerrar Sesión*/
 .boton-cerrar-sesion {
-    width: 72%;
-    height: 7%;
+    width: auto !important;
+    height: 35px !important;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -89,6 +89,7 @@
     transition: all .5s ease;
     cursor: pointer;
     text-align: center;
+    margin-right: 1em;
 }
 
 .boton-cerrar-sesion:hover{
@@ -154,4 +155,56 @@
 /*Estilo para boton cerrar sesion display block*/
 .boton-cerrar-sesion a{
     display: block !important;
+}
+
+/*ESTILOS PARA EL HEADER/MENU EN ESPACIOS PERSONALES*/
+
+
+#header-esp-personales {
+    --bg-color: var(--main-color-white); /*Variable para */
+    --txt-color: var(--main-color-black);
+    --menu-height: 12vh;
+    z-index: 9999;
+}
+
+
+/*Estilo del menu principal*/
+#header-esp-personales {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    height: var(--menu-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.51em;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+
+/*Estilo contenedor del menu de navegacion*/
+.contenedor-iconos-2 {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Ajusta el valor según el espaciado deseado */
+}
+
+.texto-boton-cerrar{
+    font-size: 16px;
+}
+
+.boton-cerrar-sesion {
+    width: 8rem;
+    height: 2.3rem;
+    transition: all .5s ease;
+}
+
+.boton-cerrar-sesion {
+    padding-top: 0.4rem;
+    transition: all .5s ease;
+}
+.boton-cerrar-sesion a {
+    color: var(--main-color-white);
+    transition: all .5s ease;
 }

@@ -35,7 +35,7 @@ async function nuevaContrasenya(event) {
             popupContrasenyaNueva()
         }
         else if(respuesta.ok && data.valor==true){
-            document.getElementById("mensaje-error-contrasenya").innerText = "Solo puedes introducir una nueva contraseña"
+            document.getElementById("mensaje-error-contrasenya").innerText = "Introduce una nueva contraseña, no la misma que ya tienes"
             document.getElementById("mensaje-error-contrasenya").style.display = "block"
         }
         else{

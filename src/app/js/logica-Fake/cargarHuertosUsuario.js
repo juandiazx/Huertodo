@@ -9,7 +9,7 @@
 async function cargarHuertosUsuario(){
     var respuesta = await fetch('../api/v.1.0/monitorizacion/cargarHuertosUsuario.php');
     if(!respuesta.ok){
-        document.getElementById("contenedor-espacio-personal-completo").style.height = "75vh"
+        document.getElementById("contenedor-espacio-personal-completo").style.height = "82vh"
         document.getElementById("contenedor-notificaciones").remove()
         document.getElementById("contenedor-boton-mapas").remove()
         eliminarHijos("contenedor-monitorizacion")

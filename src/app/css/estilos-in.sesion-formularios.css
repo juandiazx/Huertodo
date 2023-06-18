@@ -1016,6 +1016,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 300px;
     height: 20%;
     border-radius: 1.3em;
     border: none;
@@ -1061,6 +1062,7 @@ textarea:focus {
     background-color: var(--second-color-green);
     color: var(--main-color-white);
     margin-top: auto;
+    text-decoration: none !important;
 }
 /*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
 #footer-bottom a{

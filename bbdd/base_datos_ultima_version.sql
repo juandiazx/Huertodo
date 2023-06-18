@@ -46,8 +46,6 @@ CREATE TABLE `comunicacion_trabajadores` (
 CREATE TABLE `huertos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(15) NOT NULL,
-  `latitud` double NOT NULL,
-  `longitud` double NOT NULL,
   `usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 

@@ -147,7 +147,7 @@ async function cargarSolicitudesUsuarios() {
         selectAsunto.append(optionAsunto2);
         form.append(selectAsunto);
 
-        var textareaTexto = $('<textarea class="selectores-tablas" name="texto" placeholder="Texto"></textarea>');
+        var textareaTexto = $('<textarea class="selectores-tablas input-textarea" name="texto" placeholder="Texto"></textarea>');
         form.append(textareaTexto);
 
         var inputFecha = $('<input class="campos-desplegables-ocultos" type="date" name="fecha">');

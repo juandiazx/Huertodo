@@ -182,7 +182,6 @@
     box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
 }
 
-
 /*Estilo contenedor del menu de navegacion*/
 .contenedor-iconos-2 {
     display: flex;
@@ -191,12 +190,15 @@
 }
 
 .texto-boton-cerrar{
-    font-size: 16px;
+    font-size: 1.1rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    text-decoration: none !important;
 }
 
 .boton-cerrar-sesion {
     width: 8rem;
-    height: 2.3rem;
+    height: 2.5rem;
     transition: all .5s ease;
 }
 

@@ -98,7 +98,7 @@ async function cargarComunicacionesTecnico() {
         inputAsunto.val(tarea); // Establecer el valor del campo "Asunto" con el valor de la columna "Tarea"
         form.append(inputAsunto);
 
-        var textareaTexto = $('<textarea class="selectores-tablas" name="texto" placeholder="Escribe las medidas o confirma el montaje"></textarea>');
+        var textareaTexto = $('<textarea class="selectores-tablas input-textarea" name="texto" placeholder="Escribe las medidas o confirma el montaje"></textarea>');
         form.append(textareaTexto);
 
         var inputFecha = $('<input class="campos-desplegables-ocultos" type="date" name="fecha">');

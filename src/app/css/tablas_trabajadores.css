@@ -11,7 +11,7 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
-    word-break: break-word;
+    word-break: unset !important;
 }
 
 :root {
@@ -27,6 +27,11 @@
     color: inherit;
 }
 
+.container{
+    width: 85% !important;
+
+}
+
 table{
     width: 100%;
     border-collapse: collapse;
@@ -36,7 +41,7 @@ table{
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    min-width: 400px;
+    min-width: 200px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -154,6 +159,7 @@ table{
     margin-right: 1rem;
     margin-bottom: 1rem;
     float: right;
+    display: block;
 }
 
 .boton-verde-blanco-tablas:hover{
@@ -182,19 +188,7 @@ table{
     text-align: left;
     margin-bottom: 1rem;
     margin-right: 1rem;
-}
-
-@media (max-width: 767px) {
-    table {
-        overflow-x: auto;
-        display: block;
-    }
-}
-
-@media (min-width: 576px - max-width:768px) {
-    .container, .dataTables_scrollHead, .content-table {
-        max-width: 750px;
-    }
+    display: block;
 }
 
 .page-link{
@@ -210,7 +204,50 @@ table{
     border-color: var(--second-color-green);
 }
 
+/* Sobrescribiendo estilos de _grid.scss para que la tabla sea responsive */
 
+@media (max-width: 791px){
+    .container {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 700px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 706px){
+    .container {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 665px){
+    .container {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 643px){
+    .container {
+
+        overflow-x: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+    @media (min-width: 576px) {
+        .container {
+            max-width: 100%;
+        }
+    }
 
 /*Estilos para la sección de bienvenido...*/
 

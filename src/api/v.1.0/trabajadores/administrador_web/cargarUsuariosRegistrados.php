@@ -32,10 +32,12 @@ session_start();
 $user = $_SESSION['user'];
 $id = $user['id'];
 
-$sql = "SELECT `solicitud`.`id`, `solicitud`.`nombreApellidos`, `solicitud`.`direccion`, `comunicacion_trabajadores`.`asunto`, `comunicacion_trabajadores`.`fecha`, `comunicacion_trabajadores`.`usuario_solicitud`, `comunicacion_trabajadores`.`texto`
-        FROM `solicitud`, `comunicacion_trabajadores` 
-        WHERE `comunicacion_trabajadores`.`usuario_solicitud` = `solicitud`.`id` 
-        AND `comunicacion_trabajadores`.`para` = 3";
+$sql = "SELECT `usuario`.`id`, `usuario`.`email`, `usuario`.`nombreApellidos`, COUNT(`huertos`.`id`) AS `numHuertos`
+        FROM `usuario`
+        LEFT JOIN `huertos` ON `usuario`.`id` = `huertos`.`usuario`
+        WHERE `usuario`.`rol` = 1
+        GROUP BY `usuario`.`id`";
+
 $resultado = mysqli_query($connexion, $sql);
 
 if (mysqli_num_rows($resultado) > 0) {
@@ -44,11 +46,9 @@ if (mysqli_num_rows($resultado) > 0) {
     while ($registro = mysqli_fetch_assoc($resultado)) {
         $solicitudes = new stdClass();
         $solicitudes->id = $registro['id'];
+        $solicitudes->email = $registro['email'];
         $solicitudes->nombreApellidos = $registro['nombreApellidos'];
-        $solicitudes->direccion = $registro['direccion'];
-        $solicitudes->asunto = $registro['asunto'];
-        $solicitudes->fecha = $registro['fecha'];
-        $solicitudes->texto = $registro['texto'];
+        $solicitudes->numHuertos = $registro['numHuertos'];
         $salida[] = $solicitudes;
     }
 
@@ -56,5 +56,5 @@ if (mysqli_num_rows($resultado) > 0) {
     echo json_encode($salida);
 } else {
     http_response_code(401);
-    echo json_encode(array('message' => 'No se encontraron huertos.'));
+    echo json_encode(array('message' => 'No se encontraron usuarios registrados.'));
 }

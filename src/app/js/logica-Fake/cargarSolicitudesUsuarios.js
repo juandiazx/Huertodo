@@ -36,9 +36,13 @@ async function cargarSolicitudesUsuarios() {
     console.log("Empieza la carga de datos del servidor")
             tabla.clear().draw(); // Limpiar la tabla antes de cargar nuevos datos
       var respuesta = await fetch('../api/v.1.0/trabajadores/comercial/cargarSolicitudesUsuarios.php');
-      console.log(respuesta);
+      // Verificar si hay datos
+            console.log(respuesta);
       var data = await respuesta.json();
       console.log(data);
+      if (!respuesta.ok || !data) {
+          return; // Resuelve la promesa sin cargar datos adicionales
+      }
             $.each(data, function (index, value) {
                 var fila = crearFila(value);
                 var primerIcono = obtenerPrimerIcono(fila);
@@ -260,7 +264,7 @@ async function cargarSolicitudesUsuarios() {
         selectAsunto.append(optionAsunto1);
         form.append(selectAsunto);
 
-        var textareaTexto = $('<textarea class="selectores-tablas" name="texto" placeholder="Texto"></textarea>');
+        var textareaTexto = $('<textarea class="selectores-tablas campos-desplegables-ocultos" name="texto" placeholder="Texto"></textarea>');
         form.append(textareaTexto);
 
         var inputFecha = $('<input class="campos-desplegables-ocultos" type="date" name="fecha">');
@@ -344,7 +348,6 @@ async function cargarSolicitudesUsuarios() {
     function mostrarTercerDesplegable(fila) {
         var seccion = $('<tr class="seccion-desplegada"><td colspan="6">' +
             '<div class="contenido-desplegado">' +
-            '<h4>Información Usuario</h4>' +
             '<div id="datos-desplegable"></div>' +
             '<button id="cerrar3" class="boton-verde-blanco-tablas">Cerrar</button>' +
             '</div>' +
@@ -358,12 +361,29 @@ async function cargarSolicitudesUsuarios() {
 
                 console.log(datos);
 
-                for (var i = 0; i < datos.length; i++) {
-                    var comunicacion = datos[i];
-                    var contenido = '<p>Asunto: ' + comunicacion.asunto + '</p>' +
-                        '<p>Texto: ' + comunicacion.texto + '</p>' +
-                        '<p>Fecha: ' + comunicacion.fecha + '</p>';
-                    datosDesplegable.append(contenido);
+                var mensajes = datos.filter(function(comunicacion) {
+                    return comunicacion.id === id;
+                });
+
+                if (mensajes.length > 0) {
+                    var primerMensaje = mensajes[0];
+                    var contenidoSolicitud = '<h4>Texto Solicitud</h4>' +
+                        '<p>Mensaje: ' + primerMensaje.mensaje + '</p>';
+                    datosDesplegable.append(contenidoSolicitud);
+
+                    var contenidoMensajes = '<h4>Mensajes Técnico</h4>';
+
+                    for (var i = 0; i < mensajes.length; i++) {
+                        var comunicacion = mensajes[i];
+                        var contenido = '<p>Asunto: ' + comunicacion.asunto + '</p>' +
+                            '<p>Texto: ' + comunicacion.texto + '</p>' +
+                            '<p>Fecha: ' + comunicacion.fecha + '</p>';
+                        contenidoMensajes += contenido;
+                    }
+
+                    datosDesplegable.append(contenidoMensajes);
+                } else {
+                    datosDesplegable.text('No se encontraron mensajes.');
                 }
 
                 fila.after(seccion);
@@ -372,6 +392,21 @@ async function cargarSolicitudesUsuarios() {
             });
         });
     }
+
+
+
+
+
+
+    function obtenerIdSolicitud(fila, callback) {
+        var id = $(fila).find('td:first-child').text().trim();
+        callback(id);
+    }
+
+
+
+
+
 
     function obtenerIdFila(fila, callback) {
         var id = $(fila).find('td:first-child').text().trim();
@@ -404,13 +439,6 @@ async function cargarSolicitudesUsuarios() {
         });
     }
 
-
-
-
-
-
-
-
     function agregarEventoClickCancelar(seccion, fila) {
         var botonCancelar = seccion.find("#cancelar");
 
@@ -436,6 +464,31 @@ async function cargarSolicitudesUsuarios() {
             seccion.remove();
         });
     }
+
+    $(document).ready(function() {
+        $(".dataTables_scrollHeadInner, .content-table.dataTable.no-footer, .dataTables_scrollBody, .bottom").css("width", "100%");
+        $(".dataTables_scrollHeadInner, .content-table.dataTable.no-footer, .dataTables_scrollBody").css("overflow", "auto");
+        $(".bottom").css("margin-top", "2rem");
+        $(".content-table").css("border-radius", "5px 5px 0 0");
+    });
+
+    // Función para bloquear la orientación si el ancho de la pantalla es menor a 646 píxeles
+    function lockOrientation() {
+        if (window.innerWidth < 646) {
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock("landscape").then(function() {
+                    console.log("La orientación se ha bloqueado correctamente");
+                }).catch(function(error) {
+                    console.log("No se pudo bloquear la orientación:", error);
+                });
+            } else {
+                console.log("El dispositivo no admite la función para bloquear la orientación");
+            }
+        }
+    }
+
+    // Llama a la función para bloquear la orientación si es necesario
+    lockOrientation();
 
 }
 

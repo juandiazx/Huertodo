@@ -25,7 +25,8 @@ async function comprobarSesion(rol) {
         } else if (data.rol == "tecnico") {
             await cargarComunicacionesTecnico();//Se cargan las tareas del tecnico
         } else if (data.rol == "administrador") {
-            await cargarComunicacionesAdministradorWeb();//Se cargan las tareas del Adm Web
+           await cargarComunicacionesAdministradorWeb();//Se cargan las tareas del Adm Web
+           await cargarUsuariosRegistrados();
         }
         let body = document.querySelector("body");
         document.body.classList.remove("loading");

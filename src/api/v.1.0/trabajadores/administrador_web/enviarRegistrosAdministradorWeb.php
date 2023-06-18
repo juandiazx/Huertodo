@@ -50,6 +50,17 @@ if (mysqli_num_rows($resultado) > 0) {
         $salida[] = $solicitudes;
     }
 
+    $id2 = $id;
+
+    echo $id2;
+
+    //Eliminar el mensaje de la tabla "comunicacion_trabajadores"
+    $deleteSql = "DELETE FROM `comunicacion_trabajadores` WHERE `usuario_solicitud` = '$id'";
+    mysqli_query($connexion, $deleteSql);
+
+    $deleteSql2 = "DELETE FROM `solicitud` WHERE `id` = '$id'";
+    mysqli_query($connexion, $deleteSql2);
+
     http_response_code(200);
     echo json_encode($salida);
 } else {

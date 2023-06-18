@@ -32,11 +32,22 @@ session_start();
 $user = $_SESSION['user'];
 $id = $user['id'];
 
-$sql = "SELECT `comunicacion_trabajadores`.`para`, `comunicacion_trabajadores`.`asunto`, `comunicacion_trabajadores`.`texto`, `comunicacion_trabajadores`.`fecha`, `comunicacion_trabajadores`.`usuario_solicitud`, `solicitud`.`id` 
-        FROM `comunicacion_trabajadores`
-        INNER JOIN `solicitud` ON `comunicacion_trabajadores`.`usuario_solicitud` = `solicitud`.`id`
-        WHERE `comunicacion_trabajadores`.`para` = 2
-        AND `solicitud`.`id` = `comunicacion_trabajadores`.`usuario_solicitud`";
+$sql = "SELECT
+  `comunicacion_trabajadores`.`para`,
+  `comunicacion_trabajadores`.`asunto`,
+  `comunicacion_trabajadores`.`texto`,
+  `comunicacion_trabajadores`.`fecha`,
+  `comunicacion_trabajadores`.`usuario_solicitud`,
+  `solicitud`.`id`,
+  `solicitud`.`mensaje`
+FROM
+  `comunicacion_trabajadores`
+INNER JOIN
+  `solicitud` ON `comunicacion_trabajadores`.`usuario_solicitud` = `solicitud`.`id`
+WHERE
+  `comunicacion_trabajadores`.`para` = 2
+  AND `solicitud`.`id` = `comunicacion_trabajadores`.`usuario_solicitud`";
+
 
 $resultado = mysqli_query($connexion, $sql);
 
@@ -51,6 +62,7 @@ if (mysqli_num_rows($resultado) > 0) {
         $comunicacion->fecha = $registro['fecha'];
         $comunicacion->usuario_solicitud = $registro['usuario_solicitud'];
         $comunicacion->id = $registro['id'];
+        $comunicacion->mensaje = $registro['mensaje'];
         $salida[] = $comunicacion;
     }
 

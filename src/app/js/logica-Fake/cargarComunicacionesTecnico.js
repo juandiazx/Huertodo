@@ -20,24 +20,32 @@ async function cargarComunicacionesTecnico() {
                 sortDescending: ": active para ordenar la columna en orden descendente",
             },
         },
+        bAutoWidth: false,
+
         dom: 'rt<"bottom"p>',
         scrollY: "100vh",
         scrollCollapse: true,
         responsive: {
             details: false,
         },
+
     });
 
     // Función para cargar los datos del archivo JSON a la tabla
     async function cargarDatos3() {
         console.log("Empieza la carga de datos del servidor");
         tabla.clear().draw();
-        var respuesta = await fetch(
-            "../api/v.1.0/trabajadores/tecnico/cargarComunicacionesTecnico.php"
-        );
-        console.log(respuesta);
+        var respuesta = await fetch("../api/v.1.0/trabajadores/tecnico/cargarComunicacionesTecnico.php");
+
+        if (!respuesta.ok) {
+            return; // Resuelve la promesa sin cargar datos adicionales
+        }
+
         var data = await respuesta.json();
         console.log(data);
+
+        var iconos = '<i class="bi bi-tools"></i>' +
+            '<i class="bi bi-info-circle"></i>';
 
         data.forEach((value) => {
             var fila = tabla
@@ -47,11 +55,12 @@ async function cargarComunicacionesTecnico() {
                     value.direccion,
                     value.asunto,
                     value.fecha,
-                    '<i class="bi bi-tools"></i>',
+                    iconos
                 ])
                 .node();
 
             $(fila).attr("data-id", value.id);
+            $(fila).data("texto", value.texto);
         });
 
         tabla.draw();
@@ -104,7 +113,7 @@ async function cargarComunicacionesTecnico() {
         inputUsuarioSolicitud.val(id);
         form.append(inputUsuarioSolicitud);
 
-        var enviarBtn = $('<button class="boton-verde-blanco-tablas">Enviar</button>');
+        var enviarBtn = $('<button id="enviarMensaje" class="boton-verde-blanco-tablas">Enviar</button>');
         enviarBtn.on('click', function (event) {
             event.preventDefault(); // Evitar el envío del formulario por defecto
 
@@ -148,6 +157,28 @@ async function cargarComunicacionesTecnico() {
         }
     }
 
+    function mostrarSegundoDesplegable(fila) {
+        var seccion = $('<tr class="seccion-desplegada">' +
+            '<td colspan="6">' +
+            '<div class="contenido-desplegado">' +
+            '<h4>Mensaje Comercial</h4>' +
+            '</div>' +
+            '</td>' +
+            '</tr>');
+
+        fila.after(seccion);
+
+        // Obtener el texto del campo 'texto' del objeto 'value'
+        var texto = fila.data('texto');
+
+        // Agregar el texto al contenido del segundo desplegable
+        var contenidoDesplegado = seccion.find('.contenido-desplegado');
+        contenidoDesplegado.append('<p>' + texto + '</p>');
+
+        agregarEventoClickCancelar(seccion, fila);
+        agregarEventoClickConfirmar(seccion, fila);
+    }
+
 
     function agregarEventoClickCancelar(seccion, fila) {
         var botonCancelar = seccion.find(".boton-cerrar-sesion");
@@ -184,4 +215,43 @@ async function cargarComunicacionesTecnico() {
             fila.addClass("desplegado");
         }
     });
+
+    $("#tablax tbody").on("click", 'i.bi.bi-info-circle', function (event) {
+        var fila = $(this).closest("tr");
+
+        if (fila.hasClass("desplegado")) {
+            fila.removeClass("desplegado");
+            fila.next(".seccion-desplegada").remove();
+        } else {
+            mostrarSegundoDesplegable(fila);
+            fila.addClass("desplegado");
+        }
+    });
+
+
+    $(document).ready(function() {
+        $(".dataTables_scrollHeadInner, table.display.content-table.dataTable.no-footer, .dataTables_scrollBody, .bottom").css("width", "100%");
+        $(".dataTables_scrollHeadInner, table.display.content-table.dataTable.no-footer, .dataTables_scrollBody").css("overflow", "auto");
+        $(".bottom").css("margin-top", "2rem");
+        $(".content-table").css("border-radius", "5px 5px 0 0");
+    });
+
+    // Función para bloquear la orientación si el ancho de la pantalla es menor a 646 píxeles
+    function lockOrientation() {
+        if (window.innerWidth < 646) {
+            if (screen.orientation && screen.orientation.lock) {
+                screen.orientation.lock("landscape").then(function() {
+                    console.log("La orientación se ha bloqueado correctamente");
+                }).catch(function(error) {
+                    console.log("No se pudo bloquear la orientación:", error);
+                });
+            } else {
+                console.log("El dispositivo no admite la función para bloquear la orientación");
+            }
+        }
+    }
+
+    // Llama a la función para bloquear la orientación si es necesario
+    lockOrientation();
+
 }

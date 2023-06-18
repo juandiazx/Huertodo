@@ -12,7 +12,7 @@ $bbdd_nombre = 'test_local';
 $bbdd_user = 'root';
 $bbdd_password = '';
 try {
-    $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password,$bbdd_nombre); //$bbdd_nombre
+    $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre); //$bbdd_nombre
 } catch (Exception $e) {
     http_response_code(500);
     die("Error: " . mysqli_connect_errno() . " " . mysqli_connect_error());
@@ -24,9 +24,10 @@ $asunto = $_POST['asunto'];
 $texto = $_POST['texto'];
 $fecha = $_POST['fecha'];
 $usuario_solicitud = $_POST['usuario_solicitud'];
+
+// Realizar el INSERT en la tabla "comunicacion_trabajadores"
 $sql = "INSERT INTO `comunicacion_trabajadores` (`de`, `para`, `asunto`, `texto`, `fecha`, `usuario_solicitud`) 
             VALUES ('$de', '$para', '$asunto', '$texto', '$fecha', '$usuario_solicitud')";
-// Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
 try {
     mysqli_query($connexion, $sql);
 
@@ -41,11 +42,14 @@ try {
     $updateSql = "UPDATE `solicitud` SET `estado` = '$estado' WHERE `id` = '$usuario_solicitud'";
     mysqli_query($connexion, $updateSql);
 
+    // Eliminar el mensaje de la tabla "comunicacion_trabajadores"
+    $deleteSql = "DELETE FROM `comunicacion_trabajadores` WHERE `usuario_solicitud` = '$usuario_solicitud' AND `comunicacion_trabajadores`.`para` = 3";
+    mysqli_query($connexion, $deleteSql);
 
     http_response_code(200);
 } catch (Exception $exception) {
     http_response_code(500);
-    // podemos usar mysqli_errno para concretar el código de respuesta
+    // Podemos usar mysqli_errno para concretar el código de respuesta
     die(mysqli_errno($connexion));
 }
 ?>

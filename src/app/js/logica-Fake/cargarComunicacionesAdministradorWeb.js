@@ -39,7 +39,10 @@ async function cargarComunicacionesAdministradorWeb() {
         console.log(respuesta);
         var data = await respuesta.json();
         console.log(data);
-
+        // Verificar si hay datos
+        if (!respuesta.ok || !data) {
+            return; // Resuelve la promesa sin cargar datos adicionales
+        }
         var datosFiltrados = data.filter((item) => item.estado === "2");
         var uniqueDatos = Array.from(
             new Set(datosFiltrados.map(JSON.stringify))
@@ -65,6 +68,7 @@ async function cargarComunicacionesAdministradorWeb() {
     await cargarDatos2();
 
     function mostrarDesplegable(fila) {
+
         var seccion = $(
             '<tr class="seccion-desplegada">' +
             '<td colspan="6">' +
@@ -178,4 +182,5 @@ async function cargarComunicacionesAdministradorWeb() {
             fila.addClass("desplegado");
         }
     });
+
 }

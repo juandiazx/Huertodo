@@ -300,9 +300,9 @@ INSERT INTO `usuario` (`id`, `email`, `nombreApellidos`, `contrasenya`, `rol`, `
 -- Volcado de datos para la tabla `huertos`
 --
 
-INSERT INTO `huertos` (`id`, `nombre`, `latitud`, `longitud`, `usuario`) VALUES
-(1, 'Manzanas', 30.946249, 118.756589, 1),
-(2, 'Tomates', 45.9113179, 16.1242534, 1);
+INSERT INTO `huertos` (`id`, `nombre`, `usuario`) VALUES
+(1, 'Manzanas', 1),
+(2, 'Tomates', 1);
 
 --
 -- Volcado de datos para la tabla `medicion`

@@ -12,7 +12,13 @@ async function cargarGrafica(primerTimestamp,segundoTimestamp,idHuerto,parametro
     let url = '../api/v.1.0/monitorizacion/cargarGrafica.php'
     const respuesta = await fetch(`${url}?${param}`);
     if(!respuesta.ok){
-        alert("La grafica no se ha podido cargar")
+        let container = document.getElementById("contenedor-graficas-con-filtros")
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
+        }
+        container.style.padding = "2rem"
+        container.style.textAlign = "center"
+        container.innerText = "No están disponibles las gráficas"
     }
     const data = await respuesta.json();
     return data;

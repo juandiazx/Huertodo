@@ -1,5 +1,44 @@
 document.addEventListener("DOMContentLoaded",graficas)
 async function graficas(){
+    let container = document.getElementById("contenedor-graficas-con-filtros")
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+    // Crear el contenedor de la gráfica
+    const contenedorGrafica = document.createElement("div");
+    contenedorGrafica.id = "contenedor-grafica-historial";
+
+// Crear el elemento canvas para la gráfica
+    const canvasGrafica = document.createElement("canvas");
+    canvasGrafica.id = "grafica-historial";
+    canvasGrafica.setAttribute("aria-label", "Grafica Interactiva Histórico Parámetros");
+    canvasGrafica.setAttribute("role", "img");
+
+// Agregar el canvas al contenedor de la gráfica
+    contenedorGrafica.appendChild(canvasGrafica);
+
+// Crear el contenedor de los botones de filtro de la gráfica
+    const contenedorBotonesFiltro = document.createElement("div");
+    contenedorBotonesFiltro.id = "contenedor-botones-filtro-grafica";
+
+// Crear el botón "Semana"
+    const botonSemana = document.createElement("button");
+    botonSemana.id = "boton-filtro-grafica-semana";
+    botonSemana.textContent = "Semana";
+
+// Crear el botón "Mes"
+    const botonMes = document.createElement("button");
+    botonMes.id = "boton-filtro-grafica-mes";
+    botonMes.textContent = "Mes";
+
+// Agregar los botones al contenedor de filtros
+    contenedorBotonesFiltro.appendChild(botonSemana);
+    contenedorBotonesFiltro.appendChild(botonMes);
+
+// Agregar los contenedores al documento
+    container.appendChild(contenedorGrafica);
+    container.appendChild(contenedorBotonesFiltro);
 //setTimeout porque la carga de fuentes poppins para el chart, tarda sus 100ms, con el DOM, no funcionaba
 setTimeout(async function () {
     document.getElementById("grafica-historial").remove()

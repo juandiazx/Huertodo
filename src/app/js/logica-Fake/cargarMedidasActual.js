@@ -10,47 +10,59 @@ async function cargarMedidasActual(){
     let url = '../api/v.1.0/monitorizacion/cargarMedidasActual.php'
     const respuesta = await fetch(`${url}?${param}`);
     if(!respuesta.ok){
-        alert("Las última medida no se ha podido cargar")
-    }
-    const data = await respuesta.json();
-    const selectElement = document.getElementById("nombre-huerto");
-    const selectedOption = selectElement.selectedOptions[0];
-    const selectedOptionName = selectedOption.text;
-    let dataJSON = {
-        huerto: selectedOptionName,
-        idHuerto: document.getElementById("nombre-huerto").value,
-        timestamp: obtenerFechaActual(),//Obtiene el date actual en formato SQL
-        temperatura: comprobarParametroTemp(data.temperatura),
-        ph: comprobarPh(data.ph),
-        humedad: comprobarParametroNoPh(data.humedad),
-        salinidad: comprobarParametroNoPh(data.salinidad),
-        iluminacion: comprobarParametroNoPh(data.iluminacion)
-    };
+        const humedad = document.getElementById("contenedor-humedad").querySelector("span")
+        const salinidad = document.getElementById("contenedor-salinidad").querySelector("span")
+        const iluminacion = document.getElementById("contenedor-iluminacion").querySelector("span")
+        const ph = document.getElementById("contenedor-ph").querySelector("span")
+        const temperatura = document.getElementById("contenedor-temperatura").querySelector("span")
 
-    // Verificar si la medida ya ha sido procesada
-    const medidaExistente = Array.from(medidasProcesadas).some(medida => {
-        return JSON.stringify(medida) === JSON.stringify(data);
-    });
-    // Verificar si la medida ya ha sido procesada
-    if (!medidaExistente) {
-        console.log(medidasProcesadas)
-        // La medida no ha sido procesada, crear la notificación
-        decidirSiGenerarNotificaciones(dataJSON)//Aqui se decide para que parametros se generan notificaciones
-        // Agregar la medida al conjunto de medidas procesadas
-        medidasProcesadas.add(data);
+        humedad.innerText = "No disponible"
+        salinidad.innerText = "No disponible"
+        iluminacion.innerText = "No disponible"
+        ph.innerText = "No disponible"
+        temperatura.innerText = "No disponible"
     }
+    else{
+        const data = await respuesta.json();
+        const selectElement = document.getElementById("nombre-huerto");
+        const selectedOption = selectElement.selectedOptions[0];
+        const selectedOptionName = selectedOption.text;
+        let dataJSON = {
+            huerto: selectedOptionName,
+            idHuerto: document.getElementById("nombre-huerto").value,
+            timestamp: obtenerFechaActual(),//Obtiene el date actual en formato SQL
+            temperatura: comprobarParametroTemp(data.temperatura),
+            ph: comprobarPh(data.ph),
+            humedad: comprobarParametroNoPh(data.humedad),
+            salinidad: comprobarParametroNoPh(data.salinidad),
+            iluminacion: comprobarParametroNoPh(data.iluminacion)
+        };
+
+        // Verificar si la medida ya ha sido procesada
+        const medidaExistente = Array.from(medidasProcesadas).some(medida => {
+            return JSON.stringify(medida) === JSON.stringify(data);
+        });
+        // Verificar si la medida ya ha sido procesada
+        if (!medidaExistente) {
+            console.log(medidasProcesadas)
+            // La medida no ha sido procesada, crear la notificación
+            decidirSiGenerarNotificaciones(dataJSON)//Aqui se decide para que parametros se generan notificaciones
+            // Agregar la medida al conjunto de medidas procesadas
+            medidasProcesadas.add(data);
+        }
 //Guardamos IDs de los spans donde van los datos en tiempo real de monitorizacion
-    const humedad = document.getElementById("contenedor-humedad").querySelector("span")
-    const salinidad = document.getElementById("contenedor-salinidad").querySelector("span")
-    const iluminacion = document.getElementById("contenedor-iluminacion").querySelector("span")
-    const ph = document.getElementById("contenedor-ph").querySelector("span")
-    const temperatura = document.getElementById("contenedor-temperatura").querySelector("span")
+        const humedad = document.getElementById("contenedor-humedad").querySelector("span")
+        const salinidad = document.getElementById("contenedor-salinidad").querySelector("span")
+        const iluminacion = document.getElementById("contenedor-iluminacion").querySelector("span")
+        const ph = document.getElementById("contenedor-ph").querySelector("span")
+        const temperatura = document.getElementById("contenedor-temperatura").querySelector("span")
 
-    humedad.innerText = data.humedad+"%"
-    salinidad.innerText = data.salinidad+"%"
-    iluminacion.innerText = data.iluminacion+"%"
-    ph.innerText = data.ph
-    temperatura.innerText = data.temperatura+"ºC"
+        humedad.innerText = data.humedad+"%"
+        salinidad.innerText = data.salinidad+"%"
+        iluminacion.innerText = data.iluminacion+"%"
+        ph.innerText = data.ph
+        temperatura.innerText = data.temperatura+"ºC"
+    }
 }
 
 

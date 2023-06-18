@@ -35,6 +35,8 @@ async function cargarHuertosUsuario(){
             option.text = objetoHuerto.nombre;
             selector.appendChild(option);
         })
+        await mapaMonitorizacion() //Cargar los huertos en el mapa
+        await dinamicaMapaMonitorizacion()
     }
 }
 

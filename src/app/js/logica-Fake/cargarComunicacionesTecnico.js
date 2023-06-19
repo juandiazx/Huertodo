@@ -44,8 +44,8 @@ async function cargarComunicacionesTecnico() {
         var data = await respuesta.json();
         console.log(data);
 
-        var iconos = '<i class="bi bi-tools"></i>' +
-            '<i class="bi bi-info-circle"></i>';
+        var iconos = '<i class="bi bi-tools icono-tecnico"></i>' +
+            '<i class="bi bi-info-circle "></i>';
 
         data.forEach((value) => {
             var fila = tabla

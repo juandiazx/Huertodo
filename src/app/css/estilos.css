@@ -88,6 +88,7 @@ h3 {
     text-align: center;
     align-content: center;
     width: 72%;
+    max-width: 300px;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -98,6 +99,7 @@ h3 {
     font-size: 170%;
     padding: 0.1em 0.1em;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 .boton-verde-blanco:hover{
@@ -241,7 +243,45 @@ main>section, body>section{
     margin-top: 12vh;
     padding-left: 7%;
     padding-right: 7%;
+
 }
+
+/* Esconde las imágenes por defecto */
+.mySlides {
+    display: none;
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    padding-left: 10px; /* Ajusta el margen izquierdo según tus necesidades */
+    padding-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+}
+
+
+/* Contenido dentro de .mySlides */
+.mySlides img {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente dentro de .mySlides */
+}
+
+/* Fila de imágenes del selector */
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto; /* Centra la sección horizontalmente */
+    max-width: 1200px; /* Ajusta el ancho máximo de la fila según tus necesidades */
+    padding-left: 10px; /* Ajusta el margen izquierdo según tus necesidades */
+    padding-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+}
+
+/* Contenido dentro de .row */
+.row .column {
+    display: flex;
+    justify-content: center;
+}
+
+.row .column img {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente dentro de cada columna */
+}
+
 
 /* Página del Producto */
 #producto-page{
@@ -253,6 +293,7 @@ main>section, body>section{
     align-items: center;
     margin-top: 3em;
 }
+
 
 #producto-page h2 {
     text-align: left;
@@ -266,6 +307,9 @@ main>section, body>section{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
 /* Características de la sección de preguntas frecuentes */
@@ -292,13 +336,12 @@ main>section, body>section{
 
 /* Características de las imágenes mostradas del selector */
 .image-selector {
-    width: 100%;
-    height: 6%;
+    width: 320px; /* Tamaño fijo en píxeles */
+    height: auto; /* Mantén la proporción de aspecto */
     border-radius: 1.1em;
-    max-width: 100%;
+    margin-bottom: 1em;
     align-content: center;
     justify-content: center;
-    margin-bottom: 3em;
 }
 
 /* Fila de imágenes del selector */
@@ -312,18 +355,17 @@ main>section, body>section{
 /* Crea seis columnas en la fila para las seis imágenes del selector */
 .column {
     float: left;
-    width: 16.66%;
-    padding: 0 5px;
+    width: 50px;
+    padding: 0 1px;
     height: 4em;
 }
 
 /* Características de las imágenes inferiores de selección */
 .demo {
     opacity: 1;
-    width: 100%;
-    height: 100%;
+    width: 45px; /* Tamaño fijo en píxeles */
+    height: 45px; /* Mantén la proporción de aspecto */
     border-radius: 1.1em;
-    max-width: 100%;
     align-content: center;
     justify-content: center;
     cursor: pointer;
@@ -480,29 +522,17 @@ tbody tr:nth-child(even) {
     font-size: 92%;
 }
 
-/*Estilo imágenes de la landing page*/
-.imagenes-landing {
-    height: 6%;
-    border-radius: 1.1em;
-    max-width: 100%;
-    align-content: center;
-    justify-content: center;
-    margin-bottom: 3em;
-}
-
-#boton-CTA{
-    max-width: 500px;
-}
-
-.flecha-bajar{
-    margin-top: 18vh;
-    width: 3rem;
-    padding: 0.5rem 0 0 0; /* Arriba, Derecha, Abajo, Izquierda*/
-}
 
 
 /*------------------------Comienza landing page------------------------*/
 /*------------------------Comienza landing page hero------------------------*/
+
+/*Contenedor completo, wrapper de toda la monitorización, no lleva el margin top 12vh en landing*/
+.wrapper-landing{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
 /*Estilo de la sección hero donde esta el CTA, primera pantalla de la landing page*/
 #landing-page-hero {
     margin-top: 12vh;
@@ -519,20 +549,90 @@ tbody tr:nth-child(even) {
     margin-bottom: 2rem;
 }
 
-#landing-page-hero h1{
-    margin-top: 12vh;
+/* Márgenes para el título de la hero */
+#landing-page-hero h1 {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
 }
 
-/*Márgenes para el párrafo de la hero, */
-#landing-page-hero p{
+/* Márgenes para el párrafo de la hero */
+#landing-page-hero p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 1em;
     margin-bottom: 6em;
 }
-/*------------------------Termina landing page hero------------------------*/
 
-.content{
-
+/* Estilos para el botón CTA */
+#boton-CTA {
+    position: absolute;
+    max-width: 500px;
+    transition: all .5s ease;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+/* Estilos para la flecha de bajar */
+.flecha-bajar {
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #06884DFF;
+}
+
+.flecha-bajar a {
+    color: var(--main-color-white);
+    font-size: 4rem;
+    display: inline-block;
+    animation: flecha_animada 1.5s ease-in-out infinite;
+    padding: 0.3rem;
+    transition: all .5s ease;
+}
+
+
+@keyframes flecha_animada {
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+
+/*Estilo imágenes de la landing page*/
+.imagenes-landing {
+    height: 6%;
+    border-radius: 1.1em;
+    max-width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+.imagenes-landing {
+    width: 370px;
+    height: auto;
+    display: block;
+    margin: 5vh auto;
+}
+
+
+
+
+/*------------------------Termina landing page hero------------------------*/
 
 /*------------------------Comienza sección mantenimiento------------------------*/
 /*Estilo de la sección de mantenimiento en la landing page*/
@@ -651,6 +751,7 @@ tbody tr:nth-child(even) {
     font-size: 1.2em;
     width: 2.4em;
     height: 2.4em;
+    transition: all .5s ease;
 }
 /*------------------------Termina reseñas------------------------*/
 /*------------------------Termina landing page------------------------*/
@@ -675,12 +776,14 @@ tbody tr:nth-child(even) {
     width: 100%;
     background-color: var(--second-color-green);
     color: var(--main-color-white);
+    transition: all .5s ease;
 }
 
 /*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
 #footer-bottom a{
     margin-right: 0.6em;
     margin-left: 0.6em;
+    transition: all .5s ease;
 }
 
 /*Margenes para el texto de copyrigth del footer*/

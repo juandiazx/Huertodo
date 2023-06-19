@@ -17,9 +17,30 @@
     <!-- CSS DOCUMENTO estilos.css-->
     <link rel='stylesheet' href="css/estilos.css"/>
     <link rel='stylesheet' href="css/estilos_responsive.css"/>
+    <link rel='stylesheet' href="css/monitorizacion.css"/>
 
     <!-- Añadir librerias de chart.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+
+    <!--JS Funcion cargarGrafica() llamada cada vez que se recarga o cada boton de grafica y de intervalo-->
+    <script src="js/logica-Fake/cargarGrafica.js"></script>
+
+    <!--JS Funcion generarNotificaciones() llamada cada vez que se toma una medida-->
+    <script src="js/logica-Fake/generarNotificaciones.js"></script>
+
+    <!--JS Funcion cargarNotificacionesHuertos() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/cargarNotificacionesHuertos.js"></script>
+
+    <!--JS Funcion borrarNotificacionMonitorizacion() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/borrarNotificacionMonitorizacion.js"></script>
+
+    <!--JS Funcion cargarHuertosUsuario() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/cargarHuertosUsuario.js"></script>
+
+    <!--JS Funcion cargarMedidasActual() llamada desde control-acceso.js-->
+    <script src="js/logica-Fake/cargarMedidasActual.js"></script>
+
+    <!--JS con la funcion de comprobarSesion()-->
     <script src="js/logica-Fake/control-acceso.js"></script>
     <script>document.addEventListener('DOMContentLoaded',comprobarSesion("usuario"));</script>
 
@@ -27,27 +48,15 @@
 <body class="loading">
 <!-- Comienza la cabecera-->
 <header>
-    <nav id="main-menu">
+    <nav id="header-esp-personales">
         <!-- Logotipo Link Landing Page-->
-        <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+        <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
 
         <!-- Contenedor para los iconos de inicio de sesión y menú -->
-        <div class="contenedor-iconos">
+        <div class="contenedor-iconos-2">
             <!-- Icono de inicio de sesión -->
 
-            <!-- Menu hamburguesa-->
-            <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <ul >
-                <li><a href="Producto.html" class="texto-link">Producto</a></li>
-                <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
-                <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
-                <li class="boton-cerrar-sesion boton-verde-blanco"><a onclick="borrarSesion()">Cerrar sesión</a></li>
-            </ul>
+             <button class="boton-cerrar-sesion boton-verde-blanco"><a href="Inicio_sesion.html" class="texto-boton-cerrar" onclick="borrarSesion()">Cerrar sesión</a></button>
 
         </div>
     </nav>
@@ -70,65 +79,23 @@
 
     <!-- Desplegable para las notificaciones-->
     <dialog id="desplegable-popup-notificaciones">
-        <div id="cabecera-popup-notificaciones">
-            <h2>Notificaciones</h2>
-            <img id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
-        </div>
-        <div class="contenedor-notificacion-especifica">
-            <div class="notificacion-especifica-texto">
-                <p>La iluminación está bajando más de lo normal</p>
+            <div id="cabecera-popup-notificaciones" class="cabecera-popup">
+                <h2>Notificaciones</h2>
+                <img class="cerrar-dialogo" id="cerrar-dialogo-notificaciones" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar notificaciones">
             </div>
-            <div class="notificacion-especifica-fecha">
-                <p>16 Julio 2023</p>
+            <div id="contenedor-sin-notificaciones">
+                <p id="texto-sin-notificaciones">Sin notificaciones</p>
             </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="notificacion-especifica-texto">
-                <p>La humedad ha bajado drásticamente</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>14 Julio 2023</p>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="notificacion-especifica-texto">
-                <p>La humedad ha bajado drásticamente</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>10 Julio 2023</p>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="notificacion-especifica-texto">
-                <p>El Huerto 2 está teniendo una humedad muy alta</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>09 Julio 2023</p>
-            </div>
-        </div>
-
-        <div class="contenedor-notificacion-especifica">
-            <div class="notificacion-especifica-texto">
-                <p>La temperatura ha llegado a estar muy alta</p>
-            </div>
-            <div class="notificacion-especifica-fecha">
-                <p>05 Julio 2023</p>
-            </div>
-        </div>
     </dialog>
 
     <!--Termina esplegable para las notificaciones-->
 
     <!-- Comienza el contenedor de monitorizacion-->
     <div id="contenedor-monitorizacion">
-
+        <div id="contenedor-nombre-tiempo-parametros"><!--Inicia contenedor donde cambia el flex,nombre,tiempo,parametro tiempo real, sin grafica-->
+        <div id="contenedor-nombre-metereologia"><!--Inicia contenedor porcion derecha-->
         <div id="contenedor-nombre-huerto">
             <select name="nombres-huertos" id="nombre-huerto">
-                <option value="Huerto 1">Huerto 1</option>
-                <option value="Huerto 2">Huerto 2</option>
             </select>
             <div id="contenedor-boton-editar-nombre-huerto">
                 <i id="icono-editar-nombre" class="bi bi-pencil-square"></i>
@@ -142,18 +109,27 @@
             <form id="formulario-cambiar-nombre-huerto">
                 <label for="nombre-huerto-form">Nombre nuevo de Huerto 1</label>
                 <input type="text" id="nombre-huerto-form" name="nombre-huerto" required>
+                <input type="number" id="input-clandestino" name="id">
+                <div id="mensaje-exito-cambiar-nombre">Nombre modificado con éxito</div>
                 <button type="submit" class="boton-verde-blanco-mapa">Modificar nombre</button>
             </form>
         </dialog>
 
         <div id="contenedor-fecha-hora-huerto">
             <div id="contenedor-temperatura-metereologia">
-                <p>18ºC Gandia <img class="icono-estado-metereologico" src="images/icono-soleado.png" alt="icono soleado"></p>
+                <div id="label-tiempo-actual">El tiempo actual:</div>
+                <div id="ww_4b62def8642aa" v='1.3' loc='id' a='{"t":"horizontal","lang":"es","sl_lpl":1,"ids":["wl6604"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_nme":3,"el_whr":3,"el_phw":3}'>Weather Data Source: <a href="https://sharpweather.com/weather_valencia_province/30_days/" id="ww_4b62def8642aa_u" target="_blank">Valencia Province weather 30 days</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_4b62def8642aa"></script>
             </div>
-            <p class="parrafo-negrita">18:32</p>
+            <!--
+            Hora anulada temporalmente
+            <div id="contenedor-hora-huerto">
+                <p class="parrafo-negrita" id="hora-huerto">18:32</p>
+            </div>
+            -->
         </div>
-
-        <div id="datos-cada-30-s">Actualización de datos cada 30 minutos</div>
+        </div><!--Contenedor porcion de la izquierda-->
+        <div id="contenedor-actualizacion-parametros-derecha"><!--Inicia contenedor porcion derecha-->
+        <div id="datos-cada-30-s">Actualización de datos cada hora</div>
 
                 <!--Comienza contenedor con los parametros en tiempo real del huerto-->
         <div class="contenedor-parametros-tiempo-real-huerto">
@@ -171,7 +147,7 @@
         <div class="contenedor-parametros-tiempo-real-huerto">
             <div id="contenedor-iluminacion" class="contenedor-parametro-monitorizacion-especifico">
                 <img class="icono-dato-tiempo-real" src="images/brightness.png" alt="icono iluminosidad">
-                <p><span>Muy alta</span></p>
+                <p><span>70%</span></p>
                 <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
             <div id="contenedor-ph" class="contenedor-parametro-monitorizacion-especifico">
@@ -187,6 +163,8 @@
                 <img class="icono-boton-grafica-historico" src="images/icono-grafica-historico.png" alt="icono boton gráfica">
             </div>
         </div>
+        </div><!--Termina contenedor porcion derecha-->
+        </div><!--Acaba contenedor donde cambia flex, ahora va graficas-->
         <!--Termina contenedor con los parametros en tiempo real del huerto-->
 
         <!-- Comienza el historial de mediciones grafica-->
@@ -196,14 +174,11 @@
                 <canvas id="grafica-historial" aria-label="Grafica Interactiva Histórico Parámetros" role="img"></canvas>
             </div>
             <!--Contenedor con los botones de filtrar de la gráfica-->
-            <!--
+
             <div id="contenedor-botones-filtro-grafica">
-                <button id="boton-filtro-grafica-anyo">Año</button>
-                <button id="boton-filtro-grafica-mes">Mes</button>
                 <button id="boton-filtro-grafica-semana">Semana</button>
-                <button id="boton-filtro-grafica-dia">Dia</button>
+                <button id="boton-filtro-grafica-mes">Mes</button>
             </div>
-			-->
         </div>
         <!-- Termina el historial de mediciones grafica-->
 
@@ -216,17 +191,12 @@
 
     <!-- Desplegable para el mapa de huertos-->
     <dialog id="desplegable-popup-mapa">
-        <section id="cabecera-popup-mapa">
-            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-mapa.png" alt="Icono cruz Cerrar notificaciones">
+        <section id="contenedor-cerrar-mapa" class="cabecera-popup">
+            <h2>Mapa con tus huertos</h2>
+            <img id="cerrar-dialogo-mapa" src="images/icono-cerrar-notificaciones.png" alt="Icono cruz Cerrar mapa">
         </section>
-        <section class="contenedor-icono-huerto-mapa">
-            <img id="icono-huerto1" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
-            <p>Huerto 1</p>
-        </section>
-        <section class="contenedor-icono-huerto-mapa">
-            <img id="icono-huerto2" class="icono-huerto-mapa" src="images/icono-huerto-mapa.png" alt="Icono huerto">
-            <p>Huerto 2</p>
-        </section>
+        <div id="contenedor-mapa">
+        </div>
     </dialog>
     <!--Termina desplegable para el mapa de huertos-->
 
@@ -245,13 +215,19 @@
 </footer>
 <!-- Termina el footer-->
 
+<!-- JavaScript Documento mapaMonitorizacion.js-->
+<script src="js/mapaMonitorizacion.js"></script>
+
 <!-- JavaScript Documento graficas.js para la gráfica-->
 <script src="js/graficas.js"></script>
+<!-- JavaScript cambiarNombreHuerto-->
+<script src="js/logica-Fake/cambiarNombreHuerto.js"></script>
 <!-- JavaScript Documento popups-monitorizacion.js para el mapa y las notificaciones-->
 <script src="js/popups-monitorizacion.js"></script>
 <!-- JavaScript Documento index.js para el menu desplegable-->
 <script src="js/index.js"></script>
 <!-- JavaScript Documento getMedidas.js-->
 <script src="js/getMedidas.js"></script>
+
 </body>
 </html>

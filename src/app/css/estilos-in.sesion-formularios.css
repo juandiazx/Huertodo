@@ -70,8 +70,9 @@ h3 {
 
 /*Estilo botones verdes y blancos como CTA*/
 .boton-verde-blanco {
-    text-align: center;
-    align-content: center;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
     width: 72%;
     border-radius: 3em;
     border: none;
@@ -83,6 +84,7 @@ h3 {
     font-size: 170%;
     padding: 0.1em 0.1em;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 /*Estilo para cambiar el color de los botones al poner el ratón encima*/
@@ -164,14 +166,17 @@ h3 {
         font-size: 16px; /
     font-weight: normal;
         color: var(--second-color-green);
+        transition: all .5s ease;
     }
 
     .boton-cerrar-sesion {
         padding-top: 0.4rem;
+        transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
-        margin-top: 3rem;
-        color: var(--main-color-white);
+        display: block !important;
+        color: var(--main-color-white) !important;
+        transition: all .5s ease;
     }
 
 
@@ -185,11 +190,13 @@ h3 {
     #icono-inicio-sesion {
         margin-right: 30px; /* Margen derecho entre el icono y el borde */
         order: 1;
+        transition: all .5s ease;
     }
 
     .boton-cerrar-sesion {
         width: 8rem;
         height: 2.3rem;
+        transition: all .5s ease;
     }
 }
 
@@ -225,6 +232,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .estilo-form-inicio-sesion {
@@ -247,6 +255,7 @@ h3 {
     align-items: center;
     margin-bottom: 4.95em;
     margin-top: 2em;
+    transition: all .5s ease;
 
 }
 
@@ -326,6 +335,7 @@ h3 {
     margin-top: 0.7em;
     color: #06884D;
     font-weight: 600;
+    transition: all .5s ease;
 }
 /*-----------------------------------------------------------------------------------------*/
 
@@ -340,6 +350,7 @@ h3 {
     align-items: center;
     margin-bottom: 4.95em;
     margin-top: 2em;
+    transition: all .5s ease;
 
 }
 
@@ -354,6 +365,7 @@ h3 {
     font-weight: 400;
     font-size: 140%;
     padding: 7px ;
+    transition: all .5s ease;
 }
 
 .boton-iniciar-sesion:hover{
@@ -380,6 +392,7 @@ h3 {
 #solicitar-acceso a {
     color: #06884D;
     font-weight: 700;
+    transition: all .5s ease;
 }
 
 #solicitar-acceso a:hover{
@@ -390,7 +403,7 @@ h3 {
 
 .seccion-solicitud{
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 
@@ -447,10 +460,20 @@ h3 {
 }
 
 #campos-obligatorios{
+    margin-top: -0.2rem;
     margin-bottom: 0.8rem;
 }
 
+#campos-obligatorios-nueva-contrasenya{
+    text-align: right;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.8em;
+}
+
 /*-----------------------------------------------------------------------------------------*/
+
+
 
 /* Estilos para los inputs */
 
@@ -520,6 +543,7 @@ textarea:focus {
     font-weight: 400;
     font-size: 140%;
     padding: 7px;
+    transition: all .5s ease;
 }
 
 .boton-enviar-formulario-solicitud-activo:hover {
@@ -561,6 +585,7 @@ textarea:focus {
 #chekbox a {
     color: #06884D;
     font-weight: 700;
+    transition: all .5s ease;
 }
 
 #chekbox a:hover{
@@ -595,6 +620,7 @@ textarea:focus {
     background-color: var(--second-color-green);
     border: none;
     outline: none;
+    transition: all .5s ease;
 }
 
 #close-icon{
@@ -761,6 +787,42 @@ textarea:focus {
 
 }
 
+/*ESTILOS PARA LOS DROPLISTS DENTRO DE LOS FORMULARIOS*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.droplist select {
+    width: 100%;
+    font-size: 0.9em;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family:'Poppins', sans-serif;
+    text-align: left;
+    padding: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    transition: all .5s ease;
+}
+
+.droplist select option:hover {
+    background-color: #06884DFF; /* Cambia el color a rojo al pasar el ratón */
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+.droplist select:focus{
+    outline: none;
+    border: 2px #06884DFF solid;
+}
+
+
+/*---------------------------------*/
 
 /*--------------------FIN ESTILOS DE TRABAJADORES----------------*/
 
@@ -850,11 +912,13 @@ textarea:focus {
 /*--------ACABA MENSAJE ERROR DATOS INCORRECTOS INICIO SESIÓN--------*/
 
 /*--------ESTILOS RESTABLECER CONTRASEÑA NUEVA---------*/
-#mensaje-error-contraseña{
+#mensaje-error-contrasenya{
     display: none;
     color: #c70202;
-    padding: 0.5rem;
+    padding: 0.2rem;
+    margin-bottom: 0.4rem;
 }
+
 /*--------ACABA ESTILOS RESTABLECER CONTRASEÑA NUEVA---------*/
 
 /*---------------------Estilos para los popups de inicio de sesión, formularios y trabajadores------------*/
@@ -911,16 +975,48 @@ textarea:focus {
     padding: 2rem;
     text-align: center;
     font-size: 1.2em;
-    max-width: 65%;
-    max-height: 30%;
+    /*max-width: 65%;
+    max-height: 30%;*/
     overflow: auto;
-    height: 70%;
+    width: 30%;
+    height: 30%;
+}
+
+/*ESTILOS RESPONSIVE PARA LOS POPUPS*/
+@media screen and (min-width: 250px) and (max-width: 450px) {
+    .popup-contenido {
+        width: 65%;
+        height: 30%;
+        font-size: 0.9em;
+    }
+}
+
+/*ESTILOS RESPONSIVE PARA LOS POPUPS*/
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .popup-contenido {
+        width: 50%;
+        height: 30%;
+        font-size: 1em;
+    }
+}
+
+/*ESTILOS RESPONSIVE PARA LOS POPUPS*/
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .popup-contenido {
+        width: 45%;
+        height: 30%;
+        font-size: 1.1em;
+    }
 }
 
 /* Botón de cerrar */
 #cerrar-popup, #confirmar-popup, #cancelar-popup {
     /* Establecer el diseño del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    max-width: 300px;
     height: 20%;
     border-radius: 1.3em;
     border: none;
@@ -933,6 +1029,7 @@ textarea:focus {
     padding: 5px;
     margin-top: 0.5rem;
     cursor: pointer;
+    transition: all .5s ease;
 }
 /* Estilo de botones Pop Ups para cuando el ratón pasa por encima */
 #cerrar-popup:hover, #confirmar-popup:hover, #cancelar-popup:hover{
@@ -965,11 +1062,14 @@ textarea:focus {
     background-color: var(--second-color-green);
     color: var(--main-color-white);
     margin-top: auto;
+    text-decoration: none !important;
 }
 /*Estilo que poseen los enlaces de politica de privacidad y condiciones, margenes entre cada uno */
 #footer-bottom a{
     margin-right: 0.6em;
     margin-left: 0.6em;
+    transition: all .5s ease;
+    color: var(--main-color-white);
 }
 /*Margenes para el texto de copyrigth del footer*/
 #footer-bottom p {

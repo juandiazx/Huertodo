@@ -73,6 +73,7 @@ h3 {
     padding: 0.5em 0.6em;
     display: block;
     cursor: pointer;
+    transition: all .5s ease;
 }
 
 .boton-verde-blanco-mapa:hover {
@@ -93,10 +94,15 @@ h3 {
 
 /*------------------------Comienza el estilo del espacio personal------------------------*/
 
+#contenedor-espacio-personal-completo{
+    display: flex;
+    flex-direction: column;
+}
 /*Estilo contenedor de las notificaciones huertos*/
 #contenedor-notificaciones {
     display: flex;
     justify-content: flex-end;
+    order: 1;
 }
 /*Estilo panel circular notificaciones espacio personal*/
 #panel-circular-notificaciones {
@@ -111,6 +117,12 @@ h3 {
     height: auto;
     margin-bottom: 0.7rem;
     cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+/*Estilo panel circular notificaciones espacio personal cuando hover*/
+#panel-circular-notificaciones:hover {
+    transform: scale(1.05);
 }
 
 /*Estilo parrafo con el numero de notificaciones*/
@@ -142,11 +154,27 @@ h3 {
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
+    scrollbar-width: thin; /* Ajusta el ancho de la barra de desplazamiento */
+    overflow-y: scroll; /* Habilita la barra de desplazamiento vertical solo cuando sea necesario */
+}
+
+/* Estilos para la barra de desplazamiento en Chrome, Edge y Safari */
+#desplegable-popup-notificaciones::-webkit-scrollbar {
+    width: 6px; /* Ajusta el ancho de la barra de desplazamiento */
+}
+
+#desplegable-popup-notificaciones::-webkit-scrollbar-track {
+    background-color: #dddddd; /* Ajusta el color de fondo de la barra de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la barra de desplazamiento */
+}
+
+#desplegable-popup-notificaciones::-webkit-scrollbar-thumb {
+    background-color: #888888; /* Ajusta el color de la perilla de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la perilla de desplazamiento */
 }
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
 #desplegable-popup-notificaciones::backdrop {
-    display: flex;
     width: 100%;
     height: 100%;
     top: 50%; /* Distancia desde la parte superior */
@@ -154,19 +182,18 @@ h3 {
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
     /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
 }
 
 /*Estilo cabecera del popup de las notificaciones*/
-#cabecera-popup-notificaciones {
+.cabecera-popup {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1.2em;
 }
 /*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
-#cerrar-dialogo-notificaciones {
+.cerrar-dialogo {
     width: 2.3em;
     height: 2.3em;
     cursor: pointer;
@@ -177,19 +204,68 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+/*Estilo para el icono de la carita de la prioridad*/
+.icono-prioridad-notificacion>img{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.3rem;
+}
+/*Estilo de contenedor textos de cada notificacion en las notificaciones*/
+.notificacion-especifica-texto {
+    width: 8em;
 }
 
 /*Estilo de textos de cada notificacion en las notificaciones*/
-.notificacion-especifica-texto {
-    width: 11em;
+.notificacion-especifica-texto>p {
+    font-size:0.8rem ;
+    margin: 0;
 }
 
 /*Estilo para el texto de fecha de cada notificacion*/
 .notificacion-especifica-fecha>p{
-    padding-left: 1em;
-    font-weight: 700;
+    font-size: 0.77rem;
+    padding-left: 0.2em;
+    font-weight: 500;
     text-align: center;
+    margin: 0;
 }
+
+/*Estilo para el icono de borrar cada notificacion*/
+.icono-borrar-notificacion{
+    margin-left: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:1.4rem ;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+/*Estilo borrar notificaciones icono hover*/
+.icono-borrar-notificacion:hover {
+    transform: scale(1.08);
+}
+
+/*Estilos para el contenedor del texto que no hay notificaciones*/
+#contenedor-sin-notificaciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Estilo para el texto que indica que no hay notificaciones*/
+#texto-sin-notificaciones{
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
 /*Estilo del contenedor completo de la monitorizacion, panel con sombra*/
 #contenedor-monitorizacion {
     display: flex;
@@ -200,6 +276,7 @@ h3 {
     border-radius: 1.1em;
     margin-top: 0.7em;
     margin-bottom: 3.2em;
+    order: 3;
 }
 
 /*Estilo contenedor que contiene el select de nombres de huerto*/
@@ -222,7 +299,14 @@ select {
     font-size: 170%;
     overflow: hidden;
     margin-right: 1rem;
+    transition: all .4s ease-in-out;
 }
+
+/*Dropdown list para cambiar de huerto y cambiar el nombre con hover*/
+select:hover {
+    transform: scale(1.05);
+}
+
 
 /*Estilo para el contenedor que cubre al boton de editar el nombre del huerto*/
 #contenedor-boton-editar-nombre-huerto  {
@@ -232,11 +316,12 @@ select {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: .5s ease;
 }
 
-/*Hover para cuando pasas por encima del boton de editar nombre*/
-#contenedor-boton-editar-nombre-huerto:hover {
-    color: var(--second-color-green-hover);
+/*Estilo para el contenedor que cubre al boton de editar el nombre del huerto*/
+#contenedor-boton-editar-nombre-huerto:hover  {
+    color:var(--second-color-green-hover);
 }
 
 /*Estilo del dialogo depopup cambiar nombre*/
@@ -255,7 +340,6 @@ select {
 
 /*Estilo popup de su backdrop dialogo*/
 #desplegable-popup-cambiar-nombre-huerto::backdrop {
-    display: flex;
     width: 100%;
     height: 100%;
     top: 50%; /* Distancia desde la parte superior */
@@ -263,7 +347,6 @@ select {
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
     /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
 }
 
@@ -300,6 +383,20 @@ select {
     color: #333333;
 }
 
+/*Estilo para el input oculto que contiene el id del huerto a cambiar*/
+#input-clandestino {
+    display: none;
+}
+
+/*Estilo mensaje exito para cambiar nombre*/
+#mensaje-exito-cambiar-nombre{
+    display: none;
+    font-size: 0.9rem;
+    color: var(--second-color-green);
+    text-align: left;
+    margin-top: 0.3rem;
+}
+
 /*Estilo para el button del formulario de cambiar nombre de huerto*/
 #formulario-cambiar-nombre-huerto button {
     text-align: center;
@@ -333,9 +430,41 @@ select {
 #contenedor-fecha-hora-huerto {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    margin-bottom: 1rem;
 }
+
+/*------------------Estilos widget meteorologia----------------*/
+
+/*Estilo para el label que dice, tiempo actual*/
+#label-tiempo-actual{
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.ww-box{
+    margin: 0;
+    width: 19rem;
+    display: flex;
+    height: 5rem;
+    font-family: 'Poppins', sans-serif;
+    position: static;
+    font-size: 17px;
+}
+
+#ww_4b62def8642aa {
+    width: 19rem;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: static;
+    font-size: 15px;
+}
+/*--------------------------------------------------------------------*/
 
 /*Estilo de los parrafos que indican la hora y la fecha del huerto*/
 #contenedor-fecha-hora-huerto p{
@@ -344,9 +473,9 @@ select {
     align-content: center;
     align-items: center;
     justify-content: center;
-    padding-top: 0.4em;
+    padding-bottom: 0.5rem;
     margin-bottom: 0;
-    font-size: 100%;
+    font-size: 95%;
 }
 
 /*Estilo para el contenedor de parametros en tiemop real*/
@@ -362,6 +491,7 @@ select {
 #contenedor-parametros-tiempo-real-huerto-temperatura{
     justify-content: center;
 }
+
 
 /*Estilo para todos los iconos de representacion de cada dato en tiempo real*/
 .icono-dato-tiempo-real {
@@ -394,7 +524,13 @@ select {
     width: 1.7em;
     height: 1.7em;
     border-radius: 0.3em;
+    transition: all .4s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+}
+
+/*Estilo del icono de grafica para acceder a el histórico de cada parámetro cuando hover*/
+.icono-boton-grafica-historico:hover {
+    transform: scale(1.05);
 }
 
 /*Contenedor con la grafica de parametros y los botones de filtrar*/
@@ -420,23 +556,30 @@ select {
 
 /*Estilo de los botones que estan dentro del contenedor de botones de filtro de la grafica*/
 #contenedor-botones-filtro-grafica>button {
-    width: 22%;
-    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 35px;
     border-radius: 3em;
     border: none;
     background: var(--second-color-green);
     color: var(--main-color-white);
     font-family:'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 3.3vw;
+    font-size: 18px;
+    transition: all .5s ease;
     padding: 0.2em 0.3em;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    transition: all .5s ease;
 }
 
-/*Contenedor con la tarjeta de la informacion metereologica*/
-#contenedor-informacion-metereologica {
-
+#contenedor-botones-filtro-grafica>button:hover{
+    background: var(--second-color-green-hover);
+}
+#contenedor-widget-meteorologia {
+    justify-content: center;
 }
 
 /*Contenedor con la temperatura en tiempo real de la informacion metereologica*/
@@ -466,16 +609,27 @@ select {
 #datos-cada-30-s{
     text-align: center;
     font-weight: 500;
-    margin-top: 1.6rem;
+    margin-top: 0.45rem;
     margin-bottom: 0.5rem;
 }
 
 /*Estilo contenedor con el boton para acceder al mapa con los huertos*/
 #contenedor-boton-mapas {
     display: flex;
-    justify-content: center;
-    font-size: 74%;
+    text-align: right;
+    justify-content: right;
+    font-size: 60%;
     height: auto;
+    order: 2;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#contenedor-boton-mapas button{
+    display: block;
+    text-align: center;
+    justify-content: right;
+    width: 60%;
 }
 
 /*Estilo del dialogo de notifiacones popup*/
@@ -484,19 +638,32 @@ select {
     height: 29em;
     border-radius: 1.1em;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    padding: 1.7em;
     outline: 0;
     border: none;
     top: 50%; /* Distancia desde la parte superior */
     left: 50%; /* Distancia desde la parte izquierda */
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
-    background-image: url("../images/mapa-popup-imagen.png");
-    background-repeat: no-repeat;
+    scrollbar-width: thin; /* Ajusta el ancho de la barra de desplazamiento */
+    overflow-y: scroll; /* Habilita la barra de desplazamiento vertical solo cuando sea necesario */
+}
+
+/* Estilos para la barra de desplazamiento en Chrome, Edge y Safari */
+#desplegable-popup-mapa::-webkit-scrollbar {
+    width: 6px; /* Ajusta el ancho de la barra de desplazamiento */
+}
+
+#desplegable-popup-mapa::-webkit-scrollbar-track {
+    background-color: #dddddd; /* Ajusta el color de fondo de la barra de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la barra de desplazamiento */
+}
+
+#desplegable-popup-mapa::-webkit-scrollbar-thumb {
+    background-color: #888888; /* Ajusta el color de la perilla de desplazamiento */
+    border-radius: 2px; /* Ajusta los bordes curvos de la perilla de desplazamiento */
 }
 
 /*Estilo popup de su backdrop dialogo de las notificaciones*/
 #desplegable-popup-mapa::backdrop {
-    display: flex;
     width: 100%;
     height: 100%;
     top: 50%; /* Distancia desde la parte superior */
@@ -504,7 +671,6 @@ select {
     transform: translate(-50%, -50%); /* Centra el cuadro de diálogo */
     /**z-index: 9999; /* Posición del cuadro de diálogo por encima del resto de elementos */
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
     position: fixed; /* Posición fija */
 }
 
@@ -513,28 +679,51 @@ select {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    margin-bottom: 1.2em;
+    padding: 0.8em;
+    margin-bottom: 0;
 }
 /*Estilo para icono de cerrar del dialogo desplegable de notificaciones*/
 #cerrar-dialogo-mapa {
-    background-color: #06884D;
-    border-radius: 0.4em;
-    box-shadow: rgba(0, 0, 0, 0.32) 0 5px 8px;
+    background: transparent;
     width: 2.3em;
     height: 2.3em;
     cursor: pointer;
+    margin-left: 0.6rem;
+}
+/*Estilos para la cabecera del contenedor de cerrar mapa*/
+#contenedor-cerrar-mapa{
+    display: flex;
+    justify-content: right;
+    padding: 1em;
+    margin-bottom: 0;
+    align-items: center;
+    padding-bottom: 0;
 }
 
+#contenedor-mapa{
+    height: 100%;
+    background-image: url("../images/mapa-popup-imagen.png");
+}
+#mapa-huerto-2{
+    margin-left: 7em;
+    margin-top: 5em;
+}
 .contenedor-icono-huerto-mapa {
     color: white;
-    margin: 4em;
+    border-radius: 50%;
+    height: 5.6em;
+    width: 7.2em;
+    margin-right: 2.4em;
     text-align: center;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 /*Estilo para cada icono de huerto dentro del mapa despleglable*/
 .icono-huerto-mapa {
-    width: 3em;
-    height: 3em;
+    margin-top: 0.6em;
+    width: 2.6em;
+    height: 2.6em;
     background-color: white;
     cursor: pointer;
 }
@@ -574,3 +763,57 @@ select {
     margin-bottom: 0;
 }
 /*------------------------Termina footer------------------------*/
+
+
+/*------------------------Estilos responsive monitorizacion para pc, movil y tablet ya ready----------------*/
+
+@media screen and (min-width: 1200px){
+    #contenedor-espacio-personal-completo{
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+    }
+    select{
+        width: 70%;
+    }
+
+    #contenedor-nombre-huerto{
+        justify-content: center;
+    }
+    .contenedor-parametro-monitorizacion-especifico{
+        width: 80%;
+    }
+
+    #contenedor-fecha-hora-huerto{
+        justify-content: left;
+    }
+
+    .contenedor-parametros-tiempo-real-huerto{
+        /*display: block;*/
+    }
+
+    #contenedor-nombre-tiempo-parametros{
+        display: flex;
+        flex-direction: row;
+    }
+    #contenedor-actualizacion-parametros-derecha{
+        width: 100%;
+        margin-left: 2.7rem;
+    }
+    #datos-cada-30-s{
+        margin-top: 0;
+    }
+    #label-tiempo-actual{
+        margin-bottom: 0.6rem;
+        margin-top: 2rem;
+    }
+    #panel-circular-notificaciones{
+        width: 30%;
+    }
+    .wrapper{
+        padding: 5vh 7% 5vh;
+    }
+    #contenedor-boton-mapas button{
+        width: 30%;
+    }
+}

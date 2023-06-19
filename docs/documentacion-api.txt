@@ -1,6 +1,6 @@
 Los usuarios y contraseñas posibles para realizar la prueba de la Web del G01 son los siguientes:
 
--Usuario final: Correo: joselgarciamant1@gmail.com  Contraseña: mementoMori45
+-Usuario final: Correo: joselgarciamant1@gmail.com  Contraseña: mementoMori46
 
 -Comercial: Correo: lanternmartin@gmail.com  Contraseña: upvMejorUniLoremIpsum
 

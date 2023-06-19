@@ -1,5 +1,7 @@
 document.getElementById("login-form").addEventListener('submit', guardarFormularioSolicitud);
-
+//--------------------------------------------------------
+//      POST
+//--------------------------------------------------------
 /**
  * Se ejecutará cuando se envíe el formulario.
  * Puesto que se usa fetch, es una función asíncrona
@@ -14,10 +16,8 @@ async function guardarFormularioSolicitud(event) {
         method: 'post',
         body: formData
     })
-    const data = await respuesta.json();
-    // si el resultado de la petición es OK (i.e. código HTTP 200)
-    if(respuesta.ok){
-
+    if(!respuesta.ok){
+        alert("Error, el formulario no se ha podido enviar")
     }
 }
 

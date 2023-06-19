@@ -28,7 +28,7 @@
   <header>
     <nav id="main-menu">
       <!-- Logotipo Link Landing Page-->
-      <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+      <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
 
       <!-- Contenedor para los iconos de inicio de sesión y menú -->
       <div class="contenedor-iconos">
@@ -59,16 +59,23 @@
     <section>
 
       <!-- Comienza la seccion titulo -->
-      <div id="inicio-de-sesion-titulo">
+      <div id="inicio-de-sesion-titulo" class="contraseña-nueva">
         <h1 class="h1-formularios-titulos">Introduce la nueva Contraseña</h1>
       </div>
 
       <form id="login-form">
 
         <!-- Comienza la seccion contraseña -->
+        <div id="email">
+          <div class="datos">
+            <label for="email-input">Email*</label>
+            <input type="email" id="email-input" name="email" required>
+          </div>
+        </div>
+
         <div id="password">
           <div class="datos">
-            <label for="password">Contraseña nueva*</label>
+            <label for="password-input">Contraseña nueva*</label>
             <input type="password" id="password-input" name="password" required>
           </div>
         </div>
@@ -76,14 +83,15 @@
         <!-- Repite la contraseña -->
         <div id="password_2">
           <div class="datos">
-            <label for="password_2">Repite contraseña nueva*</label>
-            <input type="password" id="password-input_2" name="password" required>
+            <label for="password-input_2">Repite contraseña nueva*</label>
+            <input type="password" id="password-input_2" name="password-repeat" required>
           </div>
         </div>
 
         <!-- Comienza la seccion texto error contraseñas no son iguales -->
-        <p id="mensaje-error-contraseña">Las contraseñas no son iguales, inténtelo de nuevo.</p>
+        <p id="mensaje-error-contrasenya">Las contraseñas no coinciden, inténtalo de nuevo</p>
 
+        <label id="campos-obligatorios-nueva-contrasenya">*Campos Obligatorios</label>
         <!-- Comienza la seccion boton -->
         <section class="boton-enviar">
           <button type="submit" id="enviar-contraseña abrir-popup" class="boton-iniciar-sesion boton-verde-blanco">Enviar</button>
@@ -116,13 +124,13 @@
   </dialog>
   <!-- Termina el popup -->
 
-  <!-- JavaScript Documento index.js para el menu desplegable-->
-  <script src="js/index.js"></script>
-
 </div>
 
 <!-- JavaScript Documento index.js para el menu desplegable-->
-<script src="js/popup_contraNueva.js"></script>
+<script src="js/index.js"></script>
+
+<!-- JavaScript Documento Para Logica enviarCorreoRestablecerContasenya-->
+<script src="js/logica-Fake/nuevaContrasenya.js"></script>
 
 </body>
 </html>

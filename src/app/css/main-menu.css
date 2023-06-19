@@ -9,12 +9,14 @@
     --bg-color: var(--main-color-white); /*Variable para */
     --txt-color: var(--main-color-black);
     --menu-height: 12vh;
+    z-index: 9999;
 }
 
 /*Estilo imagen LOGOTIPO del menu de navegacion*/
 #logo-menu-inicio {
     width: 10em;
     height: 7em;
+    transition: all .5s ease;
 }
 
 /*Icono de inicio sesión usuario*/
@@ -22,6 +24,7 @@
     font-size: 3rem;
     margin-top: 0.4em;
     color: var(--second-color-green);
+    transition: all .5s ease;
 }
 
 #icono-inicio-sesion:hover{
@@ -72,9 +75,8 @@
 
 /*Botón Cerrar Sesión*/
 .boton-cerrar-sesion {
-    text-align: center;
-    width: 72%;
-    height: 7%;
+    width: auto !important;
+    height: 35px !important;
     border-radius: 3em;
     border: none;
     box-shadow: 0.1em 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.25);
@@ -84,6 +86,14 @@
     font-weight: 500;
     font-size: 170%;
     padding: 0.2em;
+    transition: all .5s ease;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 1em;
+}
+
+.boton-cerrar-sesion:hover{
+    background: var(--second-color-green-hover);
 }
 
 /*Dimensiones del menu hamburguesa*/
@@ -101,6 +111,7 @@
     height: .27em;
     border-radius: .6em;
     margin-top: 0.63em;
+    transition: all .5s ease;
 }
 
 /*Estilo de la linea del medio del menu para cuando este activo*/
@@ -139,4 +150,63 @@
 /*Propiedad loading para todos espacios personales*/
 .loading {
     display: none;
+}
+
+/*Estilo para boton cerrar sesion display block*/
+.boton-cerrar-sesion a{
+    display: block !important;
+}
+
+/*ESTILOS PARA EL HEADER/MENU EN ESPACIOS PERSONALES*/
+
+
+#header-esp-personales {
+    --bg-color: var(--main-color-white); /*Variable para */
+    --txt-color: var(--main-color-black);
+    --menu-height: 12vh;
+    z-index: 9999;
+}
+
+
+/*Estilo del menu principal*/
+#header-esp-personales {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    height: var(--menu-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.51em;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.25);
+}
+
+/*Estilo contenedor del menu de navegacion*/
+.contenedor-iconos-2 {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Ajusta el valor según el espaciado deseado */
+}
+
+.texto-boton-cerrar{
+    font-size: 1.1rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    text-decoration: none !important;
+}
+
+.boton-cerrar-sesion {
+    width: 8rem;
+    height: 2.5rem;
+    transition: all .5s ease;
+}
+
+.boton-cerrar-sesion {
+    padding-top: 0.4rem;
+    transition: all .5s ease;
+}
+.boton-cerrar-sesion a {
+    color: var(--main-color-white);
+    transition: all .5s ease;
 }

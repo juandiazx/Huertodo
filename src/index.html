@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GTI | Huertos domésticos monitorizables</title>
-    <link rel="shortcut icon" href="src/app/images/icono-gti-sin-letras.png" />
+    <link rel="shortcut icon" href="app/images/icono-gti-sin-letras.png" />
     <!-- Para que pueda verse bien en movil-->
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" />
     <!-- Palabras clave para el SEO de la Web-->
@@ -12,9 +12,9 @@
     <!-- Para que sea compatible con Microsoft Edge-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS DOCUMENTO estilos.css-->
-    <link rel='stylesheet' href="src/app/css/estilos.css"/>
-    <link rel='stylesheet' href="src/app/css/main-menu.css"/>
-    <link rel='stylesheet' href="src/app/css/estilos_responsive.css"/>
+    <link rel='stylesheet' href="app/css/estilos.css"/>
+    <link rel='stylesheet' href="app/css/main-menu.css"/>
+    <link rel='stylesheet' href="app/css/estilos_responsive.css"/>
 
 </head>
 <body>
@@ -23,12 +23,12 @@
 <header>
     <nav id="main-menu">
         <!-- Logotipo Link Landing Page-->
-        <a href="index.html"><img src="src/app/images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
+        <a href="index.html"><img src="app/images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
 
         <!-- Contenedor para los iconos de inicio de sesión y menú -->
         <div class="contenedor-iconos">
             <!-- Icono de inicio de sesión -->
-            <a href="src/app/Inicio_sesion.html"><i id="icono-inicio-sesion" class="bi bi-person-circle"></i></a>
+            <a href="app/Inicio_sesion.html"><i id="icono-inicio-sesion" class="bi bi-person-circle"></i></a>
 
             <!-- Menu hamburguesa-->
             <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
@@ -38,9 +38,9 @@
             </div>
 
         <ul>
-            <li><a href="src/app/Producto.html" class="texto-link">Producto</a></li>
-            <li><a href="src/app/Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
-            <li><a href="src/app/Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
+            <li><a href="app/Producto.html" class="texto-link">Producto</a></li>
+            <li><a href="app/Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
+            <li><a href="app/Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
         </ul>
 
         </div>
@@ -52,15 +52,19 @@
     <h1>MONITORIZA TU HUERTO</h1>
     <p class="parrafo-negrita">Cuida tu huerto vertical desde cualquier parte sin ensuciarte las manos</p>
     <!--Call To Action-->
-    <a class="boton-verde-blanco" id="boton-CTA" href="src/app/Formulario_Solicitud.html">Pídelo ya</a>
-    <!-- Flecha bajar -->
-        <a class="boton-verde-blanco flecha-bajar"><img id="flecha-bajar" src="src/app/images/flecha-hacia-abajo.png" alt="Flecha Bajar Landing Page"></a>
+    <a class="boton-verde-blanco" id="boton-CTA" href="app/Formulario_Solicitud.html">Pídelo ya</a>
+
+    <!--aqui va la flecha para bajar-->
+    <div class="flecha-bajar text-center">
+        <a href="#agencia" class="custom-arrow" ><i id="flecha-bajar" class="bi bi-chevron-down"></i></a>
+    </div>
+
 </section>
 
 
 
 <!-- Comienza la sección primera de explicación general-->
-<main class="wrapper">
+<main class="wrapper-landing">
     <div class="contenedor-pc">
 
         <section  id="seccion-info1">
@@ -69,7 +73,7 @@
                     <h2>Huerto doméstico</h2>
                     <p>Cultiva y cuida de tu huerto sin preocuparte por el riego o su cuidado. Nuestro sistema hidropónico te permite aprovechar tu tiempo sin perjudicar a tu huerto.</p>
                 </div>
-                <img class="imagenes-landing tamanyos1" src="src/app/images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
+                <img class="imagenes-landing tamanyos0" src="app/images/The%20Rise%20of%20At-Home%20Hydroponic%20Gardens%20(1).jpg" alt="Huerto doméstico">
             </div>
         </section>
         <section id="seccion-info2">
@@ -78,7 +82,7 @@
                     <h2>Monitorización</h2>
                     <p>Visualiza en tiempo real el estado de tu huerto. Nuestros sensores recopilan datos constantemente, lo que te permite controlar el cuidado de tu huerto constantemente.</p>
                 </div>
-                <img class="imagenes-landing tamanyos1" src="src/app/images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
+                <img class="imagenes-landing tamanyos1" src="app/images/4%20High-Tech%20Garden%20Gadgets%20for%20Gardening%20in%20the%2021st%20Century%20(1).jpg" alt="Persona monitorizando en remoto">
             </div>
         </section>
         <section id="seccion-info3">
@@ -87,13 +91,13 @@
                     <h2>Estadísticas</h2>
                     <p>Estadísticas de tu huerto de manera clara y concisa. Visualiza los datos históricos de tu huerto rápidamente y sin complicaciones.</p>
                 </div>
-                <img class="imagenes-landing tamanyos1" src="src/app/images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
+                <img class="imagenes-landing tamanyos1" src="app/images/Food%20Delivery%20Web%20Based%20Dashboard%20(1).png" alt="Estadísticas monitorización huerto">
             </div>
         </section>
     </div>
     <section id="contenedor-boton-saber-mas">
         <!--Boton Saber Más-->
-        <a class="boton-verde-blanco" href="src/app/Producto.html">Saber más</a>
+        <a class="boton-verde-blanco" href="app/Producto.html">Saber más</a>
     </section>
 
 
@@ -101,23 +105,23 @@
 <!-- Termina el main, explicación general -->
 
 <!-- Comienza la sección de explicación mantenimiento-->
-<section id="seccion-mantenimiento" class="wrapper">
+<section id="seccion-mantenimiento" class="wrapper-landing">
     <div class="flex-container">
         <div class="content">
             <h3>Mantenimiento constante de tu equipo</h3>
             <p class="parrafo-negrita">No te preocupes por las averías</p>
             <p>Nuestro equipo de expertos estará siempre disponible para ayudarte con cualquier problema técnico que puedas tener. Te proveemos con cambios de sensores, cambios de baterías y fallos en la monitorización.</p>
         </div>
-        <img class="imagenes-landing tamanyos2" src="src/app/images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
+        <img class="imagenes-landing tamanyos2" src="app/images/e54629bfcdbf399e542720fdfde11390.png" alt="Persona realizando mantenimiento huerto">
     </div>
 </section>
 <!-- Termina la sección de mantenimiento-->
 
 
 <!-- Comienza la sección de reseñas-->
-<section id="seccion-resenyas" class="wrapper">
+<section id="seccion-resenyas" class="wrapper-landing">
     <div id="contenedor-estrellas-opiniones">
-        <img id="estrellas-media-resenyas" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+        <img id="estrellas-media-resenyas" src="app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
         <p class="parrafo-negrita">La media de las opiniones de nuestros usuarios</p>
     </div>
 
@@ -129,7 +133,7 @@
                 <p class="parrafo-negrita">Víctor Pérez</p>
             </div>
             <div>
-                <img class="estrellas-resenya-especifica" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+                <img class="estrellas-resenya-especifica" src="app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
             </div>
         </div>
         <!--Texto reseña persona-->
@@ -146,7 +150,7 @@
                 <p class="parrafo-negrita">Laura Lor</p>
             </div>
             <div>
-                <img class="estrellas-resenya-especifica" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+                <img class="estrellas-resenya-especifica" src="app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
             </div>
         </div>
         <!--Texto reseña persona-->
@@ -163,7 +167,7 @@
                 <p class="parrafo-negrita">Eduardo Pío</p>
             </div>
             <div>
-                <img class="estrellas-resenya-especifica" src="src/app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
+                <img class="estrellas-resenya-especifica" src="app/images/imagen-5-estrellas.png" alt="imagen 5 estrellas verdes">
             </div>
         </div>
         <!--Texto reseña persona-->
@@ -185,7 +189,7 @@
     <div id="contenedor-footer-texto">
         <!--Contenedor con los links de texto-->
         <div>
-            <a href="src/app/PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="src/app/TerminosYCondiciones.html">Terminos y condiciones</a>
+            <a href="app/PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="app/TerminosYCondiciones.html">Terminos y condiciones</a>
         </div>
         <!--Parrafo con el nombre de la empresa y el copyright-->
         <p class="parrafo-negrita">© GTI Copyright 2023</p>
@@ -194,13 +198,13 @@
 <!-- Termina el footer-->
 
 <!-- JavaScript Documento index.js para el menu desplegable-->
-<script src="src/app/js/index.js"></script>
+<script src="app/js/index.js"></script>
 
 <!-- JavaScript Documento deslizables.js para los deslizables de reseñas-->
-<script src="src/app/js/deslizables.js"></script>
+<script src="app/js/deslizables.js"></script>
 
 <!-- JavaScript Documento flecha-landing.js para la flecha de landing-->
-<script src="src/app/js/flecha-landing.js"></script>
+<script src="app/js/flecha-landing.js"></script>
 
 </div>
 </body>

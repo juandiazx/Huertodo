@@ -147,7 +147,20 @@
 
 /*LANDING PAGE RESPONSIVE*/
 
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (max-width: 767px) {
+    .tamanyos0{
+        height: 16rem;
+        width: 23rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+
+    /*Contenedor completo, wrapper de toda la monitorización*/
+    .wrapper-landing {
+        margin-top: 5vh;
+        padding: 5vh 7% 5vh;
+    }
 
     /* Contenedor de la sección hero */
     #landing-page-hero {
@@ -193,13 +206,18 @@
         margin: 20px auto; /* Margen igual en todos los lados */
     }
 
+    .tamanyos0{
+        height: 17rem;
+        width: 23rem;
+    }
+
     .tamanyos1{
         height: 17rem;
         width: 23rem;
     }
 
     #contenedor-boton-saber-mas{
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
         margin-top: 1rem;
     }
 
@@ -207,6 +225,10 @@
         height: 3rem;
     }
 
+    #seccion-mantenimiento{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
     #seccion-mantenimiento .flex-container {
         display: flex;
@@ -229,6 +251,11 @@
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
         display: block;
+    }
+
+    #seccion-resenyas{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     /*Contenedor para estrellas reseñas*/
@@ -272,6 +299,12 @@
 
 @media screen and (min-width: 1400px){
 
+    /*Contenedor completo, wrapper de toda la monitorización*/
+    .wrapper-landing {
+        margin-top: 5vh;
+        padding: 5vh 7% 5vh;
+    }
+
     /* Contenedor de la sección hero */
     #landing-page-hero {
         background-image: url("../images/landing-hero-respons1.png");
@@ -288,13 +321,30 @@
 
     .columnas-pc {
         width: 100%;
-        max-width: 400px;
-        padding: 2em;
+        max-width: 350px;
+        /*padding: 1.5em;*/
         text-align: center;
+    }
+
+    #seccion-info1{
+        margin-right: 2.4em;
+    }
+    #seccion-info2{
+        margin-left: 2.4em;
+        margin-right: 2.4em;
+    }
+    #seccion-info3{
+        margin-left: 2.4em;
     }
 
     #boton-CTA{
         max-width: 300px;
+        transition: all .5s ease;
+    }
+
+    .tamanyos0{
+        height: 15rem;
+        width: 40rem;
     }
 
     .tamanyos1{
@@ -308,12 +358,18 @@
     }
 
     #contenedor-boton-saber-mas{
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
         margin-top: 1rem;
     }
 
     .boton-verde-blanco{
         height: 3rem;
+        transition: all .5s ease;
+    }
+
+    #seccion-mantenimiento{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     #seccion-mantenimiento .flex-container {
@@ -337,6 +393,11 @@
         max-width: 400px;
         margin: 20px auto; /* Margen igual en todos los lados */
         display: block;
+    }
+
+    #seccion-resenyas{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 
     /*Contenedor para estrellas reseñas*/
@@ -378,11 +439,10 @@
 
 /*ESILOS PARA LA PÁGINA DE PRODUCTO*/
 
-@media screen and (min-width: 700px) and (max-width: 1000px) {
+@media screen and (min-width: 850px) {
     /* Contenedor de las columnas */
-
     /* Página del Producto */
-    #producto-page{
+    #producto-page {
         flex-direction: column;
         align-content: flex-start;
         text-align: left;
@@ -395,85 +455,97 @@
     .columnas-paralelas {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     /* Columna de las imágenes */
     .columna-imagenes {
-        width: 40%;
+        width: 300px;
         margin-right: 2em;
+    }
+
+    /* Estilos para la imagen grande */
+    .columna-imagenes .image-selector {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para las imágenes pequeñas */
+    .columna-imagenes .row .column img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-bottom: 5px;
     }
 
     /* Columna de la descripción y botón */
     .columna-descripcion {
-        width: 60%;
+        flex: 1;
         margin-left: 2em;
     }
 
-    .image-selector {
-        width: 100%;
-        max-width: 500px;
-        max-height: 600px;
-    }
 
-    .demo cursor{
-        width: 50%;
-        max-width: 30px;
-        max-height: 20px;
+    .boton-producto {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 3em;
     }
 
 }
 
-@media screen and (min-width: 1000px) {
-    /* Contenedor de las columnas */
-    /* Página del Producto */
-    #producto-page{
-        flex-direction: column;
-        align-content: flex-start;
-        text-align: left;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-top: 3em;
-    }
+.seccion-preguntas{
+    margin-top: 1vh;
+}
 
-    .columnas-paralelas {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.titulo-preguntas{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
 
-    /* Columna de las imágenes */
-    .columna-imagenes {
-        width: 30%;
-        margin-right: 2em;
-    }
-
-    /* Columna de la descripción y botón */
-    .columna-descripcion {
+@media screen and (min-width: 600px) and (max-width: 850px){
+    .boton-producto {
         width: 70%;
-        margin-left: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4em;
+        margin-bottom: 3em;
     }
+}
 
-    .image-selector {
-        width: 100%;
-        max-width: 400px;
-        max-height: 500px;
+
+@media screen and (min-width: 1000px){
+    .boton-producto {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4em;
+        margin-bottom: 3em;
     }
+}
 
-    .demo cursor{
-        width: 50%;
-        max-width: 30px;
-        max-height: 20px;
+
+@media screen and (min-width: 1200px){
+    .boton-producto {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4em;
+        margin-bottom: 3em;
     }
-
 }
 
 
 
 /*---------ESITLOS PARA EL  HEADER Y MENU RESPONSIVE---------------*/
 
-@media screen and (min-width: 890px) {
+
+@media screen and (min-width: 760px) {
 
     /*Oculta el icono del menu*/
     .menu-hamburguesa {
@@ -504,15 +576,17 @@
         font-size: 16px; /
     font-weight: normal;
         color: var(--second-color-green);
+        transition: all .5s ease;
     }
 
-    .boton-cerrar-sesion {
+    /*.boton-cerrar-sesion {
         padding-top: 0.4rem;
+        transition: all .5s ease;
     }
     .boton-cerrar-sesion a {
-        margin-top: 3rem;
         color: var(--main-color-white);
-    }
+        transition: all .5s ease;
+    }*/
 
 
     /*agrega margenes entre los elementos del menu*/
@@ -527,14 +601,38 @@
         order: 1;
     }
 
-    .boton-cerrar-sesion {
+    /*.boton-cerrar-sesion {
         width: 8rem;
         height: 2.3rem;
-    }
+        transition: all .5s ease;
+    }*/
 }
 
 
 /*ESTILOS RESPONSIVE PARA MONITORIZACIÓN*/
+@media screen and (min-width: 250px) and (max-width: 370px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 70%;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 400px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 80%;
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 430px) {
+    /*Estilo parrafo con el numero de notificaciones*/
+    #parrafo-numero-notificaciones {
+        font-size: 90%;
+        font-weight: 500;
+    }
+}
 
 @media screen and (min-width: 700px) {
     #contenedor-espacio-personal-completo{
@@ -548,4 +646,72 @@
         margin-top: 12vh;
         padding: 5vh 7% 5vh;
     }
+}
+
+/*Estilo responsive para el widget monitorizacion*/
+@media screen and (max-width: 560px){
+    .ww-box{
+        width: 17rem;
+        height: 4rem;
+        font-size: 15px;
+    }
+
+    #contenedor-fecha-hora-huerto{
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 385px){
+    .ww-box{
+        width: 15rem;
+        height: 5rem;
+        font-size: 15px;
+    }
+
+    #contenedor-fecha-hora-huerto{
+        margin-bottom: 0.8rem;
+    }
+}
+
+
+/*ESTILOS PARA CONTRASENYA_NUEVA*/
+
+#inicio-de-sesion-titulo{
+    margin-top: 2vh;
+}
+
+.h1-formularios-titulos{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#enviar-contraseña\ abrir-popup{
+    margin-top: 2vh;
+}
+.boton-enviar{
+    margin-bottom: 3vh;
+}
+
+.datos{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+@media screen and (min-width: 700px) {
+
+    #inicio-de-sesion-titulo{
+        margin-top: 1vh;
+    }
+
+    .h1-formularios-titulos{
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+}
+
+/*ESTILOS PARA CONTRASEÑA OLVIDADA*/
+
+.contra-olvidada{
+    margin-top: 10vh;
 }

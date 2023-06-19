@@ -1,4 +1,12 @@
 <?php
+//--------------------------------------------------------
+//      POST
+//--------------------------------------------------------
+
+/*
+ * formularioSolicitud:POST--------------> guardarFormularioSolicitud()----->Insert en BD, HTTP:200 | HTTP:500
+ *
+ * */
 $bbdd_servidor = 'localhost';
 $bbdd_nombre = 'test_local';
 $bbdd_user = 'root';

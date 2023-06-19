@@ -11,39 +11,51 @@
   <meta name="keywords" content="Huerto hidropónico, huerto vertical, huertos verticales, monitorización huerto, huerto monitorizado, jardín vertical, jardín doméstico, huerto doméstico, monitorización huerto, monitorización huerto doméstico, control huerto, control remoto huerto" />
   <!-- Para que sea compatible con Microsoft Edge-->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- CSS DOCUMENTO estilos.css-->
   <link rel='stylesheet' href="css/main-menu.css"/>
   <link rel='stylesheet' href="css/estilos-in.sesion-formularios.css"/>
   <link rel='stylesheet' href="css/estilos_responsive.css"/>
-  <link rel='stylesheet' href="css/estilo_popup_1.css"/>
+  <link rel="stylesheet" href="css/tablas_trabajadores.css">
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+  <!-- DATATABLES -->
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+  <!-- JavaScript funcionalidad Tablas -->
+  <script src="js/logica-Fake/cargarComunicacionesAdministradorWeb.js"></script>
+
+  <!-- JavaScript para cargar usuarios -->
+  <script src="js/logica-Fake/cargarUsuariosRegistrados.js"></script>
 
   <script src="js/logica-Fake/control-acceso.js"></script>
   <script>document.addEventListener('DOMContentLoaded',comprobarSesion("administrador"));</script>
+
+  <!-- JavaScript Documento index.js-->
+  <script src="js/index.js"></script>
+</head>
+
 <body class="loading">
 <div class="page">
-<!-- Comienza la cabecera-->
-<header>
-  <nav id="main-menu">
-    <!-- Logotipo Link Landing Page-->
-    <a href="../../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
-    
-    <!-- Contenedor para los iconos de inicio de sesión y menú -->
-    <div class="contenedor-iconos">
-      <!-- Icono de inicio de sesión -->
+  <!-- Comienza la cabecera-->
+  <header>
+    <nav id="header-esp-personales">
+      <!-- Logotipo Link Landing Page-->
+      <a href="../index.html"><img src="images/logoGTI.svg" id="logo-menu-inicio" alt="Imagen Logo GTI"></a>
 
-        <!-- Menu hamburguesa-->
-        <div class="menu-hamburguesa" onClick="toggleMenu(document.getElementById('main-menu'))">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      <!-- Contenedor para los iconos de inicio de sesión y menú -->
+      <div class="contenedor-iconos-2">
+        <!-- Icono de inicio de sesión -->
 
-        <ul >
-          <li><a href="Producto.html" class="texto-link">Producto</a></li>
-          <li><a href="Formulario_Solicitud.html" class="texto-link">Solicita el producto</a></li>
-          <li><a href="Sobre_Nosotros.html" class="texto-link">Sobre nosotros</a></li>
-          <li class="boton-cerrar-sesion boton-verde-blanco"><a onclick="borrarSesion()">Cerrar sesión</a></li>
-        </ul>
+        <button class="boton-cerrar-sesion boton-verde-blanco"><a href="Inicio_sesion.html" class="texto-boton-cerrar" onclick="borrarSesion()">Cerrar sesión</a></button>
 
       </div>
     </nav>
@@ -52,117 +64,60 @@
 
   <main>
       <!--Comienza la seccion Registros  -->
-
+    <section class="separacion-contenido"></section>
       <section class="seccion-preguntas" >
+
         <section class="separacion-contenido"></section>
-        <div id="contenedor-nombre-usuario">
+        <div class=bienvenido id="contenedor-nombre-usuario">
           <p id=nombre-usuario">Bienvenido</p>
         </div>
+
+
+
         <div class="títulos-trabajadores">
-          <h2>Registros Usuarios</h2>
+          <h1 class="titulos-trabajadores">Registros Usuarios</h1>
         </div>
 
-        <!-- Desplegable 1 -->
-
-        <div class="acordeon-trabajador">
-          <div class="acordeon-item">
-            <div class="acordeon-item-header">
-              <div class="texto-desplegable-trabajadores">Usuario #37</div>
-              <div class="close-icon">
-                <button class="delete-button">
-                  <img src="images/icono-x-50.png">
-                </button>
-              </div>
-            </div>
-            <div class="acordeon-item-body">
-              <p class="acordeon-item-body-content">
-                No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-              </p>
-            </div>
-          </div>
+        <div class="container">
+          <table id="tablax" class="display content-table">
+            <thead>
+            <tr>
+              <th class="id-columna">ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Fecha</th>
+              <th>Registrar</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-datos">
+            </tbody>
+          </table>
         </div>
-      <!-- Desplegable 2 -->
 
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #36</div>
-            <div class="close-icon">
-              <button class="delete-button">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
+        <div class="container">
+          <div class="títulos-trabajadores">
+            <h1 class="titulos-trabajadores">Gestión de Huertos</h1>
           </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
+
+          <table id="tablax-2" class="display content-table">
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Nombre</th>
+              <th>Huertos</th>
+              <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody id="tabla-datos-2">
+            <!-- Aquí se agregarán las filas de la tabla dinámicamente con JavaScript -->
+            </tbody>
+          </table>
+          <div id="mensajeRegistro" class="mensaje-registro"></div>
         </div>
-      </div>
+      </section>
+    <iframe name="hidden_iframe" style="display: none;"></iframe>
 
-        <!-- Desplegable 3 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #35</div>
-            <div class="close-icon">
-              <button class="delete-button">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Desplegable 4 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #34</div>
-            <div class="close-icon">
-              <button class="delete-button">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
-
-        <!-- Desplegable 5 -->
-
-      <div class="acordeon-trabajador">
-        <div class="acordeon-item">
-          <div class="acordeon-item-header">
-            <div class="texto-desplegable-trabajadores">Usuario #33</div>
-            <div class="close-icon">
-              <button class="delete-button" id="close-icon">
-                <img src="images/icono-x-50.png">
-              </button>
-            </div>
-          </div>
-          <div class="acordeon-item-body">
-            <p class="acordeon-item-body-content">
-              No, no se necesita experiencia en jardinería para comenzar un huerto hidropónico doméstico. Los huertos hidropónicos son fáciles de configurar y mantener con recursos en línea.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--Termina la seccion Notificaciones tecnico  -->
 
 
 <!-- Comienza el popup -->
@@ -181,7 +136,7 @@
   <div id="contenedor-footer-texto">
     <!--Contenedor con los links de texto-->
     <div>
-      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Terminos y condiciones</a>
+      <a href="PoliticaDePrivacidad.html">Política de privacidad</a>  |  <a href="TerminosYCondiciones.html">Términos y condiciones</a>
     </div>
       <!--Parrafo con el nombre de la empresa y el copyright-->
       <p class="parrafo-negrita">© GTI Copyright 2023</p>
@@ -189,10 +144,6 @@
 </footer>
   <!-- Termina el footer-->
 
-<!-- JavaScript Documento index.js-->
-<script src="js/index.js"></script>
-<!--JavaScript Documento desplegables_trabajadores.js para los desplegables de trabajadores -->
-<script src="js/desplegables_trabajadores.js"></script>
 </div>
 </body>
 </html>
